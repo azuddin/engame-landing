@@ -253,7 +253,7 @@ const Home: NextPage = () => {
           </div>
           <div className="flex overflow-auto">
             {[...Array(6)].map((index) => (
-              <div key={index} className="flex flex-col p-4">
+              <div key={`game-${index}`} className="flex flex-col p-4">
                 <div className="w-64">
                   <Image
                     src="/assets/images/home-5.png"
@@ -334,7 +334,7 @@ const Home: NextPage = () => {
           </div>
           <div className="flex overflow-auto">
             {[...Array(5)].map((index) => (
-              <div key={index} className="w-72">
+              <div key={`partner-${index}`} className="w-72">
                 <Image
                   src="/assets/images/home-6.png"
                   width={300}
@@ -496,15 +496,29 @@ const Home: NextPage = () => {
               </div>
             </div>
             <div className="flex flex-col items-center space-y-10 lg:flex-row lg:space-y-0 lg:space-x-4">
-              <p className="font-lato font-bold text-3xl">Our Story</p>
-              <p className="font-lato font-bold text-3xl">Pricing</p>
-              <p className="font-lato font-bold text-3xl lg:hidden">Blog</p>
-              <p className="font-lato font-bold text-3xl">FAQ</p>
-              <p className="font-lato font-bold text-3xl">Contact Us</p>
+              <Link href="/our-story" passHref>
+                <p className="font-lato font-bold text-3xl">Our Story</p>
+              </Link>
+              <Link href="/pricing" passHref>
+                <p className="font-lato font-bold text-3xl">Pricing</p>
+              </Link>
+              <Link href="/blog" passHref>
+                <p className="font-lato font-bold text-3xl lg:hidden">Blog</p>
+              </Link>
+              <Link href="/faq" passHref>
+                <p className="font-lato font-bold text-3xl">FAQ</p>
+              </Link>
+              <Link href="/contact-us" passHref>
+                <p className="font-lato font-bold text-3xl">Contact Us</p>
+              </Link>
             </div>
             <div className="flex flex-col items-center space-y-10 lg:flex-row lg:space-y-0 lg:space-x-4">
-              <p className="font-lato font-bold text-3xl">Privacy</p>
-              <p className="font-lato font-bold text-3xl">Conditions</p>
+              <Link href="/privacy" passHref>
+                <p className="font-lato font-bold text-3xl">Privacy</p>
+              </Link>
+              <Link href="/conditions" passHref>
+                <p className="font-lato font-bold text-3xl">Conditions</p>
+              </Link>
             </div>
           </div>
         </div>
