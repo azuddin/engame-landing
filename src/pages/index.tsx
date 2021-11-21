@@ -5,7 +5,7 @@ import { Heading, Container, Card } from "@engame/components";
 
 const Home: NextPage = () => {
   return (
-    <div className="">
+    <>
       <Head>
         <title>Engame Landing</title>
         <meta
@@ -14,13 +14,12 @@ const Home: NextPage = () => {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
       <div id="content" className="space-y-16 md:space-y-24">
-        <Container>
-          <section
-            id="section-1"
-            className="space-y-16 md:flex md:items-center md:flex-row-reverse md:space-y-0"
-          >
+        <section
+          id="are-you-interested"
+          className="space-y-16 md:flex md:items-center md:flex-row-reverse md:space-y-0"
+        >
+          <Container>
             <div className="flex justify-center md:flex-1 md:justify-end">
               <Image
                 src="/assets/images/home-1.png"
@@ -48,10 +47,10 @@ const Home: NextPage = () => {
                 </button>
               </div>
             </div>
-          </section>
-        </Container>
-        <Container>
-          <section id="section-2" className="space-y-16">
+          </Container>
+        </section>
+        <section id="proven-gamification" className="space-y-16">
+          <Container>
             <Heading level={2} size="text-4xl md:text-5xl" capitalize>
               Proven gamification model delivered to superapps across the globe
             </Heading>
@@ -97,10 +96,10 @@ const Home: NextPage = () => {
                 description="Across the globe"
               />
             </div>
-          </section>
-        </Container>
-        <Container>
-          <section id="section-3" className="space-y-16 md:space-y-0">
+          </Container>
+        </section>
+        <section id="next-gen" className="space-y-16 md:space-y-0">
+          <Container>
             <div className="mb-10 md:mb-0">
               <Heading level={2} size="text-4xl md:text-5xl" capitalize>
                 Next-gen enter-gagement platform
@@ -136,9 +135,9 @@ const Home: NextPage = () => {
                 </div>
               </div>
             </div>
-          </section>
-        </Container>
-        <section id="section-4" className="">
+          </Container>
+        </section>
+        <section id="how-it-work" className="">
           <Container>
             <div className="space-y-16 md:space-y-0 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-4">
               <div className="flex flex-col items-center justify-center space-y-16 md:items-start md:space-y-10 md:h-full">
@@ -178,7 +177,7 @@ const Home: NextPage = () => {
             </div>
           </Container>
         </section>
-        <section id="section-5" className="space-y-10">
+        <section id="trending-games" className="space-y-10">
           <Container>
             <div className="space-y-16">
               <Heading level={2} size="text-4xl md:text-5xl" capitalize>
@@ -212,7 +211,7 @@ const Home: NextPage = () => {
           </div>
         </section>
         <section
-          id="section-6"
+          id="learn-more"
           className="md:grid md:grid-cols-2 md:gap-12 md:container md:mx-auto md:px-5 space-y-20 md:space-y-0"
         >
           <div className="space-y-10 flex flex-col md:justify-between">
@@ -272,7 +271,7 @@ const Home: NextPage = () => {
             </div>
           </div>
         </section>
-        <section id="section-7" className="">
+        <section id="our-partner" className="">
           <Container>
             <h3 className="font-montserrat font-extrabold text-4xl text-center capitalize md:text-5xl">
               Partnered with the world’s best companies
@@ -292,7 +291,7 @@ const Home: NextPage = () => {
             ))}
           </div>
         </section>
-        <section id="section-8" className="">
+        <section id="be-part-of" className="">
           <Container>
             <div className="space-y-11 flex flex-col md:flex-row md:space-y-0 md:space-x-10">
               <div className="space-y-11 md:space-y-0 md:flex md:flex-col-reverse md:flex-1 md:justify-between">
@@ -310,7 +309,6 @@ const Home: NextPage = () => {
                       Be part of the next gaming phenomenon
                     </h3>
                   </div>
-
                   <h4 className="font-lato font-normal text-2xl text-center capitalize md:text-left">
                     Looking to make a media inquiry ? Any feedback or
                     suggestions about one of our games? Fill out the form and
@@ -383,7 +381,7 @@ const Home: NextPage = () => {
           </Container>
         </section>
       </div>
-    </div>
+    </>
   );
 };
 
