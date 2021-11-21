@@ -10,10 +10,7 @@ export interface NavbarProps {
 const Navbar = (props: NavbarProps): JSX.Element => {
   const { children } = props;
   return (
-    <div
-      id="navbar"
-      className="w-full flex justify-between py-4 mb-10 md:pt-12"
-    >
+    <div id="navbar" className="w-full flex justify-between py-6 mb-10">
       <Link href="/" passHref>
         <a className="flex justify-center items-center">
           <Image
@@ -51,12 +48,12 @@ const Navbar = (props: NavbarProps): JSX.Element => {
               Contact Us
             </a>
           </Link>
-          <button className="border border-gray-700 bg-black px-4 py-2 rounded-lg">
+          <button className="border border-gray-700 bg-black px-4 py-1 lg:py-2 rounded-lg">
             <a className="font-montserrat font-semibold text-xs lg:text-lg text-white">
               Start Free Trial
             </a>
           </button>
-          <button className="border border-gray-700 px-4 py-2 rounded-lg">
+          <button className="border border-gray-700 px-4 py-1 lg:py-2 rounded-lg">
             <a className="font-montserrat font-semibold text-xs lg:text-lg">
               Login
             </a>

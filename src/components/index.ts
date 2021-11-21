@@ -4,3 +4,4 @@ export * from "./Container";
 export * from "./Card";
 export * from "./Layout";
 export * from "./Footer";
+export * from "./Timeline";

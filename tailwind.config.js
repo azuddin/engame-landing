@@ -16,5 +16,18 @@ module.exports = {
   variants: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    function ({ addUtilities }) {
+      const extendUnderline = {
+        ".underline": {
+          textDecoration: "underline",
+          "text-decoration-thickness": ".35rem",
+        },
+        ".underline-yellow": {
+          "text-decoration-color": "#FFA800",
+        },
+      };
+      addUtilities(extendUnderline);
+    },
+  ],
 };

@@ -189,8 +189,8 @@ const Home: NextPage = () => {
             </div>
           </Container>
           <div className="flex overflow-auto space-x-6 md:space-x-10">
-            {[...Array(6)].map((index) => (
-              <div key={`game-${index}`} className="flex flex-col w-60 md:w-80">
+            {[...Array(6)].map((index, key) => (
+              <div key={`game-${key}`} className="flex flex-col w-60 md:w-80">
                 <div className="flex">
                   <Image
                     src="/assets/images/home-5.png"
@@ -281,8 +281,8 @@ const Home: NextPage = () => {
             </h3>
           </Container>
           <div className="flex overflow-auto">
-            {[...Array(5)].map((index) => (
-              <div key={`partner-${index}`} className="w-72">
+            {[...Array(5)].map((index, key) => (
+              <div key={`partner-${key}`} className="w-72">
                 <Image
                   src="/assets/images/home-6.png"
                   width={300}

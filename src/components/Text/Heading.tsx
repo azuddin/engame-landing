@@ -1,4 +1,4 @@
-import { filterClassNames } from "@engame/utils/filterClassNames";
+import { filterClassNames } from "@engame/utils";
 import { ElementType, ReactNode } from "react";
 
 export interface HeadingProps {
@@ -9,10 +9,22 @@ export interface HeadingProps {
   weight?: string;
   capitalize?: boolean;
   truncate?: boolean;
+  overflowEllipsis?: boolean;
+  color?: string;
 }
 
 const Heading = (props: HeadingProps): JSX.Element => {
-  const { children, level, size, align, weight, capitalize, truncate } = props;
+  const {
+    children,
+    level,
+    size,
+    align,
+    weight,
+    capitalize,
+    truncate,
+    overflowEllipsis,
+    color,
+  } = props;
   const HeadingTag = `h${level}` as ElementType;
 
   const classNames = filterClassNames([
@@ -22,6 +34,8 @@ const Heading = (props: HeadingProps): JSX.Element => {
     weight ? weight : "font-extrabold",
     capitalize ? "capitalize" : "",
     truncate ? "truncate" : "", // to make this work, parent must defined width
+    overflowEllipsis ? "overflow-ellipsis overflow-hidden pb-1" : "",
+    color ? color : "",
   ]);
   return <HeadingTag className={classNames}>{children}</HeadingTag>;
 };
