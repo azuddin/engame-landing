@@ -14,50 +14,52 @@ const Navbar = (props: NavbarProps): JSX.Element => {
       id="navbar"
       className="w-full flex justify-between py-4 mb-10 md:pt-12"
     >
-      <div className="flex justify-center items-center">
-        <Image
-          src="/assets/images/logo.png"
-          width={180}
-          height={32}
-          alt="logo"
-        />
-      </div>
+      <Link href="/" passHref>
+        <a className="flex justify-center items-center">
+          <Image
+            src="/assets/images/logo.png"
+            width={180}
+            height={32}
+            alt="logo"
+          />
+        </a>
+      </Link>
       <div id="navbar-menu">
         <div className="hidden md:flex items-center space-x-1 lg:space-x-2">
           <Link href="/our-story" passHref>
-            <p className="font-montserrat font-semibold text-xs lg:text-lg px-2">
+            <a className="font-montserrat font-semibold text-xs lg:text-lg px-2">
               Our Story
-            </p>
+            </a>
           </Link>
           <Link href="/pricing" passHref>
-            <p className="font-montserrat font-semibold text-xs lg:text-lg px-2">
+            <a className="font-montserrat font-semibold text-xs lg:text-lg px-2">
               Pricing
-            </p>
+            </a>
           </Link>
           <Link href="/blog" passHref>
-            <p className="font-montserrat font-semibold text-xs lg:text-lg px-2">
+            <a className="font-montserrat font-semibold text-xs lg:text-lg px-2">
               Blog
-            </p>
+            </a>
           </Link>
           <Link href="/faq" passHref>
-            <p className="font-montserrat font-semibold text-xs lg:text-lg px-2">
+            <a className="font-montserrat font-semibold text-xs lg:text-lg px-2">
               FAQ
-            </p>
+            </a>
           </Link>
           <Link href="/contact-us" passHref>
-            <p className="font-montserrat font-semibold text-xs lg:text-lg px-2">
+            <a className="font-montserrat font-semibold text-xs lg:text-lg px-2">
               Contact Us
-            </p>
+            </a>
           </Link>
           <button className="border border-gray-700 bg-black px-4 py-2 rounded-lg">
-            <p className="font-montserrat font-semibold text-xs lg:text-lg text-white">
+            <a className="font-montserrat font-semibold text-xs lg:text-lg text-white">
               Start Free Trial
-            </p>
+            </a>
           </button>
           <button className="border border-gray-700 px-4 py-2 rounded-lg">
-            <p className="font-montserrat font-semibold text-xs lg:text-lg">
+            <a className="font-montserrat font-semibold text-xs lg:text-lg">
               Login
-            </p>
+            </a>
           </button>
         </div>
         <button className="border border-gray-700 p-2 rounded-lg md:hidden">
