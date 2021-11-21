@@ -15,36 +15,39 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div id="content" className="space-y-16 md:space-y-24">
-        <section
-          id="are-you-interested"
-          className="space-y-16 md:flex md:items-center md:flex-row-reverse md:space-y-0"
-        >
+        <section id="are-you-interested">
           <Container>
-            <div className="flex justify-center md:flex-1 md:justify-end">
-              <Image
-                src="/assets/images/home-1.png"
-                width={800}
-                height={800}
-                alt="home-1"
-              />
-            </div>
-            <div className="space-y-16 md:space-y-8 md:flex-1">
-              <div className="mb-8 md:mb-0">
-                <Heading level={1} align="text-center md:text-left" capitalize>
-                  Are you interested to join us? Let&apos;s grow together!
-                </Heading>
+            <div className="space-y-16 md:flex md:items-center md:flex-row-reverse md:space-y-0">
+              <div className="flex justify-center md:flex-1 md:justify-end">
+                <Image
+                  src="/assets/images/home-1.png"
+                  width={800}
+                  height={800}
+                  alt="home-1"
+                />
               </div>
-              <div className="space-y-2 md:inline-grid">
-                <button className="border-2 border-black bg-black p-2 w-full rounded-lg md:w-auto md:px-6 md:py-4">
-                  <p className="font-montserrat text-white font-semibold">
-                    I&apos;am A Brand Owner
-                  </p>
-                </button>
-                <button className="border-2 border-black bg-white p-2 w-full rounded-lg md:w-auto md:px-6 md:py-4">
-                  <p className="font-montserrat text-black font-semibold">
-                    Nope. I&apos;m A Gamer
-                  </p>
-                </button>
+              <div className="space-y-16 md:space-y-8 md:flex-1">
+                <div className="mb-8 md:mb-0">
+                  <Heading
+                    level={1}
+                    align="text-center md:text-left"
+                    capitalize
+                  >
+                    Are you interested to join us? Let&apos;s grow together!
+                  </Heading>
+                </div>
+                <div className="space-y-2 md:inline-grid">
+                  <button className="border-2 border-black bg-black p-2 w-full rounded-lg md:w-auto md:px-6 md:py-4">
+                    <p className="font-montserrat text-white font-semibold">
+                      I&apos;am A Brand Owner
+                    </p>
+                  </button>
+                  <button className="border-2 border-black bg-white p-2 w-full rounded-lg md:w-auto md:px-6 md:py-4">
+                    <p className="font-montserrat text-black font-semibold">
+                      Nope. I&apos;m A Gamer
+                    </p>
+                  </button>
+                </div>
               </div>
             </div>
           </Container>
