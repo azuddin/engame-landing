@@ -52,52 +52,55 @@ const Home: NextPage = () => {
             </div>
           </Container>
         </section>
-        <section id="proven-gamification" className="space-y-16">
+        <section id="proven-gamification">
           <Container>
-            <Heading level={2} size="text-4xl md:text-5xl" capitalize>
-              Proven gamification model delivered to superapps across the globe
-            </Heading>
-            <div className="space-y-16 md:space-y-0 md:grid md:grid-cols-4 md:gap-4">
-              <Card
-                image={{
-                  src: "/assets/images/home-2.png",
-                  width: 200,
-                  height: 200,
-                  alt: "home-2",
-                }}
-                title="+9 Million"
-                description="Players"
-              />
-              <Card
-                image={{
-                  src: "/assets/images/home-2.png",
-                  width: 200,
-                  height: 200,
-                  alt: "home-2",
-                }}
-                title="+163 Million"
-                description="Games played"
-              />
-              <Card
-                image={{
-                  src: "/assets/images/home-2.png",
-                  width: 200,
-                  height: 200,
-                  alt: "home-2",
-                }}
-                title="+16 Minutes"
-                description="Played per session"
-              />
-              <Card
-                image={{
-                  src: "/assets/images/home-2.png",
-                  width: 200,
-                  height: 200,
-                  alt: "home-2",
-                }}
-                title="+9 Million"
-                description="Across the globe"
-              />
+            <div className="space-y-16">
+              <Heading level={2} size="text-4xl md:text-5xl" capitalize>
+                Proven gamification model delivered to superapps across the
+                globe
+              </Heading>
+              <div className="space-y-16 md:space-y-0 md:grid md:grid-cols-4 md:gap-4">
+                <Card
+                  image={{
+                    src: "/assets/images/home-2.png",
+                    width: 200,
+                    height: 200,
+                    alt: "home-2",
+                  }}
+                  title="+9 Million"
+                  description="Players"
+                />
+                <Card
+                  image={{
+                    src: "/assets/images/home-2.png",
+                    width: 200,
+                    height: 200,
+                    alt: "home-2",
+                  }}
+                  title="+163 Million"
+                  description="Games played"
+                />
+                <Card
+                  image={{
+                    src: "/assets/images/home-2.png",
+                    width: 200,
+                    height: 200,
+                    alt: "home-2",
+                  }}
+                  title="+16 Minutes"
+                  description="Played per session"
+                />
+                <Card
+                  image={{
+                    src: "/assets/images/home-2.png",
+                    width: 200,
+                    height: 200,
+                    alt: "home-2",
+                  }}
+                  title="+9 Million"
+                  description="Across the globe"
+                />
+              </div>
             </div>
           </Container>
         </section>

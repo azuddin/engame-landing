@@ -3,6 +3,30 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 
+const TEAM_LIST = [
+  {
+    avatar: "/assets/images/home-2.png",
+    name: "Vincent Chong",
+    title: "The Mastermind CEO",
+    quoat:
+      "“grow this studio to a place where creative game person from all around the world can gather.”",
+  },
+  {
+    avatar: "/assets/images/home-2.png",
+    name: "Jasmine Ng",
+    title: "Business Leader Co-founder",
+    quoat:
+      "“games and engagement thru entertainment will bring about the next paradigm shift in technological evolution for new business.”",
+  },
+  {
+    avatar: "/assets/images/home-2.png",
+    name: "Cham Lee",
+    title: "The Archbishop CTO",
+    quoat:
+      "“Whether you’re A casual gamer, OR you’re an enthusiast, there’s a large market for us.”",
+  },
+];
+
 const OurStory: NextPage = () => {
   return (
     <>
@@ -36,7 +60,7 @@ const OurStory: NextPage = () => {
         </section>
         <section id="game-is-one" className="">
           <Container>
-            <div className="space-y-10">
+            <div className="space-y-16">
               <Heading level={2} capitalize size="text-4xl">
                 Gaming Is One Of Those Things That’s Pretty Amazing Because When
                 You Think About It, Everybody wants to game.
@@ -82,26 +106,26 @@ const OurStory: NextPage = () => {
                     <div className="flex flex-col px-8 md:px-0 space-y-8 md:flex-1 md:space-y-4">
                       <Heading
                         level={1}
-                        size="text-4xl md:text-3xl"
+                        size="text-4xl md:text-3xl lg:text-4xl"
                         align="text-center md:text-left"
                         overflowEllipsis
                       >
                         Studio That Gamifies Consumer Engagement
                       </Heading>
                       <ol className="list-decimal space-y-2 pl-8 md:pl-4">
-                        <li className="font-montserrat text-2xl md:text-sm text-center md:text-left font-semibold capitalize">
+                        <li className="font-montserrat text-2xl md:text-sm xl:text-xl text-center md:text-left font-semibold capitalize">
                           Pioneer in offering Games as a Service - Tap Master to
                           brands &amp; businesses such as Tealive, Fave, Mydin
                           and Herbalife
                         </li>
-                        <li className="font-montserrat text-2xl md:text-sm text-center md:text-left font-semibold capitalize">
+                        <li className="font-montserrat text-2xl md:text-sm xl:text-xl text-center md:text-left font-semibold capitalize">
                           Commercial Ready Game Winner of MDEC DiCE
                         </li>
-                        <li className="font-montserrat text-2xl md:text-sm text-center md:text-left font-semibold capitalize">
+                        <li className="font-montserrat text-2xl md:text-sm xl:text-xl text-center md:text-left font-semibold capitalize">
                           The only game studio selected by Maxis as one of the
                           Top 100 startups in Maxis Market Access Day
                         </li>
-                        <li className="font-montserrat text-2xl md:text-sm text-center md:text-left font-semibold capitalize">
+                        <li className="font-montserrat text-2xl md:text-sm xl:text-xl text-center md:text-left font-semibold capitalize">
                           Also developing on our own game “Rogue Planet”,
                           scheduled to be launch in 5 years
                         </li>
@@ -210,40 +234,50 @@ const OurStory: NextPage = () => {
               </Heading>
             </div>
           </Container>
-          <div className="space-y-10">
-            <div className="flex justify-center">
-              <Image
-                src="/assets/images/home-2.png"
-                width={769}
-                height={769}
-                alt="home-2"
-                className="md:rounded-3xl"
-              />
-            </div>
-            <Container>
-              <div className="space-y-6">
-                <Heading
-                  level={3}
-                  size="text-3xl"
-                  weight="font-bold"
-                  capitalize
-                >
-                  “grow this studio to a place where creative game person from
-                  all around the world can gather.”
-                </Heading>
-                <Heading level={3} size="text-4xl" color="text-yellow-400">
-                  Vincent Chong
-                </Heading>
-                <p className="font-montserrat font-bold text-2xl text-center">
-                  The Mastermind CEO
-                </p>
+          <div className="md:container md:mx-auto md:px-5">
+            <div className="overflow-auto space-y-4">
+              <div className="flex justify-between pb-10">
+                {TEAM_LIST.map((person) => (
+                  <div className="min-w-full md:min-w-max">
+                    <div className="flex flex-col items-center md:w-56 lg:w-72 xl:w-80 space-y-10">
+                      <Image
+                        src={person.avatar}
+                        width={384}
+                        height={384}
+                        alt="home-2"
+                      />
+                      <Container>
+                        <div className="space-y-6">
+                          <Heading
+                            level={3}
+                            size="text-3xl"
+                            weight="font-bold"
+                            capitalize
+                          >
+                            {person.quoat}
+                          </Heading>
+                          <Heading
+                            level={3}
+                            size="text-4xl"
+                            color="text-yellow-400"
+                          >
+                            {person.name}
+                          </Heading>
+                          <p className="font-montserrat font-bold text-2xl text-center">
+                            {person.title}
+                          </p>
+                        </div>
+                      </Container>
+                    </div>
+                  </div>
+                ))}
               </div>
-            </Container>
-            <div className="flex justify-center space-x-4">
-              <div className="w-4 h-4 rounded-full bg-black"></div>
-              <div className="w-4 h-4 rounded-full bg-gray-300"></div>
-              <div className="w-4 h-4 rounded-full bg-gray-300"></div>
             </div>
+          </div>
+          <div className="justify-center space-x-5 md:hidden flex">
+            <button className="w-5 h-5 bg-gray-800 shadow-lg rounded-full"></button>
+            <button className="w-5 h-5 bg-gray-400 shadow-lg rounded-full"></button>
+            <button className="w-5 h-5 bg-gray-400 shadow-lg rounded-full"></button>
           </div>
         </section>
         <section id="our-partner" className="">
