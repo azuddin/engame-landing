@@ -1,12 +1,12 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import Image from "next/image";
-import { Heading, Container, Card } from "@engame/components";
+import { Section } from "@engame/components";
+import Link from "next/link";
 
 const Home: NextPage = () => {
   return (
     <>
-      <Head>
+      {/* <Head>
         <title>Engame Landing</title>
         <meta
           name="description"
@@ -386,7 +386,200 @@ const Home: NextPage = () => {
             </div>
           </Container>
         </section>
-      </div>
+      </div> */}
+      <Head>
+        <title>Engame Landing</title>
+        <meta
+          name="description"
+          content="Sunt ullamco do adipisicing dolore occaecat qui eiusmod ut irure."
+        />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <Section bgColor="bg-gray-200">
+        <div className="flex flex-col-reverse md:flex-row justify-between">
+          <div className="flex flex-col justify-start space-y-2">
+            <p className="text-center md:text-left">
+              Are You Interested To Join Us? Let's Grow Together!
+            </p>
+            <Link href="/im-brand-owner" passHref>
+              <button className="border border-black bg-black text-white rounded">
+                I'm A Brand Owner
+              </button>
+            </Link>
+            <Link href="/im-gamer" passHref>
+              <button className="border border-black rounded">
+                Nope, I'm A Gamer
+              </button>
+            </Link>
+          </div>
+          <div className="flex justify-center items-center">
+            <div className="w-20 h-20 bg-gray-400 rounded"></div>
+          </div>
+        </div>
+      </Section>
+      <Section bgColor="bg-gray-300">
+        <div className="flex flex-col items-center space-y-4">
+          <p className="text-center md:text-left">
+            Proven Gamification Model Delivered To Superapps Across The Globe
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-20">
+            <div className="flex flex-col justify-center">
+              <div className="h-20 w-20 rounded bg-gray-400"></div>
+              <p className="text-center">+9 Million</p>
+              <p className="text-center">Players</p>
+            </div>
+            <div className="flex flex-col justify-center">
+              <div className="h-20 w-20 rounded bg-gray-400"></div>
+              <p className="text-center">+9 Million</p>
+              <p className="text-center">Players</p>
+            </div>
+            <div className="flex flex-col justify-center">
+              <div className="h-20 w-20 rounded bg-gray-400"></div>
+              <p className="text-center">+9 Million</p>
+              <p className="text-center">Players</p>
+            </div>
+            <div className="flex flex-col justify-center">
+              <div className="h-20 w-20 rounded bg-gray-400"></div>
+              <p className="text-center">+9 Million</p>
+              <p className="text-center">Players</p>
+            </div>
+          </div>
+        </div>
+      </Section>
+      <Section bgColor="bg-gray-200">
+        <div className="flex flex-col space-y-2 md:space-y-2">
+          <p className="text-center">Next-Gen Enter-Gagement Platform</p>
+          <div className="flex flex-col-reverse md:flex-col items-center">
+            <div className="flex flex-col space-y-2 md:flex-row md:space-x-4 md:space-y-0">
+              <div className="rounded bg-yellow-200 px-4 py-2">
+                <p>+30 Games free to play</p>
+                <p>
+                  Creating amazing games is our DNA! Come and discover our
+                  latest games and future releases.
+                </p>
+              </div>
+              <div className="rounded bg-yellow-200 px-4 py-2">
+                <p>+30 Games free to play</p>
+                <p>
+                  Creating amazing games is our DNA! Come and discover our
+                  latest games and future releases.
+                </p>
+              </div>
+            </div>
+            <div className="h-20 w-20 rounded bg-gray-400 mb-2 md:mt-2 md:mb-0"></div>
+          </div>
+        </div>
+      </Section>
+      <Section bgColor="bg-gray-300">
+        <div className="flex flex-col md:flex-row space-y-2 md:space-x-2 md:space-y-0">
+          <div className="flex flex-col md:w-1/3 items-center md:items-start">
+            <div className="h-20 w-20 rounded bg-gray-400 mb-2 md:mt-2 md:mb-0"></div>
+            <p className="text-center md:text-left">How it work easier?</p>
+            <p className="text-center md:text-left">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+              netus et ut imperdiet et quisque donec
+            </p>
+          </div>
+          <div className="flex-grow flex justify-center items-center bg-black rounded">
+            <div className="h-20 w-20 rounded bg-gray-400"></div>
+          </div>
+        </div>
+      </Section>
+      <Section bgColor="bg-gray-200">
+        <div className="flex flex-col items-center">
+          <p>Trending Games</p>
+          <div className="w-full flex flex-row overflow-auto space-x-2 pb-2">
+            {[...Array(8)].map((i, k) => (
+              <div key={k} className="flex flex-col">
+                <div className="h-28 w-28 rounded bg-gray-400"></div>
+                <p>Legendary moai</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </Section>
+      <Section bgColor="bg-gray-300">
+        <div className="grid grid-cols-1 md:grid-cols-2">
+          <div className="flex flex-col items-center space-y-2">
+            <p>Learn more about Why Superbrand work with us</p>
+            <div className="h-28 w-28 rounded bg-gray-400"></div>
+            <button className="px-2 py-1 text-base bg-black text-white rounded">
+              Get A Free Demo
+            </button>
+          </div>
+          <div className="flex flex-col items-center space-y-2">
+            <p>Learn more about Why Superbrand work with us</p>
+            <div className="h-28 w-28 rounded bg-gray-400"></div>
+            <button className="px-2 py-1 text-base bg-black text-white rounded">
+              Get A Free Demo
+            </button>
+          </div>
+        </div>
+      </Section>
+      <Section bgColor="bg-gray-200">
+        <div className="flex flex-col items-center">
+          <p>Partnered with the world’s best companies</p>
+          <div className="w-full flex flex-row overflow-auto space-x-2 pb-2">
+            {[...Array(10)].map((i, k) => (
+              <div key={k} className="flex flex-col">
+                <div className="h-20 w-20 rounded bg-gray-400"></div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </Section>
+      <Section bgColor="bg-gray-300">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+          <div className="flex flex-col-reverse md:flex-col">
+            <div className="flex flex-col">
+              <p>Be part of the next gaming phenomenon</p>
+              <p>
+                Looking to make a media inquiry ? Any feedback or suggestions
+                about one of our games? Fill out the form and we'll get back to
+                you !
+              </p>
+            </div>
+            <div className="flex flex-col">
+              <div className="h-20 w-20 rounded bg-gray-400"></div>
+            </div>
+          </div>
+          <div className="flex flex-col">
+            <div className="flex flex-col">
+              <label htmlFor="name">
+                Name <span className="text-red-600">*</span>
+              </label>
+              <input name="name" id="name" type="text" />
+            </div>
+            <div className="flex flex-col">
+              <label htmlFor="company_name">
+                Company Name <span className="text-red-600">*</span>
+              </label>
+              <input name="company_name" id="company_name" type="text" />
+            </div>
+            <div className="flex flex-col">
+              <label htmlFor="email">
+                Email <span className="text-red-600">*</span>
+              </label>
+              <input name="email" id="email" type="email" />
+            </div>
+            <div className="flex flex-col">
+              <label htmlFor="phone_number">
+                Phone Number <span className="text-red-600">*</span>
+              </label>
+              <input name="phone_number" id="phone_number" type="text" />
+            </div>
+            <div className="flex flex-col">
+              <label htmlFor="message">
+                Enter Your Message <span className="text-red-600">*</span>
+              </label>
+              <textarea name="message" id="message" rows={4}></textarea>
+            </div>
+            <button className="px-2 py-1 text-base bg-black text-white rounded">
+              Submit Enquiry
+            </button>
+          </div>
+        </div>
+      </Section>
     </>
   );
 };

@@ -10,62 +10,67 @@ export interface NavbarProps {
 const Navbar = (props: NavbarProps): JSX.Element => {
   const { children } = props;
   return (
-    <div className="fixed md:block overflow-auto px-5 bg-white z-20 w-full left-0 top-0">
-      <div
-        id="navbar"
-        className="w-full flex justify-between items-center h-16"
-      >
-        <Link href="/" passHref>
-          <a className="flex justify-center items-center">
-            <Image
-              src="/assets/images/logo.png"
-              width={180}
-              height={32}
-              alt="logo"
-            />
-          </a>
-        </Link>
-        <div id="navbar-menu">
-          <div className="hidden md:flex items-center space-x-1 lg:space-x-2">
+    <div className="flex flex-col">
+      <div className="z-20 shadow">
+        <div className="container mx-auto px-4 lg:px-36 py-2 flex justify-between items-center">
+          <Link href="/" passHref>
+            <a href="#">LOGO</a>
+          </Link>
+          <button
+            id="burger"
+            className="px-2 py-1 md:hidden flex items-center text-base border-2 border-black rounded"
+          >
+            <FiMenu size={22} />
+          </button>
+          <div id="nav" className="space-x-1 md:flex hidden">
             <Link href="/our-story" passHref>
-              <a className="font-montserrat font-semibold text-xs lg:text-lg px-2">
-                Our Story
-              </a>
+              <button className="px-2 py-1 text-base">Our Story</button>
             </Link>
             <Link href="/pricing" passHref>
-              <a className="font-montserrat font-semibold text-xs lg:text-lg px-2">
-                Pricing
-              </a>
+              <button className="px-2 py-1 text-base">Pricing</button>
             </Link>
             <Link href="/blog" passHref>
-              <a className="font-montserrat font-semibold text-xs lg:text-lg px-2">
-                Blog
-              </a>
+              <button className="px-2 py-1 text-base">Blog</button>
             </Link>
             <Link href="/faq" passHref>
-              <a className="font-montserrat font-semibold text-xs lg:text-lg px-2">
-                FAQ
-              </a>
+              <button className="px-2 py-1 text-base">FAQ</button>
             </Link>
             <Link href="/contact-us" passHref>
-              <a className="font-montserrat font-semibold text-xs lg:text-lg px-2">
-                Contact Us
-              </a>
+              <button className="px-2 py-1 text-base">Contact Us</button>
             </Link>
-            <button className="border border-gray-700 bg-black px-4 py-1 lg:py-2 rounded-lg">
-              <a className="font-montserrat font-semibold text-xs lg:text-lg text-white">
-                Start Free Trial
-              </a>
+            <button className="px-2 py-1 text-base bg-black text-white rounded">
+              Start Free Trial
             </button>
-            <button className="border border-gray-700 px-4 py-1 lg:py-2 rounded-lg">
-              <a className="font-montserrat font-semibold text-xs lg:text-lg">
-                Login
-              </a>
+            <button className="px-2 py-1 border-2 border-black rounded">
+              Login
             </button>
           </div>
-          <button className="border border-gray-700 p-2 rounded-lg md:hidden">
-            <FiMenu size={16} />
+        </div>
+      </div>
+      <div className="fixed top-12 p-4 w-full h-full bg-gray-100 z-10 hidden">
+        <div className="flex flex-col space-y-4">
+          <Link href="/our-story" passHref>
+            <button className="text-base text-left">Our Story</button>
+          </Link>
+          <Link href="/pricing" passHref>
+            <button className="text-base text-left">Pricing</button>
+          </Link>
+          <Link href="/blog" passHref>
+            <button className="text-base text-left">Blog</button>
+          </Link>
+          <Link href="/faq" passHref>
+            <button className="text-base text-left">FAQ</button>
+          </Link>
+          <Link href="/contact-us" passHref>
+            <button className="text-base text-left">Contact Us</button>
+          </Link>
+          <div className="flex flex-col items-center">
+            <div className="h-20 w-20 rounded bg-gray-400"></div>
+          </div>
+          <button className="text-base bg-black text-white rounded">
+            Start Free Trial
           </button>
+          <button className="border-2 border-black rounded">Login</button>
         </div>
       </div>
     </div>

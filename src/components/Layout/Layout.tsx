@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { Container, Footer, Navbar } from "@engame/components";
+import { Footer, Navbar } from "@engame/components";
 
 export interface LayoutProps {
   children?: ReactNode;
@@ -8,11 +8,9 @@ export interface LayoutProps {
 const Layout = (props: LayoutProps): JSX.Element => {
   const { children } = props;
   return (
-    <div className="w-full max-w-7xl mx-auto overflow-hidden">
-      <Container>
-        <Navbar />
-      </Container>
-      <div className="mt-16 overflow-auto h-screen pb-24">
+    <div className="flex flex-1 flex-col h-screen">
+      <Navbar />
+      <div className="overflow-auto flex flex-1 flex-col">
         {children}
         <Footer />
       </div>

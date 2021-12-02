@@ -1,7 +1,6 @@
-import { Container, Heading, CardTimeline } from "@engame/components";
+import { Section } from "@engame/components";
 import type { NextPage } from "next";
 import Head from "next/head";
-import Image from "next/image";
 
 const TEAM_LIST = [
   {
@@ -38,7 +37,7 @@ const OurStory: NextPage = () => {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div id="content" className="space-y-16 md:space-y-24">
+      {/* <div id="content" className="space-y-16 md:space-y-24">
         <section id="our-story" className="space-y-2 lg:space-y-10">
           <Container>
             <div className="flex items-center justify-center h-12 relative">
@@ -327,7 +326,197 @@ const OurStory: NextPage = () => {
             </div>
           </Container>
         </section>
-      </div>
+      </div> */}
+      <Section bgColor="bg-gray-200">
+        <div className="flex flex-col items-center">
+          <p>Our Story</p>
+          <div className="flex justify-center items-center">
+            <div className="w-20 h-20 bg-gray-400 rounded"></div>
+          </div>
+        </div>
+      </Section>
+      <Section bgColor="bg-gray-300">
+        <div className="flex flex-col items-center">
+          <p>
+            Gaming Is One Of Those Things That’s Pretty Amazing Because When You
+            Think About It, Everybody wants to game.
+          </p>
+          <p>
+            The story of Engame originally started in 2015 with the merger of
+            two passionate game making studios.
+          </p>
+        </div>
+      </Section>
+      <Section bgColor="bg-gray-200">
+        <div className="flex flex-row space-x-2">
+          <p className="flex-1 hidden md:block"></p>
+          <div className="flex flex-col items-center">
+            <div className="h-5 w-5 rounded-full border-4 border-black"></div>
+            <div className="flex-1 h-20 w-1 border-2 border-black"></div>
+          </div>
+          <div className="flex-1 flex flex-col">
+            <p>Dec 2015</p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna
+              pulvinar sit aenean nunc nunc gravida elit.
+            </p>
+          </div>
+        </div>
+        <div className="flex flex-row md:flex-row-reverse space-x-2 space-x md:space-x-reverse">
+          <p className="flex-1 hidden md:block"></p>
+          <div className="flex flex-col items-center">
+            <div className="h-5 w-5 rounded-full border-4 border-black"></div>
+            <div className="flex-1 h-20 w-1 border-2 border-black"></div>
+          </div>
+          <div className="flex-1 flex flex-col">
+            <p className="md:text-right">Dec 2015</p>
+            <p className="md:text-right">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna
+              pulvinar sit aenean nunc nunc gravida elit.
+            </p>
+          </div>
+        </div>
+      </Section>
+      <Section bgColor="bg-gray-300">
+        <div className="flex flex-col-reverse md:flex-row md:space-x-2">
+          <div className="flex-1 flex flex-col">
+            <p>Studio That Gamifies Consumer Engagement</p>
+            <ol className="list-decimal pl-4">
+              <li>
+                Pioneer in offering Games as a Service - Tap Master to brands &
+                businesses such as Tealive, Fave, Mydin and Herbalife
+              </li>
+              <li>Commercial Ready Game Winner of MDEC DiCE</li>
+              <li>
+                The only game studio selected by Maxis as one of the Top 100
+                startups in Maxis Market Access Day
+              </li>
+              <li>
+                Also developing on our own game “Rogue Planet”, scheduled to be
+                launch in 5 years
+              </li>
+            </ol>
+          </div>
+          <div className="flex-1 flex justify-center items-center">
+            <div className="w-20 h-20 bg-gray-400 rounded"></div>
+          </div>
+        </div>
+      </Section>
+      <Section bgColor="bg-gray-200">
+        <p className="text-center">
+          strategic plan that defines a goal or desired outcome and includes the
+          major steps or milestones needed to reach it.
+        </p>
+      </Section>
+      <Section bgColor="bg-gray-300">
+        <div className="flex flex-col space-y-2">
+          <div className="w-full flex flex-row overflow-auto space-x-2 justify-center">
+            <p className="bg-gray-400 px-2 py-1 rounded">2021</p>
+            <p className="bg-gray-400 px-2 py-1 rounded">2022</p>
+            <p className="bg-gray-400 px-2 py-1 rounded">2023</p>
+          </div>
+          <div className="flex-1 flex justify-center items-center md:hidden">
+            <div className="w-20 h-20 bg-gray-400 rounded"></div>
+          </div>
+          <div className="flex flex-col">
+            <div className="flex flex-row space-x-2">
+              <p className="flex-1 hidden md:block"></p>
+              <div className="flex flex-col items-center">
+                <div className="h-5 w-5 rounded-full border-4 border-black"></div>
+                <div className="flex-1 h-20 w-1 border-2 border-black"></div>
+              </div>
+              <div className="flex-1 flex flex-col">
+                <p>Dec 2015</p>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna
+                  pulvinar sit aenean nunc nunc gravida elit.
+                </p>
+              </div>
+            </div>
+            <div className="flex flex-row space-x-2">
+              <p className="flex-1 hidden md:block"></p>
+              <div className="flex flex-col items-center">
+                <div className="h-5 w-5 rounded-full border-4 border-black"></div>
+                <div className="flex-1 h-20 w-1 border-2 border-black"></div>
+              </div>
+              <div className="flex-1 flex flex-col">
+                <p>Dec 2015</p>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna
+                  pulvinar sit aenean nunc nunc gravida elit.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </Section>
+      <Section bgColor="bg-gray-200">
+        <div className="flex flex-col items-center">
+          <p>Core Team</p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-2">
+          <div className="flex flex-col items-center">
+            <div className="flex-1 flex justify-center items-center">
+              <div className="w-20 h-20 bg-gray-400 rounded"></div>
+            </div>
+            <p className="text-center md:text-left max-w-xs">
+              “grow this studio to a place where creative game person from all
+              around the world can gather.”
+            </p>
+            <p>Vincent Chong</p>
+            <p>The Mastermind CEO</p>
+          </div>
+          <div className="flex flex-col items-center">
+            <div className="flex-1 flex justify-center items-center">
+              <div className="w-20 h-20 bg-gray-400 rounded"></div>
+            </div>
+            <p className="text-center md:text-left max-w-xs">
+              “grow this studio to a place where creative game person from all
+              around the world can gather.”
+            </p>
+            <p>Vincent Chong</p>
+            <p>The Mastermind CEO</p>
+          </div>
+          <div className="flex flex-col items-center">
+            <div className="flex-1 flex justify-center items-center">
+              <div className="w-20 h-20 bg-gray-400 rounded"></div>
+            </div>
+            <p className="text-center md:text-left max-w-xs">
+              “grow this studio to a place where creative game person from all
+              around the world can gather.”
+            </p>
+            <p>Vincent Chong</p>
+            <p>The Mastermind CEO</p>
+          </div>
+        </div>
+      </Section>
+      <Section bgColor="bg-gray-200">
+        <div className="flex flex-col items-center">
+          <p>Partnered with the world’s best companies</p>
+          <div className="w-full flex flex-row overflow-auto space-x-2 pb-2">
+            {[...Array(10)].map((i, k) => (
+              <div key={k} className="flex flex-col">
+                <div className="h-20 w-20 rounded bg-gray-400"></div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </Section>
+      <Section bgColor="bg-gray-300">
+        <div className="bg-white rounded p-4 shadow">
+          <div className="flex flex-row justify-between">
+            <div className="flex flex-col">
+              <p>Are you interested to join us? Let’s grow together!</p>
+              <p>Come and join us to grow your business together</p>
+            </div>
+            <div className="flex flex-col justify-center">
+              <button className="px-2 py-1 text-base bg-black text-white rounded">
+                Join Now
+              </button>
+            </div>
+          </div>
+        </div>
+      </Section>
     </>
   );
 };
