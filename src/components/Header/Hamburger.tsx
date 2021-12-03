@@ -16,16 +16,16 @@ const Hamburger = (props: { isOpen: boolean }): JSX.Element => {
   const { isOpen } = props;
   return (
     <>
-      <svg viewBox="0 0 23 23" className="h-4 w-4">
+      <svg viewBox="0 0 20 20" className="h-4 w-4">
         <HamburgerPath
           animate={isOpen ? "open" : "closed"}
           variants={{
-            closed: { d: "M 2 2.5 L 20 2.5" },
+            closed: { d: "M 0 2.5 L 20 2.5" },
             open: { d: "M 3 16.5 L 17 2.5" },
           }}
         />
         <HamburgerPath
-          d="M 2 9.423 L 20 9.423"
+          d="M 0 9.423 L 20 9.423"
           animate={isOpen ? "open" : "closed"}
           variants={{
             closed: { opacity: 1 },
@@ -36,7 +36,7 @@ const Hamburger = (props: { isOpen: boolean }): JSX.Element => {
         <HamburgerPath
           animate={isOpen ? "open" : "closed"}
           variants={{
-            closed: { d: "M 2 16.346 L 20 16.346" },
+            closed: { d: "M 0 16.346 L 20 16.346" },
             open: { d: "M 3 2.5 L 17 16.346" },
           }}
         />
