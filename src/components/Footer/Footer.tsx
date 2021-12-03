@@ -34,14 +34,27 @@ const Footer = (): JSX.Element => {
           <button>FB</button>
         </div>
         <div className="menu md:space-x-4 flex flex-col md:flex-row">
-          <button>Our Story</button>
-          <button>Pricing</button>
-          <button>FAQ</button>
-          <button>Contact Us</button>
+          <Link href="/our-story" passHref>
+            <button>Our Story</button>
+          </Link>
+          <Link href="/pricing" passHref>
+            <button>Pricing</button>
+          </Link>
+
+          <Link href="/faq" passHref>
+            <button>FAQ</button>
+          </Link>
+          <Link href="/contact-us" passHref>
+            <button>Contact Us</button>
+          </Link>
         </div>
         <div className="term md:space-x-4 flex flex-col md:flex-row">
-          <button>Privacy</button>
-          <button>Conditions</button>
+          <Link href="/privacy" passHref>
+            <button>Privacy</button>
+          </Link>
+          <Link href="/conditions" passHref>
+            <button>Conditions</button>
+          </Link>
         </div>
       </div>
     </Section>

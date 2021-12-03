@@ -396,23 +396,23 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Section bgColor="bg-gray-200">
-        <div className="flex flex-col-reverse md:flex-row justify-between">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="flex flex-col justify-start space-y-2">
             <p className="text-center md:text-left">
               Are You Interested To Join Us? Let's Grow Together!
             </p>
             <Link href="/im-brand-owner" passHref>
-              <button className="border border-black bg-black text-white rounded">
+              <button className="w-full md:w-40 border border-black bg-black text-white rounded">
                 I'm A Brand Owner
               </button>
             </Link>
             <Link href="/im-gamer" passHref>
-              <button className="border border-black rounded">
+              <button className="w-full md:w-40 border border-black rounded">
                 Nope, I'm A Gamer
               </button>
             </Link>
           </div>
-          <div className="flex justify-center items-center">
+          <div className="order-first md:order-none flex justify-center items-center">
             <div className="w-20 h-20 bg-gray-400 rounded"></div>
           </div>
         </div>

@@ -15,7 +15,7 @@ const FAQ: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Section bgColor="bg-gray-200">
-        <div className="flex flex-col-reverse md:flex-row justify-between">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="flex flex-col justify-start space-y-2">
             <p className="text-center md:text-left">
               We’re here to help you solve your problem

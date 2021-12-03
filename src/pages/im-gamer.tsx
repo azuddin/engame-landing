@@ -15,12 +15,12 @@ const ImGamer: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Section bgColor="bg-gray-200">
-        <div className="flex flex-col-reverse md:flex-row justify-between">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="flex flex-col justify-start space-y-2">
             <p className="text-center md:text-left">
               You can do that now with tap master
             </p>
-            <button className="border border-black bg-black text-white rounded">
+            <button className="w-full md:w-40 border border-black bg-black text-white rounded">
               Play game Now
             </button>
           </div>

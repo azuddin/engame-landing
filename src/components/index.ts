@@ -1,5 +1,5 @@
 export * from "./Text";
-export * from "./Navbar";
+export * from "./Header";
 export * from "./Container";
 export * from "./Card";
 export * from "./Layout";

@@ -1,26 +1,27 @@
-import { ReactNode } from "react";
-import Image from "next/image";
+import { ReactNode, useState } from "react";
 import Link from "next/link";
-import { FiMenu } from "react-icons/fi";
+import { Hamburger } from "@engame/components";
 
 export interface NavbarProps {
   children?: ReactNode;
 }
 
 const Navbar = (props: NavbarProps): JSX.Element => {
+  const [showMenu, setShowMenu] = useState(false);
   const { children } = props;
   return (
     <div className="flex flex-col">
-      <div className="z-20 shadow">
+      <div className="z-20">
         <div className="container mx-auto px-4 lg:px-36 py-2 flex justify-between items-center">
           <Link href="/" passHref>
             <a href="#">LOGO</a>
           </Link>
           <button
             id="burger"
-            className="px-2 py-1 md:hidden flex items-center text-base border-2 border-black rounded"
+            className="px-2 pt-2 pb-1 md:hidden flex items-center justify-center text-base border-2 border-black rounded"
+            onClick={() => setShowMenu(!showMenu)}
           >
-            <FiMenu size={22} />
+            <Hamburger isOpen={showMenu} />
           </button>
           <div id="nav" className="space-x-1 md:flex hidden">
             <Link href="/our-story" passHref>
@@ -47,7 +48,12 @@ const Navbar = (props: NavbarProps): JSX.Element => {
           </div>
         </div>
       </div>
-      <div className="fixed top-12 p-4 w-full h-full bg-gray-100 z-10 hidden">
+      <div
+        className={
+          "fixed top-12 p-4 w-full h-full bg-gray-100 z-10 " +
+          (showMenu ? "" : "hidden")
+        }
+      >
         <div className="flex flex-col space-y-4">
           <Link href="/our-story" passHref>
             <button className="text-base text-left">Our Story</button>
