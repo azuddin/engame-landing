@@ -479,7 +479,7 @@ const OurStory: NextPage = () => {
               alt="our-story-2"
             />
           </div>
-          <div className="flex flex-col">
+          <div className="flex flex-col border-b-2">
             {[
               {
                 title: "Q1",
@@ -551,43 +551,63 @@ const OurStory: NextPage = () => {
           </div>
         </div>
       </Section>
-      <Section bgColor="bg-gray-200">
-        <div className="flex flex-col items-center">
-          <p>Core Team</p>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-2">
+      <Section>
+        <div className="py-10 space-y-10">
           <div className="flex flex-col items-center">
-            <div className="flex-1 flex justify-center items-center">
-              <div className="w-20 h-20 bg-gray-400 rounded"></div>
-            </div>
-            <p className="text-center md:text-left max-w-xs">
-              “grow this studio to a place where creative game person from all
-              around the world can gather.”
+            <p className="text-center font-montserrat font-extrabold text-4xl">
+              Core Team
             </p>
-            <p>Vincent Chong</p>
-            <p>The Mastermind CEO</p>
           </div>
-          <div className="flex flex-col items-center">
-            <div className="flex-1 flex justify-center items-center">
-              <div className="w-20 h-20 bg-gray-400 rounded"></div>
-            </div>
-            <p className="text-center md:text-left max-w-xs">
-              “grow this studio to a place where creative game person from all
-              around the world can gather.”
-            </p>
-            <p>Vincent Chong</p>
-            <p>The Mastermind CEO</p>
-          </div>
-          <div className="flex flex-col items-center">
-            <div className="flex-1 flex justify-center items-center">
-              <div className="w-20 h-20 bg-gray-400 rounded"></div>
-            </div>
-            <p className="text-center md:text-left max-w-xs">
-              “grow this studio to a place where creative game person from all
-              around the world can gather.”
-            </p>
-            <p>Vincent Chong</p>
-            <p>The Mastermind CEO</p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+            {[
+              {
+                image: "/assets/images/home-2.png",
+                quote:
+                  "“grow this studio to a place where creative game person from all around the world can gather.”",
+                name: "Vincent Chong",
+                title: "The Mastermind CEO",
+              },
+              {
+                image: "/assets/images/home-2.png",
+                quote:
+                  "“games and engagement thru entertainment will bring about the next paradigm shift in technological evolution for new business.”",
+                name: "Jasmine Ng",
+                title: "Business Leader Co-founder",
+              },
+              {
+                image: "/assets/images/home-2.png",
+                quote:
+                  "“Whether you’re A casual gamer, OR you’re an enthusiast, there’s a large market for us.”",
+                name: "Cham Lee",
+                title: "The Archbishop CTO",
+              },
+            ].map((i, k) => (
+              <div
+                key={`team-${k}`}
+                className="flex flex-col items-center md:items-start"
+              >
+                <div className="flex justify-center items-center mb-10">
+                  <div className="max-w-xs flex justify-center">
+                    <Image
+                      src={i.image}
+                      width={800}
+                      height={800}
+                      alt="home-2"
+                      className="rounded-lg"
+                    />
+                  </div>
+                </div>
+                <p className="text-center md:text-left max-w-xs font-montserrat font-bold capitalize text-xl mb-4">
+                  {i.quote}
+                </p>
+                <p className="text-center md:text-left max-w-xs font-montserrat font-bold capitalize text-2xl text-yellow-500 mb-4">
+                  {i.name}
+                </p>
+                <p className="text-center md:text-left max-w-xs font-montserrat font-semibold capitalize text-xl">
+                  {i.title}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </Section>
