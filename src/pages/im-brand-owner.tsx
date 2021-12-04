@@ -2,6 +2,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import { Section } from "@engame/components";
 import Image from "next/image";
+import { FiCheckCircle } from "react-icons/fi";
 
 const ImBrandOwner: NextPage = () => {
   return (
@@ -33,34 +34,47 @@ const ImBrandOwner: NextPage = () => {
           </div>
         </div>
       </Section>
-      <Section bgColor="bg-gray-300">
-        <div className="flex flex-col items-center space-y-4">
-          <p className="text-center md:text-left">Why choose us</p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-20">
-            <div className="flex flex-col justify-start items-center border rounded p-4">
-              <div className="h-20 w-20 rounded bg-gray-400"></div>
-              <p className="text-center">Increase sales & Leads</p>
-              <p className="text-center max-w-xs">
-                Having your own games on your platform that funnels in new
-                customers and retaining them
-              </p>
-            </div>
-            <div className="flex flex-col justify-start items-center border rounded p-4">
-              <div className="h-20 w-20 rounded bg-gray-400"></div>
-              <p className="text-center">Improved customer experience</p>
-              <p className="text-center max-w-xs">
-                Engaging and understanding customers is easier than ever before
-                with games and data
-              </p>
-            </div>
-            <div className="flex flex-col justify-start items-center border rounded p-4">
-              <div className="h-20 w-20 rounded bg-gray-400"></div>
-              <p className="text-center">increase brand stickiness</p>
-              <p className="text-center max-w-xs">
-                With your brand and products featured in games, your brand will
-                be all over their heads
-              </p>
-            </div>
+      <Section bgColor="">
+        <div className="flex flex-col items-center space-y-10 py-10">
+          <p className="text-center font-montserrat font-extrabold text-4xl">
+            Why choose us
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-6 xl:gap-20">
+            {[
+              {
+                title: "Increase sales & Leads",
+                desc: "Having your own games on your platform that funnels in new customers and retaining them",
+              },
+              {
+                title: "Improved customer experience",
+                desc: "Engaging and understanding customers is easier than ever before with games and data",
+              },
+              {
+                title: "increase brand stickiness",
+                desc: "With your brand and products featured in games, your brand will be all over their heads",
+              },
+            ].map((i, k) => (
+              <div
+                key={`why-${k}`}
+                className="flex flex-col justify-start items-center border rounded-2xl px-8 py-6"
+              >
+                <div className="max-w-xs md:h-32 md:w-32 flex justify-center mb-4">
+                  <Image
+                    src="/assets/images/home-2.png"
+                    width={800}
+                    height={800}
+                    alt="home-2"
+                    className="rounded-lg"
+                  />
+                </div>
+                <p className="text-center font-montserrat font-bold text-3xl md:text-xl capitalize mb-6">
+                  {i.title}
+                </p>
+                <p className="text-center max-w-xs font-lato font-medium text-xl md:text-base capitalize">
+                  {i.desc}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </Section>
@@ -95,109 +109,144 @@ const ImBrandOwner: NextPage = () => {
           </div>
         </div>
       </Section>
-      <Section bgColor="bg-gray-300">
-        <div className="grid grid-cols-1 md:grid-cols-3">
-          <div className="flex flex-col items-center">
-            <div className="flex-grow flex justify-center items-center bg-black rounded">
-              <div className="h-20 w-20 rounded bg-gray-400"></div>
+      <Section>
+        <div className="grid grid-cols-1 md:grid-cols-3 py-10 gap-10 md:gap-6 xl:gap-20">
+          {[
+            "Send your vouchers to us on our website",
+            "Vouchers will be listed on our gaaS as challenges",
+            "player will go through challenges to win vouchers",
+            "Send your vouchers to us on our website",
+            "Vouchers will be listed on our gaaS as challenges",
+            "player will go through challenges to win vouchers",
+          ].map((i, k) => (
+            <div
+              key={`brand-${k}`}
+              className="flex flex-col items-center space-y-4"
+            >
+              <div className="max-w-xs flex justify-center">
+                <Image
+                  src="/assets/images/home-2.png"
+                  width={800}
+                  height={800}
+                  alt="home-2"
+                  className="rounded-lg"
+                />
+              </div>
+              <p className="text-center md:text-left font-montserrat font-bold text-3xl md:text-xl capitalize">
+                {i}
+              </p>
             </div>
-            <p>Send your vouchers to us on our website</p>
-          </div>
-          <div className="flex flex-col items-center">
-            <div className="flex-grow flex justify-center items-center bg-black rounded">
-              <div className="h-20 w-20 rounded bg-gray-400"></div>
-            </div>
-            <p>Send your vouchers to us on our website</p>
-          </div>
-          <div className="flex flex-col items-center">
-            <div className="flex-grow flex justify-center items-center bg-black rounded">
-              <div className="h-20 w-20 rounded bg-gray-400"></div>
-            </div>
-            <p>Send your vouchers to us on our website</p>
+          ))}
+        </div>
+      </Section>
+      <Section>
+        <div className="flex justify-center items-center py-10">
+          <div className="h-96 w-full relative">
+            <Image
+              src="/assets/images/home-4.png"
+              alt="home-4"
+              className="rounded-3xl"
+              layout="fill"
+              objectFit="cover"
+              quality={100}
+            />
           </div>
         </div>
       </Section>
-      <Section bgColor="bg-gray-200">
-        <div className="flex-grow flex justify-center items-center bg-black rounded">
-          <div className="h-20 w-20 rounded bg-gray-400"></div>
-        </div>
-      </Section>
-      <Section bgColor="bg-gray-300">
-        <div className="flex flex-col items-center">
-          <p>Subscribe your plan now!</p>
-          <p>
+      <Section>
+        <div className="flex flex-col items-center py-10">
+          <p className="text-center md:text-left font-montserrat font-extrabold text-4xl mb-4">
+            Subscribe your plan now!
+          </p>
+          <p className="text-center max-w-lg font-lato font-medium text-xl capitalize mb-10">
             Interested to find out what Games as a Service can do to your
             business? Subscribe to our basic starter package for FREE today!
           </p>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-2">
-          <div className="bg-white rounded border shadow p-4 flex flex-col justify-between">
-            <div className="flex flex-col">
-              <p>Basic Starter</p>
-              <p>
-                <span>FREE</span>/annual
-              </p>
-              <p>
-                Empowering users to manage their electronic health record in a
-                secure & interoperable manner
-              </p>
-              <ol className="list-decimal pl-4">
-                <li>Access to GaaS player base</li>
-                <li>Voucher distribution</li>
-                <li>Fixed game challenges</li>
-                <li>Free business package trial</li>
-              </ol>
-            </div>
-            <button className="w-full px-2 py-1 text-base bg-black text-white rounded">
-              Choose plan
-            </button>
-          </div>
-          <div className="bg-white rounded border shadow p-4 flex flex-col justify-between">
-            <div className="flex flex-col">
-              <p>Business</p>
-              <p>
-                <span>RM299</span>/annual
-              </p>
-              <p>
-                Empowering users to manage their electronic health record in a
-                secure & interoperable manner
-              </p>
-              <ol className="list-decimal pl-4">
-                <li>Access to GaaS player base</li>
-                <li>Voucher distribution</li>
-                <li>Voucher optimization</li>
-                <li>Featuring your brand in game</li>
-                <li>Featuring your product in game</li>
-                <li>Fixed game challenges</li>
-              </ol>
-            </div>
-            <button className="w-full px-2 py-1 text-base bg-black text-white rounded">
-              Choose plan
-            </button>
-          </div>
-          <div className="bg-white rounded border shadow p-4 flex flex-col justify-between">
-            <div className="flex flex-col">
-              <p>Professional</p>
-              <p>
-                <span>RM599</span>/annual
-              </p>
-              <p>
-                Empowering users to manage their electronic health record in a
-                secure & interoperable manner
-              </p>
-              <ol className="list-decimal pl-4">
-                <li>Access to GaaS player base</li>
-                <li>Voucher distribution</li>
-                <li>Voucher optimization</li>
-                <li>Featuring your brand in game</li>
-                <li>Featuring your product in game</li>
-                <li>Featuring your competition in game</li>
-                <li>Custom game challenges</li>
-              </ol>
-            </div>
-            <button className="w-full px-2 py-1 text-base bg-black text-white rounded">
-              Choose plan
-            </button>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-6 xl:gap-20">
+            {[
+              {
+                title: "Basic Starter",
+                price: "FREE",
+                desc: "Empowering users to manage their electronic health record in a secure & interoperable manner",
+                descList: [
+                  "Access to GaaS player base",
+                  "Voucher distribution",
+                  "Fixed game challenges",
+                  "Free business package trial",
+                ],
+              },
+              {
+                title: "Business",
+                price: "RM299",
+                desc: "Empowering users to manage their electronic health record in a secure & interoperable manner",
+                descList: [
+                  "Access to GaaS player base",
+                  "Voucher distribution",
+                  "Voucher optimization",
+                  "Featuring your brand in game",
+                  "Featuring your product in game",
+                  "Fixed game challenges",
+                ],
+                isPopular: true,
+              },
+              {
+                title: "Professional",
+                price: "RM599",
+                desc: "Empowering users to manage their electronic health record in a secure & interoperable manner",
+                descList: [
+                  "Access to GaaS player base",
+                  "Voucher distribution",
+                  "Voucher optimization",
+                  "Featuring your brand in game",
+                  "Featuring your product in game",
+                  "Featuring your competition in game",
+                  "Custom game challenges",
+                ],
+              },
+            ].map((i, k) => (
+              <div
+                key={`pricing-${k}`}
+                className="bg-white rounded-2xl border shadow-lg p-4 flex flex-col justify-between relative"
+              >
+                {i?.isPopular && (
+                  <div className="w-20 absolute top-0 right-0 overflow-hidden inline-block rounded-tr-2xl">
+                    <div className="h-20 bg-black transform rotate-45 origin-bottom-right flex-1 flex items-end -ml-8 px-8">
+                      <p className="text-center text-white capitalize font-montserrat font-bold text-xs">
+                        popular choice
+                      </p>
+                    </div>
+                  </div>
+                )}
+                <div className="flex flex-col space-y-4">
+                  <p className="text-left font-montserrat font-bold text-xl capitalize">
+                    {i.title}
+                  </p>
+                  <p className="text-left font-lato font-thin text-xl">
+                    <span className="font-montserrat font-bold text-3xl">
+                      {i.price}
+                    </span>
+                    /annual
+                  </p>
+                  <p className="text-left font-lato">{i.desc}</p>
+                  <ol>
+                    {i.descList.map((li, key) => (
+                      <li
+                        key={`descList-${k}`}
+                        className="flex space-x-2 text-left font-lato font-bold"
+                      >
+                        <span className="text-green-500 text-lg pt-1">
+                          <FiCheckCircle />
+                        </span>
+                        <p>{li}</p>
+                      </li>
+                    ))}
+                  </ol>
+                </div>
+                <button className="w-full px-2 py-1 mt-6 text-base bg-black text-white rounded border border-black font-montserrat font-bold">
+                  Choose plan
+                </button>
+              </div>
+            ))}
           </div>
         </div>
       </Section>
