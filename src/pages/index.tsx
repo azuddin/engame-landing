@@ -399,7 +399,7 @@ const Home: NextPage = () => {
       <Section bgColor="">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="flex flex-col justify-center space-y-2">
-            <p className="text-center md:text-left font-montserrat font-extrabold text-3xl pb-4">
+            <p className="text-center md:text-left font-montserrat font-extrabold pb-4 text-4xl md:text-3xl">
               Are You Interested To Join Us? Let's Grow Together!
             </p>
             <Link href="/im-brand-owner" passHref>
@@ -425,71 +425,148 @@ const Home: NextPage = () => {
           </div>
         </div>
       </Section>
-      <Section bgColor="bg-gray-300">
-        <div className="flex flex-col items-center space-y-4">
-          <p className="text-center md:text-left">
+      <Section bgColor="">
+        <div className="flex flex-col items-center space-y-10 py-10">
+          <p className="text-center font-montserrat font-extrabold text-4xl md:text-3xl">
             Proven Gamification Model Delivered To Superapps Across The Globe
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-20">
-            <div className="flex flex-col justify-center">
-              <div className="h-20 w-20 rounded bg-gray-400"></div>
-              <p className="text-center">+9 Million</p>
-              <p className="text-center">Players</p>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
+            <div className="flex flex-col justify-start">
+              <div className="flex justify-center mb-4">
+                <Image
+                  src="/assets/images/home-2.png"
+                  width={800}
+                  height={800}
+                  alt="home-2"
+                  className="rounded-lg"
+                />
+              </div>
+              <p className="text-center font-montserrat font-bold text-3xl md:text-xl">
+                +9 Million
+              </p>
+              <p className="text-center font-montserrat font-bold text-xl md:text-base">
+                Players
+              </p>
             </div>
-            <div className="flex flex-col justify-center">
-              <div className="h-20 w-20 rounded bg-gray-400"></div>
-              <p className="text-center">+9 Million</p>
-              <p className="text-center">Players</p>
+            <div className="flex flex-col justify-start">
+              <div className="flex justify-center mb-4">
+                <Image
+                  src="/assets/images/home-2.png"
+                  width={800}
+                  height={800}
+                  alt="home-2"
+                  className="rounded-lg"
+                />
+              </div>
+              <p className="text-center font-montserrat font-bold text-3xl md:text-xl">
+                +163 Million
+              </p>
+              <p className="text-center font-montserrat font-bold text-xl md:text-base">
+                Games played
+              </p>
             </div>
-            <div className="flex flex-col justify-center">
-              <div className="h-20 w-20 rounded bg-gray-400"></div>
-              <p className="text-center">+9 Million</p>
-              <p className="text-center">Players</p>
+            <div className="flex flex-col justify-start">
+              <div className="flex justify-center mb-4">
+                <Image
+                  src="/assets/images/home-2.png"
+                  width={800}
+                  height={800}
+                  alt="home-2"
+                  className="rounded-lg"
+                />
+              </div>
+              <p className="text-center font-montserrat font-bold text-3xl md:text-xl">
+                +16 Minutes
+              </p>
+              <p className="text-center font-montserrat font-bold text-xl md:text-base">
+                Played per session
+              </p>
             </div>
-            <div className="flex flex-col justify-center">
-              <div className="h-20 w-20 rounded bg-gray-400"></div>
-              <p className="text-center">+9 Million</p>
-              <p className="text-center">Players</p>
+            <div className="flex flex-col justify-start">
+              <div className="flex justify-center mb-4">
+                <Image
+                  src="/assets/images/home-2.png"
+                  width={800}
+                  height={800}
+                  alt="home-2"
+                  className="rounded-lg"
+                />
+              </div>
+              <p className="text-center font-montserrat font-bold text-3xl md:text-xl">
+                +26 Partners
+              </p>
+              <p className="text-center font-montserrat font-bold text-xl md:text-base">
+                Across the globe
+              </p>
             </div>
           </div>
         </div>
       </Section>
-      <Section bgColor="bg-gray-200">
-        <div className="flex flex-col space-y-2 md:space-y-2">
-          <p className="text-center">Next-Gen Enter-Gagement Platform</p>
+      <Section bgColor="">
+        <div className="flex flex-col space-y-6 md:space-y-10 py-10">
+          <p className="text-center font-montserrat font-extrabold text-4xl md:text-3xl">
+            Next-Gen Enter-Gagement Platform
+          </p>
           <div className="flex flex-col-reverse md:flex-col items-center">
-            <div className="flex flex-col space-y-2 md:flex-row md:space-x-4 md:space-y-0">
-              <div className="rounded bg-yellow-200 px-4 py-2">
-                <p>+30 Games free to play</p>
-                <p>
+            <div className="flex flex-col space-y-8 md:flex-row md:space-x-4 md:space-y-0">
+              <div className="rounded-2xl bg-yellow-100 p-10">
+                <p className="font-montserrat font-extrabold text-2xl">
+                  +30 Games free to play
+                </p>
+                <p className="font-lato text-lg">
                   Creating amazing games is our DNA! Come and discover our
                   latest games and future releases.
                 </p>
               </div>
-              <div className="rounded bg-yellow-200 px-4 py-2">
-                <p>+30 Games free to play</p>
-                <p>
+              <div className="rounded-2xl bg-yellow-100 p-10">
+                <p className="font-montserrat font-extrabold text-2xl">
+                  +30 Games free to play
+                </p>
+                <p className="font-lato text-lg">
                   Creating amazing games is our DNA! Come and discover our
                   latest games and future releases.
                 </p>
               </div>
             </div>
-            <div className="h-20 w-20 rounded bg-gray-400 mb-2 md:mt-2 md:mb-0"></div>
+            <div className="flex justify-center mb-8 md:mt-8 md:mb-0">
+              <Image
+                src="/assets/images/home-3.png"
+                width={1596}
+                height={789}
+                alt="home-1"
+              />
+            </div>
           </div>
         </div>
       </Section>
-      <Section bgColor="bg-gray-300">
-        <div className="flex flex-col md:flex-row space-y-2 md:space-x-2 md:space-y-0">
-          <div className="flex flex-col md:w-1/3 items-center md:items-start">
-            <div className="h-20 w-20 rounded bg-gray-400 mb-2 md:mt-2 md:mb-0"></div>
-            <p className="text-center md:text-left">How it work easier?</p>
-            <p className="text-center md:text-left">
+      <Section bgColor="">
+        <div className="flex flex-col md:flex-row space-y-10 md:space-x-2 md:space-y-0 py-10">
+          <div className="flex flex-col md:w-3/4 items-center justify-center md:items-start space-y-2">
+            <div className="h-20 w-20 flex justify-center">
+              <Image
+                src="/assets/images/home-2.png"
+                width={800}
+                height={800}
+                alt="home-2"
+                className="rounded-lg"
+              />
+            </div>
+            <p className="text-center md:text-left font-montserrat font-extrabold text-4xl md:text-3xl">
+              How it work easier?
+            </p>
+            <p className="text-center md:text-left font-lato text-lg">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
               netus et ut imperdiet et quisque donec
             </p>
           </div>
-          <div className="flex-grow flex justify-center items-center bg-black rounded">
-            <div className="h-20 w-20 rounded bg-gray-400"></div>
+          <div className="flex-grow flex justify-center items-center">
+            <Image
+              src="/assets/images/home-4.png"
+              width={1022}
+              height={766}
+              alt="home-4"
+              className="rounded-3xl"
+            />
           </div>
         </div>
       </Section>
