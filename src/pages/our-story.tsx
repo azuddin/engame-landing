@@ -329,7 +329,7 @@ const OurStory: NextPage = () => {
         </section>
       </div> */}
       <Section>
-        <div className="flex flex-col -space-y-4 py-10">
+        <div className="flex flex-col -space-y-4 py-10 items-center">
           <p className="text-center font-montserrat font-extrabold text-5xl md:text-6xl z-10">
             Our Story
           </p>
