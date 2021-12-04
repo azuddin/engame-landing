@@ -19,7 +19,8 @@
       "@engame/components": ["src/components"],
       "@engame/utils": ["src/utils"],
       "@engame/styles/*": ["src/styles/*"]
-    }
+    },
+    "downlevelIteration": true
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]

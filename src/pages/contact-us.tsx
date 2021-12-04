@@ -2,6 +2,8 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import { Section } from "@engame/components";
 import Image from "next/image";
+import { Select } from "src/components/Form";
+import { Item } from "react-stately";
 
 const ContactUs: NextPage = () => {
   return (
@@ -80,6 +82,16 @@ const ContactUs: NextPage = () => {
                 type="tel"
                 className="rounded-md border px-4 py-2 text-2xl"
               />
+            </div>
+            <div className="flex flex-col mb-8">
+              <label htmlFor="category" className="font-lato text-xl mb-1">
+                Category <span className="text-red-600">*</span>
+              </label>
+              <Select aria-label="Category" placeholder="Select a category">
+                <Item key="category 1">Category 1</Item>
+                <Item key="category 2">Category 2</Item>
+                <Item key="category 3">Category 3</Item>
+              </Select>
             </div>
             <div className="flex flex-col mb-8">
               <label htmlFor="message" className="font-lato text-xl mb-1">
