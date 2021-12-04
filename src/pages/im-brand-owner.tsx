@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import { Section } from "@engame/components";
+import { PartnerWith, Section } from "@engame/components";
 
 const ImBrandOwner: NextPage = () => {
   return (
@@ -177,18 +177,7 @@ const ImBrandOwner: NextPage = () => {
           </div>
         </div>
       </Section>
-      <Section bgColor="bg-gray-200">
-        <div className="flex flex-col items-center">
-          <p>Partnered with the world’s best companies</p>
-          <div className="w-full flex flex-row overflow-auto space-x-2 pb-2">
-            {[...Array(10)].map((i, k) => (
-              <div key={k} className="flex flex-col">
-                <div className="h-20 w-20 rounded bg-gray-400"></div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </Section>
+      <PartnerWith />
     </>
   );
 };

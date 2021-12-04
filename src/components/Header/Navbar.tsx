@@ -10,7 +10,7 @@ const Navbar = (): JSX.Element => {
       <div className="z-20 h-14 flex justify-center">
         <div className="container mx-auto px-4 lg:px-36 py-3 md:py-2 flex justify-between items-center">
           <Link href="/" passHref>
-            <div className="flex flex-col justify-center w-36 md:w-28">
+            <div className="flex flex-col justify-center w-36 md:w-28 cursor-pointer">
               <Image
                 src="/assets/images/logo.png"
                 alt="logo"
