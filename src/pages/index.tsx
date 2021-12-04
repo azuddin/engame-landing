@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import { PartnerWith, Section } from "@engame/components";
+import { Section } from "@engame/components";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -15,7 +15,7 @@ const Home: NextPage = () => {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Section bgColor="">
+      <Section>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="flex flex-col justify-center space-y-2">
             <p className="text-center md:text-left font-montserrat font-extrabold pb-4 text-4xl">
@@ -44,7 +44,7 @@ const Home: NextPage = () => {
           </div>
         </div>
       </Section>
-      <Section bgColor="">
+      <Section>
         <div className="flex flex-col items-center space-y-10 py-10">
           <p className="text-center font-montserrat font-extrabold text-4xl">
             Proven Gamification Model Delivered To Superapps Across The Globe
@@ -77,7 +77,7 @@ const Home: NextPage = () => {
           </div>
         </div>
       </Section>
-      <Section bgColor="">
+      <Section>
         <div className="flex flex-col space-y-6 md:space-y-10 py-10">
           <p className="text-center font-montserrat font-extrabold text-4xl">
             Next-Gen Enter-Gagement Platform
@@ -116,7 +116,7 @@ const Home: NextPage = () => {
           </div>
         </div>
       </Section>
-      <Section bgColor="">
+      <Section>
         <div className="flex flex-col md:flex-row space-y-10 md:space-x-2 md:space-y-0 py-10">
           <div className="flex flex-col md:w-3/4 items-center justify-center md:items-start space-y-6 md:space-y-2">
             <div className="max-w-xs md:h-32 md:w-32 flex justify-center">
@@ -147,7 +147,7 @@ const Home: NextPage = () => {
           </div>
         </div>
       </Section>
-      <Section bgColor="">
+      <Section>
         <div className="flex flex-col items-center space-y-5 py-10">
           <p className="text-center font-montserrat font-extrabold text-4xl">
             Trending Games
@@ -189,7 +189,7 @@ const Home: NextPage = () => {
           </div>
         </div>
       </Section>
-      <Section bgColor="">
+      <Section>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-10 py-10">
           <div className="flex flex-col items-center space-y-6">
             <p className="text-center font-montserrat font-extrabold text-4xl md:text-3xl">
@@ -227,8 +227,39 @@ const Home: NextPage = () => {
           </div>
         </div>
       </Section>
-      <PartnerWith />
-      <Section bgColor="">
+      <Section>
+        <div className="flex flex-col items-center py-10 space-y-8">
+          <p className="text-center font-montserrat font-extrabold text-4xl">
+            Partnered with the world’s best companies
+          </p>
+          <div className="w-full flex flex-row xl:justify-center overflow-auto space-x-2 pb-2">
+            {/* `justify-center` will break if company more than 5 */}
+            {[
+              "/assets/images/company-1.png",
+              "/assets/images/company-2.png",
+              "/assets/images/company-3.png",
+              "/assets/images/company-4.png",
+              "/assets/images/company-5.png",
+            ].map((i, k) => (
+              <div
+                key={k}
+                className="flex flex-col min-w-max cursor-pointer filter grayscale hover:grayscale-0"
+              >
+                <div className="flex flex-col w-52">
+                  <Image
+                    src={i}
+                    width={320}
+                    height={225}
+                    alt="home-5"
+                    className="rounded-lg"
+                  />
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </Section>
+      <Section>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 py-10">
           <div className="flex flex-col-reverse md:flex-col md:items-center md:justify-center">
             <div className="flex flex-col space-y-8">

@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import { Section } from "@engame/components";
-import Link from "next/link";
+import Image from "next/image";
 
 const ImGamer: NextPage = () => {
   return (
@@ -80,14 +80,43 @@ const ImGamer: NextPage = () => {
           </div>
         </div>
       </Section>
-      <Section bgColor="bg-gray-300">
-        <div className="flex flex-col items-center">
-          <p>Trending Games</p>
-          <div className="w-full flex flex-row overflow-auto space-x-2 pb-2">
-            {[...Array(8)].map((i, k) => (
-              <div key={k} className="flex flex-col">
-                <div className="h-28 w-28 rounded bg-gray-400"></div>
-                <p>Legendary moai</p>
+      <Section>
+        <div className="flex flex-col items-center space-y-5 py-10">
+          <p className="text-center font-montserrat font-extrabold text-4xl">
+            Trending Games
+          </p>
+          <div className="w-full flex flex-row overflow-auto space-x-4 pb-2">
+            {[
+              { name: "Legendary moai", image: "/assets/images/home-5.png" },
+              { name: "The largest one", image: "/assets/images/game-2.png" },
+              { name: "Deep blue sea", image: "/assets/images/game-3.png" },
+              {
+                name: "Scissors rock paper",
+                image: "/assets/images/game-4.png",
+              },
+              { name: "Super fast food", image: "/assets/images/home-5.png" },
+              { name: "Legendary moai", image: "/assets/images/home-5.png" },
+              { name: "The largest one", image: "/assets/images/game-2.png" },
+              { name: "Deep blue sea", image: "/assets/images/game-3.png" },
+              {
+                name: "Scissors rock paper",
+                image: "/assets/images/game-4.png",
+              },
+              { name: "Super fast food", image: "/assets/images/home-5.png" },
+            ].map((i, k) => (
+              <div key={k} className="flex flex-col min-w-max">
+                <div className="flex flex-col w-52">
+                  <Image
+                    src={i.image}
+                    width={320}
+                    height={225}
+                    alt="home-5"
+                    className="rounded-lg"
+                  />
+                </div>
+                <p className="w-44 font-montserrat font-bold text-lg md:text-lg truncate">
+                  {i.name}
+                </p>
               </div>
             ))}
           </div>
