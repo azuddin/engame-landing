@@ -166,55 +166,80 @@ const ImGamer: NextPage = () => {
           </div>
         </div>
       </Section>
-      <Section bgColor="bg-gray-100">
-        <div className="flex flex-col items-center">
-          <p>Hot Vouchers</p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div className="rounded flex flex-col border pb-4 overflow-hidden">
-              <div className="flex justify-center">
-                <div className="h-28 w-full bg-gray-400"></div>
-              </div>
-              <div className="px-4 ">
-                <p>Buy 100g for RM2 Deal</p>
-                <p>Twinbow</p>
-                <p>200 points</p>
-                <div className="relative pt-1">
-                  <div className="overflow-hidden h-2 text-xs flex rounded bg-gray-300">
-                    <div className="w-1/2 shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-black"></div>
+      <Section>
+        <div className="flex flex-col items-center py-10 space-y-8">
+          <p className="text-center font-montserrat font-extrabold text-4xl">
+            Hot Vouchers
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-6">
+            {[
+              {
+                image: "/assets/images/home-2.png",
+                title: "Buy 100g for RM2 Deal",
+                desc: "Twinbow",
+                point: "200",
+                progress: "w-1/2",
+                redeemed: "10",
+              },
+              {
+                image: "/assets/images/home-2.png",
+                title: "15% off Voucher",
+                desc: "Call me baby",
+                point: "200",
+                progress: "w-1/2",
+                redeemed: "10",
+              },
+              {
+                image: "/assets/images/home-2.png",
+                title: "50% off Voucher",
+                desc: "Call me baby",
+                point: "200",
+                progress: "w-1/4",
+                redeemed: "10",
+              },
+            ].map((i, k) => (
+              <div
+                key={`voucher-${k}`}
+                className="rounded flex flex-col border overflow-hidden"
+              >
+                <div className="flex justify-center">
+                  <div className="flex-grow flex justify-center items-center relative h-56">
+                    <Image
+                      src={i.image}
+                      alt="home-4"
+                      layout="fill"
+                      objectFit="cover"
+                      quality={100}
+                    />
+                  </div>
+                </div>
+                <div className="flex-1 font-montserrat px-4 py-6 flex flex-col justify-between">
+                  <div>
+                    <p className="font-bold text-xl">{i.title}</p>
+                    <p className="text-xl mb-4">{i.desc}</p>
+                  </div>
+                  <div>
+                    <p className="text-gray-300 text-xl">
+                      <span className="text-yellow-400 font-bold">
+                        {i.point}
+                      </span>{" "}
+                      points
+                    </p>
+                    <div className="relative pt-1 mb-4">
+                      <div className="overflow-hidden h-4 text-xs flex rounded-full bg-gray-200">
+                        <div
+                          className={
+                            "rounded-full shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-yellow-400 " +
+                            i.progress
+                          }
+                        ></div>
+                      </div>
+                    </div>
+                    <p className="text-sm">{i.redeemed} redeemed</p>
                   </div>
                 </div>
               </div>
-            </div>
-            <div className="rounded flex flex-col border pb-4 overflow-hidden">
-              <div className="flex justify-center">
-                <div className="h-28 w-full bg-gray-400"></div>
-              </div>
-              <div className="px-4 ">
-                <p>Buy 100g for RM2 Deal</p>
-                <p>Twinbow</p>
-                <p>200 points</p>
-                <div className="relative pt-1">
-                  <div className="overflow-hidden h-2 text-xs flex rounded bg-gray-300">
-                    <div className="w-1/2 shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-black"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="rounded flex flex-col border pb-4 overflow-hidden">
-              <div className="flex justify-center">
-                <div className="h-28 w-full bg-gray-400"></div>
-              </div>
-              <div className="px-4 ">
-                <p>Buy 100g for RM2 Deal</p>
-                <p>Twinbow</p>
-                <p>200 points</p>
-                <div className="relative pt-1">
-                  <div className="overflow-hidden h-2 text-xs flex rounded bg-gray-300">
-                    <div className="w-1/2 shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-black"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </Section>
