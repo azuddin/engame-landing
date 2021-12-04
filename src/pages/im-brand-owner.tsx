@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import { PartnerWith, Section } from "@engame/components";
+import { Section } from "@engame/components";
+import Image from "next/image";
 
 const ImBrandOwner: NextPage = () => {
   return (
@@ -56,18 +57,34 @@ const ImBrandOwner: NextPage = () => {
           </div>
         </div>
       </Section>
-      <Section bgColor="bg-gray-200">
-        <div className="flex flex-col md:flex-row space-y-2 md:space-x-2 md:space-y-0">
-          <div className="flex flex-col md:w-1/3 items-center md:items-start">
-            <div className="h-20 w-20 rounded bg-gray-400 mb-2 md:mt-2 md:mb-0"></div>
-            <p className="text-center md:text-left">How it work easier?</p>
-            <p className="text-center md:text-left">
+      <Section>
+        <div className="flex flex-col md:flex-row space-y-10 md:space-x-2 md:space-y-0 py-10">
+          <div className="flex flex-col md:w-3/4 items-center justify-center md:items-start space-y-6 md:space-y-2">
+            <div className="max-w-xs md:h-32 md:w-32 flex justify-center">
+              <Image
+                src="/assets/images/home-2.png"
+                width={800}
+                height={800}
+                alt="home-2"
+                className="rounded-lg"
+              />
+            </div>
+            <p className="text-center md:text-left font-montserrat font-extrabold text-4xl">
+              How it work easier?
+            </p>
+            <p className="text-center md:text-left font-lato text-lg">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
               netus et ut imperdiet et quisque donec
             </p>
           </div>
-          <div className="flex-grow flex justify-center items-center bg-black rounded">
-            <div className="h-20 w-20 rounded bg-gray-400"></div>
+          <div className="flex-grow flex justify-center items-center">
+            <Image
+              src="/assets/images/home-4.png"
+              width={1022}
+              height={766}
+              alt="home-4"
+              className="rounded-3xl"
+            />
           </div>
         </div>
       </Section>
@@ -177,7 +194,38 @@ const ImBrandOwner: NextPage = () => {
           </div>
         </div>
       </Section>
-      <PartnerWith />
+      <Section>
+        <div className="flex flex-col items-center py-10 space-y-8">
+          <p className="text-center font-montserrat font-extrabold text-4xl">
+            Partnered with the world’s best companies
+          </p>
+          <div className="w-full flex flex-row xl:justify-center overflow-auto space-x-2 pb-2">
+            {/* `justify-center` will break if company more than 5 */}
+            {[
+              "/assets/images/company-1.png",
+              "/assets/images/company-2.png",
+              "/assets/images/company-3.png",
+              "/assets/images/company-4.png",
+              "/assets/images/company-5.png",
+            ].map((i, k) => (
+              <div
+                key={k}
+                className="flex flex-col min-w-max cursor-pointer filter grayscale hover:grayscale-0"
+              >
+                <div className="flex flex-col w-52">
+                  <Image
+                    src={i}
+                    width={320}
+                    height={225}
+                    alt="home-5"
+                    className="rounded-lg"
+                  />
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </Section>
     </>
   );
 };
