@@ -353,7 +353,7 @@ const OurStory: NextPage = () => {
           </div>
         </div>
       </Section>
-      <Section bgColor="">
+      <Section>
         <div className="bg-white rounded-xl p-10 shadow-lg my-10">
           <div className="flex flex-col md:flex-row justify-between space-y-10 md:space-y-0 md:space-x-8">
             <div className="flex flex-col space-y-2">
