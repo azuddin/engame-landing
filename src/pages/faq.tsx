@@ -217,7 +217,7 @@ const FAQ: NextPage = () => {
         </div>
       </Section>
       <Section>
-        <div className="border border-b-2"></div>
+        <div className="border-t"></div>
         <div className="flex flex-col items-center py-10 space-y-10">
           <p className="text-center font-montserrat font-extrabold text-4xl">
             Still need help?

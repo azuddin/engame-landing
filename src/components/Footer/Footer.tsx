@@ -46,7 +46,7 @@ const Footer = (): JSX.Element => {
           </p>
         </div>
       </div>
-      <div className="flex flex-col md:flex-row justify-between items-center border-t-2 py-8 md:py-4 space-y-4 md:space-y-0">
+      <div className="flex flex-col md:flex-row justify-between items-center border-t py-8 md:py-4 space-y-4 md:space-y-0">
         <div className="social space-x-4 flex flex-row">
           <div className="flex flex-col justify-center w-9 md:w-6">
             <Image

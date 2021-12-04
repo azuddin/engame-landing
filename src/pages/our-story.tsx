@@ -189,7 +189,7 @@ const OurStory: NextPage = () => {
               alt="our-story-2"
             />
           </div>
-          <div className="flex flex-col border-b-2">
+          <div className="flex flex-col border-b">
             {[
               {
                 title: "Q1",
