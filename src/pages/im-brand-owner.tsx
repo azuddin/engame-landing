@@ -7,7 +7,7 @@ const ImBrandOwner: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Our Story - Engame</title>
+        <title>I'm Brand Owner - Engame</title>
         <meta
           name="description"
           content="Sunt ullamco do adipisicing dolore occaecat qui eiusmod ut irure."

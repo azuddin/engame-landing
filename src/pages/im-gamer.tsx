@@ -7,7 +7,7 @@ const ImGamer: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Engame Landing</title>
+        <title>I'm Gamer - Engame</title>
         <meta
           name="description"
           content="Sunt ullamco do adipisicing dolore occaecat qui eiusmod ut irure."

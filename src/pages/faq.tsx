@@ -8,7 +8,7 @@ const FAQ: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Our Story - Engame</title>
+        <title>FAQ - Engame</title>
         <meta
           name="description"
           content="Sunt ullamco do adipisicing dolore occaecat qui eiusmod ut irure."

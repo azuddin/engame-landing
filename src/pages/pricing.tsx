@@ -7,7 +7,7 @@ const Pricing: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Engame Landing</title>
+        <title>Pricing - Engame</title>
         <meta
           name="description"
           content="Sunt ullamco do adipisicing dolore occaecat qui eiusmod ut irure."
