@@ -25,7 +25,7 @@ const BlogDetail: NextPage = () => {
   );
   return (
     <>
-      <Section bgColor="bg-gray-300">
+      <Section>
         <div className="flex flex-col items-center py-10 space-y-10">
           <p className="text-center md:text-left font-montserrat font-extrabold text-4xl">
             MDEC DiCE 2019 Commercial Ready Game Winner
