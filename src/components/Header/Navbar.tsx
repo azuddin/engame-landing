@@ -63,8 +63,8 @@ const Navbar = (): JSX.Element => {
       </div>
       <div
         className={
-          "fixed top-14 w-full h-full bg-white z-10 " +
-          (showMenu ? "" : "hidden")
+          "fixed top-14 w-full h-full bg-white z-50" +
+          (showMenu ? "" : " hidden")
         }
       >
         <div className="container mx-auto p-4 lg:px-36 flex flex-col space-y-4">
