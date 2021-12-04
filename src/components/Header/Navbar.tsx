@@ -28,34 +28,34 @@ const Navbar = (): JSX.Element => {
           </button>
           <div id="nav" className="space-x-1 md:flex hidden">
             <Link href="/our-story" passHref>
-              <button className="px-2 py-1 text-montserrat font-bold md:text-sm">
+              <button className="px-2 py-1 text-montserrat font-bold md:text-md">
                 Our Story
               </button>
             </Link>
             <Link href="/pricing" passHref>
-              <button className="px-2 py-1 text-montserrat font-bold md:text-sm">
+              <button className="px-2 py-1 text-montserrat font-bold md:text-md">
                 Pricing
               </button>
             </Link>
             <Link href="/blog" passHref>
-              <button className="px-2 py-1 text-montserrat font-bold md:text-sm">
+              <button className="px-2 py-1 text-montserrat font-bold md:text-md">
                 Blog
               </button>
             </Link>
             <Link href="/faq" passHref>
-              <button className="px-2 py-1 text-montserrat font-bold md:text-sm">
+              <button className="px-2 py-1 text-montserrat font-bold md:text-md">
                 FAQ
               </button>
             </Link>
             <Link href="/contact-us" passHref>
-              <button className="px-2 py-1 text-montserrat font-bold md:text-sm">
+              <button className="px-2 py-1 text-montserrat font-bold md:text-md">
                 Contact Us
               </button>
             </Link>
-            <button className="px-2 py-1 text-montserrat font-bold md:text-sm bg-black text-white rounded">
+            <button className="px-2 py-1 text-montserrat font-bold md:text-md bg-black text-white rounded">
               Start Free Trial
             </button>
-            <button className="px-2 py-1 text-montserrat font-bold md:text-sm border-2 border-black rounded">
+            <button className="px-2 py-1 text-montserrat font-bold md:text-md border-2 border-black rounded">
               Login
             </button>
           </div>

@@ -12,6 +12,7 @@ const Layout = (props: LayoutProps): JSX.Element => {
       <Navbar />
       <div className="overflow-auto flex flex-1 flex-col">
         {children}
+        <div className="border-t-2 my-8"></div>
         <Footer />
       </div>
     </div>
