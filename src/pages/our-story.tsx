@@ -376,12 +376,12 @@ const OurStory: NextPage = () => {
             <div
               key={k}
               className={
-                "flex flex-row space-x-2" +
+                "flex flex-row md:space-x-6" +
                 (even ? "" : " md:flex-row-reverse space-x md:space-x-reverse")
               }
             >
               <p className="flex-1 hidden md:block"></p>
-              <div className="flex flex-col items-center">
+              <div className="flex flex-col items-center mr-8 md:mr-0">
                 <div
                   className={
                     "h-5 w-5 rounded-full border-4" +
@@ -396,10 +396,22 @@ const OurStory: NextPage = () => {
                 ></div>
               </div>
               <div className="flex-1 flex flex-col mb-8">
-                <p className="font-montserrat font-extrabold text-4xl">
+                <p
+                  className={
+                    "font-montserrat font-extrabold text-4xl" +
+                    (even ? "" : " md:text-right")
+                  }
+                >
                   {i.title}
                 </p>
-                <p className="font-lato font-bold text-lg">{i.desc}</p>
+                <p
+                  className={
+                    "font-lato font-bold text-lg" +
+                    (even ? "" : " md:text-right")
+                  }
+                >
+                  {i.desc}
+                </p>
               </div>
             </div>
           );
@@ -439,51 +451,103 @@ const OurStory: NextPage = () => {
           </div>
         </div>
       </Section>
-      <Section bgColor="bg-gray-200">
-        <p className="text-center">
-          strategic plan that defines a goal or desired outcome and includes the
-          major steps or milestones needed to reach it.
+      <Section>
+        <p className="py-10 font-montserrat font-extrabold text-4xl text-center capitalize">
+          <span className="underline underline-yellow">strategic plan</span>{" "}
+          that defines a goal or desired outcome and includes the major steps or
+          milestones needed to reach it.
         </p>
       </Section>
-      <Section bgColor="bg-gray-300">
-        <div className="flex flex-col space-y-2">
+      <Section>
+        <div className="flex flex-col space-y-10">
           <div className="w-full flex flex-row overflow-auto space-x-2 justify-center">
-            <p className="bg-gray-400 px-2 py-1 rounded">2021</p>
-            <p className="bg-gray-400 px-2 py-1 rounded">2022</p>
-            <p className="bg-gray-400 px-2 py-1 rounded">2023</p>
+            <p className="bg-gray-300 px-4 py-1 rounded font-montserrat font-bold text-2xl">
+              2021
+            </p>
+            <p className="bg-gray-300 px-4 py-1 rounded font-montserrat font-bold text-2xl">
+              2022
+            </p>
+            <p className="bg-gray-300 px-4 py-1 rounded font-montserrat font-bold text-2xl">
+              2023
+            </p>
           </div>
           <div className="flex-1 flex justify-center items-center md:hidden">
-            <div className="w-20 h-20 bg-gray-400 rounded"></div>
+            <Image
+              src="/assets/images/our-story-2.png"
+              width={374}
+              height={361}
+              alt="our-story-2"
+            />
           </div>
           <div className="flex flex-col">
-            <div className="flex flex-row space-x-2">
-              <p className="flex-1 hidden md:block"></p>
-              <div className="flex flex-col items-center">
-                <div className="h-5 w-5 rounded-full border-4 border-black"></div>
-                <div className="flex-1 h-20 w-1 border-2 border-black"></div>
-              </div>
-              <div className="flex-1 flex flex-col">
-                <p>Dec 2015</p>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna
-                  pulvinar sit aenean nunc nunc gravida elit.
-                </p>
-              </div>
-            </div>
-            <div className="flex flex-row space-x-2">
-              <p className="flex-1 hidden md:block"></p>
-              <div className="flex flex-col items-center">
-                <div className="h-5 w-5 rounded-full border-4 border-black"></div>
-                <div className="flex-1 h-20 w-1 border-2 border-black"></div>
-              </div>
-              <div className="flex-1 flex flex-col">
-                <p>Dec 2015</p>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna
-                  pulvinar sit aenean nunc nunc gravida elit.
-                </p>
-              </div>
-            </div>
+            {[
+              {
+                title: "Q1",
+                desc: (
+                  <>
+                    <p className="text-xl">New Merchant’s Features</p>
+                    <ol className="pl-4 list-decimal font-normal">
+                      <li>
+                        Enhancement Merchants’ template voucher – self-serve
+                        customizable feature
+                      </li>
+                      <li>
+                        Complete merchants’ enablement for self-serve
+                        competition-leaderboard setup
+                      </li>
+                      <li>Social media integration</li>
+                    </ol>
+                  </>
+                ),
+              },
+              {
+                title: "Q2",
+                desc: (
+                  <div className="space-y-4">
+                    <div>
+                      <p className="text-xl">New Merchant’s Features</p>
+                      <ol className="pl-4 list-decimal font-normal">
+                        <li>In game advertising bidding system</li>
+                        <li>In built geo-location capabilities</li>
+                      </ol>
+                    </div>
+                    <div>
+                      <p className="text-xl">New Game Features</p>
+                      <ol className="pl-4 list-decimal font-normal">
+                        <li>iOS Release</li>
+                      </ol>
+                    </div>
+                  </div>
+                ),
+              },
+            ].map((i, k) => {
+              const even = k % 2 === 0;
+              return (
+                <div key={k} className="flex flex-row md:space-x-6">
+                  <p className="flex-1 hidden md:block"></p>
+                  <div className="flex flex-col items-center mr-8 md:mr-0">
+                    <div
+                      className={
+                        "h-5 w-5 rounded-full border-4 border-yellow-300" +
+                        (even ? " border-yellow-300" : " border-yellow-500")
+                      }
+                    ></div>
+                    <div
+                      className={
+                        "flex-1 h-20 w-1 border-2 border-yellow-300" +
+                        (even ? " border-yellow-300" : " border-yellow-500")
+                      }
+                    ></div>
+                  </div>
+                  <div className="flex-1 flex flex-col mb-8">
+                    <p className="font-montserrat font-extrabold text-4xl">
+                      {i.title}
+                    </p>
+                    <p className="font-lato font-bold text-lg">{i.desc}</p>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </Section>
