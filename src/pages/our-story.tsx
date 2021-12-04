@@ -328,61 +328,90 @@ const OurStory: NextPage = () => {
           </Container>
         </section>
       </div> */}
-      <Section bgColor="bg-gray-200">
-        <div className="flex flex-col items-center">
-          <p>Our Story</p>
-          <div className="flex justify-center items-center">
-            <div className="w-20 h-20 bg-gray-400 rounded"></div>
+      <Section>
+        <div className="flex flex-col -space-y-4 py-10">
+          <p className="text-center font-montserrat font-extrabold text-5xl md:text-6xl z-10">
+            Our Story
+          </p>
+          <div className="flex justify-center mb-8 md:mt-8 md:mb-0 max-w-4xl">
+            <Image
+              src="/assets/images/home-3.png"
+              width={1596}
+              height={789}
+              alt="home-1"
+            />
           </div>
         </div>
       </Section>
-      <Section bgColor="bg-gray-300">
-        <div className="flex flex-col items-center">
-          <p>
+      <Section>
+        <div className="flex flex-col items-center space-y-6 py-10">
+          <p className="text-center font-montserrat font-extrabold text-4xl">
             Gaming Is One Of Those Things That’s Pretty Amazing Because When You
             Think About It, Everybody wants to game.
           </p>
-          <p>
-            The story of Engame originally started in 2015 with the merger of
-            two passionate game making studios.
+          <p className="text-center font-montserrat font-semibold text-2xl">
+            The story of <span className="font-bold">Engame</span> originally
+            started in 2015 with the merger of two passionate game making
+            studios.
           </p>
         </div>
       </Section>
-      <Section bgColor="bg-gray-200">
-        <div className="flex flex-row space-x-2">
-          <p className="flex-1 hidden md:block"></p>
-          <div className="flex flex-col items-center">
-            <div className="h-5 w-5 rounded-full border-4 border-black"></div>
-            <div className="flex-1 h-20 w-1 border-2 border-black"></div>
-          </div>
-          <div className="flex-1 flex flex-col">
-            <p>Dec 2015</p>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna
-              pulvinar sit aenean nunc nunc gravida elit.
-            </p>
-          </div>
-        </div>
-        <div className="flex flex-row md:flex-row-reverse space-x-2 space-x md:space-x-reverse">
-          <p className="flex-1 hidden md:block"></p>
-          <div className="flex flex-col items-center">
-            <div className="h-5 w-5 rounded-full border-4 border-black"></div>
-            <div className="flex-1 h-20 w-1 border-2 border-black"></div>
-          </div>
-          <div className="flex-1 flex flex-col">
-            <p className="md:text-right">Dec 2015</p>
-            <p className="md:text-right">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna
-              pulvinar sit aenean nunc nunc gravida elit.
-            </p>
-          </div>
-        </div>
+      <Section>
+        {[
+          {
+            title: "Dec 2015",
+            desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna pulvinar sit aenean nunc nunc gravida elit.",
+          },
+          {
+            title: "Mar 2016",
+            desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna pulvinar sit aenean nunc nunc gravida elit.",
+          },
+          {
+            title: "May 2017",
+            desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna pulvinar sit aenean nunc nunc gravida elit.",
+          },
+        ].map((i, k) => {
+          const even = k % 2 === 0;
+          return (
+            <div
+              key={k}
+              className={
+                "flex flex-row space-x-2" +
+                (even ? "" : " md:flex-row-reverse space-x md:space-x-reverse")
+              }
+            >
+              <p className="flex-1 hidden md:block"></p>
+              <div className="flex flex-col items-center">
+                <div
+                  className={
+                    "h-5 w-5 rounded-full border-4" +
+                    (even ? " border-yellow-300" : " border-yellow-500")
+                  }
+                ></div>
+                <div
+                  className={
+                    "flex-1 h-20 w-1 border-2" +
+                    (even ? " border-yellow-300" : " border-yellow-500")
+                  }
+                ></div>
+              </div>
+              <div className="flex-1 flex flex-col mb-8">
+                <p className="font-montserrat font-extrabold text-4xl">
+                  {i.title}
+                </p>
+                <p className="font-lato font-bold text-lg">{i.desc}</p>
+              </div>
+            </div>
+          );
+        })}
       </Section>
-      <Section bgColor="bg-gray-300">
-        <div className="flex flex-col-reverse md:flex-row md:space-x-2">
-          <div className="flex-1 flex flex-col">
-            <p>Studio That Gamifies Consumer Engagement</p>
-            <ol className="list-decimal pl-4">
+      <Section>
+        <div className="flex flex-col-reverse md:flex-row md:space-x-8 bg-yellow-100 rounded-2xl p-8 mb-10">
+          <div className="flex-1 flex flex-col space-y-8">
+            <p className="font-montserrat font-extrabold text-4xl text-center md:text-left">
+              Studio That Gamifies Consumer Engagement
+            </p>
+            <ol className="list-decimal pl-4 font-montserrat font-semibold text-sm xl:text-base">
               <li>
                 Pioneer in offering Games as a Service - Tap Master to brands &
                 businesses such as Tealive, Fave, Mydin and Herbalife
@@ -399,7 +428,14 @@ const OurStory: NextPage = () => {
             </ol>
           </div>
           <div className="flex-1 flex justify-center items-center">
-            <div className="w-20 h-20 bg-gray-400 rounded"></div>
+            <div className="flex justify-center mb-8 md:mt-8 md:mb-0 max-w-4xl">
+              <Image
+                src="/assets/images/our-story-1.png"
+                width={374}
+                height={361}
+                alt="our-story-2"
+              />
+            </div>
           </div>
         </div>
       </Section>

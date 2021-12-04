@@ -15,7 +15,7 @@ const Footer = (): JSX.Element => {
               height={72}
             />
           </div>
-          <p className="font-montserrat text-lg md:text-md">
+          <p className="font-montserrat text-lg md:text-base">
             © 2021 <span className="font-bold">Engame</span> all rights
             reserved.
           </p>
@@ -24,7 +24,7 @@ const Footer = (): JSX.Element => {
           <div>
             <p className="text-6xl md:text-lg">✉️</p>
             <Link href="mailto:contact@engame.asia" passHref>
-              <a className="font-montserrat font-bold text-lg md:text-md">
+              <a className="font-montserrat font-bold text-lg md:text-base">
                 contact@engame.asia
               </a>
             </Link>
@@ -32,7 +32,7 @@ const Footer = (): JSX.Element => {
           <div>
             <p className="text-6xl md:text-lg">☎</p>
             <Link href="tel:+600122774439" passHref>
-              <a className="font-montserrat font-bold text-lg md:text-md">
+              <a className="font-montserrat font-bold text-lg md:text-base">
                 (+60) 012-277 4439
               </a>
             </Link>
@@ -40,7 +40,7 @@ const Footer = (): JSX.Element => {
         </div>
         <div className="text-center md:text-left">
           <p className="text-6xl md:text-lg">📍</p>
-          <p className="font-montserrat font-bold text-lg md:text-md">
+          <p className="font-montserrat font-bold text-lg md:text-base">
             Enidea Sdn Bhd C-20-02, Metropolitan Square, Jalan PJU 8/1,
             Damansara Perdana, Petaling Jaya, 47820 Selangor, Malaysia
           </p>
@@ -67,35 +67,35 @@ const Footer = (): JSX.Element => {
         </div>
         <div className="menu md:space-x-6 flex flex-col md:flex-row space-y-4 md:space-y-0">
           <Link href="/our-story" passHref>
-            <button className="font-lato font-bold text-lg md:text-md">
+            <button className="font-lato font-bold text-lg md:text-base">
               Our Story
             </button>
           </Link>
           <Link href="/pricing" passHref>
-            <button className="font-lato font-bold text-lg md:text-md">
+            <button className="font-lato font-bold text-lg md:text-base">
               Pricing
             </button>
           </Link>
 
           <Link href="/faq" passHref>
-            <button className="font-lato font-bold text-lg md:text-md">
+            <button className="font-lato font-bold text-lg md:text-base">
               FAQ
             </button>
           </Link>
           <Link href="/contact-us" passHref>
-            <button className="font-lato font-bold text-lg md:text-md">
+            <button className="font-lato font-bold text-lg md:text-base">
               Contact Us
             </button>
           </Link>
         </div>
         <div className="term md:space-x-6 flex flex-col md:flex-row space-y-4 md:space-y-0">
           <Link href="/privacy" passHref>
-            <button className="font-lato font-bold text-lg md:text-md">
+            <button className="font-lato font-bold text-lg md:text-base">
               Privacy
             </button>
           </Link>
           <Link href="/conditions" passHref>
-            <button className="font-lato font-bold text-lg md:text-md">
+            <button className="font-lato font-bold text-lg md:text-base">
               Conditions
             </button>
           </Link>
