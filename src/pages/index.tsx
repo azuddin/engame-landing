@@ -431,74 +431,30 @@ const Home: NextPage = () => {
             Proven Gamification Model Delivered To Superapps Across The Globe
           </p>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
-            <div className="flex flex-col justify-start">
-              <div className="flex justify-center mb-4">
-                <Image
-                  src="/assets/images/home-2.png"
-                  width={800}
-                  height={800}
-                  alt="home-2"
-                  className="rounded-lg"
-                />
+            {[
+              { title: "+9 Million", desc: "Players" },
+              { title: "+163 Million", desc: "Games played" },
+              { title: "+16 Minutes", desc: "Played per session" },
+              { title: "+26 Partners", desc: "Across the globe" },
+            ].map((i, k) => (
+              <div key={k} className="flex flex-col justify-start items-center">
+                <div className="max-w-xs md:h-32 md:w-32 flex justify-center mb-4">
+                  <Image
+                    src="/assets/images/home-2.png"
+                    width={800}
+                    height={800}
+                    alt="home-2"
+                    className="rounded-lg"
+                  />
+                </div>
+                <p className="text-center font-montserrat font-bold text-3xl md:text-xl">
+                  {i.title}
+                </p>
+                <p className="text-center font-montserrat font-bold text-xl md:text-base">
+                  {i.desc}
+                </p>
               </div>
-              <p className="text-center font-montserrat font-bold text-3xl md:text-xl">
-                +9 Million
-              </p>
-              <p className="text-center font-montserrat font-bold text-xl md:text-base">
-                Players
-              </p>
-            </div>
-            <div className="flex flex-col justify-start">
-              <div className="flex justify-center mb-4">
-                <Image
-                  src="/assets/images/home-2.png"
-                  width={800}
-                  height={800}
-                  alt="home-2"
-                  className="rounded-lg"
-                />
-              </div>
-              <p className="text-center font-montserrat font-bold text-3xl md:text-xl">
-                +163 Million
-              </p>
-              <p className="text-center font-montserrat font-bold text-xl md:text-base">
-                Games played
-              </p>
-            </div>
-            <div className="flex flex-col justify-start">
-              <div className="flex justify-center mb-4">
-                <Image
-                  src="/assets/images/home-2.png"
-                  width={800}
-                  height={800}
-                  alt="home-2"
-                  className="rounded-lg"
-                />
-              </div>
-              <p className="text-center font-montserrat font-bold text-3xl md:text-xl">
-                +16 Minutes
-              </p>
-              <p className="text-center font-montserrat font-bold text-xl md:text-base">
-                Played per session
-              </p>
-            </div>
-            <div className="flex flex-col justify-start">
-              <div className="flex justify-center mb-4">
-                <Image
-                  src="/assets/images/home-2.png"
-                  width={800}
-                  height={800}
-                  alt="home-2"
-                  className="rounded-lg"
-                />
-              </div>
-              <p className="text-center font-montserrat font-bold text-3xl md:text-xl">
-                +26 Partners
-              </p>
-              <p className="text-center font-montserrat font-bold text-xl md:text-base">
-                Across the globe
-              </p>
-            </div>
+            ))}
           </div>
         </div>
       </Section>
@@ -508,25 +464,27 @@ const Home: NextPage = () => {
             Next-Gen Enter-Gagement Platform
           </p>
           <div className="flex flex-col-reverse md:flex-col items-center">
-            <div className="flex flex-col space-y-8 md:flex-row md:space-x-4 md:space-y-0">
-              <div className="rounded-2xl bg-yellow-100 p-10">
-                <p className="font-montserrat font-extrabold text-2xl">
-                  +30 Games free to play
-                </p>
-                <p className="font-lato text-lg">
-                  Creating amazing games is our DNA! Come and discover our
-                  latest games and future releases.
-                </p>
-              </div>
-              <div className="rounded-2xl bg-yellow-100 p-10">
-                <p className="font-montserrat font-extrabold text-2xl">
-                  +30 Games free to play
-                </p>
-                <p className="font-lato text-lg">
-                  Creating amazing games is our DNA! Come and discover our
-                  latest games and future releases.
-                </p>
-              </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+              {[
+                {
+                  title: "+30 Games free to play",
+                  desc: "Creating amazing games is our DNA! Come and discover our latest games and future releases.",
+                },
+                {
+                  title: "+100K players join us",
+                  desc: "Creating amazing games is our DNA! Come and discover our latest games and future releases.",
+                },
+              ].map((i, k) => (
+                <div
+                  key={`next-${k}`}
+                  className="rounded-2xl bg-yellow-100 p-10 flex flex-col justify-between"
+                >
+                  <p className="font-montserrat font-extrabold text-2xl">
+                    {i.title}
+                  </p>
+                  <p className="font-lato text-lg">{i.desc}</p>
+                </div>
+              ))}
             </div>
             <div className="flex justify-center mb-8 md:mt-8 md:mb-0">
               <Image
@@ -604,20 +562,40 @@ const Home: NextPage = () => {
           </div>
         </div>
       </Section>
-      <Section bgColor="bg-gray-300">
-        <div className="grid grid-cols-1 md:grid-cols-2">
-          <div className="flex flex-col items-center space-y-2">
-            <p>Learn more about Why Superbrand work with us</p>
-            <div className="h-28 w-28 rounded bg-gray-400"></div>
-            <button className="px-2 py-1 text-base bg-black text-white rounded">
+      <Section bgColor="">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-10 py-10">
+          <div className="flex flex-col items-center space-y-6">
+            <p className="text-center font-montserrat font-extrabold text-4xl md:text-3xl">
+              Learn more about Why Superbrand work with us
+            </p>
+            <div className="max-w-xs flex justify-center">
+              <Image
+                src="/assets/images/home-2.png"
+                width={800}
+                height={800}
+                alt="home-2"
+                className="rounded-lg"
+              />
+            </div>
+            <button className="w-full md:w-52 px-5 py-2 border border-black bg-black text-white rounded font-montserrat font-bold">
               Get A Free Demo
             </button>
           </div>
-          <div className="flex flex-col items-center space-y-2">
-            <p>Learn more about Why Superbrand work with us</p>
-            <div className="h-28 w-28 rounded bg-gray-400"></div>
-            <button className="px-2 py-1 text-base bg-black text-white rounded">
-              Get A Free Demo
+          <div className="flex flex-col items-center space-y-6">
+            <p className="text-center font-montserrat font-extrabold text-4xl md:text-3xl">
+              Deliver an immersive brands to our audience
+            </p>
+            <div className="max-w-xs flex justify-center">
+              <Image
+                src="/assets/images/home-2.png"
+                width={800}
+                height={800}
+                alt="home-2"
+                className="rounded-lg"
+              />
+            </div>
+            <button className="w-full md:w-52 px-5 py-2 border border-black bg-black text-white rounded font-montserrat font-bold">
+              Play a game
             </button>
           </div>
         </div>
