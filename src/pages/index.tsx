@@ -2,6 +2,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import { Section } from "@engame/components";
 import Link from "next/link";
+import Image from "next/image";
 
 const Home: NextPage = () => {
   return (
@@ -395,25 +396,32 @@ const Home: NextPage = () => {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Section bgColor="bg-gray-200">
+      <Section bgColor="">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div className="flex flex-col justify-start space-y-2">
-            <p className="text-center md:text-left">
+          <div className="flex flex-col justify-center space-y-2">
+            <p className="text-center md:text-left font-montserrat font-extrabold text-3xl pb-4">
               Are You Interested To Join Us? Let's Grow Together!
             </p>
             <Link href="/im-brand-owner" passHref>
-              <button className="w-full md:w-40 border border-black bg-black text-white rounded">
+              <button className="w-full md:w-52 px-5 py-2 border border-black bg-black text-white rounded font-montserrat font-bold">
                 I'm A Brand Owner
               </button>
             </Link>
             <Link href="/im-gamer" passHref>
-              <button className="w-full md:w-40 border border-black rounded">
+              <button className="w-full md:w-52 px-5 py-2 border border-black rounded font-montserrat font-bold">
                 Nope, I'm A Gamer
               </button>
             </Link>
           </div>
           <div className="order-first md:order-none flex justify-center items-center">
-            <div className="w-20 h-20 bg-gray-400 rounded"></div>
+            <div className="flex justify-center md:flex-1 md:justify-end">
+              <Image
+                src="/assets/images/home-1.png"
+                width={800}
+                height={800}
+                alt="home-1"
+              />
+            </div>
           </div>
         </div>
       </Section>
