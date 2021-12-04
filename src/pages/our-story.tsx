@@ -597,7 +597,7 @@ const OurStory: NextPage = () => {
                     />
                   </div>
                 </div>
-                <p className="text-center md:text-left max-w-xs font-montserrat font-bold capitalize text-xl mb-4">
+                <p className="flex-1 text-center md:text-left max-w-xs font-montserrat font-bold capitalize text-xl mb-4">
                   {i.quote}
                 </p>
                 <p className="text-center md:text-left max-w-xs font-montserrat font-bold capitalize text-2xl text-yellow-500 mb-4">
@@ -643,15 +643,19 @@ const OurStory: NextPage = () => {
           </div>
         </div>
       </Section>
-      <Section bgColor="bg-gray-300">
-        <div className="bg-white rounded p-4 shadow">
-          <div className="flex flex-row justify-between">
-            <div className="flex flex-col">
-              <p>Are you interested to join us? Let’s grow together!</p>
-              <p>Come and join us to grow your business together</p>
+      <Section bgColor="">
+        <div className="bg-white rounded-xl p-10 shadow-lg my-10">
+          <div className="flex flex-col md:flex-row justify-between space-y-10 md:space-y-0 md:space-x-8">
+            <div className="flex flex-col space-y-2">
+              <p className="text-center md:text-left font-montserrat font-bold text-3xl capitalize">
+                Are you interested to join us? Let’s grow together!
+              </p>
+              <p className="text-center md:text-left font-lato text-xl">
+                Come and join us to grow your business together
+              </p>
             </div>
             <div className="flex flex-col justify-center">
-              <button className="px-2 py-1 text-base bg-black text-white rounded">
+              <button className="w-full md:w-52 px-5 py-2 border border-black bg-black text-white rounded font-montserrat font-bold">
                 Join Now
               </button>
             </div>
