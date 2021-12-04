@@ -38,7 +38,7 @@ const Blog: NextPage = () => {
             <>
               <li key={`blog-${k}`}>
                 <div className="flex flex-col space-y-4">
-                  <div className="header flex items-center space-x-4">
+                  <div className="flex items-center space-x-4">
                     <div className="flex justify-center items-center relative w-10 h-10">
                       <Image
                         src={i.avatar}
