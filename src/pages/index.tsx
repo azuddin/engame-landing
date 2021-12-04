@@ -399,7 +399,7 @@ const Home: NextPage = () => {
       <Section bgColor="">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="flex flex-col justify-center space-y-2">
-            <p className="text-center md:text-left font-montserrat font-extrabold pb-4 text-4xl md:text-3xl">
+            <p className="text-center md:text-left font-montserrat font-extrabold pb-4 text-4xl">
               Are You Interested To Join Us? Let's Grow Together!
             </p>
             <Link href="/im-brand-owner" passHref>
@@ -414,7 +414,7 @@ const Home: NextPage = () => {
             </Link>
           </div>
           <div className="order-first md:order-none flex justify-center items-center">
-            <div className="flex justify-center md:flex-1 md:justify-end">
+            <div className="flex justify-center md:flex-1 md:justify-end max-w-lg">
               <Image
                 src="/assets/images/home-1.png"
                 width={800}
@@ -427,7 +427,7 @@ const Home: NextPage = () => {
       </Section>
       <Section bgColor="">
         <div className="flex flex-col items-center space-y-10 py-10">
-          <p className="text-center font-montserrat font-extrabold text-4xl md:text-3xl">
+          <p className="text-center font-montserrat font-extrabold text-4xl">
             Proven Gamification Model Delivered To Superapps Across The Globe
           </p>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
@@ -460,7 +460,7 @@ const Home: NextPage = () => {
       </Section>
       <Section bgColor="">
         <div className="flex flex-col space-y-6 md:space-y-10 py-10">
-          <p className="text-center font-montserrat font-extrabold text-4xl md:text-3xl">
+          <p className="text-center font-montserrat font-extrabold text-4xl">
             Next-Gen Enter-Gagement Platform
           </p>
           <div className="flex flex-col-reverse md:flex-col items-center">
@@ -486,7 +486,7 @@ const Home: NextPage = () => {
                 </div>
               ))}
             </div>
-            <div className="flex justify-center mb-8 md:mt-8 md:mb-0">
+            <div className="flex justify-center mb-8 md:mt-8 md:mb-0 max-w-4xl">
               <Image
                 src="/assets/images/home-3.png"
                 width={1596}
@@ -509,7 +509,7 @@ const Home: NextPage = () => {
                 className="rounded-lg"
               />
             </div>
-            <p className="text-center md:text-left font-montserrat font-extrabold text-4xl md:text-3xl">
+            <p className="text-center md:text-left font-montserrat font-extrabold text-4xl">
               How it work easier?
             </p>
             <p className="text-center md:text-left font-lato text-lg">
@@ -530,11 +530,19 @@ const Home: NextPage = () => {
       </Section>
       <Section bgColor="">
         <div className="flex flex-col items-center space-y-5 py-10">
-          <p className="text-center font-montserrat font-extrabold text-4xl md:text-3xl">
+          <p className="text-center font-montserrat font-extrabold text-4xl">
             Trending Games
           </p>
           <div className="w-full flex flex-row overflow-auto space-x-4 pb-2">
             {[
+              { name: "Legendary moai", image: "/assets/images/home-5.png" },
+              { name: "The largest one", image: "/assets/images/game-2.png" },
+              { name: "Deep blue sea", image: "/assets/images/game-3.png" },
+              {
+                name: "Scissors rock paper",
+                image: "/assets/images/game-4.png",
+              },
+              { name: "Super fast food", image: "/assets/images/home-5.png" },
               { name: "Legendary moai", image: "/assets/images/home-5.png" },
               { name: "The largest one", image: "/assets/images/game-2.png" },
               { name: "Deep blue sea", image: "/assets/images/game-3.png" },
@@ -600,13 +608,33 @@ const Home: NextPage = () => {
           </div>
         </div>
       </Section>
-      <Section bgColor="bg-gray-200">
-        <div className="flex flex-col items-center">
-          <p>Partnered with the world’s best companies</p>
-          <div className="w-full flex flex-row overflow-auto space-x-2 pb-2">
-            {[...Array(10)].map((i, k) => (
-              <div key={k} className="flex flex-col">
-                <div className="h-20 w-20 rounded bg-gray-400"></div>
+      <Section bgColor="">
+        <div className="flex flex-col items-center py-10 space-y-8">
+          <p className="text-center font-montserrat font-extrabold text-4xl">
+            Partnered with the world’s best companies
+          </p>
+          <div className="w-full flex flex-row xl:justify-center overflow-auto space-x-2 pb-2">
+            {/* `justify-center` will break if company more than 5 */}
+            {[
+              "/assets/images/company-1.png",
+              "/assets/images/company-2.png",
+              "/assets/images/company-3.png",
+              "/assets/images/company-4.png",
+              "/assets/images/company-5.png",
+            ].map((i, k) => (
+              <div
+                key={k}
+                className="flex flex-col min-w-max cursor-pointer filter grayscale hover:grayscale-0"
+              >
+                <div className="flex flex-col w-52">
+                  <Image
+                    src={i}
+                    width={320}
+                    height={225}
+                    alt="home-5"
+                    className="rounded-lg"
+                  />
+                </div>
               </div>
             ))}
           </div>

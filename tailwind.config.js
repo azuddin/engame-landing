@@ -14,7 +14,10 @@ module.exports = {
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      filter: ["hover"],
+      grayscale: ["hover"],
+    },
   },
   plugins: [
     function ({ addUtilities }) {
