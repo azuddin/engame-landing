@@ -261,7 +261,7 @@ const Home: NextPage = () => {
       </Section>
       <Section>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 py-10">
-          <div className="flex flex-col-reverse md:flex-col md:items-center md:justify-center">
+          <div className="flex flex-col-reverse md:flex-col items-center md:justify-center">
             <div className="flex flex-col space-y-8">
               <p className="text-center md:text-left font-montserrat font-extrabold text-4xl">
                 Be part of the next gaming phenomenon
