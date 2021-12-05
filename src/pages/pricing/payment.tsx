@@ -5,6 +5,8 @@ import { PaymentLayout } from "src/components/Layout/PaymentLayout";
 import { Option, Select } from "src/components/Form";
 import { countries, states } from "src/constants";
 import { FiLock } from "react-icons/fi";
+import Image from "next/image";
+import { creditCardType } from "@engame/utils";
 
 const Payment: PageLayoutProps = () => {
   return (
@@ -32,7 +34,7 @@ const Payment: PageLayoutProps = () => {
                   name="name"
                   id="name"
                   type="text"
-                  className="rounded-md border px-4 py-2 text-2xl capitalize"
+                  className="rounded-md border px-4 py-2 text-2xl"
                 />
               </div>
               <div className="flex flex-col">
@@ -117,7 +119,7 @@ const Payment: PageLayoutProps = () => {
                   name="address_1"
                   id="address_1"
                   type="text"
-                  className="rounded-md border px-4 py-2 text-2xl capitalize"
+                  className="rounded-md border px-4 py-2 text-2xl"
                 />
               </div>
               <div className="flex flex-col">
@@ -128,7 +130,7 @@ const Payment: PageLayoutProps = () => {
                   name="address_2"
                   id="address_2"
                   type="text"
-                  className="rounded-md border px-4 py-2 text-2xl capitalize"
+                  className="rounded-md border px-4 py-2 text-2xl"
                 />
               </div>
               <div className="flex flex-col">
@@ -155,7 +157,7 @@ const Payment: PageLayoutProps = () => {
                   name="city"
                   id="city"
                   type="text"
-                  className="rounded-md border px-4 py-2 text-2xl capitalize"
+                  className="rounded-md border px-4 py-2 text-2xl"
                 />
               </div>
               <div className="flex flex-col">
@@ -166,7 +168,7 @@ const Payment: PageLayoutProps = () => {
                   name="postcode"
                   id="postcode"
                   type="text"
-                  className="rounded-md border px-4 py-2 text-2xl capitalize"
+                  className="rounded-md border px-4 py-2 text-2xl"
                 />
               </div>
             </div>
@@ -201,20 +203,42 @@ const Payment: PageLayoutProps = () => {
                   name="name_on_card"
                   id="name_on_card"
                   type="text"
-                  className="rounded-md border px-4 py-2 text-2xl capitalize"
+                  className="rounded-md border px-4 py-2 text-2xl"
                 />
               </div>
               <div className="flex flex-col">
                 <label htmlFor="card_number" className="font-lato text-xl mb-1">
                   Credit Card Number <span className="text-red-600">*</span>
                 </label>
-                <input
-                  name="card_number"
-                  id="card_number"
-                  type="text"
-                  className="rounded-md border px-4 py-2 text-2xl capitalize"
-                  placeholder="0000 1234 5678 9000"
-                />
+                <div className="flex items-center relative">
+                  <input
+                    name="card_number"
+                    id="card_number"
+                    type="text"
+                    className="rounded-md border pl-4 pr-20 py-2 text-2xl w-full"
+                    placeholder="0000 1234 5678 9000"
+                  />
+                  <div className="absolute right-2 flex flex-row">
+                    <Image
+                      src="/assets/images/master.png"
+                      width={30}
+                      height={30}
+                      className={
+                        creditCardType("") === "MASTERCARD"
+                          ? ""
+                          : "filter grayscale"
+                      }
+                    />
+                    <Image
+                      src="/assets/images/visa.png"
+                      width={30}
+                      height={30}
+                      className={
+                        creditCardType("") === "VISA" ? "" : "filter grayscale"
+                      }
+                    />
+                  </div>
+                </div>
               </div>
               <div className="grid grid-cols-2 gap-8 lg:gap-10">
                 <div className="flex flex-col">
@@ -228,7 +252,7 @@ const Payment: PageLayoutProps = () => {
                     name="expiration_date"
                     id="expiration_date"
                     type="text"
-                    className="rounded-md border px-4 py-2 text-2xl capitalize"
+                    className="rounded-md border px-4 py-2 text-2xl"
                     placeholder="MM/YY"
                   />
                 </div>
@@ -240,7 +264,7 @@ const Payment: PageLayoutProps = () => {
                     name="cvc"
                     id="cvc"
                     type="password"
-                    className="rounded-md border px-4 py-2 text-2xl capitalize"
+                    className="rounded-md border px-4 py-2 text-2xl"
                     placeholder="***"
                   />
                 </div>
@@ -276,8 +300,8 @@ const Payment: PageLayoutProps = () => {
                   name="voucher_code"
                   id="voucher_code"
                   type="text"
-                  className="rounded-md border pl-4 py-2 text-2xl capitalize font-light pr-20"
-                  placeholder="Enter Valid Code"
+                  className="rounded-md border pl-4 py-2 text-2xl font-light pr-20"
+                  placeholder="Enter valid code"
                 />
                 <span className="absolute right-3 font-montserrat font-bold text-lg">
                   Apply

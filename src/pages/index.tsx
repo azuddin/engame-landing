@@ -294,7 +294,7 @@ const Home: PageLayoutProps = () => {
                 name="name"
                 id="name"
                 type="text"
-                className="rounded-md border px-4 py-2 text-2xl capitalize"
+                className="rounded-md border px-4 py-2 text-2xl"
               />
             </div>
             <div className="flex flex-col mb-8">
