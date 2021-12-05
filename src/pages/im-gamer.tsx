@@ -1,9 +1,9 @@
-import type { NextPage } from "next";
 import Head from "next/head";
-import { Section } from "@engame/components";
+import { Layout, Section } from "@engame/components";
 import Image from "next/image";
+import { PageLayoutProps } from "src/types";
 
-const ImGamer: NextPage = () => {
+const ImGamer: PageLayoutProps = () => {
   return (
     <>
       <Head>
@@ -266,5 +266,7 @@ const ImGamer: NextPage = () => {
     </>
   );
 };
+
+ImGamer.layout = Layout;
 
 export default ImGamer;

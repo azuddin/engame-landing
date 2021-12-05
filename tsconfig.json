@@ -18,7 +18,8 @@
     "paths": {
       "@engame/components": ["src/components"],
       "@engame/utils": ["src/utils"],
-      "@engame/styles/*": ["src/styles/*"]
+      "@engame/styles/*": ["src/styles/*"],
+      "@engame/types": ["src/types"]
     },
     "downlevelIteration": true
   },

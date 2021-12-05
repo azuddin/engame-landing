@@ -1,7 +1,8 @@
-import { Section } from "@engame/components";
+import { Layout, Section } from "@engame/components";
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
+import { PageLayoutProps } from "src/types";
 
 const TEAM_LIST = [
   {
@@ -27,7 +28,7 @@ const TEAM_LIST = [
   },
 ];
 
-const OurStory: NextPage = () => {
+const OurStory: PageLayoutProps = () => {
   return (
     <>
       <Head>
@@ -375,5 +376,7 @@ const OurStory: NextPage = () => {
     </>
   );
 };
+
+OurStory.layout = Layout;
 
 export default OurStory;

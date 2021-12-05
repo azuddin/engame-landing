@@ -1,8 +1,8 @@
-import { Section } from "@engame/components";
-import type { NextPage } from "next";
+import { Layout, Section } from "@engame/components";
 import Image from "next/image";
+import { PageLayoutProps } from "src/types";
 
-const BlogDetail: NextPage = () => {
+const BlogDetail: PageLayoutProps = () => {
   const content = (
     <div>
       <p>
@@ -56,5 +56,7 @@ const BlogDetail: NextPage = () => {
     </>
   );
 };
+
+BlogDetail.layout = Layout;
 
 export default BlogDetail;

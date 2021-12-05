@@ -1,9 +1,9 @@
-import type { NextPage } from "next";
 import Head from "next/head";
-import { Section } from "@engame/components";
+import { Layout, Section } from "@engame/components";
 import { FiChevronDown } from "react-icons/fi";
 import Image from "next/image";
 import { useState } from "react";
+import { PageLayoutProps } from "src/types";
 
 const Collapsible = (props: {
   title: string;
@@ -29,7 +29,7 @@ const Collapsible = (props: {
   );
 };
 
-const FAQ: NextPage = () => {
+const FAQ: PageLayoutProps = () => {
   const [openedCard, setOpenedCard] = useState([""]);
   const handleClickCard = (key: string) => {
     if (openedCard.includes(key)) {
@@ -233,5 +233,7 @@ const FAQ: NextPage = () => {
     </>
   );
 };
+
+FAQ.layout = Layout;
 
 export default FAQ;

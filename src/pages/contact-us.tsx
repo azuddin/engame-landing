@@ -1,11 +1,12 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import { Section } from "@engame/components";
+import { Layout, Section } from "@engame/components";
 import Image from "next/image";
 import { Select } from "src/components/Form";
 import { Item } from "react-stately";
+import { PageLayoutProps } from "src/types";
 
-const ContactUs: NextPage = () => {
+const ContactUs: PageLayoutProps = () => {
   return (
     <>
       <Head>
@@ -113,5 +114,7 @@ const ContactUs: NextPage = () => {
     </>
   );
 };
+
+ContactUs.layout = Layout;
 
 export default ContactUs;

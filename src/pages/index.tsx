@@ -1,12 +1,13 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import { Section } from "@engame/components";
+import { Layout, Section } from "@engame/components";
 import Link from "next/link";
 import Image from "next/image";
 import { Select } from "src/components/Form";
 import { Item } from "react-stately";
+import { PageLayoutProps } from "src/types";
 
-const Home: NextPage = () => {
+const Home: PageLayoutProps = () => {
   return (
     <>
       <Head>
@@ -359,5 +360,7 @@ const Home: NextPage = () => {
     </>
   );
 };
+
+Home.layout = Layout;
 
 export default Home;

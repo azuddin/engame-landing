@@ -1,10 +1,10 @@
-import { Section } from "@engame/components";
-import type { NextPage } from "next";
+import { Layout, Section } from "@engame/components";
 import { FiArrowRight } from "react-icons/fi";
 import Link from "next/link";
 import Image from "next/image";
+import { PageLayoutProps } from "src/types";
 
-const Blog: NextPage = () => {
+const Blog: PageLayoutProps = () => {
   const blogs = [
     {
       avatar: "/assets/images/icon.png",
@@ -86,5 +86,7 @@ const Blog: NextPage = () => {
     </>
   );
 };
+
+Blog.layout = Layout;
 
 export default Blog;

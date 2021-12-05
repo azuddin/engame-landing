@@ -1,12 +1,17 @@
 import "../styles/globals.css";
-import type { AppProps } from "next/app";
-import { Layout } from "@engame/components";
+import { AppLayoutProps } from "src/types";
 
-function MyApp({ Component, pageProps }: AppProps) {
+function MyApp({ Component, pageProps }: AppLayoutProps) {
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    <>
+      {Component.layout ? (
+        <Component.layout>
+          <Component {...pageProps} />
+        </Component.layout>
+      ) : (
+        <Component {...pageProps} />
+      )}
+    </>
   );
 }
 

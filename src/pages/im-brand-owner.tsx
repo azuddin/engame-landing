@@ -1,10 +1,10 @@
-import type { NextPage } from "next";
 import Head from "next/head";
-import { Section } from "@engame/components";
+import { Layout, Section } from "@engame/components";
 import Image from "next/image";
 import { FiCheckCircle } from "react-icons/fi";
+import { PageLayoutProps } from "src/types";
 
-const ImBrandOwner: NextPage = () => {
+const ImBrandOwner: PageLayoutProps = () => {
   return (
     <>
       <Head>
@@ -286,5 +286,7 @@ const ImBrandOwner: NextPage = () => {
     </>
   );
 };
+
+ImBrandOwner.layout = Layout;
 
 export default ImBrandOwner;

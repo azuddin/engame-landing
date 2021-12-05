@@ -1,10 +1,10 @@
-import type { NextPage } from "next";
 import Head from "next/head";
-import { Section } from "@engame/components";
+import { Layout, Section } from "@engame/components";
 import Image from "next/image";
 import { FiCheckCircle } from "react-icons/fi";
+import { PageLayoutProps } from "src/types";
 
-const Pricing: NextPage = () => {
+const Pricing: PageLayoutProps = () => {
   return (
     <>
       <Head>
@@ -173,5 +173,7 @@ const Pricing: NextPage = () => {
     </>
   );
 };
+
+Pricing.layout = Layout;
 
 export default Pricing;

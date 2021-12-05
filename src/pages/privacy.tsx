@@ -1,7 +1,10 @@
-import type { NextPage } from "next";
+import { Layout } from "@engame/components";
+import { PageLayoutProps } from "src/types";
 
-const Privacy: NextPage = () => {
+const Privacy: PageLayoutProps = () => {
   return <>TODO:Privacy</>;
 };
+
+Privacy.layout = Layout;
 
 export default Privacy;
