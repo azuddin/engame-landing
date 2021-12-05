@@ -21,7 +21,7 @@ interface OptionProps {
   state: ListState<unknown>;
 }
 
-export function ListBox(props: ListBoxProps) {
+export const ListBox = (props: ListBoxProps) => {
   let ref = React.useRef<HTMLUListElement>(null);
   let { listBoxRef = ref, state } = props;
   let { listBoxProps } = useListBox(props, state, listBoxRef);
@@ -41,9 +41,9 @@ export function ListBox(props: ListBoxProps) {
       )}
     </ul>
   );
-}
+};
 
-function ListBoxSection({ section, state }: SectionProps) {
+const ListBoxSection = ({ section, state }: SectionProps) => {
   let { itemProps, headingProps, groupProps } = useListBoxSection({
     heading: section.rendered,
     "aria-label": section["aria-label"],
@@ -68,9 +68,9 @@ function ListBoxSection({ section, state }: SectionProps) {
       </li>
     </>
   );
-}
+};
 
-function Option({ item, state }: OptionProps) {
+const Option = ({ item, state }: OptionProps) => {
   let ref = React.useRef<HTMLLIElement>(null);
   let { optionProps, isDisabled, isSelected, isFocused } = useOption(
     {
@@ -101,4 +101,4 @@ function Option({ item, state }: OptionProps) {
       )}
     </li>
   );
-}
+};

@@ -3,8 +3,10 @@ import { Layout, Section } from "@engame/components";
 import Image from "next/image";
 import { FiCheckCircle } from "react-icons/fi";
 import { PageLayoutProps } from "src/types";
+import { useRouter } from "next/router";
 
 const Pricing: PageLayoutProps = () => {
+  const { push } = useRouter();
   return (
     <>
       <Head>
@@ -130,7 +132,10 @@ const Pricing: PageLayoutProps = () => {
                     ))}
                   </ol>
                 </div>
-                <button className="w-full px-2 py-1 mt-6 text-base bg-black text-white rounded border border-black font-montserrat font-bold">
+                <button
+                  onClick={() => push("/pricing/payment")}
+                  className="w-full px-2 py-1 mt-6 text-base bg-black text-white rounded border border-black font-montserrat font-bold"
+                >
                   Choose plan
                 </button>
               </div>

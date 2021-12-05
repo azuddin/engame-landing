@@ -8,7 +8,7 @@ interface PopoverProps {
   onClose: () => void;
 }
 
-export function Popover(props: PopoverProps) {
+export const Popover = (props: PopoverProps) => {
   let ref = React.useRef<HTMLDivElement>(null);
   let { popoverRef = ref, isOpen, onClose, children } = props;
 
@@ -38,4 +38,4 @@ export function Popover(props: PopoverProps) {
       </div>
     </FocusScope>
   );
-}
+};

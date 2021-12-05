@@ -13,7 +13,7 @@ import { ListBox } from "./ListBox";
 import { Popover } from "./Popover";
 import { FiChevronDown } from "react-icons/fi";
 
-export function Select<T extends object>(props: AriaSelectProps<T>) {
+export const Select = <T extends object>(props: AriaSelectProps<T>) => {
   // Create state based on the incoming props
   let state = useSelectState(props);
 
@@ -50,7 +50,7 @@ export function Select<T extends object>(props: AriaSelectProps<T>) {
       >
         <span
           {...valueProps}
-          className={`text-md ${
+          className={`text-md font-light ${
             state.selectedItem ? "text-gray-800" : "text-gray-500"
           }`}
         >
@@ -67,4 +67,4 @@ export function Select<T extends object>(props: AriaSelectProps<T>) {
       )}
     </div>
   );
-}
+};

@@ -3,7 +3,7 @@ import Head from "next/head";
 import { Layout, Section } from "@engame/components";
 import Link from "next/link";
 import Image from "next/image";
-import { Select } from "src/components/Form";
+import { Option, Select } from "src/components/Form";
 import { Item } from "react-stately";
 import { PageLayoutProps } from "src/types";
 
@@ -334,10 +334,14 @@ const Home: PageLayoutProps = () => {
               <label htmlFor="category" className="font-lato text-xl mb-1">
                 Category <span className="text-red-600">*</span>
               </label>
-              <Select aria-label="Category" placeholder="Select a category">
-                <Item key="category 1">Category 1</Item>
-                <Item key="category 2">Category 2</Item>
-                <Item key="category 3">Category 3</Item>
+              <Select
+                name="category"
+                aria-label="Category"
+                placeholder="Select a category"
+              >
+                <Option key="category 1">Category 1</Option>
+                <Option key="category 2">Category 2</Option>
+                <Option key="category 3">Category 3</Option>
               </Select>
             </div>
             <div className="flex flex-col mb-8">
