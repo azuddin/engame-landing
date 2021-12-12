@@ -192,14 +192,14 @@ const OurStory: PageLayoutProps = () => {
                   <div className="space-y-4">
                     <div>
                       <p className="text-xl">New Merchant&apos;s Features</p>
-                      <ol className="pl-4 list-decimal font-normal">
+                      <ol className="pl-4 list-decimal font-normal list-inside">
                         <li>In game advertising bidding system</li>
                         <li>In built geo-location capabilities</li>
                       </ol>
                     </div>
                     <div>
                       <p className="text-xl">New Game Features</p>
-                      <ol className="pl-4 list-decimal font-normal">
+                      <ol className="pl-4 list-decimal font-normal list-inside">
                         <li>iOS Release</li>
                       </ol>
                     </div>
@@ -209,7 +209,15 @@ const OurStory: PageLayoutProps = () => {
             ].map((i, k) => {
               const even = k % 2 === 0;
               return (
-                <div key={k} className="flex flex-row md:space-x-6">
+                <div
+                  key={k}
+                  className={
+                    "flex flex-row md:space-x-6" +
+                    (even
+                      ? ""
+                      : " md:flex-row-reverse space-x md:space-x-reverse")
+                  }
+                >
                   <p className="flex-1 hidden md:block"></p>
                   <div className="flex flex-col items-center mr-8 md:mr-0">
                     <div
@@ -226,10 +234,22 @@ const OurStory: PageLayoutProps = () => {
                     ></div>
                   </div>
                   <div className="flex-1 flex flex-col mb-8">
-                    <p className="font-montserrat font-extrabold text-4xl">
+                    <p
+                      className={
+                        "font-montserrat font-extrabold text-4xl" +
+                        (even ? "" : " md:text-right")
+                      }
+                    >
                       {i.title}
                     </p>
-                    <p className="font-lato font-bold text-lg">{i.desc}</p>
+                    <p
+                      className={
+                        "font-lato font-bold text-lg" +
+                        (even ? "" : " md:text-right")
+                      }
+                    >
+                      {i.desc}
+                    </p>
                   </div>
                 </div>
               );
