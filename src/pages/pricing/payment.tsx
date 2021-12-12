@@ -8,12 +8,6 @@ import { creditCardType } from "@engame/utils";
 import { FiLock } from "react-icons/fi";
 
 const Payment: PageLayoutProps = () => {
-  const newCountries = countries.map((country) => {
-    const value = country || "";
-    const key = value.toLowerCase().replace(/ /g, "_");
-    return { key, value };
-  });
-
   return (
     <>
       <Head>
@@ -109,8 +103,10 @@ const Payment: PageLayoutProps = () => {
                   aria-label="Country"
                   placeholder="Select a country"
                 >
-                  {newCountries?.map((country) => (
-                    <Option key={country.key}>{country.value}</Option>
+                  {countries.map((country) => (
+                    <Option key={country.toLowerCase().replace(/ /g, "_")}>
+                      {country}
+                    </Option>
                   ))}
                 </Select>
               </div>
@@ -146,7 +142,7 @@ const Payment: PageLayoutProps = () => {
                   placeholder="Select a state"
                 >
                   {states.map((state) => (
-                    <Option key={state.toLowerCase().replaceAll(" ", "_")}>
+                    <Option key={state.toLowerCase().replace(/ /g, "_")}>
                       {state}
                     </Option>
                   ))}
