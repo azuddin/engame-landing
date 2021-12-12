@@ -10,7 +10,7 @@ import { FiLock } from "react-icons/fi";
 const Payment: PageLayoutProps = () => {
   const newCountries = countries.map((country) => {
     const value = country || "";
-    const key = value.toLowerCase().replaceAll(" ", "_");
+    const key = value.toLowerCase().replace(/ /g, "_");
     return { key, value };
   });
 
