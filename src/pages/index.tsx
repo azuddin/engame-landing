@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import { Layout, Modal, Option, Section, Select } from "@engame/components";
+import { Layout, Option, Section, Select } from "@engame/components";
 import { carouselResponsive } from "@engame/constants";
 import { PageLayoutProps } from "@engame/types";
 import Carousel from "react-multi-carousel";

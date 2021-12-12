@@ -5,13 +5,14 @@ import { Hamburger } from "@engame/components";
 
 interface NavbarProps {
   onClickLogin: () => void;
+  onClickStartFreeTrial: () => void;
   onToggleShowMenu: (status: boolean) => void;
 }
 
 const Navbar = (props: NavbarProps): JSX.Element => {
   const [showMenu, setShowMenu] = useState(false);
 
-  const { onClickLogin, onToggleShowMenu } = props;
+  const { onClickLogin, onClickStartFreeTrial, onToggleShowMenu } = props;
 
   const handleToggleMenu = () => {
     const status = !showMenu;
@@ -62,7 +63,10 @@ const Navbar = (props: NavbarProps): JSX.Element => {
               layout="fixed"
             />
           </div>
-          <button className="text-montserrat font-bold text-lg bg-black text-white border-2 border-black rounded-lg py-2">
+          <button
+            onClick={onClickStartFreeTrial}
+            className="text-montserrat font-bold text-lg bg-black text-white border-2 border-black rounded-lg py-2"
+          >
             Start Free Trial
           </button>
           <button
@@ -118,7 +122,10 @@ const Navbar = (props: NavbarProps): JSX.Element => {
                 Contact Us
               </button>
             </Link>
-            <button className="px-2 py-1 text-montserrat font-bold md:text-base bg-black text-white rounded">
+            <button
+              onClick={onClickStartFreeTrial}
+              className="px-2 py-1 text-montserrat font-bold md:text-base bg-black text-white rounded"
+            >
               Start Free Trial
             </button>
             <button

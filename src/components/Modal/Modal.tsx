@@ -17,13 +17,21 @@ const Modal = (props: ModalProps): JSX.Element => {
         <>
           <div className="fixed h-screen w-screen top-0 bg-black z-40 opacity-80"></div>
           <div className="fixed h-screen w-full top-0 z-50 flex flex-col items-center justify-center">
-            <div className="bg-white shadow rounded-2xl px-6 py-4">
+            <div className="bg-white shadow rounded-2xl px-4 md:px-6 py-6 flex flex-col max-h-screen">
               <div className="mb-4 flex justify-end w-full">
                 <button onClick={onCloseModal}>
-                  <FiX />
+                  <FiX
+                    size={20}
+                    fill="transparent"
+                    strokeWidth="3"
+                    className="stroke-current text-black"
+                    strokeLinecap="round"
+                  />
                 </button>
               </div>
-              <div className="rounded-b-lg pb-4">{children}</div>
+              <div className="flex-1 rounded-b-lg overflow-auto">
+                {children}
+              </div>
             </div>
           </div>
         </>
