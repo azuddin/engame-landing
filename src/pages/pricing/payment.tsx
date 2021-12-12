@@ -103,11 +103,11 @@ const Payment: PageLayoutProps = () => {
                   aria-label="Country"
                   placeholder="Select a country"
                 >
-                  {countries.map((country) => (
-                    <Option key={country.toLowerCase().replaceAll(" ", "_")}>
-                      {country}
-                    </Option>
-                  ))}
+                  {countries.map((country) => {
+                    const lowercase = country.toLowerCase();
+                    const key = lowercase.replaceAll(" ", "_");
+                    return <Option key={key}>{country}</Option>;
+                  })}
                 </Select>
               </div>
               <div className="flex flex-col">
