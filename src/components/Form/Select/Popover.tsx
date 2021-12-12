@@ -1,5 +1,5 @@
 import * as React from "react";
-import { useOverlay, DismissButton, FocusScope } from "react-aria";
+import { DismissButton, FocusScope, useOverlay } from "react-aria";
 
 interface PopoverProps {
   popoverRef?: React.RefObject<HTMLDivElement>;

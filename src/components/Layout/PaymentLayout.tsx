@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
-import { Footer } from "@engame/components";
 import Image from "next/image";
+import { Footer } from "@engame/components";
 
 export interface PaymentLayoutProps {
   children?: ReactNode;

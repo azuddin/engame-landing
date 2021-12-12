@@ -1,14 +1,14 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import { Layout, Section } from "@engame/components";
-import Link from "next/link";
 import Image from "next/image";
-import { Option, Select } from "src/components/Form";
-import { Item } from "react-stately";
-import { PageLayoutProps } from "src/types";
+import Link from "next/link";
+import { Layout, Section } from "@engame/components";
 import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
+import { Item } from "react-stately";
+import { Option, Select } from "src/components/Form";
 import { carouselResponsive } from "src/constants";
+import { PageLayoutProps } from "src/types";
+import "react-multi-carousel/lib/styles.css";
 
 const Home: PageLayoutProps = () => {
   return (
@@ -25,16 +25,16 @@ const Home: PageLayoutProps = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="flex flex-col justify-center space-y-2">
             <p className="text-center md:text-left font-montserrat font-extrabold pb-4 text-4xl">
-              Are You Interested To Join Us? Let's Grow Together!
+              Are You Interested To Join Us? Let&apos;s Grow Together!
             </p>
             <Link href="/im-brand-owner" passHref>
               <button className="w-full md:w-52 px-5 py-2 border border-black bg-black text-white rounded font-montserrat font-bold">
-                I'm A Brand Owner
+                I&apos;m A Brand Owner
               </button>
             </Link>
             <Link href="/im-gamer" passHref>
               <button className="w-full md:w-52 px-5 py-2 border border-black rounded font-montserrat font-bold">
-                Nope, I'm A Gamer
+                Nope, I&apos;m A Gamer
               </button>
             </Link>
           </div>
@@ -326,8 +326,8 @@ const Home: PageLayoutProps = () => {
               </p>
               <p className="font-lato text-xl">
                 Looking to make a media inquiry ? Any feedback or suggestions
-                about one of our games? Fill out the form and we'll get back to
-                you !
+                about one of our games? Fill out the form and we&apos;ll get
+                back to you !
               </p>
             </div>
             <div className="flex max-w-md">

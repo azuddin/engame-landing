@@ -1,9 +1,9 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import { Layout, Section } from "@engame/components";
 import Image from "next/image";
-import { Option, Select } from "src/components/Form";
+import { Layout, Section } from "@engame/components";
 import { Item } from "react-stately";
+import { Option, Select } from "src/components/Form";
 import { PageLayoutProps } from "src/types";
 
 const ContactUs: PageLayoutProps = () => {
@@ -26,8 +26,8 @@ const ContactUs: PageLayoutProps = () => {
               </p>
               <p className="font-lato text-xl">
                 Looking to make a media inquiry ? Any feedback or suggestions
-                about one of our games? Fill out the form and we'll get back to
-                you !
+                about one of our games? Fill out the form and we&apos;ll get
+                back to you !
               </p>
             </div>
             <div className="flex max-w-md">

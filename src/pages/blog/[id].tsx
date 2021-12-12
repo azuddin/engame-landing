@@ -1,5 +1,5 @@
-import { Layout, Section } from "@engame/components";
 import Image from "next/image";
+import { Layout, Section } from "@engame/components";
 import { PageLayoutProps } from "src/types";
 
 const BlogDetail: PageLayoutProps = () => {
@@ -7,10 +7,10 @@ const BlogDetail: PageLayoutProps = () => {
     <div>
       <p>
         In year 2017 when we first got ourselves into the then called IPCC
-        (Intellectual Property Creators' Challenge), we squeezed ourselves into
-        the finalist but falls short in the final round; it’s clear that our
-        game with commercial elements wasn’t ready and we stuffed the idea into
-        the deep freeze.
+        (Intellectual Property Creators&apos; Challenge), we squeezed ourselves
+        into the finalist but falls short in the final round; it’s clear that
+        our game with commercial elements wasn’t ready and we stuffed the idea
+        into the deep freeze.
       </p>
       <br />
       <p>

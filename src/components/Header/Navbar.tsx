@@ -1,7 +1,7 @@
 import { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { Hamburger } from "@engame/components";
-import Image from "next/image";
 
 const Navbar = (): JSX.Element => {
   const [showMenu, setShowMenu] = useState(false);

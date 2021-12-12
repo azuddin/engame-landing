@@ -1,7 +1,7 @@
-import { Layout, Section } from "@engame/components";
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
+import { Layout, Section } from "@engame/components";
 import { PageLayoutProps } from "src/types";
 
 const TEAM_LIST = [

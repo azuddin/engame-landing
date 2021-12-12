@@ -1,9 +1,9 @@
 import Head from "next/head";
-import { Layout, Section } from "@engame/components";
 import Image from "next/image";
+import { useRouter } from "next/router";
+import { Layout, Section } from "@engame/components";
 import { FiCheckCircle } from "react-icons/fi";
 import { PageLayoutProps } from "src/types";
-import { useRouter } from "next/router";
 
 const Pricing: PageLayoutProps = () => {
   const { push } = useRouter();

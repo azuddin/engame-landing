@@ -1,16 +1,16 @@
 import Head from "next/head";
-import { Layout, Section } from "@engame/components";
 import Image from "next/image";
-import { PageLayoutProps } from "src/types";
+import { Layout, Section } from "@engame/components";
 import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
 import { carouselResponsive } from "src/constants";
+import { PageLayoutProps } from "src/types";
+import "react-multi-carousel/lib/styles.css";
 
 const ImGamer: PageLayoutProps = () => {
   return (
     <>
       <Head>
-        <title>I'm Gamer - Engame</title>
+        <title>I&apos;m Gamer - Engame</title>
         <meta
           name="description"
           content="Sunt ullamco do adipisicing dolore occaecat qui eiusmod ut irure."
@@ -46,7 +46,7 @@ const ImGamer: PageLayoutProps = () => {
           </p>
           <p className="text-center font-montserrat font-semibold text-2xl capitalize">
             An online arcade game center where you can redeem and win real
-            rewards from our vendors. It's totally{" "}
+            rewards from our vendors. It&apos;s totally{" "}
             <span className="font-extrabold">free to play and win</span>! Come
             join us today!
           </p>

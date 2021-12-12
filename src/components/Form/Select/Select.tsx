@@ -1,17 +1,16 @@
 import * as React from "react";
 import type { AriaSelectProps } from "@react-types/select";
-import { useSelectState } from "react-stately";
 import {
-  useSelect,
   HiddenSelect,
-  useButton,
   mergeProps,
+  useButton,
   useFocusRing,
+  useSelect,
 } from "react-aria";
-
+import { FiChevronDown } from "react-icons/fi";
+import { useSelectState } from "react-stately";
 import { ListBox } from "./ListBox";
 import { Popover } from "./Popover";
-import { FiChevronDown } from "react-icons/fi";
 
 export const Select = <T extends object>(props: AriaSelectProps<T>) => {
   // Create state based on the incoming props

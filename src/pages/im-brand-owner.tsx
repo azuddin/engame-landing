@@ -1,6 +1,6 @@
 import Head from "next/head";
-import { Layout, Section } from "@engame/components";
 import Image from "next/image";
+import { Layout, Section } from "@engame/components";
 import { FiCheckCircle } from "react-icons/fi";
 import { PageLayoutProps } from "src/types";
 
@@ -8,7 +8,7 @@ const ImBrandOwner: PageLayoutProps = () => {
   return (
     <>
       <Head>
-        <title>I'm Brand Owner - Engame</title>
+        <title>I&apos;m Brand Owner - Engame</title>
         <meta
           name="description"
           content="Sunt ullamco do adipisicing dolore occaecat qui eiusmod ut irure."

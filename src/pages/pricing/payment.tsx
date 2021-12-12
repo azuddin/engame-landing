@@ -1,12 +1,12 @@
-import { Section } from "@engame/components";
-import { PageLayoutProps } from "src/types";
 import Head from "next/head";
-import { PaymentLayout } from "src/components/Layout/PaymentLayout";
-import { Option, Select } from "src/components/Form";
-import { countries, states } from "src/constants";
-import { FiLock } from "react-icons/fi";
 import Image from "next/image";
+import { Section } from "@engame/components";
 import { creditCardType } from "@engame/utils";
+import { FiLock } from "react-icons/fi";
+import { Option, Select } from "src/components/Form";
+import { PaymentLayout } from "src/components/Layout/PaymentLayout";
+import { countries, states } from "src/constants";
+import { PageLayoutProps } from "src/types";
 
 const Payment: PageLayoutProps = () => {
   return (
@@ -228,6 +228,7 @@ const Payment: PageLayoutProps = () => {
                           ? ""
                           : "filter grayscale"
                       }
+                      alt="mastercard"
                     />
                     <Image
                       src="/assets/images/visa.png"
@@ -236,6 +237,7 @@ const Payment: PageLayoutProps = () => {
                       className={
                         creditCardType("") === "VISA" ? "" : "filter grayscale"
                       }
+                      alt="visa"
                     />
                   </div>
                 </div>

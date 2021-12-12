@@ -1,10 +1,9 @@
-/* eslint-disable @typescript-eslint/no-use-before-define */
 import * as React from "react";
 import type { AriaListBoxOptions } from "@react-aria/listbox";
-import type { ListState } from "react-stately";
 import type { Node } from "@react-types/shared";
 import { useListBox, useListBoxSection, useOption } from "react-aria";
 import { FiCheckCircle } from "react-icons/fi";
+import type { ListState } from "react-stately";
 
 interface ListBoxProps extends AriaListBoxOptions<unknown> {
   listBoxRef?: React.RefObject<HTMLUListElement>;
