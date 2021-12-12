@@ -303,7 +303,7 @@ const ImGamer: PageLayoutProps = () => {
           <div className="flex flex-col md:flex-row justify-between space-y-10 md:space-y-0 md:space-x-8">
             <div className="flex flex-col space-y-2">
               <p className="text-center md:text-left font-montserrat font-bold text-3xl capitalize">
-                Are you interested to win more voucher? Let’s play now!
+                Are you interested to win more voucher? Let&apos;s play now!
               </p>
               <p className="text-center md:text-left font-lato text-xl">
                 <span className="font-bold">FREE</span> to enjoy the multi fun

@@ -1,32 +1,7 @@
-import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import { Layout, Section } from "@engame/components";
 import { PageLayoutProps } from "@engame/types";
-
-const TEAM_LIST = [
-  {
-    avatar: "/assets/images/home-2.png",
-    name: "Vincent Chong",
-    title: "The Mastermind CEO",
-    quoat:
-      "“grow this studio to a place where creative game person from all around the world can gather.”",
-  },
-  {
-    avatar: "/assets/images/home-2.png",
-    name: "Jasmine Ng",
-    title: "Business Leader Co-founder",
-    quoat:
-      "“games and engagement thru entertainment will bring about the next paradigm shift in technological evolution for new business.”",
-  },
-  {
-    avatar: "/assets/images/home-2.png",
-    name: "Cham Lee",
-    title: "The Archbishop CTO",
-    quoat:
-      "“Whether you’re A casual gamer, OR you’re an enthusiast, there’s a large market for us.”",
-  },
-];
 
 const OurStory: PageLayoutProps = () => {
   return (
@@ -57,8 +32,8 @@ const OurStory: PageLayoutProps = () => {
       <Section>
         <div className="flex flex-col items-center space-y-6 py-10">
           <p className="text-center font-montserrat font-extrabold text-4xl">
-            Gaming Is One Of Those Things That’s Pretty Amazing Because When You
-            Think About It, Everybody wants to game.
+            Gaming Is One Of Those Things That&apos;s Pretty Amazing Because
+            When You Think About It, Everybody wants to game.
           </p>
           <p className="text-center font-montserrat font-semibold text-2xl">
             The story of <span className="font-bold">Engame</span> originally
@@ -196,14 +171,14 @@ const OurStory: PageLayoutProps = () => {
                 title: "Q1",
                 desc: (
                   <>
-                    <p className="text-xl">New Merchant’s Features</p>
+                    <p className="text-xl">New Merchant&apos;s Features</p>
                     <ol className="pl-4 list-decimal font-normal">
                       <li>
-                        Enhancement Merchants’ template voucher – self-serve
-                        customizable feature
+                        Enhancement Merchants&apos; template voucher –
+                        self-serve customizable feature
                       </li>
                       <li>
-                        Complete merchants’ enablement for self-serve
+                        Complete merchants&apos; enablement for self-serve
                         competition-leaderboard setup
                       </li>
                       <li>Social media integration</li>
@@ -216,7 +191,7 @@ const OurStory: PageLayoutProps = () => {
                 desc: (
                   <div className="space-y-4">
                     <div>
-                      <p className="text-xl">New Merchant’s Features</p>
+                      <p className="text-xl">New Merchant&apos;s Features</p>
                       <ol className="pl-4 list-decimal font-normal">
                         <li>In game advertising bidding system</li>
                         <li>In built geo-location capabilities</li>
@@ -288,7 +263,7 @@ const OurStory: PageLayoutProps = () => {
               {
                 image: "/assets/images/home-2.png",
                 quote:
-                  "“Whether you’re A casual gamer, OR you’re an enthusiast, there’s a large market for us.”",
+                  "“Whether you&apos;re A casual gamer, OR you&apos;re an enthusiast, there&apos;s a large market for us.”",
                 name: "Cham Lee",
                 title: "The Archbishop CTO",
               },
@@ -325,7 +300,7 @@ const OurStory: PageLayoutProps = () => {
       <Section>
         <div className="flex flex-col items-center py-10 space-y-8">
           <p className="text-center font-montserrat font-extrabold text-4xl">
-            Partnered with the world’s best companies
+            Partnered with the world&apos;s best companies
           </p>
           <div className="w-full flex flex-row overflow-auto space-x-4 pb-2">
             {[
@@ -358,7 +333,7 @@ const OurStory: PageLayoutProps = () => {
           <div className="flex flex-col md:flex-row justify-between space-y-10 md:space-y-0 md:space-x-8">
             <div className="flex flex-col space-y-2">
               <p className="text-center md:text-left font-montserrat font-bold text-3xl capitalize">
-                Are you interested to join us? Let’s grow together!
+                Are you interested to join us? Let&apos;s grow together!
               </p>
               <p className="text-center md:text-left font-lato text-xl">
                 Come and join us to grow your business together

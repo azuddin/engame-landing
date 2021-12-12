@@ -146,7 +146,7 @@ const Pricing: PageLayoutProps = () => {
       <Section>
         <div className="flex flex-col items-center py-10 space-y-8">
           <p className="text-center font-montserrat font-extrabold text-4xl">
-            Partnered with the world’s best companies
+            Partnered with the world&apos;s best companies
           </p>
           <div className="w-full flex flex-row overflow-auto space-x-4 pb-2">
             {[

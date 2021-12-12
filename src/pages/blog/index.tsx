@@ -28,7 +28,7 @@ const Blog: PageLayoutProps = () => {
       <Section>
         <div className="flex justify-center py-10">
           <p className="text-center font-montserrat font-extrabold text-4xl max-w-md">
-            Let’s fire up the world of blogging🔥
+            Let&apos;s fire up the world of blogging🔥
           </p>
         </div>
       </Section>

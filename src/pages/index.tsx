@@ -1,12 +1,10 @@
-import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import { Layout, Option, Section, Select } from "@engame/components";
+import { Layout, Modal, Option, Section, Select } from "@engame/components";
 import { carouselResponsive } from "@engame/constants";
 import { PageLayoutProps } from "@engame/types";
 import Carousel from "react-multi-carousel";
-import { Item } from "react-stately";
 import "react-multi-carousel/lib/styles.css";
 
 const Home: PageLayoutProps = () => {
@@ -288,7 +286,7 @@ const Home: PageLayoutProps = () => {
       <Section>
         <div className="flex flex-col items-center py-10 space-y-8">
           <p className="text-center font-montserrat font-extrabold text-4xl">
-            Partnered with the world’s best companies
+            Partnered with the world&apos;s best companies
           </p>
           <div className="w-full flex flex-row overflow-auto space-x-4 pb-2">
             {[

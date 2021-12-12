@@ -52,7 +52,7 @@ const FAQ: PageLayoutProps = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 py-10 md:py-0">
           <div className="flex flex-col justify-center space-y-2">
             <p className="text-center md:text-left font-montserrat font-extrabold pb-4 text-4xl">
-              We’re here to help you solve your problem
+              We&apos;re here to help you solve your problem
             </p>
           </div>
           <div className="flex justify-center items-center">
@@ -71,7 +71,7 @@ const FAQ: PageLayoutProps = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-6 py-10">
           <div className="flex flex-col items-center">
             <p className="font-montserrat font-bold text-2xl pb-3">
-              I’m a Gamer
+              I&apos;m a Gamer
             </p>
             <div className="border border-b-2 w-40 border-black mb-4"></div>
             <div className="w-full">
@@ -136,7 +136,7 @@ const FAQ: PageLayoutProps = () => {
           </div>
           <div className="flex flex-col items-center">
             <p className="font-montserrat font-bold text-2xl pb-3">
-              I’m a Brand owner
+              I&apos;m a Brand owner
             </p>
             <div className="border border-b-2 w-40 border-black mb-4"></div>
             <div className="w-full">
