@@ -6,6 +6,9 @@ import Image from "next/image";
 import { Option, Select } from "src/components/Form";
 import { Item } from "react-stately";
 import { PageLayoutProps } from "src/types";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
+import { carouselResponsive } from "src/constants";
 
 const Home: PageLayoutProps = () => {
   return (
@@ -156,7 +159,59 @@ const Home: PageLayoutProps = () => {
           <p className="text-center font-montserrat font-extrabold text-4xl">
             Trending Games
           </p>
-          <div className="w-full flex flex-row overflow-auto space-x-4 pb-2">
+          <Carousel
+            responsive={carouselResponsive}
+            className="w-full pb-2 space-x-4"
+            ssr
+            partialVisbile
+          >
+            {[
+              { name: "Legendary moai", image: "/assets/images/home-5.png" },
+              { name: "The largest one", image: "/assets/images/game-2.png" },
+              { name: "Deep blue sea", image: "/assets/images/game-3.png" },
+              {
+                name: "Scissors rock paper",
+                image: "/assets/images/game-4.png",
+              },
+              { name: "Super fast food", image: "/assets/images/home-5.png" },
+              { name: "Legendary moai", image: "/assets/images/home-5.png" },
+              { name: "The largest one", image: "/assets/images/game-2.png" },
+              { name: "Deep blue sea", image: "/assets/images/game-3.png" },
+              {
+                name: "Aliquip Lorem dolore Lorem tempor ipsum occaecat qui. Qui sint eu cupidatat deserunt. Eu anim incididunt esse ut eu Lorem duis in officia veniam pariatur veniam. Ullamco id eiusmod id enim. Voluptate sint minim sint quis qui officia exercitation. Ipsum est irure laboris laboris excepteur ullamco anim dolor do. Lorem fugiat mollit veniam id do sunt voluptate enim adipisicing et anim.",
+                image: "/assets/images/game-3.png",
+              },
+              {
+                name: "Scissors rock paper",
+                image: "/assets/images/game-4.png",
+              },
+              { name: "Super fast food", image: "/assets/images/home-5.png" },
+            ].map((i, k) => (
+              <div
+                key={k}
+                className={
+                  "flex flex-col min-w-max " +
+                  // (k % 2 === 0 ? "bg-gray-200" : "") +
+                  (k === 0 ? "" : " ml-6")
+                }
+              >
+                <div className="flex-grow flex justify-center items-center relative w-full h-44">
+                  <Image
+                    src={i.image}
+                    alt={`${k}-games-home-5`}
+                    className="rounded-3xl"
+                    layout="fill"
+                    objectFit="cover"
+                    quality={100}
+                  />
+                </div>
+                <p className="w-52 font-montserrat font-bold text-lg md:text-lg truncate">
+                  {i.name}
+                </p>
+              </div>
+            ))}
+          </Carousel>
+          {/* <div className="w-full flex flex-row overflow-auto space-x-4 pb-2">
             {[
               { name: "Legendary moai", image: "/assets/images/home-5.png" },
               { name: "The largest one", image: "/assets/images/game-2.png" },
@@ -190,7 +245,7 @@ const Home: PageLayoutProps = () => {
                 </p>
               </div>
             ))}
-          </div>
+          </div> */}
         </div>
       </Section>
       <Section>
