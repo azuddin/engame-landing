@@ -2,12 +2,11 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import { Layout, Section } from "@engame/components";
+import { Layout, Option, Section, Select } from "@engame/components";
+import { carouselResponsive } from "@engame/constants";
+import { PageLayoutProps } from "@engame/types";
 import Carousel from "react-multi-carousel";
 import { Item } from "react-stately";
-import { Option, Select } from "src/components/Form";
-import { carouselResponsive } from "src/constants";
-import { PageLayoutProps } from "src/types";
 import "react-multi-carousel/lib/styles.css";
 
 const Home: PageLayoutProps = () => {

@@ -1,5 +1,5 @@
 import { Layout } from "@engame/components";
-import { PageLayoutProps } from "src/types";
+import { PageLayoutProps } from "@engame/types";
 
 const Privacy: PageLayoutProps = () => {
   return <>TODO:Privacy</>;

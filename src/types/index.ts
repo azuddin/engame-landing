@@ -1,7 +1,6 @@
 import { NextPage } from "next";
 import type { AppProps } from "next/app";
-import { Layout } from "@engame/components";
-import { PaymentLayout } from "src/components/Layout/PaymentLayout";
+import { Layout, PaymentLayout } from "@engame/components";
 
 export type PageLayoutProps = NextPage<AppProps> & {
   layout: typeof Layout | typeof PaymentLayout;

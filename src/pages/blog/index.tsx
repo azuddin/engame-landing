@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Layout, Section } from "@engame/components";
+import { PageLayoutProps } from "@engame/types";
 import { FiArrowRight } from "react-icons/fi";
-import { PageLayoutProps } from "src/types";
 
 const Blog: PageLayoutProps = () => {
   const blogs = [

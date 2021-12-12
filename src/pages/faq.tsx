@@ -2,8 +2,8 @@ import { useState } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import { Layout, Section } from "@engame/components";
+import { PageLayoutProps } from "@engame/types";
 import { FiChevronDown } from "react-icons/fi";
-import { PageLayoutProps } from "src/types";
 
 const Collapsible = (props: {
   title: string;

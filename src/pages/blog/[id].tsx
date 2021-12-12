@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Layout, Section } from "@engame/components";
-import { PageLayoutProps } from "src/types";
+import { PageLayoutProps } from "@engame/types";
 
 const BlogDetail: PageLayoutProps = () => {
   const content = (

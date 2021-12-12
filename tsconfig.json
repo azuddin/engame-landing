@@ -17,6 +17,7 @@
     "baseUrl": ".",
     "paths": {
       "@engame/components": ["src/components"],
+      "@engame/constants": ["src/constants"],
       "@engame/utils": ["src/utils"],
       "@engame/styles/*": ["src/styles/*"],
       "@engame/types": ["src/types"]

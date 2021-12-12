@@ -1,5 +1,5 @@
+import { AppLayoutProps } from "@engame/types";
 import { SSRProvider } from "@react-aria/ssr";
-import { AppLayoutProps } from "src/types";
 import "../styles/globals.css";
 
 function MyApp({ Component, pageProps }: AppLayoutProps) {

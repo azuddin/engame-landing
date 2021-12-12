@@ -1,12 +1,11 @@
 import Head from "next/head";
 import Image from "next/image";
 import { Section } from "@engame/components";
+import { Option, PaymentLayout, Select } from "@engame/components";
+import { countries, states } from "@engame/constants";
+import { PageLayoutProps } from "@engame/types";
 import { creditCardType } from "@engame/utils";
 import { FiLock } from "react-icons/fi";
-import { Option, Select } from "src/components/Form";
-import { PaymentLayout } from "src/components/Layout/PaymentLayout";
-import { countries, states } from "src/constants";
-import { PageLayoutProps } from "src/types";
 
 const Payment: PageLayoutProps = () => {
   return (

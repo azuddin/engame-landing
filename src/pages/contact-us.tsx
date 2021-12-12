@@ -1,10 +1,7 @@
-import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
-import { Layout, Section } from "@engame/components";
-import { Item } from "react-stately";
-import { Option, Select } from "src/components/Form";
-import { PageLayoutProps } from "src/types";
+import { Layout, Option, Section, Select } from "@engame/components";
+import { PageLayoutProps } from "@engame/types";
 
 const ContactUs: PageLayoutProps = () => {
   return (
