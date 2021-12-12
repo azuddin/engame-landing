@@ -22,7 +22,7 @@ const Payment: PageLayoutProps = () => {
       <Section>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10 py-10">
           <div className="flex flex-col space-y-16">
-            <div className="space-y-8">
+            <div className="space-y-6">
               <p className="text-left font-montserrat font-bold text-3xl md:text-4xl">
                 Basic Info
               </p>
@@ -91,7 +91,7 @@ const Payment: PageLayoutProps = () => {
                 </Select>
               </div>
             </div>
-            <div className="space-y-8">
+            <div className="space-y-6">
               <p className="text-left font-montserrat font-bold text-3xl md:text-4xl">
                 Billing Address
               </p>
@@ -172,7 +172,7 @@ const Payment: PageLayoutProps = () => {
                 />
               </div>
             </div>
-            <div className="space-y-8">
+            <div className="space-y-6">
               <p className="text-left font-montserrat font-bold text-3xl md:text-4xl">
                 Payment Method
               </p>
@@ -271,8 +271,8 @@ const Payment: PageLayoutProps = () => {
               </div>
             </div>
           </div>
-          <div className="flex flex-col space-y-16">
-            <p className="text-left font-montserrat font-bold text-3xl md:text-4xl">
+          <div className="flex flex-col">
+            <p className="text-left font-montserrat font-bold text-3xl md:text-4xl mb-14">
               Order Summary
             </p>
             <div className="flex flex-col p-6 border rounded-lg space-y-6">

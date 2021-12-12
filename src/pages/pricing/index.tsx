@@ -148,8 +148,7 @@ const Pricing: PageLayoutProps = () => {
           <p className="text-center font-montserrat font-extrabold text-4xl">
             Partnered with the world’s best companies
           </p>
-          <div className="w-full flex flex-row xl:justify-center overflow-auto space-x-2 pb-2">
-            {/* `justify-center` will break if company more than 5 */}
+          <div className="w-full flex flex-row overflow-auto space-x-4 pb-2">
             {[
               "/assets/images/company-1.png",
               "/assets/images/company-2.png",

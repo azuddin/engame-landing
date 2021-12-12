@@ -39,8 +39,8 @@ const ContactUs: PageLayoutProps = () => {
               />
             </div>
           </div>
-          <div className="flex flex-col">
-            <div className="flex flex-col mb-8">
+          <div className="flex flex-col space-y-6">
+            <div className="flex flex-col">
               <label htmlFor="name" className="font-lato text-xl mb-1">
                 Name <span className="text-red-600">*</span>
               </label>
@@ -51,7 +51,7 @@ const ContactUs: PageLayoutProps = () => {
                 className="rounded-md border px-4 py-2 text-2xl"
               />
             </div>
-            <div className="flex flex-col mb-8">
+            <div className="flex flex-col">
               <label htmlFor="company_name" className="font-lato text-xl mb-1">
                 Company Name <span className="text-red-600">*</span>
               </label>
@@ -62,7 +62,7 @@ const ContactUs: PageLayoutProps = () => {
                 className="rounded-md border px-4 py-2 text-2xl"
               />
             </div>
-            <div className="flex flex-col mb-8">
+            <div className="flex flex-col">
               <label htmlFor="email" className="font-lato text-xl mb-1">
                 Email <span className="text-red-600">*</span>
               </label>
@@ -73,7 +73,7 @@ const ContactUs: PageLayoutProps = () => {
                 className="rounded-md border px-4 py-2 text-2xl lowercase"
               />
             </div>
-            <div className="flex flex-col mb-8">
+            <div className="flex flex-col">
               <label htmlFor="phone_number" className="font-lato text-xl mb-1">
                 Phone Number <span className="text-red-600">*</span>
               </label>
@@ -84,7 +84,7 @@ const ContactUs: PageLayoutProps = () => {
                 className="rounded-md border px-4 py-2 text-2xl"
               />
             </div>
-            <div className="flex flex-col mb-8">
+            <div className="flex flex-col">
               <label htmlFor="category" className="font-lato text-xl mb-1">
                 Category <span className="text-red-600">*</span>
               </label>
@@ -98,7 +98,7 @@ const ContactUs: PageLayoutProps = () => {
                 <Option key="category 3">Category 3</Option>
               </Select>
             </div>
-            <div className="flex flex-col mb-8">
+            <div className="flex flex-col">
               <label htmlFor="message" className="font-lato text-xl mb-1">
                 Enter Your Message <span className="text-red-600">*</span>
               </label>

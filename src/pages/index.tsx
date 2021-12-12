@@ -236,8 +236,7 @@ const Home: PageLayoutProps = () => {
           <p className="text-center font-montserrat font-extrabold text-4xl">
             Partnered with the world’s best companies
           </p>
-          <div className="w-full flex flex-row xl:justify-center overflow-auto space-x-2 pb-2">
-            {/* `justify-center` will break if company more than 5 */}
+          <div className="w-full flex flex-row overflow-auto space-x-4 pb-2">
             {[
               "/assets/images/company-1.png",
               "/assets/images/company-2.png",
@@ -285,8 +284,8 @@ const Home: PageLayoutProps = () => {
               />
             </div>
           </div>
-          <div className="flex flex-col">
-            <div className="flex flex-col mb-8">
+          <div className="flex flex-col space-y-6">
+            <div className="flex flex-col">
               <label htmlFor="name" className="font-lato text-xl mb-1">
                 Name <span className="text-red-600">*</span>
               </label>
@@ -297,7 +296,7 @@ const Home: PageLayoutProps = () => {
                 className="rounded-md border px-4 py-2 text-2xl"
               />
             </div>
-            <div className="flex flex-col mb-8">
+            <div className="flex flex-col">
               <label htmlFor="company_name" className="font-lato text-xl mb-1">
                 Company Name <span className="text-red-600">*</span>
               </label>
@@ -308,7 +307,7 @@ const Home: PageLayoutProps = () => {
                 className="rounded-md border px-4 py-2 text-2xl"
               />
             </div>
-            <div className="flex flex-col mb-8">
+            <div className="flex flex-col">
               <label htmlFor="email" className="font-lato text-xl mb-1">
                 Email <span className="text-red-600">*</span>
               </label>
@@ -319,7 +318,7 @@ const Home: PageLayoutProps = () => {
                 className="rounded-md border px-4 py-2 text-2xl lowercase"
               />
             </div>
-            <div className="flex flex-col mb-8">
+            <div className="flex flex-col">
               <label htmlFor="phone_number" className="font-lato text-xl mb-1">
                 Phone Number <span className="text-red-600">*</span>
               </label>
@@ -330,7 +329,7 @@ const Home: PageLayoutProps = () => {
                 className="rounded-md border px-4 py-2 text-2xl"
               />
             </div>
-            <div className="flex flex-col mb-8">
+            <div className="flex flex-col">
               <label htmlFor="category" className="font-lato text-xl mb-1">
                 Category <span className="text-red-600">*</span>
               </label>
@@ -344,14 +343,14 @@ const Home: PageLayoutProps = () => {
                 <Option key="category 3">Category 3</Option>
               </Select>
             </div>
-            <div className="flex flex-col mb-8">
+            <div className="flex flex-col">
               <label htmlFor="message" className="font-lato text-xl mb-1">
                 Enter Your Message <span className="text-red-600">*</span>
               </label>
               <textarea
                 name="message"
                 id="message"
-                rows={4}
+                rows={3}
                 className="rounded-md border px-4 py-2 text-2xl"
               ></textarea>
             </div>
