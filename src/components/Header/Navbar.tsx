@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { Hamburger } from "@engame/components";
+import { AnimatePresence, motion } from "framer-motion";
 
 interface NavbarProps {
   isOpen: boolean;
@@ -22,61 +23,66 @@ const Navbar = (props: NavbarProps): JSX.Element => {
 
   return (
     <div className="flex flex-col">
-      <div
-        className={
-          "fixed pt-14 w-full h-full bg-white z-20 overflow-auto" +
-          (isOpen ? "" : " hidden")
-        }
-      >
-        <div className="container mx-auto p-4 lg:px-36 flex flex-col space-y-4 overflow-auto">
-          <Link href="/our-story" passHref>
-            <button className="text-montserrat font-bold text-left text-lg">
-              Our Story
-            </button>
-          </Link>
-          <Link href="/pricing" passHref>
-            <button className="text-montserrat font-bold text-left text-lg">
-              Pricing
-            </button>
-          </Link>
-          <Link href="/blog" passHref>
-            <button className="text-montserrat font-bold text-left text-lg">
-              Blog
-            </button>
-          </Link>
-          <Link href="/faq" passHref>
-            <button className="text-montserrat font-bold text-left text-lg">
-              FAQ
-            </button>
-          </Link>
-          <Link href="/contact-us" passHref>
-            <button className="text-montserrat font-bold text-left text-lg">
-              Contact Us
-            </button>
-          </Link>
-          <div className="flex flex-col justify-center items-center py-4">
-            <Image
-              src="/assets/images/home-2.png"
-              alt="menu image"
-              width={300}
-              height={300}
-              layout="fixed"
-            />
-          </div>
-          <button
-            onClick={onClickStartFreeTrial}
-            className="text-montserrat font-bold text-lg bg-black text-white border-2 border-black rounded-lg py-2"
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ height: "0px" }}
+            animate={{ height: "100vh" }}
+            exit={{ height: "0px" }}
+            transition={{ duration: 0.3 }}
+            className="fixed pt-14 w-full h-full bg-white z-20 overflow-auto"
           >
-            Start Free Trial
-          </button>
-          <button
-            onClick={onClickLogin}
-            className="text-montserrat font-bold text-lg border-2 border-black rounded-lg py-2"
-          >
-            Login
-          </button>
-        </div>
-      </div>
+            <div className="container mx-auto p-4 lg:px-36 flex flex-col space-y-4 overflow-auto">
+              <Link href="/our-story" passHref>
+                <button className="text-montserrat font-bold text-left text-lg">
+                  Our Story
+                </button>
+              </Link>
+              <Link href="/pricing" passHref>
+                <button className="text-montserrat font-bold text-left text-lg">
+                  Pricing
+                </button>
+              </Link>
+              <Link href="/blog" passHref>
+                <button className="text-montserrat font-bold text-left text-lg">
+                  Blog
+                </button>
+              </Link>
+              <Link href="/faq" passHref>
+                <button className="text-montserrat font-bold text-left text-lg">
+                  FAQ
+                </button>
+              </Link>
+              <Link href="/contact-us" passHref>
+                <button className="text-montserrat font-bold text-left text-lg">
+                  Contact Us
+                </button>
+              </Link>
+              <div className="flex flex-col justify-center items-center py-4">
+                <Image
+                  src="/assets/images/home-2.png"
+                  alt="menu image"
+                  width={300}
+                  height={300}
+                  layout="fixed"
+                />
+              </div>
+              <button
+                onClick={onClickStartFreeTrial}
+                className="text-montserrat font-bold text-lg bg-black text-white border-2 border-black rounded-lg py-2"
+              >
+                Start Free Trial
+              </button>
+              <button
+                onClick={onClickLogin}
+                className="text-montserrat font-bold text-lg border-2 border-black rounded-lg py-2"
+              >
+                Login
+              </button>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
       <div className="z-20 h-14 flex justify-center bg-white">
         <div className="container mx-auto px-4 lg:px-36 py-3 md:py-2 flex justify-between items-center">
           <Link href="/" passHref>
