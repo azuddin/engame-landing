@@ -10,9 +10,9 @@ const Collapsible = (props: {
   title: string;
   content: JSX.Element;
   isOpen?: boolean;
-  key: Key;
+  collapibleId?: Key;
 }): JSX.Element => {
-  const { title, content, isOpen = false, key } = props;
+  const { title, content, isOpen = false, collapibleId = 0 } = props;
   return (
     <div className="flex flex-col bg-white rounded-lg border-gray-50 border overflow-hidden shadow-lg ">
       <div
@@ -29,7 +29,7 @@ const Collapsible = (props: {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            key={`collapsible-${key}`}
+            key={`collapsible-${collapibleId}`}
             className="content p-4 overflow-auto"
             initial={{ opacity: 0, height: "0px", padding: "0px" }}
             animate={{
@@ -151,6 +151,7 @@ const FAQ: PageLayoutProps = () => {
                   >
                     <Collapsible
                       key={`gamer-${k}`}
+                      collapibleId={`gamer-${k}`}
                       title={i.title}
                       content={i.content}
                       isOpen={openedCard.includes(`gamer-${k}`)}
@@ -232,6 +233,7 @@ const FAQ: PageLayoutProps = () => {
                   >
                     <Collapsible
                       key={`brand-${k}`}
+                      collapibleId={`brand-${k}`}
                       title={i.title}
                       content={i.content}
                       isOpen={openedCard.includes(`brand-${k}`)}
