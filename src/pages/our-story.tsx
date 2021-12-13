@@ -1,9 +1,16 @@
+import { useState } from "react";
 import Head from "next/head";
 import Image from "next/image";
-import { Layout, Section } from "@engame/components";
+import { Layout, Section, Slideshow, SlideshowItem } from "@engame/components";
 import { PageLayoutProps } from "@engame/types";
 
 const OurStory: PageLayoutProps = () => {
+  const [[page, direction], setPage] = useState([0, 0]);
+  const paginate = (pageNum: number) => {
+    const newDirection = page > pageNum ? -1 : 1;
+    setPage([pageNum, newDirection]);
+  };
+
   return (
     <>
       <Head>
@@ -147,15 +154,33 @@ const OurStory: PageLayoutProps = () => {
       <Section>
         <div className="flex flex-col space-y-10">
           <div className="w-full flex flex-row overflow-auto space-x-2 justify-center">
-            <p className="bg-gray-300 px-4 py-1 rounded font-montserrat font-bold text-2xl">
+            <button
+              onClick={() => paginate(0)}
+              className={
+                "px-4 py-1 rounded font-montserrat font-bold text-2xl" +
+                (page === 0 ? " bg-gray-300" : " hover:bg-gray-300")
+              }
+            >
               2021
-            </p>
-            <p className="bg-gray-300 px-4 py-1 rounded font-montserrat font-bold text-2xl">
+            </button>
+            <button
+              onClick={() => paginate(1)}
+              className={
+                "px-4 py-1 rounded font-montserrat font-bold text-2xl" +
+                (page === 1 ? " bg-gray-300" : " hover:bg-gray-300")
+              }
+            >
               2022
-            </p>
-            <p className="bg-gray-300 px-4 py-1 rounded font-montserrat font-bold text-2xl">
+            </button>
+            <button
+              onClick={() => paginate(2)}
+              className={
+                "px-4 py-1 rounded font-montserrat font-bold text-2xl" +
+                (page === 2 ? " bg-gray-300" : " hover:bg-gray-300")
+              }
+            >
               2023
-            </p>
+            </button>
           </div>
           <div className="flex-1 flex justify-center items-center md:hidden">
             <Image
@@ -166,6 +191,245 @@ const OurStory: PageLayoutProps = () => {
             />
           </div>
           <div className="flex flex-col border-b">
+            <Slideshow activeKey={page} direction={direction} page={page}>
+              <SlideshowItem key={`1-slideshowitem`}>
+                {[
+                  {
+                    title: "Q1",
+                    desc: (
+                      <>
+                        <p className="text-xl">New Merchant&apos;s Features</p>
+                        <ol className="pl-4 list-decimal font-normal">
+                          <li>
+                            Enhancement Merchants&apos; template voucher –
+                            self-serve customizable feature
+                          </li>
+                          <li>
+                            Complete merchants&apos; enablement for self-serve
+                            competition-leaderboard setup
+                          </li>
+                          <li>Social media integration</li>
+                        </ol>
+                      </>
+                    ),
+                  },
+                  {
+                    title: "Q2",
+                    desc: (
+                      <div className="space-y-4">
+                        <div>
+                          <p className="text-xl">
+                            New Merchant&apos;s Features
+                          </p>
+                          <ol className="pl-4 list-decimal font-normal list-inside">
+                            <li>In game advertising bidding system</li>
+                            <li>In built geo-location capabilities</li>
+                          </ol>
+                        </div>
+                        <div>
+                          <p className="text-xl">New Game Features</p>
+                          <ol className="pl-4 list-decimal font-normal list-inside">
+                            <li>iOS Release</li>
+                          </ol>
+                        </div>
+                      </div>
+                    ),
+                  },
+                ].map((i, k) => {
+                  const even = k % 2 === 0;
+                  return (
+                    <div
+                      key={k}
+                      className={
+                        "flex flex-row md:space-x-6" +
+                        (even
+                          ? ""
+                          : " md:flex-row-reverse space-x md:space-x-reverse")
+                      }
+                    >
+                      <p className="flex-1 hidden md:block"></p>
+                      <div className="flex flex-col items-center mr-8 md:mr-0">
+                        <div
+                          className={
+                            "h-5 w-5 rounded-full border-4 border-yellow-300" +
+                            (even ? " border-yellow-300" : " border-yellow-500")
+                          }
+                        ></div>
+                        <div
+                          className={
+                            "flex-1 h-20 w-1 border-2 border-yellow-300" +
+                            (even ? " border-yellow-300" : " border-yellow-500")
+                          }
+                        ></div>
+                      </div>
+                      <div className="flex-1 flex flex-col mb-8">
+                        <p
+                          className={
+                            "font-montserrat font-extrabold text-4xl" +
+                            (even ? "" : " md:text-right")
+                          }
+                        >
+                          {i.title}
+                        </p>
+                        <p
+                          className={
+                            "font-lato font-bold text-lg" +
+                            (even ? "" : " md:text-right")
+                          }
+                        >
+                          {i.desc}
+                        </p>
+                      </div>
+                    </div>
+                  );
+                })}
+              </SlideshowItem>
+              <SlideshowItem key={`1-slideshowitem`}>
+                {[
+                  {
+                    title: "Q2",
+                    desc: (
+                      <div className="space-y-4">
+                        <div>
+                          <p className="text-xl">
+                            New Merchant&apos;s Features
+                          </p>
+                          <ol className="pl-4 list-decimal font-normal list-inside">
+                            <li>In game advertising bidding system</li>
+                            <li>In built geo-location capabilities</li>
+                          </ol>
+                        </div>
+                        <div>
+                          <p className="text-xl">New Game Features</p>
+                          <ol className="pl-4 list-decimal font-normal list-inside">
+                            <li>iOS Release</li>
+                          </ol>
+                        </div>
+                      </div>
+                    ),
+                  },
+                ].map((i, k) => {
+                  const even = k % 2 === 0;
+                  return (
+                    <div
+                      key={k}
+                      className={
+                        "flex flex-row md:space-x-6" +
+                        (even
+                          ? ""
+                          : " md:flex-row-reverse space-x md:space-x-reverse")
+                      }
+                    >
+                      <p className="flex-1 hidden md:block"></p>
+                      <div className="flex flex-col items-center mr-8 md:mr-0">
+                        <div
+                          className={
+                            "h-5 w-5 rounded-full border-4 border-yellow-300" +
+                            (even ? " border-yellow-300" : " border-yellow-500")
+                          }
+                        ></div>
+                        <div
+                          className={
+                            "flex-1 h-20 w-1 border-2 border-yellow-300" +
+                            (even ? " border-yellow-300" : " border-yellow-500")
+                          }
+                        ></div>
+                      </div>
+                      <div className="flex-1 flex flex-col mb-8">
+                        <p
+                          className={
+                            "font-montserrat font-extrabold text-4xl" +
+                            (even ? "" : " md:text-right")
+                          }
+                        >
+                          {i.title}
+                        </p>
+                        <p
+                          className={
+                            "font-lato font-bold text-lg" +
+                            (even ? "" : " md:text-right")
+                          }
+                        >
+                          {i.desc}
+                        </p>
+                      </div>
+                    </div>
+                  );
+                })}
+              </SlideshowItem>
+              <SlideshowItem key={`1-slideshowitem`}>
+                {[
+                  {
+                    title: "Q1",
+                    desc: (
+                      <>
+                        <p className="text-xl">New Merchant&apos;s Features</p>
+                        <ol className="pl-4 list-decimal font-normal">
+                          <li>
+                            Enhancement Merchants&apos; template voucher –
+                            self-serve customizable feature
+                          </li>
+                          <li>
+                            Complete merchants&apos; enablement for self-serve
+                            competition-leaderboard setup
+                          </li>
+                          <li>Social media integration</li>
+                        </ol>
+                      </>
+                    ),
+                  },
+                ].map((i, k) => {
+                  const even = k % 2 === 0;
+                  return (
+                    <div
+                      key={k}
+                      className={
+                        "flex flex-row md:space-x-6" +
+                        (even
+                          ? ""
+                          : " md:flex-row-reverse space-x md:space-x-reverse")
+                      }
+                    >
+                      <p className="flex-1 hidden md:block"></p>
+                      <div className="flex flex-col items-center mr-8 md:mr-0">
+                        <div
+                          className={
+                            "h-5 w-5 rounded-full border-4 border-yellow-300" +
+                            (even ? " border-yellow-300" : " border-yellow-500")
+                          }
+                        ></div>
+                        <div
+                          className={
+                            "flex-1 h-20 w-1 border-2 border-yellow-300" +
+                            (even ? " border-yellow-300" : " border-yellow-500")
+                          }
+                        ></div>
+                      </div>
+                      <div className="flex-1 flex flex-col mb-8">
+                        <p
+                          className={
+                            "font-montserrat font-extrabold text-4xl" +
+                            (even ? "" : " md:text-right")
+                          }
+                        >
+                          {i.title}
+                        </p>
+                        <p
+                          className={
+                            "font-lato font-bold text-lg" +
+                            (even ? "" : " md:text-right")
+                          }
+                        >
+                          {i.desc}
+                        </p>
+                      </div>
+                    </div>
+                  );
+                })}
+              </SlideshowItem>
+            </Slideshow>
+          </div>
+          {/* <div className="flex flex-col border-b">
             {[
               {
                 title: "Q1",
@@ -254,7 +518,7 @@ const OurStory: PageLayoutProps = () => {
                 </div>
               );
             })}
-          </div>
+          </div> */}
         </div>
       </Section>
       <Section>
