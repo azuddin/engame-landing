@@ -1,5 +1,6 @@
-import { ReactNode, useState } from "react";
+import { ReactNode, useEffect, useState } from "react";
 import Image from "next/image";
+import { useRouter } from "next/router";
 import { Footer, Modal, Navbar, Option, Select } from "@engame/components";
 import { FiCheckCircle } from "react-icons/fi";
 export interface LayoutProps {
@@ -7,9 +8,12 @@ export interface LayoutProps {
 }
 
 const Layout = (props: LayoutProps): JSX.Element => {
+  const [showMenu, setShowMenu] = useState(false);
+
+  const { events } = useRouter();
+
   const [openLoginModal, setLoginModal] = useState(false);
   const [openSignupModal, setSignupModal] = useState(false);
-  const [isOpenMobileMenu, setMobileMenuStatus] = useState<boolean>();
 
   const toggleLoginModal = () => {
     setLoginModal(!openLoginModal);
@@ -23,6 +27,13 @@ const Layout = (props: LayoutProps): JSX.Element => {
     setSignupModal(false);
     setLoginModal(true);
   };
+
+  useEffect(() => {
+    events.on("routeChangeComplete", () => setShowMenu(false));
+    return () => {
+      events.off("routeChangeComplete", () => setShowMenu(false));
+    };
+  }, [events]);
 
   const LoginModal = (props: { isOpen: boolean; onCloseModal: () => void }) => {
     const { isOpen, onCloseModal } = props;
@@ -205,13 +216,14 @@ const Layout = (props: LayoutProps): JSX.Element => {
   return (
     <div className="flex flex-1 flex-col h-screen">
       <Navbar
+        isOpen={showMenu}
         onClickLogin={toggleLoginModal}
         onClickStartFreeTrial={toggleSignupModal}
-        onToggleShowMenu={(stat) => setMobileMenuStatus(stat)}
+        onToggleShowMenu={() => setShowMenu(!showMenu)}
       />
       <div
         className={
-          "flex flex-1 flex-col" + (!!isOpenMobileMenu ? "" : " overflow-auto")
+          "flex flex-1 flex-col" + (!!showMenu ? "" : " overflow-auto")
         }
       >
         {children}

@@ -93,9 +93,9 @@ const Pricing: PageLayoutProps = () => {
                   "Custom game challenges",
                 ],
               },
-            ].map((i, k) => (
+            ].map((i, pricingIndex) => (
               <div
-                key={`pricing-${k}`}
+                key={`pricing-${pricingIndex}`}
                 className="bg-white rounded-2xl border shadow-lg p-4 flex flex-col justify-between relative"
               >
                 {i?.isPopular && (
@@ -119,9 +119,9 @@ const Pricing: PageLayoutProps = () => {
                   </p>
                   <p className="text-left font-lato">{i.desc}</p>
                   <ol>
-                    {i.descList.map((li, key) => (
+                    {i.descList.map((li, descListKey) => (
                       <li
-                        key={`descList-${k}`}
+                        key={`${pricingIndex}-descList-${descListKey}`}
                         className="flex space-x-2 text-left font-lato font-bold"
                       >
                         <span className="text-green-500 text-lg pt-1">

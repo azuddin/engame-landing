@@ -1,25 +1,23 @@
-import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { Hamburger } from "@engame/components";
 
 interface NavbarProps {
+  isOpen: boolean;
+  onToggleShowMenu: () => void;
   onClickLogin: () => void;
   onClickStartFreeTrial: () => void;
-  onToggleShowMenu: (status: boolean) => void;
 }
 
 const Navbar = (props: NavbarProps): JSX.Element => {
-  const [showMenu, setShowMenu] = useState(false);
   const { push } = useRouter();
 
-  const { onClickLogin, onClickStartFreeTrial, onToggleShowMenu } = props;
+  const { onClickLogin, onClickStartFreeTrial, onToggleShowMenu, isOpen } =
+    props;
 
   const handleToggleMenu = () => {
-    const status = !showMenu;
-    onToggleShowMenu(status);
-    setShowMenu(status);
+    onToggleShowMenu();
   };
 
   return (
@@ -27,7 +25,7 @@ const Navbar = (props: NavbarProps): JSX.Element => {
       <div
         className={
           "fixed pt-14 w-full h-full bg-white z-20 overflow-auto" +
-          (showMenu ? "" : " hidden")
+          (isOpen ? "" : " hidden")
         }
       >
         <div className="container mx-auto p-4 lg:px-36 flex flex-col space-y-4 overflow-auto">
@@ -97,7 +95,7 @@ const Navbar = (props: NavbarProps): JSX.Element => {
             className="p-2 md:hidden flex items-center justify-center text-montserrat font-bold border border-black rounded-lg"
             onClick={handleToggleMenu}
           >
-            <Hamburger isOpen={showMenu} />
+            <Hamburger isOpen={isOpen} />
           </button>
           <div id="nav" className="space-x-1 md:flex hidden">
             <Link href="/our-story" passHref>
