@@ -1,22 +1,24 @@
-import { useState } from "react";
+import { Key, useState } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import { Layout, Section } from "@engame/components";
 import { PageLayoutProps } from "@engame/types";
+import { AnimatePresence, motion } from "framer-motion";
 import { FiChevronDown } from "react-icons/fi";
 
 const Collapsible = (props: {
   title: string;
   content: JSX.Element;
   isOpen?: boolean;
+  key: Key;
 }): JSX.Element => {
-  const { title, content, isOpen = false } = props;
+  const { title, content, isOpen = false, key } = props;
   return (
-    <div className="flex flex-col bg-white rounded-lg border-gray-50 border overflow-hidden shadow-lg">
+    <div className="flex flex-col bg-white rounded-lg border-gray-50 border overflow-hidden shadow-lg ">
       <div
         className={
-          "flex justify-between items-center px-6 p-4" +
-          (isOpen ? " bg-black text-white" : "")
+          "flex justify-between items-center px-6 p-4 cursor-pointer" +
+          (isOpen ? " bg-black text-white" : " hover:bg-gray-50")
         }
       >
         <p className="font-montserrat font-bold">{title}</p>
@@ -24,7 +26,30 @@ const Collapsible = (props: {
           <FiChevronDown className={isOpen ? "transform rotate-180" : ""} />
         </div>
       </div>
-      {isOpen && <div className="content p-4">{content}</div>}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            key={`collapsible-${key}`}
+            className="content p-4 overflow-auto"
+            initial={{ opacity: 0, height: "0px", padding: "0px" }}
+            animate={{
+              opacity: 1,
+              height: "10rem",
+              padding: "16px",
+              transition: { height: { delay: 0.18 }, opacity: { delay: 0.18 } },
+            }}
+            exit={{
+              opacity: 0,
+              height: "0px",
+              padding: "0px",
+              transition: { padding: { delay: 0.18 } },
+            }}
+            transition={{ duration: 0.3 }}
+          >
+            {content}
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 };
@@ -125,6 +150,7 @@ const FAQ: PageLayoutProps = () => {
                     onClick={() => handleClickCard(`gamer-${k}`)}
                   >
                     <Collapsible
+                      key={`gamer-${k}`}
                       title={i.title}
                       content={i.content}
                       isOpen={openedCard.includes(`gamer-${k}`)}
@@ -205,6 +231,7 @@ const FAQ: PageLayoutProps = () => {
                     onClick={() => handleClickCard(`brand-${k}`)}
                   >
                     <Collapsible
+                      key={`brand-${k}`}
                       title={i.title}
                       content={i.content}
                       isOpen={openedCard.includes(`brand-${k}`)}
