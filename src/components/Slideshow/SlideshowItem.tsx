@@ -6,7 +6,7 @@ export interface SlideshowItemProps {
 
 const SlideshowItem = (props: SlideshowItemProps): JSX.Element => {
   const { children } = props;
-  return <>{children}</>;
+  return <div>{children}</div>;
 };
 
 export { SlideshowItem };

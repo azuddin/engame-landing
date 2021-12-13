@@ -34,9 +34,15 @@ const Blog: PageLayoutProps = () => {
       </Section>
       <Section>
         <ul className="py-10 space-y-10">
-          {blogs.map((i, k) => (
-            <>
-              <li key={`blog-${k}`}>
+          {blogs.map((i, index) => {
+            const border =
+              index !== blogs.length - 1 ? (
+                <div className="border-t mt-8"></div>
+              ) : (
+                <></>
+              );
+            return (
+              <li key={`blog-card-${index}-${i.avatar}`}>
                 <div className="flex flex-col space-y-4">
                   <div className="flex items-center space-x-4">
                     <div className="flex justify-center items-center relative w-10 h-10">
@@ -77,10 +83,10 @@ const Blog: PageLayoutProps = () => {
                     </div>
                   </Link>
                 </div>
+                {border}
               </li>
-              {blogs.length > k + 1 && <div className="border-t"></div>}
-            </>
-          ))}
+            );
+          })}
         </ul>
       </Section>
     </>

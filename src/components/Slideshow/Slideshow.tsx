@@ -39,27 +39,25 @@ const Slideshow = (props: SlideshowProps): JSX.Element => {
   };
 
   return (
-    <>
-      <div className="flex flex-row overflow-hidden">
-        <AnimatePresence initial={false} custom={direction}>
-          <motion.div
-            key={page}
-            custom={direction}
-            variants={variants}
-            initial="enter"
-            animate="center"
-            exit="exit"
-            transition={{
-              x: { duration },
-              opacity: { duration },
-            }}
-            className="w-full overflow-hidden"
-          >
-            {arrayChildren[activeKey]}
-          </motion.div>
-        </AnimatePresence>
-      </div>
-    </>
+    <div className="flex flex-row overflow-hidden">
+      <AnimatePresence initial={false} custom={direction}>
+        <motion.div
+          key={page}
+          custom={direction}
+          variants={variants}
+          initial="enter"
+          animate="center"
+          exit="exit"
+          transition={{
+            x: { duration },
+            opacity: { duration },
+          }}
+          className="w-full overflow-hidden"
+        >
+          {cloneElement(arrayChildren[activeKey] as any)}
+        </motion.div>
+      </AnimatePresence>
+    </div>
   );
 };
 

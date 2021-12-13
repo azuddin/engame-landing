@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { Hamburger } from "@engame/components";
 
 interface NavbarProps {
@@ -11,6 +12,7 @@ interface NavbarProps {
 
 const Navbar = (props: NavbarProps): JSX.Element => {
   const [showMenu, setShowMenu] = useState(false);
+  const { push } = useRouter();
 
   const { onClickLogin, onClickStartFreeTrial, onToggleShowMenu } = props;
 
@@ -24,16 +26,17 @@ const Navbar = (props: NavbarProps): JSX.Element => {
     <div className="flex flex-col">
       <div
         className={
-          "fixed pt-14 w-full h-full bg-white z-10 overflow-auto" +
+          "fixed pt-14 w-full h-full bg-white z-20 overflow-auto" +
           (showMenu ? "" : " hidden")
         }
       >
         <div className="container mx-auto p-4 lg:px-36 flex flex-col space-y-4 overflow-auto">
-          <Link href="/our-story" passHref>
-            <button className="text-montserrat font-bold text-left text-lg">
-              Our Story
-            </button>
-          </Link>
+          <button
+            onClick={() => push("/our-story")}
+            className="text-montserrat font-bold text-left text-lg"
+          >
+            Our Story
+          </button>
           <Link href="/pricing" passHref>
             <button className="text-montserrat font-bold text-left text-lg">
               Pricing

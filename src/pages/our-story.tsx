@@ -63,7 +63,7 @@ const OurStory: PageLayoutProps = () => {
             title: "May 2017",
             desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna pulvinar sit aenean nunc nunc gravida elit.",
           },
-        ].map((i, k) => {
+        ].map((i: { title: string; desc: string }, k) => {
           const even = k % 2 === 0;
           return (
             <div
@@ -73,20 +73,20 @@ const OurStory: PageLayoutProps = () => {
                 (even ? "" : " md:flex-row-reverse space-x md:space-x-reverse")
               }
             >
-              <p className="flex-1 hidden md:block"></p>
+              <div className="flex-1 hidden md:block" />
               <div className="flex flex-col items-center mr-8 md:mr-0">
                 <div
                   className={
                     "h-5 w-5 rounded-full border-4" +
                     (even ? " border-yellow-300" : " border-yellow-500")
                   }
-                ></div>
+                />
                 <div
                   className={
                     "flex-1 h-20 w-1 border-2" +
                     (even ? " border-yellow-300" : " border-yellow-500")
                   }
-                ></div>
+                />
               </div>
               <div className="flex-1 flex flex-col mb-8">
                 <p
@@ -197,7 +197,7 @@ const OurStory: PageLayoutProps = () => {
                   {
                     title: "Q1",
                     desc: (
-                      <>
+                      <div>
                         <p className="text-xl">New Merchant&apos;s Features</p>
                         <ol className="pl-4 list-decimal font-normal">
                           <li>
@@ -210,7 +210,7 @@ const OurStory: PageLayoutProps = () => {
                           </li>
                           <li>Social media integration</li>
                         </ol>
-                      </>
+                      </div>
                     ),
                   },
                   {
@@ -235,7 +235,7 @@ const OurStory: PageLayoutProps = () => {
                       </div>
                     ),
                   },
-                ].map((i, k) => {
+                ].map((i: { title: string; desc: JSX.Element }, k) => {
                   const even = k % 2 === 0;
                   return (
                     <div
@@ -247,20 +247,20 @@ const OurStory: PageLayoutProps = () => {
                           : " md:flex-row-reverse space-x md:space-x-reverse")
                       }
                     >
-                      <p className="flex-1 hidden md:block"></p>
+                      <div className="flex-1 hidden md:block" />
                       <div className="flex flex-col items-center mr-8 md:mr-0">
                         <div
                           className={
                             "h-5 w-5 rounded-full border-4 border-yellow-300" +
                             (even ? " border-yellow-300" : " border-yellow-500")
                           }
-                        ></div>
+                        />
                         <div
                           className={
                             "flex-1 h-20 w-1 border-2 border-yellow-300" +
                             (even ? " border-yellow-300" : " border-yellow-500")
                           }
-                        ></div>
+                        />
                       </div>
                       <div className="flex-1 flex flex-col mb-8">
                         <p
@@ -271,14 +271,14 @@ const OurStory: PageLayoutProps = () => {
                         >
                           {i.title}
                         </p>
-                        <p
+                        <div
                           className={
                             "font-lato font-bold text-lg" +
                             (even ? "" : " md:text-right")
                           }
                         >
                           {i.desc}
-                        </p>
+                        </div>
                       </div>
                     </div>
                   );
@@ -308,7 +308,7 @@ const OurStory: PageLayoutProps = () => {
                       </div>
                     ),
                   },
-                ].map((i, k) => {
+                ].map((i: { title: string; desc: JSX.Element }, k) => {
                   const even = k % 2 === 0;
                   return (
                     <div
@@ -320,20 +320,20 @@ const OurStory: PageLayoutProps = () => {
                           : " md:flex-row-reverse space-x md:space-x-reverse")
                       }
                     >
-                      <p className="flex-1 hidden md:block"></p>
+                      <div className="flex-1 hidden md:block" />
                       <div className="flex flex-col items-center mr-8 md:mr-0">
                         <div
                           className={
                             "h-5 w-5 rounded-full border-4 border-yellow-300" +
                             (even ? " border-yellow-300" : " border-yellow-500")
                           }
-                        ></div>
+                        />
                         <div
                           className={
                             "flex-1 h-20 w-1 border-2 border-yellow-300" +
                             (even ? " border-yellow-300" : " border-yellow-500")
                           }
-                        ></div>
+                        />
                       </div>
                       <div className="flex-1 flex flex-col mb-8">
                         <p
@@ -344,14 +344,14 @@ const OurStory: PageLayoutProps = () => {
                         >
                           {i.title}
                         </p>
-                        <p
+                        <div
                           className={
                             "font-lato font-bold text-lg" +
                             (even ? "" : " md:text-right")
                           }
                         >
                           {i.desc}
-                        </p>
+                        </div>
                       </div>
                     </div>
                   );
@@ -362,7 +362,7 @@ const OurStory: PageLayoutProps = () => {
                   {
                     title: "Q1",
                     desc: (
-                      <>
+                      <div>
                         <p className="text-xl">New Merchant&apos;s Features</p>
                         <ol className="pl-4 list-decimal font-normal">
                           <li>
@@ -375,10 +375,10 @@ const OurStory: PageLayoutProps = () => {
                           </li>
                           <li>Social media integration</li>
                         </ol>
-                      </>
+                      </div>
                     ),
                   },
-                ].map((i, k) => {
+                ].map((i: { title: string; desc: JSX.Element }, k) => {
                   const even = k % 2 === 0;
                   return (
                     <div
@@ -390,20 +390,20 @@ const OurStory: PageLayoutProps = () => {
                           : " md:flex-row-reverse space-x md:space-x-reverse")
                       }
                     >
-                      <p className="flex-1 hidden md:block"></p>
+                      <div className="flex-1 hidden md:block" />
                       <div className="flex flex-col items-center mr-8 md:mr-0">
                         <div
                           className={
                             "h-5 w-5 rounded-full border-4 border-yellow-300" +
                             (even ? " border-yellow-300" : " border-yellow-500")
                           }
-                        ></div>
+                        />
                         <div
                           className={
                             "flex-1 h-20 w-1 border-2 border-yellow-300" +
                             (even ? " border-yellow-300" : " border-yellow-500")
                           }
-                        ></div>
+                        />
                       </div>
                       <div className="flex-1 flex flex-col mb-8">
                         <p
@@ -414,14 +414,14 @@ const OurStory: PageLayoutProps = () => {
                         >
                           {i.title}
                         </p>
-                        <p
+                        <div
                           className={
                             "font-lato font-bold text-lg" +
                             (even ? "" : " md:text-right")
                           }
                         >
                           {i.desc}
-                        </p>
+                        </div>
                       </div>
                     </div>
                   );
@@ -429,96 +429,6 @@ const OurStory: PageLayoutProps = () => {
               </SlideshowItem>
             </Slideshow>
           </div>
-          {/* <div className="flex flex-col border-b">
-            {[
-              {
-                title: "Q1",
-                desc: (
-                  <>
-                    <p className="text-xl">New Merchant&apos;s Features</p>
-                    <ol className="pl-4 list-decimal font-normal">
-                      <li>
-                        Enhancement Merchants&apos; template voucher –
-                        self-serve customizable feature
-                      </li>
-                      <li>
-                        Complete merchants&apos; enablement for self-serve
-                        competition-leaderboard setup
-                      </li>
-                      <li>Social media integration</li>
-                    </ol>
-                  </>
-                ),
-              },
-              {
-                title: "Q2",
-                desc: (
-                  <div className="space-y-4">
-                    <div>
-                      <p className="text-xl">New Merchant&apos;s Features</p>
-                      <ol className="pl-4 list-decimal font-normal list-inside">
-                        <li>In game advertising bidding system</li>
-                        <li>In built geo-location capabilities</li>
-                      </ol>
-                    </div>
-                    <div>
-                      <p className="text-xl">New Game Features</p>
-                      <ol className="pl-4 list-decimal font-normal list-inside">
-                        <li>iOS Release</li>
-                      </ol>
-                    </div>
-                  </div>
-                ),
-              },
-            ].map((i, k) => {
-              const even = k % 2 === 0;
-              return (
-                <div
-                  key={k}
-                  className={
-                    "flex flex-row md:space-x-6" +
-                    (even
-                      ? ""
-                      : " md:flex-row-reverse space-x md:space-x-reverse")
-                  }
-                >
-                  <p className="flex-1 hidden md:block"></p>
-                  <div className="flex flex-col items-center mr-8 md:mr-0">
-                    <div
-                      className={
-                        "h-5 w-5 rounded-full border-4 border-yellow-300" +
-                        (even ? " border-yellow-300" : " border-yellow-500")
-                      }
-                    ></div>
-                    <div
-                      className={
-                        "flex-1 h-20 w-1 border-2 border-yellow-300" +
-                        (even ? " border-yellow-300" : " border-yellow-500")
-                      }
-                    ></div>
-                  </div>
-                  <div className="flex-1 flex flex-col mb-8">
-                    <p
-                      className={
-                        "font-montserrat font-extrabold text-4xl" +
-                        (even ? "" : " md:text-right")
-                      }
-                    >
-                      {i.title}
-                    </p>
-                    <p
-                      className={
-                        "font-lato font-bold text-lg" +
-                        (even ? "" : " md:text-right")
-                      }
-                    >
-                      {i.desc}
-                    </p>
-                  </div>
-                </div>
-              );
-            })}
-          </div> */}
         </div>
       </Section>
       <Section>
@@ -551,33 +461,43 @@ const OurStory: PageLayoutProps = () => {
                 name: "Cham Lee",
                 title: "The Archbishop CTO",
               },
-            ].map((i, k) => (
-              <div
-                key={`team-${k}`}
-                className="flex flex-col items-center md:items-start"
-              >
-                <div className="flex justify-center items-center mb-10">
-                  <div className="max-w-xs flex justify-center">
-                    <Image
-                      src={i.image}
-                      width={800}
-                      height={800}
-                      alt="home-2"
-                      className="rounded-lg"
-                    />
+            ].map(
+              (
+                i: {
+                  title: string;
+                  image: string;
+                  quote: string;
+                  name: string;
+                },
+                k
+              ) => (
+                <div
+                  key={`team-${k}`}
+                  className="flex flex-col items-center md:items-start"
+                >
+                  <div className="flex justify-center items-center mb-10">
+                    <div className="max-w-xs flex justify-center">
+                      <Image
+                        src={i.image}
+                        width={800}
+                        height={800}
+                        alt="home-2"
+                        className="rounded-lg"
+                      />
+                    </div>
                   </div>
+                  <p className="flex-1 text-center md:text-left max-w-xs font-montserrat font-bold capitalize text-xl mb-4">
+                    {i.quote}
+                  </p>
+                  <p className="text-center md:text-left max-w-xs font-montserrat font-bold capitalize text-2xl text-yellow-500 mb-4">
+                    {i.name}
+                  </p>
+                  <p className="text-center md:text-left max-w-xs font-montserrat font-semibold capitalize text-xl">
+                    {i.title}
+                  </p>
                 </div>
-                <p className="flex-1 text-center md:text-left max-w-xs font-montserrat font-bold capitalize text-xl mb-4">
-                  {i.quote}
-                </p>
-                <p className="text-center md:text-left max-w-xs font-montserrat font-bold capitalize text-2xl text-yellow-500 mb-4">
-                  {i.name}
-                </p>
-                <p className="text-center md:text-left max-w-xs font-montserrat font-semibold capitalize text-xl">
-                  {i.title}
-                </p>
-              </div>
-            ))}
+              )
+            )}
           </div>
         </div>
       </Section>
