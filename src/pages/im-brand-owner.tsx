@@ -1,10 +1,12 @@
 import Head from "next/head";
 import Image from "next/image";
+import { useRouter } from "next/router";
 import { Layout, Section } from "@engame/components";
 import { PageLayoutProps } from "@engame/types";
 import { FiCheckCircle } from "react-icons/fi";
 
 const ImBrandOwner: PageLayoutProps = () => {
+  const { push } = useRouter();
   return (
     <>
       <Head>
@@ -204,9 +206,9 @@ const ImBrandOwner: PageLayoutProps = () => {
                   "Custom game challenges",
                 ],
               },
-            ].map((i, k) => (
+            ].map((i, pricingIndex) => (
               <div
-                key={`pricing-${k}`}
+                key={`pricing-${pricingIndex}`}
                 className="bg-white rounded-2xl border shadow-lg p-4 flex flex-col justify-between relative"
               >
                 {i?.isPopular && (
@@ -230,9 +232,9 @@ const ImBrandOwner: PageLayoutProps = () => {
                   </p>
                   <p className="text-left font-lato">{i.desc}</p>
                   <ol>
-                    {i.descList.map((li, key) => (
+                    {i.descList.map((li, descListKey) => (
                       <li
-                        key={`descList-${k}`}
+                        key={`${pricingIndex}-descList-${descListKey}`}
                         className="flex space-x-2 text-left font-lato font-bold"
                       >
                         <span className="text-green-500 text-lg pt-1">
@@ -243,7 +245,10 @@ const ImBrandOwner: PageLayoutProps = () => {
                     ))}
                   </ol>
                 </div>
-                <button className="w-full px-2 py-1 mt-6 text-base bg-black text-white rounded border border-black font-montserrat font-bold">
+                <button
+                  onClick={() => push("/pricing/payment")}
+                  className="w-full px-2 py-1 mt-6 text-base bg-black text-white rounded border border-black font-montserrat font-bold"
+                >
                   Choose plan
                 </button>
               </div>

@@ -136,7 +136,7 @@ const ImGamer: PageLayoutProps = () => {
             responsive={carouselResponsive}
             className="w-full pb-2 space-x-4"
             ssr
-            partialVisbile
+            partialVisible
           >
             {[
               { name: "Legendary moai", image: "/assets/images/home-5.png" },

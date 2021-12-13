@@ -220,31 +220,31 @@ export const carouselResponsive = {
   xxl: {
     breakpoint: { max: 3000, min: 1536 },
     items: 4,
-    paritialVisibilityGutter: 60,
+    partialVisibilityGutter: 60,
   },
   xl: {
     breakpoint: { max: 1535, min: 1280 },
     items: 3,
-    paritialVisibilityGutter: 60,
+    partialVisibilityGutter: 60,
   },
   lg: {
     breakpoint: { max: 1279, min: 1024 },
     items: 2,
-    paritialVisibilityGutter: 60,
+    partialVisibilityGutter: 60,
   },
   md: {
     breakpoint: { max: 1024, min: 640 },
     items: 2,
-    paritialVisibilityGutter: 50,
+    partialVisibilityGutter: 50,
   },
   sm: {
     breakpoint: { max: 639, min: 465 },
     items: 2,
-    paritialVisibilityGutter: 10,
+    partialVisibilityGutter: 10,
   },
   mobile: {
     breakpoint: { max: 464, min: 0 },
     items: 1,
-    paritialVisibilityGutter: 30,
+    partialVisibilityGutter: 30,
   },
 };
