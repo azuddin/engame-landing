@@ -29,12 +29,11 @@ const Navbar = (props: NavbarProps): JSX.Element => {
         }
       >
         <div className="container mx-auto p-4 lg:px-36 flex flex-col space-y-4 overflow-auto">
-          <button
-            onClick={() => push("/our-story")}
-            className="text-montserrat font-bold text-left text-lg"
-          >
-            Our Story
-          </button>
+          <Link href="/our-story" passHref>
+            <button className="text-montserrat font-bold text-left text-lg">
+              Our Story
+            </button>
+          </Link>
           <Link href="/pricing" passHref>
             <button className="text-montserrat font-bold text-left text-lg">
               Pricing
