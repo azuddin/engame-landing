@@ -181,7 +181,7 @@ const OurStory: PageLayoutProps = () => {
                 onClick={() => paginate(0)}
                 className={
                   "px-4 py-1 rounded font-montserrat font-bold text-2xl" +
-                  (page === 0 ? " bg-gray-300" : " hover:bg-gray-300")
+                  (page === 0 ? " bg-yellow-400" : " hover:bg-yellow-300")
                 }
               >
                 2021
@@ -190,7 +190,7 @@ const OurStory: PageLayoutProps = () => {
                 onClick={() => paginate(1)}
                 className={
                   "px-4 py-1 rounded font-montserrat font-bold text-2xl" +
-                  (page === 1 ? " bg-gray-300" : " hover:bg-gray-300")
+                  (page === 1 ? " bg-yellow-400" : " hover:bg-yellow-300")
                 }
               >
                 2022
@@ -199,7 +199,7 @@ const OurStory: PageLayoutProps = () => {
                 onClick={() => paginate(2)}
                 className={
                   "px-4 py-1 rounded font-montserrat font-bold text-2xl" +
-                  (page === 2 ? " bg-gray-300" : " hover:bg-gray-300")
+                  (page === 2 ? " bg-yellow-400" : " hover:bg-yellow-300")
                 }
               >
                 2023
@@ -524,7 +524,7 @@ const OurStory: PageLayoutProps = () => {
           </div>
         </div>
       </Section>
-      <PartnerContent />
+      <PartnerContent backgroundImage />
       <div className="relative">
         <Image
           src="/assets/images/EG---bg.jpg"

@@ -1,16 +1,21 @@
 import Image from "next/image";
 import { Section } from "@engame/components";
 
-const PartnerContent = (): JSX.Element => {
+const PartnerContent = (props: {
+  backgroundImage?: string | boolean;
+}): JSX.Element => {
+  const { backgroundImage } = props;
   return (
     <div className="relative">
-      <Image
-        src="/assets/images/EG---bg-2.jpg"
-        alt="home-4"
-        layout="fill"
-        objectFit="cover"
-        quality={100}
-      />
+      {backgroundImage && (
+        <Image
+          src="/assets/images/EG---bg-2.jpg"
+          alt="home-4"
+          layout="fill"
+          objectFit="cover"
+          quality={100}
+        />
+      )}
       <Section>
         <div className="flex flex-col items-center py-10 space-y-8">
           <p className="text-center font-montserrat font-extrabold text-4xl z-10">

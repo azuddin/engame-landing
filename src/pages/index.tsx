@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import { Layout, Option, Section, Select } from "@engame/components";
+import { HowItWork, Layout, Option, Section, Select } from "@engame/components";
 import { carouselResponsive } from "@engame/constants";
 import { PageLayoutProps } from "@engame/types";
 import Carousel from "react-multi-carousel";
@@ -157,39 +157,7 @@ const Home: PageLayoutProps = () => {
           alt="home-1"
         />
       </div>
-      <Section>
-        <div className="flex flex-col md:flex-row space-y-10 md:space-x-6 md:space-y-0 py-10">
-          <div className="flex flex-col md:w-1/3 items-center justify-center md:items-start space-y-6 md:space-y-2">
-            <div className="max-w-xs md:h-32 md:w-32 flex justify-center">
-              <Image
-                src="/assets/images/01 Home/EG---Landing-home_info(D).png"
-                width={800}
-                height={800}
-                alt="home-2"
-                className="rounded-lg"
-              />
-            </div>
-            <p className="text-center md:text-left font-montserrat font-extrabold text-4xl">
-              How it work easier?
-            </p>
-            <p className="text-center md:text-left font-lato text-lg">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
-              netus et ut imperdiet et quisque donec
-            </p>
-          </div>
-          <div className="flex-grow flex justify-center items-center relative h-96">
-            <Image
-              src="/assets/images/home-4.png"
-              alt="home-4"
-              className="rounded-3xl"
-              layout="fill"
-              objectFit="cover"
-              quality={100}
-            />
-          </div>
-        </div>
-      </Section>
-
+      <HowItWork />
       <div className="relative">
         <Image
           src="/assets/images/EG---bg-2.jpg"
@@ -303,7 +271,7 @@ const Home: PageLayoutProps = () => {
           </div>
         </div>
       </Section>
-      <PartnerContent />
+      <PartnerContent backgroundImage />
       <Section>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 py-10">
           <div className="flex flex-col-reverse md:flex-col items-center md:justify-center">

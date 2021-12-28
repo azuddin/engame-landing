@@ -1,7 +1,13 @@
 import Head from "next/head";
 import Image from "next/image";
 import { useRouter } from "next/router";
-import { Layout, PartnerContent, Section } from "@engame/components";
+import {
+  HowItWork,
+  Layout,
+  PartnerContent,
+  Section,
+  SubscribePlan,
+} from "@engame/components";
 import { PageLayoutProps } from "@engame/types";
 import { FiCheckCircle } from "react-icons/fi";
 
@@ -17,25 +23,34 @@ const ImBrandOwner: PageLayoutProps = () => {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Section>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 py-10 md:py-0">
-          <div className="flex flex-col justify-center space-y-2">
-            <p className="text-center md:text-left font-montserrat font-extrabold pb-4 text-4xl">
-              Unlock your business potential and grow up together with us!
-            </p>
-          </div>
-          <div className="flex justify-center items-center">
-            <div className="flex justify-center md:flex-1 md:justify-end max-w-lg">
+      <div className="relative">
+        <Image
+          src="/assets/images/03 Brand owner/EG---Landing-brand_top(D).jpg"
+          alt="home-4"
+          layout="fill"
+          objectFit="cover"
+          quality={100}
+        />
+        <Section zIndex="z-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 py-20">
+            <div className="flex flex-col justify-center space-y-2">
+              <p className="text-center md:text-left font-montserrat font-extrabold pb-4 text-4xl">
+                Unlock your business potential and grow up together with us!
+              </p>
+            </div>
+            <div className="flex justify-center items-center">
+              {/* <div className="flex justify-center md:flex-1 md:justify-end max-w-lg">
               <Image
                 src="/assets/images/home-1.png"
                 width={800}
                 height={800}
                 alt="home-1"
               />
+            </div> */}
             </div>
           </div>
-        </div>
-      </Section>
+        </Section>
+      </div>
       <Section>
         <div className="flex flex-col items-center space-y-10 py-10">
           <p className="text-center font-montserrat font-extrabold text-4xl">
@@ -46,23 +61,29 @@ const ImBrandOwner: PageLayoutProps = () => {
               {
                 title: "Increase sales & Leads",
                 desc: "Having your own games on your platform that funnels in new customers and retaining them",
+                imageUrl:
+                  "/assets/images/03 Brand owner/EG---Landing-brand_icon-1(D).png",
               },
               {
                 title: "Improved customer experience",
                 desc: "Engaging and understanding customers is easier than ever before with games and data",
+                imageUrl:
+                  "/assets/images/03 Brand owner/EG---Landing-brand_icon-2(D).png",
               },
               {
                 title: "increase brand stickiness",
                 desc: "With your brand and products featured in games, your brand will be all over their heads",
+                imageUrl:
+                  "/assets/images/03 Brand owner/EG---Landing-brand_icon-3(D).png",
               },
             ].map((i, k) => (
               <div
                 key={`why-${k}`}
-                className="flex flex-col justify-start items-center border rounded-2xl px-8 py-6"
+                className="flex flex-col justify-start items-center border-2 border-yellow-400 rounded-2xl px-8 py-6"
               >
                 <div className="max-w-xs md:h-32 md:w-32 flex justify-center mb-4">
                   <Image
-                    src="/assets/images/home-2.png"
+                    src={i.imageUrl}
                     width={800}
                     height={800}
                     alt="home-2"
@@ -80,47 +101,25 @@ const ImBrandOwner: PageLayoutProps = () => {
           </div>
         </div>
       </Section>
-      <Section>
-        <div className="flex flex-col md:flex-row space-y-10 md:space-x-6 md:space-y-0 py-10">
-          <div className="flex flex-col md:w-1/3 items-center justify-center md:items-start space-y-6 md:space-y-2">
-            <div className="max-w-xs md:h-32 md:w-32 flex justify-center">
-              <Image
-                src="/assets/images/home-2.png"
-                width={800}
-                height={800}
-                alt="home-2"
-                className="rounded-lg"
-              />
-            </div>
-            <p className="text-center md:text-left font-montserrat font-extrabold text-4xl">
-              How it work easier?
-            </p>
-            <p className="text-center md:text-left font-lato text-lg">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
-              netus et ut imperdiet et quisque donec
-            </p>
-          </div>
-          <div className="flex-grow flex justify-center items-center relative h-96">
-            <Image
-              src="/assets/images/home-4.png"
-              alt="home-4"
-              className="rounded-3xl"
-              layout="fill"
-              objectFit="cover"
-              quality={100}
-            />
-          </div>
-        </div>
-      </Section>
+      <HowItWork />
       <Section>
         <div className="grid grid-cols-1 md:grid-cols-3 py-10 gap-10 md:gap-6 xl:gap-20">
           {[
-            "Send your vouchers to us on our website",
-            "Vouchers will be listed on our gaaS as challenges",
-            "player will go through challenges to win vouchers",
-            "Send your vouchers to us on our website",
-            "Vouchers will be listed on our gaaS as challenges",
-            "player will go through challenges to win vouchers",
+            {
+              title: "Send your vouchers to us on our website",
+              imageUrl:
+                "/assets/images/03 Brand owner/EG---Landing_brand_voucher-1(D).jpg",
+            },
+            {
+              title: "Vouchers will be listed on our gaaS as challenges",
+              imageUrl:
+                "/assets/images/03 Brand owner/EG---Landing_brand_voucher-2(D).jpg",
+            },
+            {
+              title: "player will go through challenges to win vouchers",
+              imageUrl:
+                "/assets/images/03 Brand owner/EG---Landing_brand_voucher-3(D).jpg",
+            },
           ].map((i, k) => (
             <div
               key={`brand-${k}`}
@@ -128,21 +127,21 @@ const ImBrandOwner: PageLayoutProps = () => {
             >
               <div className="max-w-xs flex justify-center">
                 <Image
-                  src="/assets/images/home-2.png"
-                  width={800}
-                  height={800}
+                  src={i.imageUrl}
+                  width={600}
+                  height={400}
                   alt="home-2"
                   className="rounded-lg"
                 />
               </div>
               <p className="text-center md:text-left font-montserrat font-bold text-3xl md:text-xl capitalize">
-                {i}
+                {i.title}
               </p>
             </div>
           ))}
         </div>
       </Section>
-      <Section>
+      {/* <Section>
         <div className="flex justify-center items-center py-10">
           <div className="h-96 w-full relative">
             <Image
@@ -155,107 +154,8 @@ const ImBrandOwner: PageLayoutProps = () => {
             />
           </div>
         </div>
-      </Section>
-      <Section>
-        <div className="flex flex-col items-center py-10">
-          <p className="text-center md:text-left font-montserrat font-extrabold text-4xl mb-4">
-            Subscribe your plan now!
-          </p>
-          <p className="text-center max-w-lg font-lato font-medium text-xl capitalize mb-10">
-            Interested to find out what Games as a Service can do to your
-            business? Subscribe to our basic starter package for FREE today!
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-6 xl:gap-20">
-            {[
-              {
-                title: "Basic Starter",
-                price: "FREE",
-                desc: "Empowering users to manage their electronic health record in a secure & interoperable manner",
-                descList: [
-                  "Access to GaaS player base",
-                  "Voucher distribution",
-                  "Fixed game challenges",
-                  "Free business package trial",
-                ],
-              },
-              {
-                title: "Business",
-                price: "RM299",
-                desc: "Empowering users to manage their electronic health record in a secure & interoperable manner",
-                descList: [
-                  "Access to GaaS player base",
-                  "Voucher distribution",
-                  "Voucher optimization",
-                  "Featuring your brand in game",
-                  "Featuring your product in game",
-                  "Fixed game challenges",
-                ],
-                isPopular: true,
-              },
-              {
-                title: "Professional",
-                price: "RM599",
-                desc: "Empowering users to manage their electronic health record in a secure & interoperable manner",
-                descList: [
-                  "Access to GaaS player base",
-                  "Voucher distribution",
-                  "Voucher optimization",
-                  "Featuring your brand in game",
-                  "Featuring your product in game",
-                  "Featuring your competition in game",
-                  "Custom game challenges",
-                ],
-              },
-            ].map((i, pricingIndex) => (
-              <div
-                key={`pricing-${pricingIndex}`}
-                className="bg-white rounded-2xl border shadow-lg p-4 flex flex-col justify-between relative"
-              >
-                {i?.isPopular && (
-                  <div className="w-20 absolute top-0 right-0 overflow-hidden inline-block rounded-tr-2xl">
-                    <div className="h-20 bg-black transform rotate-45 origin-bottom-right flex-1 flex items-end -ml-8 px-8">
-                      <p className="text-center text-white capitalize font-montserrat font-bold text-xs">
-                        popular choice
-                      </p>
-                    </div>
-                  </div>
-                )}
-                <div className="flex flex-col space-y-4">
-                  <p className="text-left font-montserrat font-bold text-xl capitalize">
-                    {i.title}
-                  </p>
-                  <p className="text-left font-lato font-thin text-xl">
-                    <span className="font-montserrat font-bold text-3xl">
-                      {i.price}
-                    </span>
-                    /annual
-                  </p>
-                  <p className="text-left font-lato">{i.desc}</p>
-                  <ol>
-                    {i.descList.map((li, descListKey) => (
-                      <li
-                        key={`${pricingIndex}-descList-${descListKey}`}
-                        className="flex space-x-2 text-left font-lato font-bold"
-                      >
-                        <span className="text-green-500 text-lg pt-1">
-                          <FiCheckCircle />
-                        </span>
-                        <p>{li}</p>
-                      </li>
-                    ))}
-                  </ol>
-                </div>
-                <button
-                  onClick={() => push("/pricing/payment")}
-                  className="w-full px-2 py-1 mt-6 text-base bg-black text-white rounded border border-black font-montserrat font-bold"
-                >
-                  Choose plan
-                </button>
-              </div>
-            ))}
-          </div>
-        </div>
-      </Section>
+      </Section> */}
+      <SubscribePlan backgroundImage />
       <PartnerContent />
     </>
   );
