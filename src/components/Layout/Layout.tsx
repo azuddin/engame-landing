@@ -38,42 +38,39 @@ const Layout = (props: LayoutProps): JSX.Element => {
   const LoginModal = (props: { isOpen: boolean; onCloseModal: () => void }) => {
     const { isOpen, onCloseModal } = props;
     return (
-      <Modal isOpen={isOpen} onCloseModal={onCloseModal}>
-        <div className="grid grid-cols-1 max-w-3xl p-3">
-          <div className="flex flex-col justify-start items-start overflow-auto">
-            <p className="font-montserrat font-semibold text-3xl mb-1">Login</p>
-            <div className="flex flex-col space-y-6 w-full">
-              <div className="flex flex-col">
-                <label htmlFor="email" className="font-lato text-xl mb-1">
-                  Email <span className="text-red-600">*</span>
-                </label>
-                <input
-                  name="email"
-                  id="email"
-                  type="email"
-                  className="rounded-md border px-4 py-2 text-2xl lowercase"
-                />
-              </div>
-              <div className="flex flex-col">
-                <label htmlFor="password" className="font-lato text-xl mb-1">
-                  Password <span className="text-red-600">*</span>
-                </label>
-                <input
-                  name="password"
-                  id="password"
-                  type="password"
-                  className="rounded-md border px-4 py-2 text-2xl lowercase"
-                />
-              </div>
-              <button className="w-full px-5 py-2 border border-black bg-black text-white rounded font-montserrat font-bold">
-                Login
-              </button>
-              <div className="border-t my-8 w-full"></div>
-              <a className="font-lato">Don&apos;t have account yet?</a>
-              <button className="w-full px-5 py-2 border border-black bg-white text-black rounded font-montserrat font-bold">
-                Create a free account
-              </button>
+      <Modal isOpen={isOpen} onCloseModal={onCloseModal} title="Login">
+        <div className="grid grid-cols-1">
+          <div className="flex flex-col space-y-6 w-full">
+            <div className="flex flex-col">
+              <label htmlFor="email" className="font-lato text-xl mb-1">
+                Email <span className="text-red-600">*</span>
+              </label>
+              <input
+                name="email"
+                id="email"
+                type="email"
+                className="rounded-md border px-4 py-2 text-2xl lowercase"
+              />
             </div>
+            <div className="flex flex-col">
+              <label htmlFor="password" className="font-lato text-xl mb-1">
+                Password <span className="text-red-600">*</span>
+              </label>
+              <input
+                name="password"
+                id="password"
+                type="password"
+                className="rounded-md border px-4 py-2 text-2xl lowercase"
+              />
+            </div>
+            <button className="w-full px-5 py-2 border border-black bg-black text-white rounded font-montserrat font-bold">
+              Login
+            </button>
+            <div className="border-t my-8 w-full"></div>
+            <a className="font-lato">Don&apos;t have account yet?</a>
+            <button className="w-full px-5 py-2 border border-black bg-white text-black rounded font-montserrat font-bold">
+              Create a free account
+            </button>
           </div>
         </div>
       </Modal>
@@ -86,24 +83,23 @@ const Layout = (props: LayoutProps): JSX.Element => {
   }) => {
     const { isOpen, onCloseModal } = props;
     return (
-      <Modal isOpen={isOpen} onCloseModal={onCloseModal}>
-        <div className="grid grid-cols-1 md:grid-cols-2 md:gap-8 max-w-3xl p-3">
+      <Modal
+        isOpen={isOpen}
+        onCloseModal={onCloseModal}
+        title="Start your free trial now!"
+      >
+        <div className="grid grid-cols-1 md:grid-cols-2 md:gap-6">
           <div className="flex items-center">
-            <div className="flex-1 flex justify-center items-center relative h-full">
+            <div className="flex-1 flex justify-center items-start relative h-full">
               <Image
-                src="/assets/images/home-4.png"
-                alt="home-4"
-                className="rounded-3xl"
-                layout="fill"
-                objectFit="cover"
-                quality={100}
+                src="/assets/images/07 Free trial/EG---Free-trial(D).jpg"
+                width={1080}
+                height={1400}
+                alt="home-2"
               />
             </div>
           </div>
           <div className="flex flex-col justify-start items-start overflow-auto">
-            <p className="font-montserrat font-semibold text-3xl mb-1">
-              Start your free trial now!
-            </p>
             <p className="font-lato text-xl mb-8">
               Start your free trial now and drive more sales and leads for your
               business from day one. (No risk. No credit card required.)
