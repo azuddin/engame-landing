@@ -227,7 +227,6 @@ const Layout = (props: LayoutProps): JSX.Element => {
         }
       >
         {children}
-        <div className="border-t mt-8"></div>
         <Footer />
       </div>
       <LoginModal isOpen={openLoginModal} onCloseModal={toggleLoginModal} />

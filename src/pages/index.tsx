@@ -5,6 +5,7 @@ import { Layout, Option, Section, Select } from "@engame/components";
 import { carouselResponsive } from "@engame/constants";
 import { PageLayoutProps } from "@engame/types";
 import Carousel from "react-multi-carousel";
+import { PartnerContent } from "src/components";
 import "react-multi-carousel/lib/styles.css";
 
 const Home: PageLayoutProps = () => {
@@ -44,16 +45,6 @@ const Home: PageLayoutProps = () => {
               </Link>
             </div>
             <div className=""></div>
-            {/* <div className="order-first md:order-none flex justify-center items-center">
-              <div className="flex justify-center md:flex-1 md:justify-end max-w-lg">
-                <Image
-                  src="/assets/images/home-1.png"
-                  width={800}
-                  height={800}
-                  alt="home-1"
-                />
-              </div>
-            </div> */}
           </div>
         </Section>
       </div>
@@ -141,8 +132,15 @@ const Home: PageLayoutProps = () => {
           </div>
         </div>
       </Section>
-      <div className="flex justify-center items-end mb-8 md:mt-8 lg:mt-18 xl:mt-28 2xl:mt-36 md:mb-0 bg-yellow-400 h-40">
-        <div className="h-80 flex items-end">
+      <div className="flex justify-center items-end mb-8 md:mt-8 lg:mt-18 xl:mt-28 2xl:mt-36 md:mb-0 bg-yellow-400 h-40 relative">
+        <Image
+          src="/assets/images/EG---bg.jpg"
+          alt="home-4"
+          layout="fill"
+          objectFit="cover"
+          quality={100}
+        />
+        <div className="h-80 items-end hidden md:flex">
           <Image
             src="/assets/images/01 Home/EG---Landing-home_arcade(D).png"
             width={1920}
@@ -150,6 +148,14 @@ const Home: PageLayoutProps = () => {
             alt="home-1"
           />
         </div>
+      </div>
+      <div className="block md:hidden">
+        <Image
+          src="/assets/images/01 Home/EG---Landing-home_arcade(M).png"
+          width={800}
+          height={300}
+          alt="home-1"
+        />
       </div>
       <Section>
         <div className="flex flex-col md:flex-row space-y-10 md:space-x-6 md:space-y-0 py-10">
@@ -204,26 +210,31 @@ const Home: PageLayoutProps = () => {
               partialVisible
             >
               {[
-                { name: "Legendary moai", image: "/assets/images/home-5.png" },
-                { name: "The largest one", image: "/assets/images/game-2.png" },
-                { name: "Deep blue sea", image: "/assets/images/game-3.png" },
+                {
+                  name: "Legendary moai",
+                  image:
+                    "/assets/images/01 Home/EG---Landing-home_game-1(D).png",
+                },
+                {
+                  name: "The largest one",
+                  image:
+                    "/assets/images/01 Home/EG---Landing-home_game-2(D).png",
+                },
+                {
+                  name: "Deep blue sea",
+                  image:
+                    "/assets/images/01 Home/EG---Landing-home_game-3(D).png",
+                },
                 {
                   name: "Scissors rock paper",
-                  image: "/assets/images/game-4.png",
-                },
-                { name: "Super fast food", image: "/assets/images/home-5.png" },
-                { name: "Legendary moai", image: "/assets/images/home-5.png" },
-                { name: "The largest one", image: "/assets/images/game-2.png" },
-                { name: "Deep blue sea", image: "/assets/images/game-3.png" },
-                {
-                  name: "Aliquip Lorem dolore Lorem tempor ipsum occaecat qui. Qui sint eu cupidatat deserunt. Eu anim incididunt esse ut eu Lorem duis in officia veniam pariatur veniam. Ullamco id eiusmod id enim. Voluptate sint minim sint quis qui officia exercitation. Ipsum est irure laboris laboris excepteur ullamco anim dolor do. Lorem fugiat mollit veniam id do sunt voluptate enim adipisicing et anim.",
-                  image: "/assets/images/game-3.png",
+                  image:
+                    "/assets/images/01 Home/EG---Landing-home_game-4(D).png",
                 },
                 {
-                  name: "Scissors rock paper",
-                  image: "/assets/images/game-4.png",
+                  name: "Super fast food",
+                  image:
+                    "/assets/images/01 Home/EG---Landing-home_game-5(D).png",
                 },
-                { name: "Super fast food", image: "/assets/images/home-5.png" },
               ].map((i, k) => (
                 <div
                   key={k}
@@ -249,41 +260,6 @@ const Home: PageLayoutProps = () => {
                 </div>
               ))}
             </Carousel>
-            {/* <div className="w-full flex flex-row overflow-auto space-x-4 pb-2">
-            {[
-              { name: "Legendary moai", image: "/assets/images/home-5.png" },
-              { name: "The largest one", image: "/assets/images/game-2.png" },
-              { name: "Deep blue sea", image: "/assets/images/game-3.png" },
-              {
-                name: "Scissors rock paper",
-                image: "/assets/images/game-4.png",
-              },
-              { name: "Super fast food", image: "/assets/images/home-5.png" },
-              { name: "Legendary moai", image: "/assets/images/home-5.png" },
-              { name: "The largest one", image: "/assets/images/game-2.png" },
-              { name: "Deep blue sea", image: "/assets/images/game-3.png" },
-              {
-                name: "Scissors rock paper",
-                image: "/assets/images/game-4.png",
-              },
-              { name: "Super fast food", image: "/assets/images/home-5.png" },
-            ].map((i, k) => (
-              <div key={k} className="flex flex-col min-w-max">
-                <div className="flex flex-col w-52">
-                  <Image
-                    src={i.image}
-                    width={320}
-                    height={225}
-                    alt="home-5"
-                    className="rounded-lg"
-                  />
-                </div>
-                <p className="w-44 font-montserrat font-bold text-lg md:text-lg truncate">
-                  {i.name}
-                </p>
-              </div>
-            ))}
-          </div> */}
           </div>
         </Section>
       </div>
@@ -327,46 +303,7 @@ const Home: PageLayoutProps = () => {
           </div>
         </div>
       </Section>
-      <div className="relative">
-        <Image
-          src="/assets/images/EG---bg-2.jpg"
-          alt="home-4"
-          layout="fill"
-          objectFit="cover"
-          quality={100}
-        />
-        <Section>
-          <div className="flex flex-col items-center py-10 space-y-8">
-            <p className="text-center font-montserrat font-extrabold text-4xl z-10">
-              Partnered with the world&apos;s best companies
-            </p>
-            <div className="w-full flex flex-row overflow-auto space-x-4 pb-2">
-              {[
-                "/assets/images/company-1.png",
-                "/assets/images/company-2.png",
-                "/assets/images/company-3.png",
-                "/assets/images/company-4.png",
-                "/assets/images/company-5.png",
-              ].map((i, k) => (
-                <div
-                  key={k}
-                  className="flex flex-col min-w-max cursor-pointer filter grayscale hover:grayscale-0 bg-white"
-                >
-                  <div className="flex flex-col w-52">
-                    <Image
-                      src={i}
-                      width={320}
-                      height={225}
-                      alt="home-5"
-                      className="rounded-lg"
-                    />
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </Section>
-      </div>
+      <PartnerContent />
       <Section>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 py-10">
           <div className="flex flex-col-reverse md:flex-col items-center md:justify-center">
