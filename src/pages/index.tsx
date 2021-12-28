@@ -18,35 +18,45 @@ const Home: PageLayoutProps = () => {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Section>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div className="flex flex-col justify-center space-y-2">
-            <p className="text-center md:text-left font-montserrat font-extrabold pb-4 text-4xl">
-              Are You Interested To Join Us? Let&apos;s Grow Together!
-            </p>
-            <Link href="/im-brand-owner" passHref>
-              <button className="w-full md:w-52 px-5 py-2 border border-black bg-black text-white rounded font-montserrat font-bold">
-                I&apos;m A Brand Owner
-              </button>
-            </Link>
-            <Link href="/im-gamer" passHref>
-              <button className="w-full md:w-52 px-5 py-2 border border-black rounded font-montserrat font-bold">
-                Nope, I&apos;m A Gamer
-              </button>
-            </Link>
-          </div>
-          <div className="order-first md:order-none flex justify-center items-center">
-            <div className="flex justify-center md:flex-1 md:justify-end max-w-lg">
-              <Image
-                src="/assets/images/home-1.png"
-                width={800}
-                height={800}
-                alt="home-1"
-              />
+      <div className="relative">
+        <Image
+          src="/assets/images/01 Home/EG---Landing-home_top(D).jpg"
+          alt="home-4"
+          layout="fill"
+          objectFit="cover"
+          quality={100}
+        />
+        <Section>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="flex flex-col justify-center space-y-2 z-10 py-20">
+              <p className="text-center md:text-left font-montserrat font-extrabold pb-4 text-4xl">
+                Are You Interested To Join Us? Let&apos;s Grow Together!
+              </p>
+              <Link href="/im-brand-owner" passHref>
+                <button className="w-full md:w-52 px-5 py-2 border border-black bg-black text-white rounded font-montserrat font-bold">
+                  I&apos;m A Brand Owner
+                </button>
+              </Link>
+              <Link href="/im-gamer" passHref>
+                <button className="w-full md:w-52 px-5 py-2 border border-black rounded font-montserrat font-bold">
+                  Nope, I&apos;m A Gamer
+                </button>
+              </Link>
             </div>
+            <div className=""></div>
+            {/* <div className="order-first md:order-none flex justify-center items-center">
+              <div className="flex justify-center md:flex-1 md:justify-end max-w-lg">
+                <Image
+                  src="/assets/images/home-1.png"
+                  width={800}
+                  height={800}
+                  alt="home-1"
+                />
+              </div>
+            </div> */}
           </div>
-        </div>
-      </Section>
+        </Section>
+      </div>
       <Section>
         <div className="flex flex-col items-center space-y-10 py-10">
           <p className="text-center font-montserrat font-extrabold text-4xl">
@@ -54,15 +64,35 @@ const Home: PageLayoutProps = () => {
           </p>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
             {[
-              { title: "+9 Million", desc: "Players" },
-              { title: "+163 Million", desc: "Games played" },
-              { title: "+16 Minutes", desc: "Played per session" },
-              { title: "+26 Partners", desc: "Across the globe" },
+              {
+                title: "+9 Million",
+                desc: "Players",
+                image_url:
+                  "/assets/images/01 Home/EG---Landing-home_icon-1(D).jpg",
+              },
+              {
+                title: "+163 Million",
+                desc: "Games played",
+                image_url:
+                  "/assets/images/01 Home/EG---Landing-home_icon-2(D).jpg",
+              },
+              {
+                title: "+16 Minutes",
+                desc: "Played per session",
+                image_url:
+                  "/assets/images/01 Home/EG---Landing-home_icon-3(D).jpg",
+              },
+              {
+                title: "+26 Partners",
+                desc: "Across the globe",
+                image_url:
+                  "/assets/images/01 Home/EG---Landing-home_icon-4(D).jpg",
+              },
             ].map((i, k) => (
               <div key={k} className="flex flex-col justify-start items-center">
                 <div className="max-w-xs md:h-32 md:w-32 flex justify-center mb-4">
                   <Image
-                    src="/assets/images/home-2.png"
+                    src={i.image_url}
                     width={800}
                     height={800}
                     alt="home-2"
@@ -108,23 +138,25 @@ const Home: PageLayoutProps = () => {
                 </div>
               ))}
             </div>
-            <div className="flex justify-center mb-8 md:mt-8 md:mb-0 max-w-4xl">
-              <Image
-                src="/assets/images/home-3.png"
-                width={1596}
-                height={789}
-                alt="home-1"
-              />
-            </div>
           </div>
         </div>
       </Section>
+      <div className="flex justify-center items-end mb-8 md:mt-8 lg:mt-18 xl:mt-28 2xl:mt-36 md:mb-0 bg-yellow-400 h-40">
+        <div className="h-80 flex items-end">
+          <Image
+            src="/assets/images/01 Home/EG---Landing-home_arcade(D).png"
+            width={1920}
+            height={300}
+            alt="home-1"
+          />
+        </div>
+      </div>
       <Section>
         <div className="flex flex-col md:flex-row space-y-10 md:space-x-6 md:space-y-0 py-10">
           <div className="flex flex-col md:w-1/3 items-center justify-center md:items-start space-y-6 md:space-y-2">
             <div className="max-w-xs md:h-32 md:w-32 flex justify-center">
               <Image
-                src="/assets/images/home-2.png"
+                src="/assets/images/01 Home/EG---Landing-home_info(D).png"
                 width={800}
                 height={800}
                 alt="home-2"
@@ -151,64 +183,73 @@ const Home: PageLayoutProps = () => {
           </div>
         </div>
       </Section>
-      <Section>
-        <div className="flex flex-col items-center space-y-5 py-10">
-          <p className="text-center font-montserrat font-extrabold text-4xl">
-            Trending Games
-          </p>
-          <Carousel
-            responsive={carouselResponsive}
-            className="w-full pb-2 space-x-4"
-            ssr
-            partialVisible
-          >
-            {[
-              { name: "Legendary moai", image: "/assets/images/home-5.png" },
-              { name: "The largest one", image: "/assets/images/game-2.png" },
-              { name: "Deep blue sea", image: "/assets/images/game-3.png" },
-              {
-                name: "Scissors rock paper",
-                image: "/assets/images/game-4.png",
-              },
-              { name: "Super fast food", image: "/assets/images/home-5.png" },
-              { name: "Legendary moai", image: "/assets/images/home-5.png" },
-              { name: "The largest one", image: "/assets/images/game-2.png" },
-              { name: "Deep blue sea", image: "/assets/images/game-3.png" },
-              {
-                name: "Aliquip Lorem dolore Lorem tempor ipsum occaecat qui. Qui sint eu cupidatat deserunt. Eu anim incididunt esse ut eu Lorem duis in officia veniam pariatur veniam. Ullamco id eiusmod id enim. Voluptate sint minim sint quis qui officia exercitation. Ipsum est irure laboris laboris excepteur ullamco anim dolor do. Lorem fugiat mollit veniam id do sunt voluptate enim adipisicing et anim.",
-                image: "/assets/images/game-3.png",
-              },
-              {
-                name: "Scissors rock paper",
-                image: "/assets/images/game-4.png",
-              },
-              { name: "Super fast food", image: "/assets/images/home-5.png" },
-            ].map((i, k) => (
-              <div
-                key={k}
-                className={
-                  "flex flex-col min-w-max " +
-                  // (k % 2 === 0 ? "bg-gray-200" : "") +
-                  (k === 0 ? "" : " ml-6")
-                }
-              >
-                <div className="flex-grow flex justify-center items-center relative w-full h-44">
-                  <Image
-                    src={i.image}
-                    alt={`${k}-games-home-5`}
-                    className="rounded-3xl"
-                    layout="fill"
-                    objectFit="cover"
-                    quality={100}
-                  />
+
+      <div className="relative">
+        <Image
+          src="/assets/images/EG---bg-2.jpg"
+          alt="home-4"
+          layout="fill"
+          objectFit="cover"
+          quality={100}
+        />
+        <Section>
+          <div className="flex flex-col items-center space-y-5 py-10">
+            <p className="text-center font-montserrat font-extrabold text-4xl z-10">
+              Trending Games
+            </p>
+            <Carousel
+              responsive={carouselResponsive}
+              className="w-full pb-2 space-x-4"
+              ssr
+              partialVisible
+            >
+              {[
+                { name: "Legendary moai", image: "/assets/images/home-5.png" },
+                { name: "The largest one", image: "/assets/images/game-2.png" },
+                { name: "Deep blue sea", image: "/assets/images/game-3.png" },
+                {
+                  name: "Scissors rock paper",
+                  image: "/assets/images/game-4.png",
+                },
+                { name: "Super fast food", image: "/assets/images/home-5.png" },
+                { name: "Legendary moai", image: "/assets/images/home-5.png" },
+                { name: "The largest one", image: "/assets/images/game-2.png" },
+                { name: "Deep blue sea", image: "/assets/images/game-3.png" },
+                {
+                  name: "Aliquip Lorem dolore Lorem tempor ipsum occaecat qui. Qui sint eu cupidatat deserunt. Eu anim incididunt esse ut eu Lorem duis in officia veniam pariatur veniam. Ullamco id eiusmod id enim. Voluptate sint minim sint quis qui officia exercitation. Ipsum est irure laboris laboris excepteur ullamco anim dolor do. Lorem fugiat mollit veniam id do sunt voluptate enim adipisicing et anim.",
+                  image: "/assets/images/game-3.png",
+                },
+                {
+                  name: "Scissors rock paper",
+                  image: "/assets/images/game-4.png",
+                },
+                { name: "Super fast food", image: "/assets/images/home-5.png" },
+              ].map((i, k) => (
+                <div
+                  key={k}
+                  className={
+                    "flex flex-col min-w-max " +
+                    // (k % 2 === 0 ? "bg-gray-200" : "") +
+                    (k === 0 ? "" : " ml-6")
+                  }
+                >
+                  <div className="flex-grow flex justify-center items-center relative w-full h-44">
+                    <Image
+                      src={i.image}
+                      alt={`${k}-games-home-5`}
+                      className="rounded-3xl"
+                      layout="fill"
+                      objectFit="cover"
+                      quality={100}
+                    />
+                  </div>
+                  <p className="w-52 font-montserrat font-bold text-lg md:text-lg truncate">
+                    {i.name}
+                  </p>
                 </div>
-                <p className="w-52 font-montserrat font-bold text-lg md:text-lg truncate">
-                  {i.name}
-                </p>
-              </div>
-            ))}
-          </Carousel>
-          {/* <div className="w-full flex flex-row overflow-auto space-x-4 pb-2">
+              ))}
+            </Carousel>
+            {/* <div className="w-full flex flex-row overflow-auto space-x-4 pb-2">
             {[
               { name: "Legendary moai", image: "/assets/images/home-5.png" },
               { name: "The largest one", image: "/assets/images/game-2.png" },
@@ -243,21 +284,23 @@ const Home: PageLayoutProps = () => {
               </div>
             ))}
           </div> */}
-        </div>
-      </Section>
+          </div>
+        </Section>
+      </div>
       <Section>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-10 py-10">
           <div className="flex flex-col items-center space-y-6">
             <p className="text-center font-montserrat font-extrabold text-4xl md:text-3xl">
               Learn more about Why Superbrand work with us
             </p>
-            <div className="max-w-xs flex justify-center">
+            <div className="flex-grow flex justify-center items-center relative w-full h-44">
               <Image
-                src="/assets/images/home-2.png"
-                width={800}
-                height={800}
-                alt="home-2"
-                className="rounded-lg"
+                src="/assets/images/01 Home/EG---Landing-home_demo(D).jpg"
+                alt={`-games-home-5`}
+                className="rounded-3xl"
+                layout="fill"
+                objectFit="contain"
+                quality={100}
               />
             </div>
             <button className="w-full md:w-52 px-5 py-2 border border-black bg-black text-white rounded font-montserrat font-bold">
@@ -268,13 +311,14 @@ const Home: PageLayoutProps = () => {
             <p className="text-center font-montserrat font-extrabold text-4xl md:text-3xl">
               Deliver an immersive brands to our audience
             </p>
-            <div className="max-w-xs flex justify-center">
+            <div className="flex-grow flex justify-center items-center relative w-full h-44">
               <Image
-                src="/assets/images/home-2.png"
-                width={800}
-                height={800}
-                alt="home-2"
-                className="rounded-lg"
+                src="/assets/images/01 Home/EG---Landing-home_playgame(D).jpg"
+                alt={`-games-home-5`}
+                className="rounded-3xl"
+                layout="fill"
+                objectFit="contain"
+                quality={100}
               />
             </div>
             <button className="w-full md:w-52 px-5 py-2 border border-black bg-black text-white rounded font-montserrat font-bold">
@@ -283,37 +327,46 @@ const Home: PageLayoutProps = () => {
           </div>
         </div>
       </Section>
-      <Section>
-        <div className="flex flex-col items-center py-10 space-y-8">
-          <p className="text-center font-montserrat font-extrabold text-4xl">
-            Partnered with the world&apos;s best companies
-          </p>
-          <div className="w-full flex flex-row overflow-auto space-x-4 pb-2">
-            {[
-              "/assets/images/company-1.png",
-              "/assets/images/company-2.png",
-              "/assets/images/company-3.png",
-              "/assets/images/company-4.png",
-              "/assets/images/company-5.png",
-            ].map((i, k) => (
-              <div
-                key={k}
-                className="flex flex-col min-w-max cursor-pointer filter grayscale hover:grayscale-0"
-              >
-                <div className="flex flex-col w-52">
-                  <Image
-                    src={i}
-                    width={320}
-                    height={225}
-                    alt="home-5"
-                    className="rounded-lg"
-                  />
+      <div className="relative">
+        <Image
+          src="/assets/images/EG---bg-2.jpg"
+          alt="home-4"
+          layout="fill"
+          objectFit="cover"
+          quality={100}
+        />
+        <Section>
+          <div className="flex flex-col items-center py-10 space-y-8">
+            <p className="text-center font-montserrat font-extrabold text-4xl z-10">
+              Partnered with the world&apos;s best companies
+            </p>
+            <div className="w-full flex flex-row overflow-auto space-x-4 pb-2">
+              {[
+                "/assets/images/company-1.png",
+                "/assets/images/company-2.png",
+                "/assets/images/company-3.png",
+                "/assets/images/company-4.png",
+                "/assets/images/company-5.png",
+              ].map((i, k) => (
+                <div
+                  key={k}
+                  className="flex flex-col min-w-max cursor-pointer filter grayscale hover:grayscale-0 bg-white"
+                >
+                  <div className="flex flex-col w-52">
+                    <Image
+                      src={i}
+                      width={320}
+                      height={225}
+                      alt="home-5"
+                      className="rounded-lg"
+                    />
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
-      </Section>
+        </Section>
+      </div>
       <Section>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 py-10">
           <div className="flex flex-col-reverse md:flex-col items-center md:justify-center">
@@ -329,7 +382,7 @@ const Home: PageLayoutProps = () => {
             </div>
             <div className="flex max-w-md">
               <Image
-                src="/assets/images/home-1.png"
+                src="/assets/images/01 Home/EG---Landing-home_feedback(D).jpg"
                 width={800}
                 height={800}
                 alt="home-1"
