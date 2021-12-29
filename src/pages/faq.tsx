@@ -18,7 +18,7 @@ const Collapsible = (props: {
       <div
         className={
           "flex justify-between items-center px-6 p-4 cursor-pointer" +
-          (isOpen ? " bg-black text-white" : " hover:bg-gray-50")
+          (isOpen ? " bg-yellow-400 " : " hover:bg-gray-50")
         }
       >
         <p className="font-montserrat font-bold">{title}</p>
@@ -30,7 +30,7 @@ const Collapsible = (props: {
         {isOpen && (
           <motion.div
             key={`collapsible-${collapibleId}`}
-            className="content p-4 overflow-auto"
+            className="content p-4 overflow-auto border-4 border-yellow-400 rounded-b-lg"
             initial={{ opacity: 0, height: "0px", padding: "0px" }}
             animate={{
               opacity: 1,
@@ -254,20 +254,28 @@ const FAQ: PageLayoutProps = () => {
           </div>
         </div>
       </Section>
-      <Section>
-        <div className="border-t"></div>
-        <div className="flex flex-col items-center py-10 space-y-10">
-          <p className="text-center font-montserrat font-extrabold text-4xl">
-            Still need help?
-          </p>
-          <p className="text-center font-montserrat text-3xl">
-            Our team will be happy to help!
-          </p>
-          <button className="w-full md:w-52 px-5 py-2 border border-black bg-black text-white rounded font-montserrat font-bold">
-            Get in touch
-          </button>
-        </div>
-      </Section>
+      <div className="relative">
+        <Image
+          src="/assets/images/EG---bg-2.jpg"
+          alt="home-4"
+          layout="fill"
+          objectFit="cover"
+          quality={100}
+        />
+        <Section zIndex="z-10">
+          <div className="flex flex-col items-center py-10 space-y-10">
+            <p className="text-center font-montserrat font-extrabold text-4xl">
+              Still need help?
+            </p>
+            <p className="text-center font-montserrat text-3xl">
+              Our team will be happy to help!
+            </p>
+            <button className="w-full md:w-52 px-5 py-2 border border-black bg-black text-white rounded font-montserrat font-bold">
+              Get in touch
+            </button>
+          </div>
+        </Section>
+      </div>
     </>
   );
 };
