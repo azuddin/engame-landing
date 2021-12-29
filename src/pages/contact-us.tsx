@@ -29,7 +29,7 @@ const ContactUs: PageLayoutProps = () => {
             </div>
             <div className="flex max-w-md">
               <Image
-                src="/assets/images/01 Home/EG---Landing-home_feedback(D).jpg"
+                src="/assets/images/01 Home/EG---Landing-home_feedback(D).png"
                 width={800}
                 height={800}
                 alt="home-1"

@@ -75,25 +75,25 @@ const Home: PageLayoutProps = () => {
                 title: "+9 Million",
                 desc: "Players",
                 image_url:
-                  "/assets/images/01 Home/EG---Landing-home_icon-1(D).jpg",
+                  "/assets/images/01 Home/EG---Landing-home_icon-1(D).png",
               },
               {
                 title: "+163 Million",
                 desc: "Games played",
                 image_url:
-                  "/assets/images/01 Home/EG---Landing-home_icon-2(D).jpg",
+                  "/assets/images/01 Home/EG---Landing-home_icon-2(D).png",
               },
               {
                 title: "+16 Minutes",
                 desc: "Played per session",
                 image_url:
-                  "/assets/images/01 Home/EG---Landing-home_icon-3(D).jpg",
+                  "/assets/images/01 Home/EG---Landing-home_icon-3(D).png",
               },
               {
                 title: "+26 Partners",
                 desc: "Across the globe",
                 image_url:
-                  "/assets/images/01 Home/EG---Landing-home_icon-4(D).jpg",
+                  "/assets/images/01 Home/EG---Landing-home_icon-4(D).png",
               },
             ].map((i, k) => (
               <div key={k} className="flex flex-col justify-start items-center">
@@ -231,7 +231,7 @@ const Home: PageLayoutProps = () => {
             </div>
             <div className="flex max-w-md">
               <Image
-                src="/assets/images/01 Home/EG---Landing-home_feedback(D).jpg"
+                src="/assets/images/01 Home/EG---Landing-home_feedback(D).png"
                 width={800}
                 height={800}
                 alt="home-1"
