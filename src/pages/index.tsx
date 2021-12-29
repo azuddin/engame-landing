@@ -1,7 +1,14 @@
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import { HowItWork, Layout, Option, Section, Select } from "@engame/components";
+import {
+  HowItWork,
+  Layout,
+  Option,
+  Section,
+  Select,
+  TrendingGame,
+} from "@engame/components";
 import { carouselResponsive } from "@engame/constants";
 import { PageLayoutProps } from "@engame/types";
 import Carousel from "react-multi-carousel";
@@ -21,15 +28,15 @@ const Home: PageLayoutProps = () => {
       </Head>
       <div className="relative">
         <Image
-          src="/assets/images/01 Home/EG---Landing-home_top(D).jpg"
+          src="/assets/images/EG---bg.jpg"
           alt="home-4"
           layout="fill"
           objectFit="cover"
           quality={100}
         />
-        <Section>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div className="flex flex-col justify-center space-y-2 z-10 py-20">
+        <Section zIndex="z-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-10 md:pt-0">
+            <div className="flex flex-col justify-center space-y-2">
               <p className="text-center md:text-left font-montserrat font-extrabold pb-4 text-4xl">
                 Are You Interested To Join Us? Let&apos;s Grow Together!
               </p>
@@ -44,7 +51,16 @@ const Home: PageLayoutProps = () => {
                 </button>
               </Link>
             </div>
-            <div className=""></div>
+            <div className="flex justify-center items-center">
+              <div className="flex justify-center md:flex-1 md:justify-end max-w-lg">
+                <Image
+                  src="/assets/images/01 Home/EG---Landing-home_top-main(D).png"
+                  width={800}
+                  height={800}
+                  alt="home-1"
+                />
+              </div>
+            </div>
           </div>
         </Section>
       </div>
@@ -158,79 +174,7 @@ const Home: PageLayoutProps = () => {
         />
       </div>
       <HowItWork />
-      <div className="relative">
-        <Image
-          src="/assets/images/EG---bg-2.jpg"
-          alt="home-4"
-          layout="fill"
-          objectFit="cover"
-          quality={100}
-        />
-        <Section>
-          <div className="flex flex-col items-center space-y-5 py-10">
-            <p className="text-center font-montserrat font-extrabold text-4xl z-10">
-              Trending Games
-            </p>
-            <Carousel
-              responsive={carouselResponsive}
-              className="w-full pb-2 space-x-4"
-              ssr
-              partialVisible
-            >
-              {[
-                {
-                  name: "Legendary moai",
-                  image:
-                    "/assets/images/01 Home/EG---Landing-home_game-1(D).png",
-                },
-                {
-                  name: "The largest one",
-                  image:
-                    "/assets/images/01 Home/EG---Landing-home_game-2(D).png",
-                },
-                {
-                  name: "Deep blue sea",
-                  image:
-                    "/assets/images/01 Home/EG---Landing-home_game-3(D).png",
-                },
-                {
-                  name: "Scissors rock paper",
-                  image:
-                    "/assets/images/01 Home/EG---Landing-home_game-4(D).png",
-                },
-                {
-                  name: "Super fast food",
-                  image:
-                    "/assets/images/01 Home/EG---Landing-home_game-5(D).png",
-                },
-              ].map((i, k) => (
-                <div
-                  key={k}
-                  className={
-                    "flex flex-col min-w-max " +
-                    // (k % 2 === 0 ? "bg-gray-200" : "") +
-                    (k === 0 ? "" : " ml-6")
-                  }
-                >
-                  <div className="flex-grow flex justify-center items-center relative w-full h-44">
-                    <Image
-                      src={i.image}
-                      alt={`${k}-games-home-5`}
-                      className="rounded-3xl"
-                      layout="fill"
-                      objectFit="cover"
-                      quality={100}
-                    />
-                  </div>
-                  <p className="w-52 font-montserrat font-bold text-lg md:text-lg truncate">
-                    {i.name}
-                  </p>
-                </div>
-              ))}
-            </Carousel>
-          </div>
-        </Section>
-      </div>
+      <TrendingGame />
       <Section>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-10 py-10">
           <div className="flex flex-col items-center space-y-6">

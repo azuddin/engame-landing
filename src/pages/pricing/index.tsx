@@ -24,14 +24,14 @@ const Pricing: PageLayoutProps = () => {
       </Head>
       <div className="relative">
         <Image
-          src="/assets/images/08 Pricing/EG---Landing-pricing_top(D).jpg"
+          src="/assets/images/EG---bg.jpg"
           alt="home-4"
           layout="fill"
           objectFit="cover"
           quality={100}
         />
         <Section zIndex="z-10">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 py-20">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="flex flex-col justify-center space-y-2">
               <p className="text-center md:text-left font-montserrat font-extrabold pb-4 text-4xl">
                 Get started now, pick a plan later.
@@ -45,14 +45,14 @@ const Pricing: PageLayoutProps = () => {
               </p>
             </div>
             <div className="flex justify-center items-center">
-              {/* <div className="flex justify-center md:flex-1 md:justify-end max-w-lg">
+              <div className="flex justify-center md:flex-1 md:justify-end max-w-lg">
                 <Image
-                  src="/assets/images/home-1.png"
+                  src="/assets/images/08 Pricing/EG---Landing-pricing_top-main(D).png"
                   width={800}
                   height={800}
                   alt="home-1"
                 />
-              </div> */}
+              </div>
             </div>
           </div>
         </Section>

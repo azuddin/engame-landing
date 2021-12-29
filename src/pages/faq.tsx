@@ -73,25 +73,34 @@ const FAQ: PageLayoutProps = () => {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Section>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 py-10 md:py-0">
-          <div className="flex flex-col justify-center space-y-2">
-            <p className="text-center md:text-left font-montserrat font-extrabold pb-4 text-4xl">
-              We&apos;re here to help you solve your problem
-            </p>
-          </div>
-          <div className="flex justify-center items-center">
-            <div className="flex justify-center md:flex-1 md:justify-end max-w-lg">
-              <Image
-                src="/assets/images/home-1.png"
-                width={800}
-                height={800}
-                alt="home-1"
-              />
+      <div className="relative">
+        <Image
+          src="/assets/images/EG---bg.jpg"
+          alt="home-4"
+          layout="fill"
+          objectFit="cover"
+          quality={100}
+        />
+        <Section zIndex="z-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 py-10">
+            <div className="flex flex-col justify-center space-y-2">
+              <p className="text-center md:text-left font-montserrat font-extrabold pb-4 text-4xl">
+                We&apos;re here to help you solve your problem
+              </p>
+            </div>
+            <div className="flex justify-center items-center">
+              <div className="flex justify-center md:flex-1 md:justify-end max-w-lg">
+                <Image
+                  src="/assets/images/06 Faq/EG---Landing-faq_top-main(M).png"
+                  width={628}
+                  height={621}
+                  alt="home-1"
+                />
+              </div>
             </div>
           </div>
-        </div>
-      </Section>
+        </Section>
+      </div>
       <Section>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-6 py-10">
           <div className="flex flex-col items-center">

@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
-import { Layout, Section } from "@engame/components";
+import { Layout, Section, TrendingGame } from "@engame/components";
 import { carouselResponsive } from "@engame/constants";
 import { PageLayoutProps } from "@engame/types";
 import Carousel from "react-multi-carousel";
@@ -17,28 +17,37 @@ const ImGamer: PageLayoutProps = () => {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Section>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 py-10 md:py-0">
-          <div className="flex flex-col justify-center space-y-2">
-            <p className="text-center md:text-left font-montserrat font-extrabold pb-4 text-4xl">
-              You can do that now with tap master
-            </p>
-            <button className="w-full md:w-52 px-5 py-2 border border-black bg-black text-white rounded font-montserrat font-bold">
-              Play game Now
-            </button>
-          </div>
-          <div className="flex justify-center items-center">
-            <div className="flex justify-center md:flex-1 md:justify-end max-w-lg">
-              <Image
-                src="/assets/images/home-1.png"
-                width={800}
-                height={800}
-                alt="home-1"
-              />
+      <div className="relative">
+        <Image
+          src="/assets/images/EG---bg.jpg"
+          alt="home-4"
+          layout="fill"
+          objectFit="cover"
+          quality={100}
+        />
+        <Section zIndex="z-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-10 md:pt-0">
+            <div className="flex flex-col justify-center space-y-2">
+              <p className="text-center md:text-left font-montserrat font-extrabold pb-4 text-4xl">
+                You can do that now with tap master
+              </p>
+              <button className="w-full md:w-52 px-5 py-2 border border-black bg-black text-white rounded font-montserrat font-bold">
+                Play game Now
+              </button>
+            </div>
+            <div className="flex justify-center items-center">
+              <div className="flex justify-center md:flex-1 md:justify-end max-w-lg">
+                <Image
+                  src="/assets/images/04 Gamer/EG---Landing-gamer_top-main(D).png"
+                  width={800}
+                  height={800}
+                  alt="home-1"
+                />
+              </div>
             </div>
           </div>
-        </div>
-      </Section>
+        </Section>
+      </div>
       <Section>
         <div className="flex flex-col items-center space-y-10 py-10">
           <p className="text-center font-montserrat font-extrabold text-4xl">
@@ -127,100 +136,7 @@ const ImGamer: PageLayoutProps = () => {
           </div>
         </div>
       </Section>
-      <Section>
-        <div className="flex flex-col items-center space-y-5 py-10">
-          <p className="text-center font-montserrat font-extrabold text-4xl">
-            Trending Games
-          </p>
-          <Carousel
-            responsive={carouselResponsive}
-            className="w-full pb-2 space-x-4"
-            ssr
-            partialVisible
-          >
-            {[
-              { name: "Legendary moai", image: "/assets/images/home-5.png" },
-              { name: "The largest one", image: "/assets/images/game-2.png" },
-              { name: "Deep blue sea", image: "/assets/images/game-3.png" },
-              {
-                name: "Scissors rock paper",
-                image: "/assets/images/game-4.png",
-              },
-              { name: "Super fast food", image: "/assets/images/home-5.png" },
-              { name: "Legendary moai", image: "/assets/images/home-5.png" },
-              { name: "The largest one", image: "/assets/images/game-2.png" },
-              { name: "Deep blue sea", image: "/assets/images/game-3.png" },
-              {
-                name: "Aliquip Lorem dolore Lorem tempor ipsum occaecat qui. Qui sint eu cupidatat deserunt. Eu anim incididunt esse ut eu Lorem duis in officia veniam pariatur veniam. Ullamco id eiusmod id enim. Voluptate sint minim sint quis qui officia exercitation. Ipsum est irure laboris laboris excepteur ullamco anim dolor do. Lorem fugiat mollit veniam id do sunt voluptate enim adipisicing et anim.",
-                image: "/assets/images/game-3.png",
-              },
-              {
-                name: "Scissors rock paper",
-                image: "/assets/images/game-4.png",
-              },
-              { name: "Super fast food", image: "/assets/images/home-5.png" },
-            ].map((i, k) => (
-              <div
-                key={k}
-                className={
-                  "flex flex-col min-w-max " +
-                  // (k % 2 === 0 ? "bg-gray-200" : "") +
-                  (k === 0 ? "" : " ml-6")
-                }
-              >
-                <div className="flex-grow flex justify-center items-center relative w-full h-44">
-                  <Image
-                    src={i.image}
-                    alt={`${k}-games-home-5`}
-                    className="rounded-3xl"
-                    layout="fill"
-                    objectFit="cover"
-                    quality={100}
-                  />
-                </div>
-                <p className="w-52 font-montserrat font-bold text-lg md:text-lg truncate">
-                  {i.name}
-                </p>
-              </div>
-            ))}
-          </Carousel>
-          {/* <div className="w-full flex flex-row overflow-auto space-x-4 pb-2">
-            {[
-              { name: "Legendary moai", image: "/assets/images/home-5.png" },
-              { name: "The largest one", image: "/assets/images/game-2.png" },
-              { name: "Deep blue sea", image: "/assets/images/game-3.png" },
-              {
-                name: "Scissors rock paper",
-                image: "/assets/images/game-4.png",
-              },
-              { name: "Super fast food", image: "/assets/images/home-5.png" },
-              { name: "Legendary moai", image: "/assets/images/home-5.png" },
-              { name: "The largest one", image: "/assets/images/game-2.png" },
-              { name: "Deep blue sea", image: "/assets/images/game-3.png" },
-              {
-                name: "Scissors rock paper",
-                image: "/assets/images/game-4.png",
-              },
-              { name: "Super fast food", image: "/assets/images/home-5.png" },
-            ].map((i, k) => (
-              <div key={k} className="flex flex-col min-w-max">
-                <div className="flex flex-col w-52">
-                  <Image
-                    src={i.image}
-                    width={320}
-                    height={225}
-                    alt="home-5"
-                    className="rounded-lg"
-                  />
-                </div>
-                <p className="w-44 font-montserrat font-bold text-lg md:text-lg truncate">
-                  {i.name}
-                </p>
-              </div>
-            ))}
-          </div> */}
-        </div>
-      </Section>
+      <TrendingGame />
       <Section>
         <div className="flex flex-col items-center py-10 space-y-8">
           <p className="text-center font-montserrat font-extrabold text-4xl">
