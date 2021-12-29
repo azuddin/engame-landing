@@ -331,7 +331,7 @@ const Payment: PageLayoutProps = () => {
                   <p className="font-montserrat text-md">Total</p>
                   <p className="font-montserrat font-bold text-lg">RM299.00</p>
                 </div>
-                <button className="w-full px-5 py-2 border border-black bg-black text-white rounded font-montserrat font-bold">
+                <button className="w-full px-5 py-2 border border-black bg-black text-white rounded font-montserrat font-bold hover:opacity-90 hover:shadow-lg">
                   Complete Checkout
                 </button>
                 <div className="flex flex-row justify-center items-start space-x-2">

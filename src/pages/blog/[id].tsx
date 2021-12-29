@@ -25,32 +25,43 @@ const BlogDetail: PageLayoutProps = () => {
   );
   return (
     <>
-      <Section>
-        <div className="flex flex-col items-center py-10 space-y-10">
-          <p className="text-center md:text-left font-montserrat font-extrabold text-4xl">
-            MDEC DiCE 2019 Commercial Ready Game Winner
-          </p>
-          <div className="flex flex-col space-y-8">
-            <div className="flex items-center space-x-4">
-              <div className="flex justify-center items-center relative w-10 h-10">
-                <Image
-                  src="/assets/images/icon.png"
-                  alt="home-4"
-                  className="rounded-3xl"
-                  layout="fill"
-                  objectFit="cover"
-                  quality={100}
-                />
-              </div>
-              <div className="flex flex-col">
-                <p className="font-lato font-extrabold">Engame.Asia</p>
-                <p className="font-lato text-gray-500 font-bold">
-                  13 Apr 21 • 9:00AM
-                </p>
-              </div>
-            </div>
-            <div>{content}</div>
+      <div className="relative">
+        <Image
+          src="/assets/images/EG---bg.jpg"
+          alt="home-4"
+          layout="fill"
+          objectFit="cover"
+          quality={100}
+        />
+        <Section zIndex="z-10">
+          <div className="flex justify-center py-10">
+            <p className="text-center md:text-left font-montserrat font-extrabold text-4xl">
+              MDEC DiCE 2019 Commercial Ready Game Winner
+            </p>
           </div>
+        </Section>
+      </div>
+      <Section>
+        <div className="flex flex-col space-y-8 py-10">
+          <div className="flex items-center space-x-4">
+            <div className="flex justify-center items-center relative w-10 h-10">
+              <Image
+                src="/assets/images/icon.png"
+                alt="home-4"
+                className="rounded-3xl"
+                layout="fill"
+                objectFit="cover"
+                quality={100}
+              />
+            </div>
+            <div className="flex flex-col">
+              <p className="font-lato font-extrabold">Engame.Asia</p>
+              <p className="font-lato text-gray-500 font-bold">
+                13 Apr 21 • 9:00AM
+              </p>
+            </div>
+          </div>
+          <div>{content}</div>
         </div>
       </Section>
     </>

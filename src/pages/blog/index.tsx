@@ -25,13 +25,22 @@ const Blog: PageLayoutProps = () => {
   ];
   return (
     <>
-      <Section>
-        <div className="flex justify-center py-10">
-          <p className="text-center font-montserrat font-extrabold text-4xl max-w-md">
-            Let&apos;s fire up the world of blogging🔥
-          </p>
-        </div>
-      </Section>
+      <div className="relative">
+        <Image
+          src="/assets/images/EG---bg.jpg"
+          alt="home-4"
+          layout="fill"
+          objectFit="cover"
+          quality={100}
+        />
+        <Section zIndex="z-10">
+          <div className="flex justify-center py-10">
+            <p className="text-center font-montserrat font-extrabold text-4xl max-w-md">
+              Let&apos;s fire up the world of blogging🔥
+            </p>
+          </div>
+        </Section>
+      </div>
       <Section>
         <ul className="py-10 space-y-10">
           {blogs.map((i, index) => {
@@ -77,7 +86,7 @@ const Blog: PageLayoutProps = () => {
                   </p>
                   <p className="font-lato text-lg">{i.desc}</p>
                   <Link href="/blog/1" passHref>
-                    <div className="flex items-center space-x-1 font-montserrat font-bold">
+                    <div className="flex items-center space-x-1 font-montserrat font-bold cursor-pointer">
                       <a>Read more</a>
                       <FiArrowRight />
                     </div>

@@ -69,13 +69,13 @@ const Navbar = (props: NavbarProps): JSX.Element => {
               </div>
               <button
                 onClick={onClickStartFreeTrial}
-                className="text-montserrat font-bold text-lg bg-black text-white border-2 border-black rounded-lg py-2"
+                className="text-montserrat font-bold text-lg bg-black text-white border-2 border-black rounded-lg py-2 hover:opacity-90 hover:shadow-lg"
               >
                 Start Free Trial
               </button>
               <button
                 onClick={onClickLogin}
-                className="text-montserrat font-bold text-lg border-2 border-black rounded-lg py-2"
+                className="text-montserrat font-bold text-lg border-2 border-black rounded-lg py-2 hover:opacity-90 hover:shadow-lg"
               >
                 Login
               </button>
@@ -130,13 +130,13 @@ const Navbar = (props: NavbarProps): JSX.Element => {
             </Link>
             <button
               onClick={onClickStartFreeTrial}
-              className="px-2 py-1 text-montserrat font-bold md:text-base bg-black text-white rounded"
+              className="px-2 py-1 text-montserrat font-bold md:text-base bg-black text-white rounded hover:opacity-90 hover:shadow-lg"
             >
               Start Free Trial
             </button>
             <button
               onClick={onClickLogin}
-              className="px-2 py-1 text-montserrat font-bold md:text-base border-2 border-black rounded"
+              className="px-2 py-1 text-montserrat font-bold md:text-base border-2 border-black rounded hover:opacity-90 hover:shadow-lg"
             >
               Login
             </button>

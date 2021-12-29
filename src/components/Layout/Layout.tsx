@@ -63,12 +63,12 @@ const Layout = (props: LayoutProps): JSX.Element => {
                 className="rounded-md border px-4 py-2 text-2xl lowercase"
               />
             </div>
-            <button className="w-full px-5 py-2 border border-black bg-black text-white rounded font-montserrat font-bold">
+            <button className="w-full px-5 py-2 border border-black bg-black text-white rounded font-montserrat font-bold hover:opacity-90 hover:shadow-lg">
               Login
             </button>
             <div className="border-t my-8 w-full"></div>
             <a className="font-lato">Don&apos;t have account yet?</a>
-            <button className="w-full px-5 py-2 border border-black bg-white text-black rounded font-montserrat font-bold">
+            <button className="w-full px-5 py-2 border border-black bg-white text-black rounded font-montserrat font-bold hover:opacity-90 hover:shadow-lg">
               Create a free account
             </button>
           </div>
@@ -169,7 +169,7 @@ const Layout = (props: LayoutProps): JSX.Element => {
                   <Option key="category 3">Category 3</Option>
                 </Select>
               </div>
-              <button className="w-full px-5 py-2 border border-black bg-black text-white rounded font-montserrat font-bold">
+              <button className="w-full px-5 py-2 border border-black bg-black text-white rounded font-montserrat font-bold hover:opacity-90 hover:shadow-lg">
                 Start free Trial
               </button>
               <div className="flex flex-row space-x-2">

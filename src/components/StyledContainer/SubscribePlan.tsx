@@ -115,7 +115,7 @@ const SubscribePlan = (props: {
                 </div>
                 <button
                   onClick={() => push("/pricing/payment")}
-                  className="w-full px-2 py-1 mt-6 text-base bg-black text-white rounded border border-black font-montserrat font-bold"
+                  className="w-full px-2 py-1 mt-6 text-base bg-black text-white rounded border border-black font-montserrat font-bold hover:opacity-90 hover:shadow-lg"
                 >
                   Choose plan
                 </button>

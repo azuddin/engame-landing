@@ -41,12 +41,12 @@ const Home: PageLayoutProps = () => {
                 Are You Interested To Join Us? Let&apos;s Grow Together!
               </p>
               <Link href="/im-brand-owner" passHref>
-                <button className="w-full md:w-52 px-5 py-2 border border-black bg-black text-white rounded font-montserrat font-bold">
+                <button className="w-full md:w-52 px-5 py-2 border border-black bg-black text-white rounded font-montserrat font-bold hover:opacity-90 hover:shadow-lg">
                   I&apos;m A Brand Owner
                 </button>
               </Link>
               <Link href="/im-gamer" passHref>
-                <button className="w-full md:w-52 px-5 py-2 border border-black rounded font-montserrat font-bold">
+                <button className="w-full md:w-52 px-5 py-2 border border-white bg-white rounded font-montserrat font-bold hover:opacity-90 hover:shadow-lg">
                   Nope, I&apos;m A Gamer
                 </button>
               </Link>
@@ -191,7 +191,7 @@ const Home: PageLayoutProps = () => {
                 quality={100}
               />
             </div>
-            <button className="w-full md:w-52 px-5 py-2 border border-black bg-black text-white rounded font-montserrat font-bold">
+            <button className="w-full md:w-52 px-5 py-2 border border-black bg-black text-white rounded font-montserrat font-bold hover:opacity-90 hover:shadow-lg">
               Get A Free Demo
             </button>
           </div>
@@ -209,7 +209,7 @@ const Home: PageLayoutProps = () => {
                 quality={100}
               />
             </div>
-            <button className="w-full md:w-52 px-5 py-2 border border-black bg-black text-white rounded font-montserrat font-bold">
+            <button className="w-full md:w-52 px-5 py-2 border border-black bg-black text-white rounded font-montserrat font-bold hover:opacity-90 hover:shadow-lg">
               Play a game
             </button>
           </div>
@@ -308,7 +308,7 @@ const Home: PageLayoutProps = () => {
                 className="rounded-md border px-4 py-2 text-2xl"
               ></textarea>
             </div>
-            <button className="w-full px-5 py-2 border border-black bg-black text-white rounded font-montserrat font-bold">
+            <button className="w-full px-5 py-2 border border-black bg-black text-white rounded font-montserrat font-bold hover:opacity-90 hover:shadow-lg">
               Submit Enquiry
             </button>
           </div>

@@ -16,10 +16,10 @@ const ContactUs: PageLayoutProps = () => {
       </Head>
       <Section>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 py-10">
-          <div className="flex flex-col-reverse md:flex-col items-center md:justify-center">
+          <div className="flex flex-col-reverse md:flex-col items-center">
             <div className="flex flex-col space-y-8">
               <p className="text-center md:text-left font-montserrat font-extrabold text-4xl">
-                Be part of the next gaming phenomenon
+                Who You Gonna Call?
               </p>
               <p className="font-lato text-xl">
                 Looking to make a media inquiry ? Any feedback or suggestions
@@ -29,7 +29,7 @@ const ContactUs: PageLayoutProps = () => {
             </div>
             <div className="flex max-w-md">
               <Image
-                src="/assets/images/home-1.png"
+                src="/assets/images/01 Home/EG---Landing-home_feedback(D).jpg"
                 width={800}
                 height={800}
                 alt="home-1"
@@ -106,7 +106,7 @@ const ContactUs: PageLayoutProps = () => {
                 className="rounded-md border px-4 py-2 text-2xl"
               ></textarea>
             </div>
-            <button className="w-full px-5 py-2 border border-black bg-black text-white rounded font-montserrat font-bold">
+            <button className="w-full px-5 py-2 border border-black bg-black text-white rounded font-montserrat font-bold hover:opacity-90 hover:shadow-lg">
               Submit Enquiry
             </button>
           </div>

@@ -545,7 +545,7 @@ const OurStory: PageLayoutProps = () => {
                 </p>
               </div>
               <div className="flex flex-col justify-center">
-                <button className="w-full md:w-52 px-5 py-2 border border-black bg-black text-white rounded font-montserrat font-bold">
+                <button className="w-full md:w-52 px-5 py-2 border border-black bg-black text-white rounded font-montserrat font-bold hover:opacity-90 hover:shadow-lg">
                   Join Now
                 </button>
               </div>

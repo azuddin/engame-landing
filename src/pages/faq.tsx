@@ -270,7 +270,7 @@ const FAQ: PageLayoutProps = () => {
             <p className="text-center font-montserrat text-3xl">
               Our team will be happy to help!
             </p>
-            <button className="w-full md:w-52 px-5 py-2 border border-black bg-black text-white rounded font-montserrat font-bold">
+            <button className="w-full md:w-52 px-5 py-2 border border-black bg-black text-white rounded font-montserrat font-bold hover:opacity-90 hover:shadow-lg">
               Get in touch
             </button>
           </div>
