@@ -47,7 +47,6 @@ const PaymentLayout = (props: PaymentLayoutProps): JSX.Element => {
       </div>
       <div className="overflow-auto flex flex-1 flex-col">
         {children}
-        <div className="border-t my-8"></div>
         <Footer />
       </div>
     </div>

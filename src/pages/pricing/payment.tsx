@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import { Section } from "@engame/components";
@@ -8,6 +9,10 @@ import { creditCardType } from "@engame/utils";
 import { FiLock } from "react-icons/fi";
 
 const Payment: PageLayoutProps = () => {
+  const [cc, setCC] = useState("");
+  const handleCCChange = (event: any) => {
+    setCC(event.target.value);
+  };
   return (
     <>
       <Head>
@@ -18,9 +23,9 @@ const Payment: PageLayoutProps = () => {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Section>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10 py-10">
-          <div className="flex flex-col space-y-16">
+      <Section padding="px-0 lg:px-36">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-5 py-5">
+          <div className="flex flex-col space-y-16 px-4 lg:p-5">
             <div className="space-y-6">
               <p className="text-left font-montserrat font-bold text-3xl md:text-4xl">
                 Basic Info
@@ -185,7 +190,7 @@ const Payment: PageLayoutProps = () => {
                 <Select
                   name="payment_method"
                   aria-label="payment_method"
-                  placeholder="Select a payment_method"
+                  placeholder="Select a payment method"
                 >
                   <Option key="credit_card">Credit Card</Option>
                   <Option key="credit_card">Grab Pay</Option>
@@ -216,6 +221,7 @@ const Payment: PageLayoutProps = () => {
                     type="text"
                     className="rounded-md border pl-4 pr-20 py-2 text-2xl w-full"
                     placeholder="0000 1234 5678 9000"
+                    onChange={handleCCChange}
                   />
                   <div className="absolute right-2 flex flex-row">
                     <Image
@@ -223,7 +229,7 @@ const Payment: PageLayoutProps = () => {
                       width={30}
                       height={30}
                       className={
-                        creditCardType("") === "MASTERCARD"
+                        creditCardType(cc) === "MASTERCARD"
                           ? ""
                           : "filter grayscale"
                       }
@@ -234,7 +240,7 @@ const Payment: PageLayoutProps = () => {
                       width={30}
                       height={30}
                       className={
-                        creditCardType("") === "VISA" ? "" : "filter grayscale"
+                        creditCardType(cc) === "VISA" ? "" : "filter grayscale"
                       }
                       alt="visa"
                     />
@@ -272,62 +278,76 @@ const Payment: PageLayoutProps = () => {
               </div>
             </div>
           </div>
+
           <div className="flex flex-col">
-            <p className="text-left font-montserrat font-bold text-3xl md:text-4xl mb-14">
-              Order Summary
-            </p>
-            <div className="flex flex-col p-6 border rounded-lg space-y-6">
-              <div className="flex flex-col">
-                <p className="font-montserrat font-bold text-xl">
-                  365-days subscription,
-                </p>
-                <p className="font-montserrat font-bold text-xl">
-                  Business Plan
-                </p>
-                <div className="flex justify-between items-center">
-                  <p className="font-montserrat text-md">
-                    1 year unlimited plan
+            <div className="flex-shrink flex flex-col relative p-4 md:p-5">
+              <Image
+                src="/assets/images/EG---bg.jpg"
+                alt="home-4"
+                layout="fill"
+                objectFit="cover"
+                quality={100}
+                className="md:rounded-xl"
+              />
+              <p className="text-left font-montserrat font-bold text-3xl md:text-4xl mb-5 md:mb-14 z-10">
+                Order Summary
+              </p>
+              <div className="flex flex-col p-6 rounded-lg space-y-6 z-10 bg-white">
+                <div className="flex flex-col">
+                  <p className="font-montserrat font-bold text-xl">
+                    365-days subscription,
                   </p>
+                  <p className="font-montserrat font-bold text-xl">
+                    Business Plan
+                  </p>
+                  <div className="flex justify-between items-center">
+                    <p className="font-montserrat text-md">
+                      1 year unlimited plan
+                    </p>
+                    <p className="font-montserrat font-bold text-lg">
+                      RM299.00
+                    </p>
+                  </div>
+                </div>
+                <div className="border-t"></div>
+                <div className="flex justify-between items-center">
+                  <p className="font-montserrat text-md">Subtotal</p>
                   <p className="font-montserrat font-bold text-lg">RM299.00</p>
                 </div>
-              </div>
-              <div className="border-t"></div>
-              <div className="flex justify-between items-center">
-                <p className="font-montserrat text-md">Subtotal</p>
-                <p className="font-montserrat font-bold text-lg">RM299.00</p>
-              </div>
-              <div className="flex flex-col relative justify-center">
-                <input
-                  name="voucher_code"
-                  id="voucher_code"
-                  type="text"
-                  className="rounded-md border pl-4 py-2 text-2xl font-light pr-20"
-                  placeholder="Enter valid code"
-                />
-                <span className="absolute right-3 font-montserrat font-bold text-lg">
-                  Apply
-                </span>
-              </div>
-              <div className="border-t"></div>
-              <div className="flex justify-between items-center">
-                <p className="font-montserrat text-md">Total</p>
-                <p className="font-montserrat font-bold text-lg">RM299.00</p>
-              </div>
-              <button className="w-full px-5 py-2 border border-black bg-black text-white rounded font-montserrat font-bold">
-                Complete Checkout
-              </button>
-              <div className="flex flex-row justify-center items-start space-x-2">
-                <div className="">
-                  <FiLock size={14} />
+                <div className="flex flex-col relative justify-center">
+                  <input
+                    name="voucher_code"
+                    id="voucher_code"
+                    type="text"
+                    className="rounded-md border pl-4 py-2 text-2xl font-light pr-20"
+                    placeholder="Enter valid code"
+                  />
+                  <span className="absolute right-3 font-montserrat font-bold text-lg">
+                    Apply
+                  </span>
                 </div>
-                <p className="font-lato text-xs">
-                  <span className="font-bold">Secure checkout.</span> For your
-                  convenience Engame will store your encrypted payment
-                  information for future orders. Manage your payment information
-                  in your Account Details.
-                </p>
+                <div className="border-t"></div>
+                <div className="flex justify-between items-center">
+                  <p className="font-montserrat text-md">Total</p>
+                  <p className="font-montserrat font-bold text-lg">RM299.00</p>
+                </div>
+                <button className="w-full px-5 py-2 border border-black bg-black text-white rounded font-montserrat font-bold">
+                  Complete Checkout
+                </button>
+                <div className="flex flex-row justify-center items-start space-x-2">
+                  <div className="">
+                    <FiLock size={14} />
+                  </div>
+                  <p className="font-lato text-xs">
+                    <span className="font-bold">Secure checkout.</span> For your
+                    convenience Engame will store your encrypted payment
+                    information for future orders. Manage your payment
+                    information in your Account Details.
+                  </p>
+                </div>
               </div>
             </div>
+            <div className="flex-1"></div>
           </div>
         </div>
       </Section>
