@@ -54,12 +54,12 @@ const TrendingGame = (): JSX.Element => {
                   (k === 0 ? "" : " ml-6")
                 }
               >
-                <div className="flex-grow flex justify-center items-center relative w-full h-44">
+                <div className="flex-grow flex justify-center items-center relative w-full h-44 bg-black rounded-lg overflow-hidden">
                   <Image
                     src={i.image}
                     alt={`${k}-games-home-5`}
                     layout="fill"
-                    objectFit="contain"
+                    objectFit="cover"
                     quality={100}
                   />
                 </div>
