@@ -8,7 +8,6 @@ import {
   SubscribePlan,
 } from "@engame/components";
 import { PageLayoutProps } from "@engame/types";
-import { FiCheckCircle } from "react-icons/fi";
 
 const Pricing: PageLayoutProps = () => {
   const { push } = useRouter();

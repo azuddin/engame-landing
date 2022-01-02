@@ -9,7 +9,6 @@ import {
   SubscribePlan,
 } from "@engame/components";
 import { PageLayoutProps } from "@engame/types";
-import { FiCheckCircle } from "react-icons/fi";
 
 const ImBrandOwner: PageLayoutProps = () => {
   const { push } = useRouter();

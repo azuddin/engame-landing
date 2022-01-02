@@ -9,9 +9,7 @@ import {
   Select,
   TrendingGame,
 } from "@engame/components";
-import { carouselResponsive } from "@engame/constants";
 import { PageLayoutProps } from "@engame/types";
-import Carousel from "react-multi-carousel";
 import { PartnerContent } from "src/components";
 import "react-multi-carousel/lib/styles.css";
 
@@ -148,7 +146,7 @@ const Home: PageLayoutProps = () => {
           </div>
         </div>
       </Section>
-      <div className="flex justify-center items-end mb-8 md:mt-8 lg:mt-18 xl:mt-28 2xl:mt-36 md:mb-0 bg-yellow-400 h-40 relative">
+      <div className="flex justify-center items-end mb-8 md:mt-8 lg:mt-18 xl:mt-28 2xl:mt-36 md:mb-0 bg-yellow-400 md:h-28 lg:h-40 2xl:h-52 relative">
         <Image
           src="/assets/images/EG---bg.jpg"
           alt="home-4"
@@ -217,102 +215,113 @@ const Home: PageLayoutProps = () => {
       </Section>
       <PartnerContent backgroundImage />
       <Section>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 py-10">
-          <div className="flex flex-col-reverse md:flex-col items-center md:justify-center">
-            <div className="flex flex-col space-y-8">
-              <p className="text-center md:text-left font-montserrat font-extrabold text-4xl">
-                Be part of the next gaming phenomenon
-              </p>
-              <p className="font-lato text-xl">
-                Looking to make a media inquiry ? Any feedback or suggestions
-                about one of our games? Fill out the form and we&apos;ll get
-                back to you !
-              </p>
+        <form>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 py-10">
+            <div className="flex flex-col-reverse md:flex-col items-center md:justify-center">
+              <div className="flex flex-col space-y-8">
+                <p className="text-center md:text-left font-montserrat font-extrabold text-4xl">
+                  Be part of the next gaming phenomenon
+                </p>
+                <p className="font-lato text-xl">
+                  Looking to make a media inquiry ? Any feedback or suggestions
+                  about one of our games? Fill out the form and we&apos;ll get
+                  back to you !
+                </p>
+              </div>
+              <div className="flex max-w-md">
+                <Image
+                  src="/assets/images/01 Home/EG---Landing-home_feedback(D).png"
+                  width={800}
+                  height={800}
+                  alt="home-1"
+                />
+              </div>
             </div>
-            <div className="flex max-w-md">
-              <Image
-                src="/assets/images/01 Home/EG---Landing-home_feedback(D).png"
-                width={800}
-                height={800}
-                alt="home-1"
-              />
-            </div>
-          </div>
-          <div className="flex flex-col space-y-6">
-            <div className="flex flex-col">
-              <label htmlFor="name" className="font-lato text-xl mb-1">
-                Name <span className="text-red-600">*</span>
-              </label>
-              <input
-                name="name"
-                id="name"
-                type="text"
-                className="rounded-md border px-4 py-2 text-2xl"
-              />
-            </div>
-            <div className="flex flex-col">
-              <label htmlFor="company_name" className="font-lato text-xl mb-1">
-                Company Name <span className="text-red-600">*</span>
-              </label>
-              <input
-                name="company_name"
-                id="company_name"
-                type="text"
-                className="rounded-md border px-4 py-2 text-2xl"
-              />
-            </div>
-            <div className="flex flex-col">
-              <label htmlFor="email" className="font-lato text-xl mb-1">
-                Email <span className="text-red-600">*</span>
-              </label>
-              <input
-                name="email"
-                id="email"
-                type="email"
-                className="rounded-md border px-4 py-2 text-2xl lowercase"
-              />
-            </div>
-            <div className="flex flex-col">
-              <label htmlFor="phone_number" className="font-lato text-xl mb-1">
-                Phone Number <span className="text-red-600">*</span>
-              </label>
-              <input
-                name="phone_number"
-                id="phone_number"
-                type="tel"
-                className="rounded-md border px-4 py-2 text-2xl"
-              />
-            </div>
-            <div className="flex flex-col">
-              <label htmlFor="category" className="font-lato text-xl mb-1">
-                Category <span className="text-red-600">*</span>
-              </label>
-              <Select
-                name="category"
-                aria-label="Category"
-                placeholder="Select a category"
+            <div className="flex flex-col space-y-6">
+              <div className="flex flex-col">
+                <label htmlFor="name" className="font-lato text-xl mb-1">
+                  Name <span className="text-red-600">*</span>
+                </label>
+                <input
+                  name="name"
+                  id="name"
+                  type="text"
+                  className="rounded-md border px-4 py-2 text-2xl"
+                />
+              </div>
+              <div className="flex flex-col">
+                <label
+                  htmlFor="company_name"
+                  className="font-lato text-xl mb-1"
+                >
+                  Company Name <span className="text-red-600">*</span>
+                </label>
+                <input
+                  name="company_name"
+                  id="company_name"
+                  type="text"
+                  className="rounded-md border px-4 py-2 text-2xl"
+                />
+              </div>
+              <div className="flex flex-col">
+                <label htmlFor="email" className="font-lato text-xl mb-1">
+                  Email <span className="text-red-600">*</span>
+                </label>
+                <input
+                  name="email"
+                  id="email"
+                  type="email"
+                  className="rounded-md border px-4 py-2 text-2xl lowercase"
+                />
+              </div>
+              <div className="flex flex-col">
+                <label
+                  htmlFor="phone_number"
+                  className="font-lato text-xl mb-1"
+                >
+                  Phone Number <span className="text-red-600">*</span>
+                </label>
+                <input
+                  name="phone_number"
+                  id="phone_number"
+                  type="tel"
+                  className="rounded-md border px-4 py-2 text-2xl"
+                />
+              </div>
+              <div className="flex flex-col">
+                <label htmlFor="category" className="font-lato text-xl mb-1">
+                  Category <span className="text-red-600">*</span>
+                </label>
+                <Select
+                  name="category"
+                  aria-label="Category"
+                  placeholder="Select a category"
+                >
+                  <Option key="category 1">Category 1</Option>
+                  <Option key="category 2">Category 2</Option>
+                  <Option key="category 3">Category 3</Option>
+                </Select>
+              </div>
+              <div className="flex flex-col">
+                <label htmlFor="message" className="font-lato text-xl mb-1">
+                  Enter Your Message <span className="text-red-600">*</span>
+                </label>
+                <textarea
+                  name="message"
+                  id="message"
+                  rows={3}
+                  className="rounded-md border px-4 py-2 text-2xl"
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                className="w-full px-5 py-2 border border-black bg-black text-white rounded font-montserrat font-bold hover:opacity-90 hover:shadow-lg"
               >
-                <Option key="category 1">Category 1</Option>
-                <Option key="category 2">Category 2</Option>
-                <Option key="category 3">Category 3</Option>
-              </Select>
+                Submit Enquiry
+              </button>
             </div>
-            <div className="flex flex-col">
-              <label htmlFor="message" className="font-lato text-xl mb-1">
-                Enter Your Message <span className="text-red-600">*</span>
-              </label>
-              <textarea
-                name="message"
-                id="message"
-                rows={3}
-                className="rounded-md border px-4 py-2 text-2xl"
-              ></textarea>
-            </div>
-            <button className="w-full px-5 py-2 border border-black bg-black text-white rounded font-montserrat font-bold hover:opacity-90 hover:shadow-lg">
-              Submit Enquiry
-            </button>
           </div>
-        </div>
+        </form>
       </Section>
     </>
   );

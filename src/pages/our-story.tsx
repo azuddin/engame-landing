@@ -34,15 +34,16 @@ const OurStory: PageLayoutProps = () => {
           </p>
         </div>
       </Section>
-      <div className="relative mb-10 hidden md:block">
+      <div className="relative mb-10 hidden md:flex md:flex-col">
         <Image
           src="/assets/images/02 Our story/EG---Landing-ourstory_top(D).jpg"
           alt="home-4"
           layout="fill"
-          objectFit="contain"
+          objectFit="cover"
           quality={100}
         />
         <div className="h-60 lg:h-96"></div>
+        <div className="hidden 2xl:block h-40"></div>
       </div>
       <div className="mb-10 block md:hidden">
         <Image

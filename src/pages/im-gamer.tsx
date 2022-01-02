@@ -1,9 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import { Layout, Section, TrendingGame } from "@engame/components";
-import { carouselResponsive } from "@engame/constants";
 import { PageLayoutProps } from "@engame/types";
-import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
 const ImGamer: PageLayoutProps = () => {
