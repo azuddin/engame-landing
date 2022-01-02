@@ -21,7 +21,7 @@ const PartnerContent = (props: {
           <p className="text-center font-montserrat font-extrabold text-4xl z-10">
             Partnered with the world&apos;s best companies
           </p>
-          <div className="w-full flex flex-row overflow-auto space-x-4 pb-2">
+          <div className="w-full flex flex-row overflow-auto space-x-4 pb-2 2xl:justify-center">
             {[
               "/assets/images/company-1.png",
               "/assets/images/company-2.png",
