@@ -63,3 +63,15 @@ yarn export
 Which will generate a `out` folder containing the website bundle. In which later, you can put it (serve it) on any server of your liking.
 
 Ultimately, you can refer [Static HTML Deployment](https://nextjs.org/docs/advanced-features/static-html-export) for more details.
+
+## Notes
+
+1. Install `yarn`
+2. open code repo, run `yarn`
+3. run `yarn dev` which will serve the website to http://localhost:3000
+
+## Software
+
+1. Sourcetree
+2. VSCode
+3. yarn
