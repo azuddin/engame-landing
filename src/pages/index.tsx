@@ -35,7 +35,7 @@ const Home: PageLayoutProps = () => {
         <Section zIndex="z-10">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-10 md:pt-0">
             <div className="flex flex-col justify-center space-y-2">
-              <p className="text-blue-500 text-center md:text-left font-montserrat font-extrabold pb-4 text-4xl">
+              <p className="text-center md:text-left font-montserrat font-extrabold pb-4 text-4xl">
                 Are You Interested To Join Us? Let&apos;s Grow Together!
               </p>
               <Link href="/im-brand-owner" passHref>
