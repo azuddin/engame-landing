@@ -5,7 +5,7 @@ import { Section } from "..";
 const Footer = (): JSX.Element => {
   return (
     <div className="bg-stone-300 pt-8">
-      <Section>
+      <Section bgColor="bg-stone-300">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 lg:gap-10 py-6">
           <div className="border-b-2 pt-10 pb-16 md:py-0 md:border-0 flex flex-col items-center md:items-start space-y-2">
             <div className="flex flex-col justify-center h-auto md:w-36">

@@ -10,7 +10,7 @@ export interface SectionProps {
 const Section = (props: SectionProps): JSX.Element => {
   const {
     children,
-    bgColor = "",
+    bgColor = "bg-white",
     zIndex = "",
     padding = "px-4 lg:px-36",
   } = props;
