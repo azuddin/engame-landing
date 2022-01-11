@@ -35,13 +35,6 @@ const Home: PageLayoutProps = () => {
         }}
       >
         <div className="relative bg-transparent">
-          {/* <Image
-          src="/assets/images/EG---bg.jpg"
-          alt="home-4"
-          layout="fill"
-          objectFit="cover"
-          quality={100}
-        /> */}
           <Section zIndex="z-10" bgColor="bg-transparent">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-10 md:pt-0">
               <div className="flex flex-col justify-center space-y-2">
