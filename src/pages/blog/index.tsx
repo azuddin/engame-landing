@@ -27,19 +27,23 @@ const Blog: PageLayoutProps = () => {
       <div
         style={{
           backgroundImage: "url('/assets/images/EG---bg.jpg')",
-          backgroundSize: "cover",
+          backgroundAttachment: "fixed",
           backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
+          backgroundRepeat: "repeat",
+          backgroundSize: "cover",
+          perspective: "5px",
         }}
         className="relative"
       >
-        <Section zIndex="z-10" bgColor="bg-transparent">
-          <div className="flex justify-center py-10">
-            <p className="text-center font-montserrat font-extrabold text-4xl max-w-md">
-              Let&apos;s fire up the world of blogging🔥
-            </p>
-          </div>
-        </Section>
+        <div className="relative bg-transparent">
+          <Section zIndex="z-10" bgColor="bg-transparent">
+            <div className="flex justify-center py-10">
+              <p className="text-center font-montserrat font-extrabold text-4xl max-w-md">
+                Let&apos;s fire up the world of blogging🔥
+              </p>
+            </div>
+          </Section>
+        </div>
       </div>
       <Section>
         <ul className="py-10 space-y-10">

@@ -27,19 +27,23 @@ const BlogDetail: PageLayoutProps = () => {
       <div
         style={{
           backgroundImage: "url('/assets/images/EG---bg.jpg')",
-          backgroundSize: "cover",
+          backgroundAttachment: "fixed",
           backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
+          backgroundRepeat: "repeat",
+          backgroundSize: "cover",
+          perspective: "5px",
         }}
         className="relative"
       >
-        <Section zIndex="z-10" bgColor="bg-transparent">
-          <div className="flex justify-center py-10">
-            <p className="text-center md:text-left font-montserrat font-extrabold text-4xl">
-              MDEC DiCE 2019 Commercial Ready Game Winner
-            </p>
-          </div>
-        </Section>
+        <div className="relative bg-transparent">
+          <Section zIndex="z-10" bgColor="bg-transparent">
+            <div className="flex justify-center py-10">
+              <p className="text-center md:text-left font-montserrat font-extrabold text-4xl">
+                MDEC DiCE 2019 Commercial Ready Game Winner
+              </p>
+            </div>
+          </Section>
+        </div>
       </div>
       <Section>
         <div className="flex flex-col space-y-8 py-10">
