@@ -1,5 +1,4 @@
 import { ReactNode, useEffect, useState } from "react";
-import Image from "next/image";
 import { useRouter } from "next/router";
 import { Footer, Modal, Navbar, Option, Select } from "@engame/components";
 import { FiCheckCircle } from "react-icons/fi";
@@ -91,7 +90,7 @@ const Layout = (props: LayoutProps): JSX.Element => {
         <div className="grid grid-cols-1 md:grid-cols-2 md:gap-6">
           <div className="flex items-center">
             <div className="flex-1 flex justify-center items-start relative h-full">
-              <Image
+              <img
                 src="/assets/images/07 Free trial/EG---Free-trial(D).png"
                 width={1080}
                 height={1400}

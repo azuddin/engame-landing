@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Image from "next/image";
 import { useRouter } from "next/router";
 import {
   Layout,
@@ -48,7 +47,7 @@ const Pricing: PageLayoutProps = () => {
               </div>
               <div className="flex justify-center items-center">
                 <div className="flex justify-center md:flex-1 md:justify-end max-w-lg">
-                  <Image
+                  <img
                     src="/assets/images/08 Pricing/EG---Landing-pricing_top-main(D).png"
                     width={800}
                     height={800}

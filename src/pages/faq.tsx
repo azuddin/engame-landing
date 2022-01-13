@@ -1,6 +1,5 @@
 import { Key, useState } from "react";
 import Head from "next/head";
-import Image from "next/image";
 import { Layout, Section } from "@engame/components";
 import { PageLayoutProps } from "@engame/types";
 import { AnimatePresence, motion } from "framer-motion";
@@ -93,7 +92,7 @@ const FAQ: PageLayoutProps = () => {
               </div>
               <div className="flex justify-center items-center">
                 <div className="flex justify-center md:flex-1 md:justify-end max-w-lg">
-                  <Image
+                  <img
                     src="/assets/images/06 Faq/EG---Landing-faq_top-main(D).png"
                     width={628}
                     height={621}
@@ -261,15 +260,14 @@ const FAQ: PageLayoutProps = () => {
             </div>
           </div>
         </Section>
-        <div className="relative">
-          <Image
-            src="/assets/images/EG---bg-2.jpg"
-            alt="home-4"
-            layout="fill"
-            objectFit="cover"
-            quality={100}
-          />
-          <Section zIndex="z-10">
+        <div
+          className="relative"
+          style={{
+            backgroundImage: "url('/assets/images/EG---bg-2.jpg')",
+            backgroundSize: "cover",
+          }}
+        >
+          <Section zIndex="z-10" bgColor="bg-transparent">
             <div className="flex flex-col items-center py-10 space-y-10">
               <p className="text-center font-montserrat font-extrabold text-4xl">
                 Still need help?

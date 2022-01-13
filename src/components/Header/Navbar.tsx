@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { Hamburger } from "@engame/components";
@@ -59,12 +58,11 @@ const Navbar = (props: NavbarProps): JSX.Element => {
                 </button>
               </Link>
               <div className="flex flex-col justify-center items-center py-4">
-                <Image
+                <img
                   src="/assets/images/home-2.png"
                   alt="menu image"
                   width={300}
                   height={300}
-                  layout="fixed"
                 />
               </div>
               <button
@@ -87,7 +85,7 @@ const Navbar = (props: NavbarProps): JSX.Element => {
         <div className="container mx-auto px-4 lg:px-36 py-3 md:py-2 flex justify-between items-center">
           <Link href="/" passHref>
             <div className="flex flex-col justify-center w-36 md:w-28 cursor-pointer">
-              <Image
+              <img
                 src="/assets/images/logo.png"
                 alt="logo"
                 width={180}

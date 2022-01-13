@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { useRouter } from "next/router";
 import { Section } from "@engame/components";
 import { FiCheckCircle } from "react-icons/fi";
@@ -12,17 +11,14 @@ const SubscribePlan = (props: {
     props;
 
   return (
-    <div className="relative">
-      {backgroundImage && (
-        <Image
-          src={backgroundImageUrl}
-          alt="home-4"
-          layout="fill"
-          objectFit="cover"
-          quality={100}
-        />
-      )}
-      <Section zIndex="z-10">
+    <div
+      className="relative"
+      style={{
+        backgroundImage: backgroundImage ? `url('${backgroundImageUrl}')` : "",
+        backgroundSize: "cover",
+      }}
+    >
+      <Section bgColor={backgroundImage ? "bg-transparent" : "bg-white"}>
         <div className="flex flex-col items-center py-10">
           <p className="text-center md:text-left font-montserrat font-extrabold text-4xl mb-4">
             Subscribe your plan now!

@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Image from "next/image";
 import Link from "next/link";
 import {
   HowItWork,
@@ -54,7 +53,7 @@ const Home: PageLayoutProps = () => {
               </div>
               <div className="flex justify-center items-center">
                 <div className="flex justify-center md:flex-1 md:justify-end max-w-lg">
-                  <Image
+                  <img
                     src="/assets/images/01 Home/EG---Landing-home_top-main(D).png"
                     width={800}
                     height={800}
@@ -101,13 +100,12 @@ const Home: PageLayoutProps = () => {
                   key={k}
                   className="flex flex-col justify-start items-center"
                 >
-                  <div className="max-w-xs md:h-32 md:w-32 flex justify-center mb-4">
-                    <Image
+                  <div className="max-w-xs md:h-32 md:w-32 flex justify-center mb-4 rounded-lg overflow-hidden">
+                    <img
                       src={i.image_url}
                       width={800}
                       height={800}
                       alt="home-2"
-                      className="rounded-lg"
                     />
                   </div>
                   <p className="text-center font-montserrat font-bold text-3xl md:text-xl">
@@ -153,16 +151,16 @@ const Home: PageLayoutProps = () => {
           </div>
         </Section>
         <div className="bg-white md:pt-8 lg:pt-18 xl:pt-28 2xl:pt-36 ">
-          <div className="flex justify-center items-end mb-8 md:mb-0 bg-yellow-400 md:h-28 lg:h-40 2xl:h-52 relative">
-            <Image
-              src="/assets/images/EG---bg.jpg"
-              alt="home-4"
-              layout="fill"
-              objectFit="cover"
-              quality={100}
-            />
+          <div
+            style={{
+              backgroundImage: "url('/assets/images/EG---bg.jpg')",
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
+            className="flex justify-center items-end mb-8 md:mb-0 bg-yellow-400 md:h-28 lg:h-40 2xl:h-52 relative"
+          >
             <div className="h-80 items-end hidden md:flex">
-              <Image
+              <img
                 src="/assets/images/01 Home/EG---Landing-home_arcade(D).png"
                 width={1920}
                 height={300}
@@ -172,7 +170,7 @@ const Home: PageLayoutProps = () => {
           </div>
         </div>
         <div className="block md:hidden">
-          <Image
+          <img
             src="/assets/images/01 Home/EG---Landing-home_arcade(M).png"
             width={800}
             height={300}
@@ -187,16 +185,16 @@ const Home: PageLayoutProps = () => {
               <p className="text-center font-montserrat font-extrabold text-4xl md:text-3xl">
                 Learn more about Why Superbrand work with us
               </p>
-              <div className="flex-grow flex justify-center items-center relative w-full h-44">
-                <Image
-                  src="/assets/images/01 Home/EG---Landing-home_demo(D).jpg"
-                  alt={`-games-home-5`}
-                  className="rounded-3xl"
-                  layout="fill"
-                  objectFit="contain"
-                  quality={100}
-                />
-              </div>
+              <div
+                style={{
+                  backgroundImage:
+                    "url('/assets/images/01 Home/EG---Landing-home_demo(D).jpg')",
+                  backgroundSize: "contain",
+                  backgroundPosition: "center",
+                  backgroundRepeat: "no-repeat",
+                }}
+                className="flex-grow flex justify-center items-center relative w-full h-44 rounded-3xl overflow-hidden"
+              ></div>
               <button className="w-full md:w-52 px-5 py-2 border border-black bg-black text-white rounded font-montserrat font-bold hover:opacity-90 hover:shadow-lg">
                 Get A Free Demo
               </button>
@@ -205,16 +203,16 @@ const Home: PageLayoutProps = () => {
               <p className="text-center font-montserrat font-extrabold text-4xl md:text-3xl">
                 Deliver an immersive brands to our audience
               </p>
-              <div className="flex-grow flex justify-center items-center relative w-full h-44">
-                <Image
-                  src="/assets/images/01 Home/EG---Landing-home_playgame(D).jpg"
-                  alt={`-games-home-5`}
-                  className="rounded-3xl"
-                  layout="fill"
-                  objectFit="contain"
-                  quality={100}
-                />
-              </div>
+              <div
+                style={{
+                  backgroundImage:
+                    "url('/assets/images/01 Home/EG---Landing-home_playgame(D).jpg')",
+                  backgroundSize: "contain",
+                  backgroundPosition: "center",
+                  backgroundRepeat: "no-repeat",
+                }}
+                className="flex-grow flex justify-center items-center relative w-full h-44 rounded-3xl overflow-hidden"
+              ></div>
               <button className="w-full md:w-52 px-5 py-2 border border-black bg-black text-white rounded font-montserrat font-bold hover:opacity-90 hover:shadow-lg">
                 Play a game
               </button>
@@ -237,7 +235,7 @@ const Home: PageLayoutProps = () => {
                   </p>
                 </div>
                 <div className="flex max-w-md">
-                  <Image
+                  <img
                     src="/assets/images/01 Home/EG---Landing-home_feedback(D).png"
                     width={800}
                     height={800}

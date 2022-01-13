@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { Layout, Section } from "@engame/components";
 import { PageLayoutProps } from "@engame/types";
@@ -25,15 +24,16 @@ const Blog: PageLayoutProps = () => {
   ];
   return (
     <>
-      <div className="relative">
-        <Image
-          src="/assets/images/EG---bg.jpg"
-          alt="home-4"
-          layout="fill"
-          objectFit="cover"
-          quality={100}
-        />
-        <Section zIndex="z-10">
+      <div
+        style={{
+          backgroundImage: "url('/assets/images/EG---bg.jpg')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
+        className="relative"
+      >
+        <Section zIndex="z-10" bgColor="bg-transparent">
           <div className="flex justify-center py-10">
             <p className="text-center font-montserrat font-extrabold text-4xl max-w-md">
               Let&apos;s fire up the world of blogging🔥
@@ -54,16 +54,15 @@ const Blog: PageLayoutProps = () => {
               <li key={`blog-card-${index}-${i.avatar}`}>
                 <div className="flex flex-col space-y-4">
                   <div className="flex items-center space-x-4">
-                    <div className="flex justify-center items-center relative w-10 h-10">
-                      <Image
-                        src={i.avatar}
-                        alt="home-4"
-                        className="rounded-3xl"
-                        layout="fill"
-                        objectFit="cover"
-                        quality={100}
-                      />
-                    </div>
+                    <div
+                      style={{
+                        backgroundImage: `url('${i.avatar}')`,
+                        backgroundSize: "cover",
+                        backgroundPosition: "center",
+                        backgroundRepeat: "no-repeat",
+                      }}
+                      className="flex justify-center items-center relative w-10 h-10 rounded-3xl overflow-hidden"
+                    ></div>
                     <div className="flex flex-col">
                       <p className="font-lato font-extrabold">{i.author}</p>
                       <p className="font-lato text-gray-500 font-bold">
@@ -71,16 +70,15 @@ const Blog: PageLayoutProps = () => {
                       </p>
                     </div>
                   </div>
-                  <div className="flex-grow flex justify-center items-center relative h-80">
-                    <Image
-                      src={i.image}
-                      alt="home-4"
-                      className="rounded-3xl"
-                      layout="fill"
-                      objectFit="cover"
-                      quality={100}
-                    />
-                  </div>
+                  <div
+                    style={{
+                      backgroundImage: `url('${i.image}')`,
+                      backgroundSize: "cover",
+                      backgroundPosition: "center",
+                      backgroundRepeat: "no-repeat",
+                    }}
+                    className="flex-grow flex justify-center items-center relative h-80 rounded-3xl overflow-hidden"
+                  ></div>
                   <p className="text-left font-montserrat font-extrabold text-2xl">
                     {i.title}
                   </p>

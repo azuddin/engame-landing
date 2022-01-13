@@ -1,6 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
-import { Section } from "..";
+import { Section } from "@engame/components";
 
 const Footer = (): JSX.Element => {
   return (
@@ -9,7 +8,7 @@ const Footer = (): JSX.Element => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 lg:gap-10 py-6">
           <div className="border-b-2 pt-10 pb-16 md:py-0 md:border-0 flex flex-col items-center md:items-start space-y-2">
             <div className="flex flex-col justify-center h-auto md:w-36">
-              <Image
+              <img
                 src="/assets/images/logo.png"
                 alt="logo"
                 width={374}
@@ -50,7 +49,7 @@ const Footer = (): JSX.Element => {
         <div className="flex flex-col md:flex-row justify-between items-center border-t py-8 md:py-4 space-y-4 md:space-y-0">
           <div className="social space-x-4 flex flex-row">
             <div className="flex flex-col justify-center w-9 md:w-6">
-              <Image
+              <img
                 src="/assets/images/ig-icon.png"
                 alt="logo"
                 width={40}
@@ -58,7 +57,7 @@ const Footer = (): JSX.Element => {
               />
             </div>
             <div className="flex flex-col justify-center w-9 md:w-6">
-              <Image
+              <img
                 src="/assets/images/fb-icon.png"
                 alt="logo"
                 width={40}

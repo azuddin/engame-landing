@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { Section } from "@engame/components";
 
 const PartnerContent = (props: {
@@ -6,17 +5,16 @@ const PartnerContent = (props: {
 }): JSX.Element => {
   const { backgroundImage } = props;
   return (
-    <div className="relative">
-      {backgroundImage && (
-        <Image
-          src="/assets/images/EG---bg-2.jpg"
-          alt="home-4"
-          layout="fill"
-          objectFit="cover"
-          quality={100}
-        />
-      )}
-      <Section>
+    <div
+      className="relative"
+      style={{
+        backgroundImage: backgroundImage
+          ? "url('/assets/images/EG---bg-2.jpg')"
+          : "",
+        backgroundSize: "cover",
+      }}
+    >
+      <Section bgColor={backgroundImage ? "bg-transparent" : "bg-white"}>
         <div className="flex flex-col items-center py-10 space-y-8">
           <p className="text-center font-montserrat font-extrabold text-4xl z-10">
             Partnered with the world&apos;s best companies
@@ -31,16 +29,10 @@ const PartnerContent = (props: {
             ].map((i, k) => (
               <div
                 key={k}
-                className="flex flex-col min-w-max cursor-pointer filter grayscale hover:grayscale-0 bg-white"
+                className="flex flex-col min-w-max cursor-pointer filter grayscale hover:grayscale-0 bg-white rounded-lg overflow-hidden"
               >
                 <div className="flex flex-col w-52">
-                  <Image
-                    src={i}
-                    width={320}
-                    height={225}
-                    alt="home-5"
-                    className="rounded-lg"
-                  />
+                  <img src={i} width={320} height={225} alt="home-5" />
                 </div>
               </div>
             ))}

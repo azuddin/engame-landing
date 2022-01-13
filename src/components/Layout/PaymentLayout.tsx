@@ -1,5 +1,4 @@
 import { ReactNode } from "react";
-import Image from "next/image";
 import { Footer } from "@engame/components";
 
 export interface PaymentLayoutProps {
@@ -14,7 +13,7 @@ const PaymentLayout = (props: PaymentLayoutProps): JSX.Element => {
         <div className="z-20 h-40 md:h-14 flex justify-center">
           <div className="container mx-auto px-4 lg:px-36 py-3 md:py-2 flex flex-col md:flex-row justify-between items-start md:items-center">
             <div className="flex flex-col justify-center w-36 md:w-28">
-              <Image
+              <img
                 src="/assets/images/logo-grayscale.png"
                 alt="logo"
                 width={180}

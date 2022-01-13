@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Image from "next/image";
 import { useRouter } from "next/router";
 import {
   HowItWork,
@@ -11,7 +10,6 @@ import {
 import { PageLayoutProps } from "@engame/types";
 
 const ImBrandOwner: PageLayoutProps = () => {
-  const { push } = useRouter();
   return (
     <>
       <Head>
@@ -42,7 +40,7 @@ const ImBrandOwner: PageLayoutProps = () => {
               </div>
               <div className="flex justify-center items-center">
                 <div className="flex justify-center md:flex-1 md:justify-end max-w-lg">
-                  <Image
+                  <img
                     src="/assets/images/03 Brand owner/EG---Landing-brand_top-main(D).png"
                     width={959}
                     height={800}
@@ -83,13 +81,12 @@ const ImBrandOwner: PageLayoutProps = () => {
                   key={`why-${k}`}
                   className="flex flex-col justify-start items-center border-2 border-yellow-400 rounded-2xl px-8 py-6"
                 >
-                  <div className="max-w-xs md:h-32 md:w-32 flex justify-center mb-4">
-                    <Image
+                  <div className="max-w-xs md:h-32 md:w-32 flex justify-center mb-4 rounded-lg overflow-hidden">
+                    <img
                       src={i.imageUrl}
                       width={800}
                       height={800}
                       alt="home-2"
-                      className="rounded-lg"
                     />
                   </div>
                   <p className="text-center font-montserrat font-bold text-3xl md:text-xl capitalize mb-6">
@@ -127,14 +124,8 @@ const ImBrandOwner: PageLayoutProps = () => {
                 key={`brand-${k}`}
                 className="flex flex-col items-center space-y-4"
               >
-                <div className="max-w-xs flex justify-center">
-                  <Image
-                    src={i.imageUrl}
-                    width={600}
-                    height={400}
-                    alt="home-2"
-                    className="rounded-lg"
-                  />
+                <div className="max-w-xs flex justify-center rounded-lg overflow-hidden">
+                  <img src={i.imageUrl} width={600} height={400} alt="home-2" />
                 </div>
                 <p className="text-center md:text-left font-montserrat font-bold text-3xl md:text-xl capitalize">
                   {i.title}
@@ -143,20 +134,6 @@ const ImBrandOwner: PageLayoutProps = () => {
             ))}
           </div>
         </Section>
-        {/* <Section>
-        <div className="flex justify-center items-center py-10">
-          <div className="h-96 w-full relative">
-            <Image
-              src="/assets/images/home-4.png"
-              alt="home-4"
-              className="rounded-3xl"
-              layout="fill"
-              objectFit="cover"
-              quality={100}
-            />
-          </div>
-        </div>
-      </Section> */}
         <SubscribePlan backgroundImage />
         <PartnerContent />
       </div>

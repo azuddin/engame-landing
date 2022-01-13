@@ -1,7 +1,5 @@
-import { ReactNode, useState } from "react";
-import Image from "next/image";
+import { ReactNode } from "react";
 import { AnimatePresence } from "framer-motion";
-import { FiX } from "react-icons/fi";
 
 export interface ModalProps {
   children?: ReactNode;
@@ -20,14 +18,13 @@ const Modal = (props: ModalProps): JSX.Element => {
           <div className="fixed h-screen w-screen top-0 bg-black z-30 opacity-80"></div>
           <div className="overflow-y-auto overflow-x-hidden fixed z-30 flex justify-center items-center h-modal md:h-full md:inset-0">
             <div className="relative mx-auto w-full max-w-2xl h-full md:h-auto">
-              <div className="flex flex-col relative bg-white rounded-lg overflow-hidden shadow dark:bg-gray-700 max-h-screen h-screen md:h-fit">
-                <Image
-                  src="/assets/images/EG---bg.jpg"
-                  alt="home-4"
-                  layout="fill"
-                  objectFit="cover"
-                  quality={100}
-                />
+              <div
+                style={{
+                  backgroundImage: "url('/assets/images/EG---bg.jpg')",
+                  backgroundSize: "contain",
+                }}
+                className="flex flex-col relative bg-white rounded-lg overflow-hidden shadow dark:bg-gray-700 max-h-screen h-screen md:h-fit"
+              >
                 <div className="flex justify-between items-start p-5 border-b dark:border-gray-600 z-10">
                   <h3 className="text-xl font-semibold text-gray-900 lg:text-2xl dark:text-white">
                     {title}

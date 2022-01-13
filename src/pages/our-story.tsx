@@ -1,6 +1,5 @@
 import { useState } from "react";
 import Head from "next/head";
-import Image from "next/image";
 import {
   Layout,
   PartnerContent,
@@ -34,19 +33,21 @@ const OurStory: PageLayoutProps = () => {
           </p>
         </div>
       </Section>
-      <div className="relative mb-10 hidden md:flex md:flex-col">
-        <Image
-          src="/assets/images/02 Our story/EG---Landing-ourstory_top(D).jpg"
-          alt="home-4"
-          layout="fill"
-          objectFit="cover"
-          quality={100}
-        />
+      <div
+        style={{
+          backgroundImage:
+            "url('/assets/images/02 Our story/EG---Landing-ourstory_top(D).jpg')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
+        className="relative mb-10 hidden md:flex md:flex-col"
+      >
         <div className="h-60 lg:h-96"></div>
         <div className="hidden 2xl:block h-40"></div>
       </div>
       <div className="mb-10 block md:hidden">
-        <Image
+        <img
           src="/assets/images/02 Our story/EG---Landing-ourstory_top2(M).jpg"
           width={800}
           height={400}
@@ -149,33 +150,35 @@ const OurStory: PageLayoutProps = () => {
               </li>
             </ol>
           </div>
-          <div className="order-first md:order-none relative h-60 md:h-full">
-            <Image
-              src="/assets/images/02 Our story/EG---Landing-ourstory_milestone-1(M).jpg"
-              alt="home-4"
-              layout="fill"
-              objectFit="cover"
-              quality={100}
-            />
-          </div>
+          <div
+            style={{
+              backgroundImage:
+                "url('/assets/images/02 Our story/EG---Landing-ourstory_milestone-1(M).jpg')",
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              backgroundRepeat: "no-repeat",
+            }}
+            className="order-first md:order-none relative h-60 md:h-full"
+          ></div>
         </div>
       </Section>
-      <div className="relative">
-        <Image
-          src="/assets/images/EG---bg-2.jpg"
-          alt="home-4"
-          layout="fill"
-          objectFit="cover"
-          quality={100}
-        />
-        <Section zIndex="z-30">
+      <div
+        style={{
+          backgroundImage: "url('/assets/images/EG---bg-2.jpg')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
+        className="relative"
+      >
+        <Section zIndex="z-30" bgColor="bg-transparent">
           <p className="py-10 font-montserrat font-extrabold text-4xl text-center capitalize">
             <span className="underline underline-yellow">strategic plan</span>{" "}
             that defines a goal or desired outcome and includes the major steps
             or milestones needed to reach it.
           </p>
         </Section>
-        <Section>
+        <Section bgColor="bg-transparent">
           <div className="flex flex-col space-y-10">
             <div className="w-full flex flex-row overflow-auto space-x-2 justify-center z-10">
               <button
@@ -211,7 +214,7 @@ const OurStory: PageLayoutProps = () => {
                 <SlideshowItem key={`1-slideshowitem`}>
                   <div className="grid grid-cols-1 md:grid-cols-2">
                     <div className="flex justify-center items-center">
-                      <Image
+                      <img
                         src="/assets/images/02 Our story/EG---Landing-ourstory_milestone-2(D).png"
                         width={800}
                         height={800}
@@ -306,7 +309,7 @@ const OurStory: PageLayoutProps = () => {
                 <SlideshowItem key={`1-slideshowitem`}>
                   <div className="grid grid-cols-1 md:grid-cols-2">
                     <div className="flex justify-center items-center">
-                      <Image
+                      <img
                         src="/assets/images/02 Our story/EG---Landing-ourstory_milestone-2(D).png"
                         width={800}
                         height={800}
@@ -379,7 +382,7 @@ const OurStory: PageLayoutProps = () => {
                 <SlideshowItem key={`1-slideshowitem`}>
                   <div className="grid grid-cols-1 md:grid-cols-2">
                     <div className="flex justify-center items-center">
-                      <Image
+                      <img
                         src="/assets/images/02 Our story/EG---Landing-ourstory_milestone-2(D).png"
                         width={800}
                         height={800}
@@ -500,13 +503,12 @@ const OurStory: PageLayoutProps = () => {
                   className="flex flex-col items-center md:items-start"
                 >
                   <div className="flex justify-center items-center mb-10">
-                    <div className="max-w-xs flex justify-center">
-                      <Image
+                    <div className="max-w-xs flex justify-center rounded-lg overflow-hidden">
+                      <img
                         src={i.image}
                         width={800}
                         height={800}
                         alt="home-2"
-                        className="rounded-lg"
                       />
                     </div>
                   </div>
@@ -526,15 +528,16 @@ const OurStory: PageLayoutProps = () => {
         </div>
       </Section>
       <PartnerContent backgroundImage />
-      <div className="relative">
-        <Image
-          src="/assets/images/EG---bg.jpg"
-          alt="home-4"
-          layout="fill"
-          objectFit="cover"
-          quality={100}
-        />
-        <Section zIndex="z-10">
+      <div
+        style={{
+          backgroundImage: "url('/assets/images/EG---bg.jpg')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
+        className="relative"
+      >
+        <Section zIndex="z-10" bgColor="bg-transparent">
           <div className="bg-white rounded-xl p-10 shadow-lg my-10">
             <div className="flex flex-col md:flex-row justify-between space-y-10 md:space-y-0 md:space-x-8">
               <div className="flex flex-col space-y-2">

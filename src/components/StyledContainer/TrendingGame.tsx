@@ -1,18 +1,16 @@
-import Image from "next/image";
 import { Section } from "@engame/components";
 import { carouselResponsive } from "@engame/constants";
 import Carousel from "react-multi-carousel";
 
 const TrendingGame = (): JSX.Element => {
   return (
-    <div className="relative">
-      <Image
-        src="/assets/images/EG---bg-2.jpg"
-        alt="home-4"
-        layout="fill"
-        objectFit="cover"
-        quality={100}
-      />
+    <div
+      className="relative"
+      style={{
+        backgroundImage: "url('/assets/images/EG---bg-2.jpg')",
+        backgroundSize: "cover",
+      }}
+    >
       <Section>
         <div className="flex flex-col items-center space-y-5 py-10">
           <p className="text-center font-montserrat font-extrabold text-4xl z-10">
@@ -54,15 +52,14 @@ const TrendingGame = (): JSX.Element => {
                   (k === 0 ? "" : " ml-6")
                 }
               >
-                <div className="flex-grow flex justify-center items-center relative w-full h-44 bg-black rounded-lg overflow-hidden">
-                  <Image
-                    src={i.image}
-                    alt={`${k}-games-home-5`}
-                    layout="fill"
-                    objectFit="cover"
-                    quality={100}
-                  />
-                </div>
+                <div
+                  style={{
+                    backgroundImage: `url('${i.image}')`,
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                  }}
+                  className="flex-grow flex justify-center items-center relative w-full h-44 bg-black rounded-lg overflow-hidden"
+                ></div>
                 <p className="w-52 font-montserrat font-bold text-lg md:text-lg truncate">
                   {i.name}
                 </p>

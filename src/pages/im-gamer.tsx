@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Image from "next/image";
 import { Layout, Section, TrendingGame } from "@engame/components";
 import { PageLayoutProps } from "@engame/types";
 import "react-multi-carousel/lib/styles.css";
@@ -38,7 +37,7 @@ const ImGamer: PageLayoutProps = () => {
               </div>
               <div className="flex justify-center items-center">
                 <div className="flex justify-center md:flex-1 md:justify-end max-w-lg">
-                  <Image
+                  <img
                     src="/assets/images/04 Gamer/EG---Landing-gamer_top-main(D).png"
                     width={800}
                     height={800}
@@ -82,13 +81,12 @@ const ImGamer: PageLayoutProps = () => {
                   key={`why-${k}`}
                   className="flex flex-col justify-start items-center border-2 border-yellow-400 rounded-2xl px-8 py-6"
                 >
-                  <div className="max-w-xs md:h-32 md:w-32 flex justify-center mb-4">
-                    <Image
+                  <div className="max-w-xs md:h-32 md:w-32 flex justify-center mb-4 rounded-lg overflow-hidden">
+                    <img
                       src={i.imageUrl}
                       width={800}
                       height={800}
                       alt="home-2"
-                      className="rounded-lg"
                     />
                   </div>
                   <p className="text-center font-montserrat font-bold text-3xl md:text-xl capitalize">
@@ -102,13 +100,12 @@ const ImGamer: PageLayoutProps = () => {
         <Section>
           <div className="flex flex-col md:flex-row space-y-10 md:space-x-6 md:space-y-0 py-10">
             <div className="flex flex-col md:w-1/3 items-center justify-center md:items-start space-y-6 md:space-y-2">
-              <div className="max-w-xs md:h-32 md:w-32 flex justify-center">
-                <Image
+              <div className="max-w-xs md:h-32 md:w-32 flex justify-center rounded-lg overflow-hidden">
+                <img
                   src="/assets/images/01 Home/EG---Landing-home_info(D).png"
                   width={800}
                   height={800}
                   alt="home-2"
-                  className="rounded-lg"
                 />
               </div>
               <p className="text-center md:text-left font-montserrat font-extrabold text-4xl">
@@ -134,15 +131,14 @@ const ImGamer: PageLayoutProps = () => {
                 })}
               </ul>
             </div>
-            <div className="flex-grow flex justify-center items-center relative h-96">
-              <Image
-                src="/assets/images/home-2.png"
-                alt="home-4"
-                className="rounded-3xl"
-                layout="fill"
-                objectFit="cover"
-                quality={100}
-              />
+            <div
+              style={{
+                backgroundImage: "url('/assets/images/home-2.png')",
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+              }}
+              className="flex-grow flex justify-center items-center relative h-96 rounded-3xl"
+            >
               <button className="absolute bottom-8 w-52 px-5 py-2 border border-black bg-black text-white rounded font-montserrat font-bold hover:opacity-90 hover:shadow-lg">
                 Play game Now
               </button>
@@ -151,15 +147,14 @@ const ImGamer: PageLayoutProps = () => {
         </Section>
         <TrendingGame />
         <div className="relative bg-white">
-          <div className="absolute bottom-0 top-auto h-5/6 md:h-2/3 w-full">
-            <Image
-              src="/assets/images/EG---bg.jpg"
-              alt="home-4"
-              layout="fill"
-              objectFit="cover"
-              quality={100}
-            />
-          </div>
+          <div
+            style={{
+              backgroundImage: "url('/assets/images/EG---bg.jpg')",
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
+            className="absolute bottom-0 top-auto h-5/6 md:h-2/3 w-full"
+          ></div>
           <Section zIndex="z-10">
             <div className="flex flex-col items-center py-10 space-y-8">
               <p className="text-center font-montserrat font-extrabold text-4xl">
@@ -197,15 +192,14 @@ const ImGamer: PageLayoutProps = () => {
                     className="flex flex-col border overflow-hidden bg-white rounded-xl shadow-lg md:rounded"
                   >
                     <div className="flex justify-center">
-                      <div className="flex-grow flex justify-center items-center relative h-56">
-                        <Image
-                          src={i.image}
-                          alt="home-4"
-                          layout="fill"
-                          objectFit="cover"
-                          quality={100}
-                        />
-                      </div>
+                      <div
+                        style={{
+                          backgroundImage: `url('${i.image}')`,
+                          backgroundSize: "cover",
+                          backgroundPosition: "center",
+                        }}
+                        className="flex-grow flex justify-center items-center relative h-56"
+                      ></div>
                     </div>
                     <div className="flex-1 font-montserrat px-4 py-6 flex flex-col justify-between">
                       <div>

@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Image from "next/image";
 import { Layout, Option, Section, Select } from "@engame/components";
 import { PageLayoutProps } from "@engame/types";
 
@@ -28,7 +27,7 @@ const ContactUs: PageLayoutProps = () => {
               </p>
             </div>
             <div className="flex max-w-md">
-              <Image
+              <img
                 src="/assets/images/01 Home/EG---Landing-home_feedback(D).png"
                 width={800}
                 height={800}

@@ -1,6 +1,5 @@
 import { useState } from "react";
 import Head from "next/head";
-import Image from "next/image";
 import { Section } from "@engame/components";
 import { Option, PaymentLayout, Select } from "@engame/components";
 import { countries, states } from "@engame/constants";
@@ -224,7 +223,7 @@ const Payment: PageLayoutProps = () => {
                     onChange={handleCCChange}
                   />
                   <div className="absolute right-2 flex flex-row">
-                    <Image
+                    <img
                       src="/assets/images/master.png"
                       width={30}
                       height={30}
@@ -235,7 +234,7 @@ const Payment: PageLayoutProps = () => {
                       }
                       alt="mastercard"
                     />
-                    <Image
+                    <img
                       src="/assets/images/visa.png"
                       width={30}
                       height={30}
@@ -280,15 +279,15 @@ const Payment: PageLayoutProps = () => {
           </div>
 
           <div className="flex flex-col">
-            <div className="flex-shrink flex flex-col relative p-4 md:p-5">
-              <Image
-                src="/assets/images/EG---bg.jpg"
-                alt="home-4"
-                layout="fill"
-                objectFit="cover"
-                quality={100}
-                className="md:rounded-xl"
-              />
+            <div
+              style={{
+                backgroundImage: `url('/assets/images/EG---bg.jpg')`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                backgroundRepeat: "no-repeat",
+              }}
+              className="flex-shrink flex flex-col relative p-4 md:p-5 md:rounded-xl overflow-hidden"
+            >
               <p className="text-left font-montserrat font-bold text-3xl md:text-4xl mb-5 md:mb-14 z-10">
                 Order Summary
               </p>
