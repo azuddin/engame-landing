@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { Layout, Option, Section, Select } from "@engame/components";
 import { PageLayoutProps } from "@engame/types";
+import toast from "react-hot-toast";
 
 const ContactUs: PageLayoutProps = () => {
   return (
@@ -105,7 +106,15 @@ const ContactUs: PageLayoutProps = () => {
                 className="rounded-md border px-4 py-2 text-2xl"
               ></textarea>
             </div>
-            <button className="w-full px-5 py-2 border border-black bg-black text-white rounded font-montserrat font-bold hover:opacity-90 hover:shadow-lg">
+            <button
+              onClick={() => {
+                toast.success(
+                  "Submission Successful! Thank you for your interest and we'll get in touch with you shortly!"
+                );
+              }}
+              type="button"
+              className="w-full px-5 py-2 border border-black bg-black text-white rounded font-montserrat font-bold hover:opacity-90 hover:shadow-lg"
+            >
               Submit Enquiry
             </button>
           </div>

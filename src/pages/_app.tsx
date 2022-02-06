@@ -1,5 +1,6 @@
 import { AppLayoutProps } from "@engame/types";
 import { SSRProvider } from "@react-aria/ssr";
+import { Toaster } from "react-hot-toast";
 import "../styles/globals.css";
 
 function MyApp({ Component, pageProps }: AppLayoutProps) {
@@ -12,6 +13,7 @@ function MyApp({ Component, pageProps }: AppLayoutProps) {
       ) : (
         <Component {...pageProps} />
       )}
+      <Toaster position="top-right" reverseOrder={false} />
     </SSRProvider>
   );
 }

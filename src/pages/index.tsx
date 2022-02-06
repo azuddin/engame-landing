@@ -9,6 +9,7 @@ import {
   TrendingGame,
 } from "@engame/components";
 import { PageLayoutProps } from "@engame/types";
+import toast from "react-hot-toast";
 import { PartnerContent } from "src/components";
 import "react-multi-carousel/lib/styles.css";
 
@@ -320,7 +321,12 @@ const Home: PageLayoutProps = () => {
                   ></textarea>
                 </div>
                 <button
-                  type="submit"
+                  onClick={() => {
+                    toast.success(
+                      "Submission Successful! Thank you for your interest and we'll get in touch with you shortly!"
+                    );
+                  }}
+                  type="button"
                   className="w-full px-5 py-2 border border-black bg-black text-white rounded font-montserrat font-bold hover:opacity-90 hover:shadow-lg"
                 >
                   Submit Enquiry
