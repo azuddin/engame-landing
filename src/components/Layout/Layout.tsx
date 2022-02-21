@@ -1,9 +1,9 @@
 import { ReactNode, useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import { Footer, Modal, Navbar, Option, Select } from "@engame/components";
-import { FiCheckCircle } from "react-icons/fi";
 import axios from "axios";
 import toast from "react-hot-toast";
+import { FiCheckCircle } from "react-icons/fi";
 
 export interface LayoutProps {
   children?: ReactNode;
@@ -30,20 +30,20 @@ const Layout = (props: LayoutProps): JSX.Element => {
     setLoginModal(true);
   };
 
-  const dashboardBaseUrl = 'https://selfservice-tapmaster.engame.asia';
+  const dashboardBaseUrl = "https://selfservice-tapmaster.engame.asia";
 
   const inputLogin = {
-    email: '',
-    password: '',
+    email: "",
+    password: "",
   };
 
   const inputSignUp = {
-    contactPerson: '',
-    email: '',
-    password: '',
-    contactNumber: '',
-    companyName: '',
-    industry: 'Others',
+    contactPerson: "",
+    email: "",
+    password: "",
+    contactNumber: "",
+    companyName: "",
+    industry: "Others",
   };
 
   const login = () => {
@@ -53,12 +53,22 @@ const Layout = (props: LayoutProps): JSX.Element => {
       formData.set(key, inputLogin[key]);
     }
 
-    axios.post(`${dashboardBaseUrl}/BackEnd/Vendor/login.php`, formData, { withCredentials: true })
-        .then((response) => {
-          window.location.href = dashboardBaseUrl;
-        }).catch(({ response: { data: { message }}}) => {
-            // handle error here
-        })
+    axios
+      .post(`${dashboardBaseUrl}/BackEnd/Vendor/login.php`, formData, {
+        withCredentials: true,
+      })
+      .then((response) => {
+        window.location.href = dashboardBaseUrl;
+      })
+      .catch(
+        ({
+          response: {
+            data: { message },
+          },
+        }) => {
+          // handle error here
+        }
+      );
   };
 
   const signup = () => {
@@ -69,17 +79,24 @@ const Layout = (props: LayoutProps): JSX.Element => {
       formData.set(key, inputSignUp[key]);
     }
 
-    axios.post(`${dashboardBaseUrl}/BackEnd/Vendor/signup.php`, formData)
-        .then((response) => {
-          toast.success
-          ("Registration successful! Please check your email for your verification email to continue");
+    axios
+      .post(`${dashboardBaseUrl}/BackEnd/Vendor/signup.php`, formData)
+      .then((response) => {
+        toast.success(
+          "Registration successful! Please check your email for your verification email to continue"
+        );
 
-          setSignupModal(false);
-          
-        }).catch(({ response: { data: { message }}}) => {
+        setSignupModal(false);
+      })
+      .catch(
+        ({
+          response: {
+            data: { message },
+          },
+        }) => {
           // handle error here
-    })
-
+        }
+      );
   };
 
   useEffect(() => {
@@ -104,7 +121,7 @@ const Layout = (props: LayoutProps): JSX.Element => {
                 id="email"
                 type="email"
                 className="rounded-md border px-4 py-2 text-2xl lowercase"
-                onChange={e => inputLogin.email = e.target.value}
+                onChange={(e) => (inputLogin.email = e.target.value)}
               />
             </div>
             <div className="flex flex-col">
@@ -116,10 +133,13 @@ const Layout = (props: LayoutProps): JSX.Element => {
                 id="password"
                 type="password"
                 className="rounded-md border px-4 py-2 text-2xl lowercase"
-                onChange={e => inputLogin.password = e.target.value}
+                onChange={(e) => (inputLogin.password = e.target.value)}
               />
             </div>
-            <button className="w-full px-5 py-2 border border-black bg-black text-white rounded font-montserrat font-bold hover:opacity-90 hover:shadow-lg" onClick={login}>
+            <button
+              className="w-full px-5 py-2 border border-black bg-black text-white rounded font-montserrat font-bold hover:opacity-90 hover:shadow-lg"
+              onClick={login}
+            >
               Login
             </button>
             <div className="border-t my-8 w-full"></div>
@@ -170,7 +190,7 @@ const Layout = (props: LayoutProps): JSX.Element => {
                   id="name"
                   type="text"
                   className="rounded-md border px-4 py-2 text-2xl"
-                  onChange={e => inputSignUp.contactPerson = e.target.value}
+                  onChange={(e) => (inputSignUp.contactPerson = e.target.value)}
                 />
               </div>
               <div className="flex flex-col">
@@ -185,7 +205,7 @@ const Layout = (props: LayoutProps): JSX.Element => {
                   id="company_name"
                   type="text"
                   className="rounded-md border px-4 py-2 text-2xl"
-                  onChange={e => inputSignUp.companyName = e.target.value}
+                  onChange={(e) => (inputSignUp.companyName = e.target.value)}
                 />
               </div>
               <div className="flex flex-col">
@@ -197,7 +217,7 @@ const Layout = (props: LayoutProps): JSX.Element => {
                   id="email"
                   type="email"
                   className="rounded-md border px-4 py-2 text-2xl lowercase"
-                  onChange={e => inputSignUp.email = e.target.value}
+                  onChange={(e) => (inputSignUp.email = e.target.value)}
                 />
               </div>
               <div className="flex flex-col">
@@ -209,7 +229,7 @@ const Layout = (props: LayoutProps): JSX.Element => {
                   id="password"
                   type="password"
                   className="rounded-md border px-4 py-2 text-2xl lowercase"
-                  onChange={e => inputSignUp.password = e.target.value}
+                  onChange={(e) => (inputSignUp.password = e.target.value)}
                 />
               </div>
               <div className="flex flex-col">
@@ -224,7 +244,7 @@ const Layout = (props: LayoutProps): JSX.Element => {
                   id="phone_number"
                   type="tel"
                   className="rounded-md border px-4 py-2 text-2xl"
-                  onChange={e => inputSignUp.contactNumber = e.target.value}
+                  onChange={(e) => (inputSignUp.contactNumber = e.target.value)}
                 />
               </div>
               <div className="flex flex-col">
@@ -238,14 +258,19 @@ const Layout = (props: LayoutProps): JSX.Element => {
                 >
                   <Option key="Food and Beverage">Food and Beverage</Option>
                   <Option key="Retail">Retail</Option>
-                  <Option key="Fast Moving Consumer Goods">Fast Moving Consumer Goods</Option>
+                  <Option key="Fast Moving Consumer Goods">
+                    Fast Moving Consumer Goods
+                  </Option>
                   <Option key="Fashion">Fashion</Option>
                   <Option key="Cosmetics">Cosmetics</Option>
                   <Option key="Services">Services</Option>
                   <Option key="Others">Others</Option>
                 </Select>
               </div>
-              <button onClick={signup} className="w-full px-5 py-2 border border-black bg-black text-white rounded font-montserrat font-bold hover:opacity-90 hover:shadow-lg">
+              <button
+                onClick={signup}
+                className="w-full px-5 py-2 border border-black bg-black text-white rounded font-montserrat font-bold hover:opacity-90 hover:shadow-lg"
+              >
                 Start free Trial
               </button>
               <div className="flex flex-row space-x-2">

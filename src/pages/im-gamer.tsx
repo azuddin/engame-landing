@@ -1,8 +1,8 @@
 import Head from "next/head";
+import Link from "next/link";
 import { Layout, Section, TrendingGame } from "@engame/components";
 import { PageLayoutProps } from "@engame/types";
 import "react-multi-carousel/lib/styles.css";
-import Link from "next/link";
 
 const ImGamer: PageLayoutProps = () => {
   return (
@@ -33,9 +33,9 @@ const ImGamer: PageLayoutProps = () => {
                   Tap Master, Play the Games, Enjoy the Rewards!
                 </p>
                 <Link href="https://tapmaster.engame.asia" passHref>
-                <button className="w-full md:w-60 px-5 py-2 border border-black bg-black text-white rounded font-montserrat font-bold hover:opacity-90 hover:shadow-lg">
-                Play Tap Master Now!
-                </button>
+                  <button className="w-full md:w-60 px-5 py-2 border border-black bg-black text-white rounded font-montserrat font-bold hover:opacity-90 hover:shadow-lg">
+                    Play Tap Master Now!
+                  </button>
                 </Link>
               </div>
               <div className="flex justify-center items-center">
@@ -57,7 +57,10 @@ const ImGamer: PageLayoutProps = () => {
               Tired of games that earn you nothing? Join Tap Master Now!
             </p>
             <p className="text-center font-montserrat font-semibold text-2xl capitalize">
-            Tap Master is more than just fun. We are an {" "}<span className="font-extrabold">FREE</span> online arcade centre where allows you to earn real-life rewards while enjoying arcade-type casual games! Join Us Now!               
+              Tap Master is more than just fun. We are an{" "}
+              <span className="font-extrabold">FREE</span> online arcade centre
+              where allows you to earn real-life rewards while enjoying
+              arcade-type casual games! Join Us Now!
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-6 xl:gap-20">
               {[
@@ -237,17 +240,18 @@ const ImGamer: PageLayoutProps = () => {
               <div className="flex flex-col md:flex-row justify-between space-y-10 md:space-y-0 md:space-x-8">
                 <div className="flex flex-col space-y-2">
                   <p className="text-center md:text-left font-montserrat font-bold text-3xl capitalize">
-                    Games, Fun, Rewards!  Let&apos;s Play Now!
+                    Games, Fun, Rewards! Let&apos;s Play Now!
                   </p>
                   <p className="text-center md:text-left font-lato text-xl">
-                    <span className="font-bold">START</span> tapping and winning now!
+                    <span className="font-bold">START</span> tapping and winning
+                    now!
                   </p>
                 </div>
                 <div className="flex flex-col justify-center">
-                <Link href="https://tapmaster.engame.asia" passHref>
-                  <button className="w-full md:w-52 px-5 py-2 border border-black bg-black text-white rounded font-montserrat font-bold hover:opacity-90 hover:shadow-lg">
-                    Play Now
-                  </button>
+                  <Link href="https://tapmaster.engame.asia" passHref>
+                    <button className="w-full md:w-52 px-5 py-2 border border-black bg-black text-white rounded font-montserrat font-bold hover:opacity-90 hover:shadow-lg">
+                      Play Now
+                    </button>
                   </Link>
                 </div>
               </div>

@@ -1,10 +1,10 @@
 import { Key, useState } from "react";
 import Head from "next/head";
+import Link from "next/link";
 import { Layout, Section } from "@engame/components";
 import { PageLayoutProps } from "@engame/types";
 import { AnimatePresence, motion } from "framer-motion";
 import { FiChevronDown } from "react-icons/fi";
-import Link from "next/link";
 
 const Collapsible = (props: {
   title: string;
@@ -116,25 +116,25 @@ const FAQ: PageLayoutProps = () => {
                   {[
                     {
                       title: "Is the game free to play?",
-                      content: (
-                        <p>
-                          Yes! They are absolutely free to play!
-                        </p>
-                      ),
+                      content: <p>Yes! They are absolutely free to play!</p>,
                     },
                     {
                       title: "How can we redeem from your voucher merchants?",
                       content: (
                         <p>
-                          Open up your voucher bag by tapping the "Bag" button, tap on your vouchers and use the code to redeem from our merchants
+                          Open up your voucher bag by tapping the
+                          &quot;Bag&quot; button, tap on your vouchers and use
+                          the code to redeem from our merchants
                         </p>
                       ),
                     },
                     {
-                      title: "I encountered some issues or bugs in the game, how can I get help?",
+                      title:
+                        "I encountered some issues or bugs in the game, how can I get help?",
                       content: (
                         <p>
-                          Please email your feedback to enquiry@engame.asia, we will get in touch with you the soonest!
+                          Please email your feedback to enquiry@engame.asia, we
+                          will get in touch with you the soonest!
                         </p>
                       ),
                     },
@@ -168,7 +168,8 @@ const FAQ: PageLayoutProps = () => {
                         "Can we have our product featured in the game as part of the game?",
                       content: (
                         <p>
-                          Yes! This feature is available to Business and Professional subscribers
+                          Yes! This feature is available to Business and
+                          Professional subscribers
                         </p>
                       ),
                     },
@@ -177,16 +178,19 @@ const FAQ: PageLayoutProps = () => {
                         "Can we have a fully customised Tap Master deployment with no other vendors in it?",
                       content: (
                         <p>
-                          Yes! Please email us enquiry@engame.asia, our game expert will get in touch with you!
+                          Yes! Please email us enquiry@engame.asia, our game
+                          expert will get in touch with you!
                         </p>
                       ),
                     },
                     {
-                      title:
-                        "How do we promote our vouchers in the game?",
+                      title: "How do we promote our vouchers in the game?",
                       content: (
                         <p>
-                          Web links can be sent to your customers or posted in your social media for more exposure; or you can have the QR code included in your printed materials such as brochure, flyers or receipts
+                          Web links can be sent to your customers or posted in
+                          your social media for more exposure; or you can have
+                          the QR code included in your printed materials such as
+                          brochure, flyers or receipts
                         </p>
                       ),
                     },
@@ -195,7 +199,9 @@ const FAQ: PageLayoutProps = () => {
                         "Does Engame provide marketing services to enhance our exposure?",
                       content: (
                         <p>
-                          Engame only promotes the entire platform as a whole service, we don't promote specific brands or voucher
+                          Engame only promotes the entire platform as a whole
+                          service, we don&apos;t promote specific brands or
+                          voucher
                         </p>
                       ),
                     },
