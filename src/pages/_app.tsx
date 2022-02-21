@@ -49,7 +49,7 @@ function MyApp({ Component, pageProps }: AppLayoutProps) {
         ) : (
           <Component {...pageProps} />
         )}
-        <Toaster position="top-right" reverseOrder={false} />
+        <Toaster position="top-center" reverseOrder={false} />
       </SSRProvider>
     </>
   );

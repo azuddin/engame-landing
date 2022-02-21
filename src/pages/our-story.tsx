@@ -57,29 +57,35 @@ const OurStory: PageLayoutProps = () => {
       <Section>
         <div className="flex flex-col items-center space-y-6 py-10">
           <p className="text-center font-montserrat font-extrabold text-4xl">
-            Gaming Is One Of Those Things That&apos;s Pretty Amazing Because
-            When You Think About It, Everybody wants to game.
+          Our journey is like an adventure game. We are fighting enemies, completing tasks, leveling up, and we know we are heading the right way, just as the games do.
           </p>
           <p className="text-center font-montserrat font-semibold text-2xl">
-            The story of <span className="font-extrabold">Engame</span>{" "}
-            originally started in 2015 with the merger of two passionate game
-            making studios.
+            The adventure of <span className="font-extrabold">Engame</span>{" "}
+            started in 2018 with a bunch of passionate developers and artists
           </p>
         </div>
       </Section>
       <Section>
         {[
           {
-            title: "Dec 2015",
-            desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna pulvinar sit aenean nunc nunc gravida elit.",
+            title: "2018 – Game Start!",
+            desc: "The beginning of every story is often so unremarkable. Engame is the same. Founded on 8 Jan 2018, Engame doesn't have deep funds or a huge team to start, but we uphold a concept, which is to grow our studio to a place where creative game people from all around the world can gather, an international game. With this concept, we developed the Tap Master platform, and the game, Watafood, also our first Voucher Claiming Game has become the prototype of our future Play-to-Earn model.",
           },
           {
-            title: "Mar 2016",
-            desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna pulvinar sit aenean nunc nunc gravida elit.",
+            title: "2019 - First Stage Clear!",
+            desc: "It took us a year to determine our future direction. We decided to avail gaming as a medium to connect businesses with their target customers. Therefore, we began to integrate the Voucher Claiming model into our Tap Master Platform, hoping to benefit more enterprises through this model. Years of hard work finally allowed us to achieve unprecedented success and honored to win the MDEC DiCE 2019 (Digital Content Creation Challenge 2019). Shortly after winning the MDEC DiCE 2019, we were contacted by Maxis, one of the major telecommunications corporations in Malaysia to participate in their upcoming Startup Challenge in November; we took it in a heartbeat and proceed to go through their submission and screening process; after a couple of weeks, they informed us with a piece of intriguing news, Endgame is chosen to be one of the top 100 startups in Malaysia by Maxis, we were also been given an opportunity to showcase our solution in their Maxis Market Access Day in December.",
           },
           {
-            title: "May 2017",
-            desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna pulvinar sit aenean nunc nunc gravida elit.",
+            title: "2020 - Buffed!",
+            desc: "With the funding from MDEC, Tap Master is gaining popularity as a corporate customized solution platform. The adequate funding has allowed us to make leaps in technological development, not only enhancing the performance of the game, but also allowing us to rebrand the artwork to a realm that is more in line with market demand. With the development of the platform, we have also successfully received cooperation invitations from Texas and Tealive, everything is developing for the better, and the tacit understanding between the teams is becoming more and more mature. In December of the same year, we had another partner on our journey, we welcomed Ms. Jasmine officially joined Engame and enjoyed the game together.",
+          },
+          {
+            title: "2021 - New Area Found!",
+            desc: "Under the mentorship of Jasmine, we have reformed our concept to a more comprehensive level, and the concept of Game as a Service was born. In the same year, our platform was also favored by the Founder of Hermo and became our strategic partner with plans to enter the markets of United States Singapore, India, Philippines and Japan in the year 2022.",
+          },
+          {
+            title: "2022 - Our Next Stage!",
+            desc: "Our team is extremely excited about the arrival of 2022 as we will be launching 5 new games during the year! The accumulated experience allows us to enhance the platform with the data analytics technologies, allowing the companies can accurately capture their target users. In addition, we will officially launch our Tap Master on the iOS platform, and will also relaunch it on the Android platform to provide the immersive experience to both companies and also the gamers.",
           },
         ].map((i: { title: string; desc: string }, k) => {
           const even = k % 2 === 0;
@@ -132,7 +138,7 @@ const OurStory: PageLayoutProps = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 border-4 overflow-hidden border-yellow-400 rounded-2xl mb-10">
           <div className="flex flex-col space-y-8 p-8">
             <p className="font-montserrat font-extrabold text-4xl text-center md:text-left">
-              Studio That Gamifies Consumer Engagement
+              Make Everything Fun! The Gamification Platform that Drives Engagement!
             </p>
             <ol className="list-decimal pl-4 font-montserrat font-semibold text-sm xl:text-base">
               <li>
@@ -173,9 +179,8 @@ const OurStory: PageLayoutProps = () => {
       >
         <Section zIndex="z-30" bgColor="bg-transparent">
           <p className="py-10 font-montserrat font-extrabold text-4xl text-center capitalize">
-            <span className="underline underline-yellow">strategic plan</span>{" "}
-            that defines a goal or desired outcome and includes the major steps
-            or milestones needed to reach it.
+            <span className="underline underline-yellow">Strategic Plan</span>{" "}
+            That Defines A Goal Or Desired Outcome And Includes The Major Steps Or Milestones Needed To Reach It.
           </p>
         </Section>
         <Section bgColor="bg-transparent">
@@ -468,21 +473,21 @@ const OurStory: PageLayoutProps = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
             {[
               {
-                image: "/assets/images/home-2.png",
+                image: "/assets/images/core-vincent.png",
                 quote:
                   "“grow this studio to a place where creative game person from all around the world can gather.”",
                 name: "Vincent Chong",
                 title: "The Mastermind CEO",
               },
               {
-                image: "/assets/images/home-2.png",
+                image: "/assets/images/core-jasmine.png",
                 quote:
                   "“games and engagement thru entertainment will bring about the next paradigm shift in technological evolution for new business.”",
                 name: "Jasmine Ng",
                 title: "Business Leader Co-founder",
               },
               {
-                image: "/assets/images/home-2.png",
+                image: "/assets/images/core-tsengfeng.png",
                 quote:
                   "“Whether you&apos;re A casual gamer, OR you&apos;re an enthusiast, there&apos;s a large market for us.”",
                 name: "Cham Lee",

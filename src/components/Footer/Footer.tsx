@@ -47,23 +47,23 @@ const Footer = (): JSX.Element => {
           </div>
         </div>
         <div className="flex flex-col md:flex-row justify-between items-center border-t py-8 md:py-4 space-y-4 md:space-y-0">
-          <div className="social space-x-4 flex flex-row">
-            <div className="flex flex-col justify-center w-9 md:w-6">
+          <div className="social space-x-4 flex flex-row">          
+            <a href="https://www.instagram.com/engame.tap.master/" className="flex flex-col justify-center w-9 md:w-6">
               <img
                 src="/assets/images/ig-icon.png"
                 alt="logo"
                 width={40}
                 height={40}
               />
-            </div>
-            <div className="flex flex-col justify-center w-9 md:w-6">
+            </a>            
+            <a href="https://www.facebook.com/TapMaster.voucher.arcade" className="flex flex-col justify-center w-9 md:w-6">
               <img
                 src="/assets/images/fb-icon.png"
                 alt="logo"
                 width={40}
                 height={40}
               />
-            </div>
+            </a>
           </div>
           <div className="menu md:space-x-6 flex flex-col md:flex-row space-y-4 md:space-y-0">
             <Link href="/our-story" passHref>

@@ -39,16 +39,16 @@ const Home: PageLayoutProps = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-10 md:pt-0">
               <div className="flex flex-col justify-center space-y-2">
                 <p className="text-center md:text-left font-montserrat font-extrabold pb-4 text-4xl">
-                  Are You Interested To Join Us? Let&apos;s Grow Together!
+                  Adding Fun to Your Brand! Think Big, Play Beyond!
                 </p>
                 <Link href="/im-brand-owner" passHref>
-                  <button className="w-full md:w-52 px-5 py-2 border border-black bg-black text-white rounded font-montserrat font-bold hover:opacity-90 hover:shadow-lg">
-                    I&apos;m A Brand Owner
+                  <button className="w-full md:w-60 px-5 py-2 border border-black bg-black text-white rounded font-segoeui font-bold hover:opacity-90 hover:shadow-lg">
+                    I want more Customers!
                   </button>
                 </Link>
                 <Link href="/im-gamer" passHref>
-                  <button className="w-full md:w-52 px-5 py-2 border border-white bg-white rounded font-montserrat font-bold hover:opacity-90 hover:shadow-lg">
-                    Nope, I&apos;m A Gamer
+                  <button className="w-full md:w-60 px-5 py-2 border border-white bg-white rounded font-segoeui font-bold hover:opacity-90 hover:shadow-lg">
+                    I wanna play Games!
                   </button>
                 </Link>
               </div>
@@ -73,25 +73,25 @@ const Home: PageLayoutProps = () => {
             <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
               {[
                 {
-                  title: "+9 Million",
+                  title: "20,000+",
                   desc: "Players",
                   image_url:
                     "/assets/images/01 Home/EG---Landing-home_icon-1(D).png",
                 },
                 {
-                  title: "+163 Million",
+                  title: "700,000+ ",
                   desc: "Games played",
                   image_url:
                     "/assets/images/01 Home/EG---Landing-home_icon-2(D).png",
                 },
                 {
-                  title: "+16 Minutes",
+                  title: "3+ Minutes",
                   desc: "Played per session",
                   image_url:
                     "/assets/images/01 Home/EG---Landing-home_icon-3(D).png",
                 },
                 {
-                  title: "+26 Partners",
+                  title: "12+ Partners",
                   desc: "Across the globe",
                   image_url:
                     "/assets/images/01 Home/EG---Landing-home_icon-4(D).png",
@@ -129,12 +129,12 @@ const Home: PageLayoutProps = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
                 {[
                   {
-                    title: "+30 Games free to play",
-                    desc: "Creating amazing games is our DNA! Come and discover our latest games and future releases.",
+                    title: "30 F2P Rewards Earning Games",
+                    desc: "Tired of playing games that earn you nothing? Join us now to enjoy the most gratifying Free to Play Rewards Earning Game!",
                   },
                   {
-                    title: "+100K players join us",
-                    desc: "Creating amazing games is our DNA! Come and discover our latest games and future releases.",
+                    title: "20K+ Active Players in the Arcade",
+                    desc: "Don't know who to play with? No worries! You can easily play with over 20,000 active users at our platform and feel connected!",
                   },
                 ].map((i, k) => (
                   <div
@@ -184,7 +184,7 @@ const Home: PageLayoutProps = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-10 py-10">
             <div className="flex flex-col items-center space-y-6">
               <p className="text-center font-montserrat font-extrabold text-4xl md:text-3xl">
-                Learn more about Why Superbrand work with us
+              Learn more about why Super-brands work with us?
               </p>
               <div
                 style={{
@@ -202,7 +202,7 @@ const Home: PageLayoutProps = () => {
             </div>
             <div className="flex flex-col items-center space-y-6">
               <p className="text-center font-montserrat font-extrabold text-4xl md:text-3xl">
-                Deliver an immersive brands to our audience
+              The Immersive Gaming Experience is Here. Are You Ready?
               </p>
               <div
                 style={{
@@ -230,7 +230,7 @@ const Home: PageLayoutProps = () => {
                     Be part of the next gaming phenomenon
                   </p>
                   <p className="font-lato text-xl">
-                    Looking to make a media inquiry ? Any feedback or
+                    Testing to make a media inquiry ? Any feedback or
                     suggestions about one of our games? Fill out the form and
                     we&apos;ll get back to you !
                   </p>
@@ -297,16 +297,19 @@ const Home: PageLayoutProps = () => {
                 </div>
                 <div className="flex flex-col">
                   <label htmlFor="category" className="font-lato text-xl mb-1">
-                    Category <span className="text-red-600">*</span>
+                    Industry <span className="text-red-600">*</span>
                   </label>
                   <Select
-                    name="category"
-                    aria-label="Category"
-                    placeholder="Select a category"
+                    name="industry"
+                    aria-label="Industry"
+                    placeholder="Select an industry"
                   >
-                    <Option key="category 1">Category 1</Option>
-                    <Option key="category 2">Category 2</Option>
-                    <Option key="category 3">Category 3</Option>
+                    <Option key="food and beverages">Food and Beverages</Option>
+                    <Option key="retail">Retail</Option>
+                    <Option key="fast moving consumer goods">Fast Moving Consumer Goods</Option>
+                    <Option key="fashion">Fashion</Option>
+                    <Option key="cosmetics">Cosmetics</Option>
+                    <Option key="services">Services</Option>
                   </Select>
                 </div>
                 <div className="flex flex-col">

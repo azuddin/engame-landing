@@ -4,6 +4,7 @@ import { Layout, Section } from "@engame/components";
 import { PageLayoutProps } from "@engame/types";
 import { AnimatePresence, motion } from "framer-motion";
 import { FiChevronDown } from "react-icons/fi";
+import Link from "next/link";
 
 const Collapsible = (props: {
   title: string;
@@ -87,7 +88,7 @@ const FAQ: PageLayoutProps = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 py-10">
               <div className="flex flex-col justify-center space-y-2">
                 <p className="text-center md:text-left font-montserrat font-extrabold pb-4 text-4xl">
-                  We&apos;re here to help you solve your problem
+                  We&apos;re here to solve your problems
                 </p>
               </div>
               <div className="flex justify-center items-center">
@@ -117,43 +118,23 @@ const FAQ: PageLayoutProps = () => {
                       title: "Is the game free to play?",
                       content: (
                         <p>
-                          Est ex dolore qui ullamco duis non consectetur elit ad
-                          ullamco sit. Nostrud aute eu eu ullamco proident esse
-                          labore deserunt esse aute. Lorem sint cillum non
-                          aliquip veniam sunt pariatur aute est occaecat. Ex
-                          amet esse elit quis consequat reprehenderit fugiat. Ea
-                          ullamco cupidatat sunt et. Nulla enim anim ipsum
-                          ullamco nostrud consectetur est Lorem eu. Deserunt
-                          exercitation amet ea laborum mollit laboris.
+                          Yes! They are absolutely free to play!
                         </p>
                       ),
                     },
                     {
-                      title: "How can we redeem from your voucher vendors?",
+                      title: "How can we redeem from your voucher merchants?",
                       content: (
                         <p>
-                          Officia voluptate pariatur do tempor nisi excepteur
-                          aute proident in fugiat excepteur. Reprehenderit est
-                          proident eu ad occaecat in consequat occaecat culpa
-                          commodo veniam non. Ipsum eu do deserunt ea aliqua
-                          nulla. Ut nulla pariatur cillum et velit officia esse.
-                          Ipsum incididunt cillum tempor officia aliqua
-                          reprehenderit laborum aliqua. Irure do excepteur ex
-                          consectetur elit laboris amet eiusmod proident
-                          aliquip.
+                          Open up your voucher bag by tapping the "Bag" button, tap on your vouchers and use the code to redeem from our merchants
                         </p>
                       ),
                     },
                     {
-                      title: "How can we redeem from your voucher vendors?",
+                      title: "I encountered some issues or bugs in the game, how can I get help?",
                       content: (
                         <p>
-                          Incididunt occaecat aute esse est quis dolore irure
-                          eiusmod aliquip minim proident quis. Ullamco id
-                          laboris qui sunt dolor sit anim do nostrud minim
-                          nostrud proident aliqua consectetur. Magna ut minim
-                          sunt laborum eiusmod Lorem pariatur adipisicing minim
-                          ea.
+                          Please email your feedback to enquiry@engame.asia, we will get in touch with you the soonest!
                         </p>
                       ),
                     },
@@ -187,14 +168,7 @@ const FAQ: PageLayoutProps = () => {
                         "Can we have our product featured in the game as part of the game?",
                       content: (
                         <p>
-                          Est ex dolore qui ullamco duis non consectetur elit ad
-                          ullamco sit. Nostrud aute eu eu ullamco proident esse
-                          labore deserunt esse aute. Lorem sint cillum non
-                          aliquip veniam sunt pariatur aute est occaecat. Ex
-                          amet esse elit quis consequat reprehenderit fugiat. Ea
-                          ullamco cupidatat sunt et. Nulla enim anim ipsum
-                          ullamco nostrud consectetur est Lorem eu. Deserunt
-                          exercitation amet ea laborum mollit laboris.
+                          Yes! This feature is available to Business and Professional subscribers
                         </p>
                       ),
                     },
@@ -203,29 +177,16 @@ const FAQ: PageLayoutProps = () => {
                         "Can we have a fully customised Tap Master deployment with no other vendors in it?",
                       content: (
                         <p>
-                          Officia voluptate pariatur do tempor nisi excepteur
-                          aute proident in fugiat excepteur. Reprehenderit est
-                          proident eu ad occaecat in consequat occaecat culpa
-                          commodo veniam non. Ipsum eu do deserunt ea aliqua
-                          nulla. Ut nulla pariatur cillum et velit officia esse.
-                          Ipsum incididunt cillum tempor officia aliqua
-                          reprehenderit laborum aliqua. Irure do excepteur ex
-                          consectetur elit laboris amet eiusmod proident
-                          aliquip.
+                          Yes! Please email us enquiry@engame.asia, our game expert will get in touch with you!
                         </p>
                       ),
                     },
                     {
                       title:
-                        "Can we have a fully customised Tap Master deployment with no other vendors in it?",
+                        "How do we promote our vouchers in the game?",
                       content: (
                         <p>
-                          Incididunt occaecat aute esse est quis dolore irure
-                          eiusmod aliquip minim proident quis. Ullamco id
-                          laboris qui sunt dolor sit anim do nostrud minim
-                          nostrud proident aliqua consectetur. Magna ut minim
-                          sunt laborum eiusmod Lorem pariatur adipisicing minim
-                          ea.
+                          Web links can be sent to your customers or posted in your social media for more exposure; or you can have the QR code included in your printed materials such as brochure, flyers or receipts
                         </p>
                       ),
                     },
@@ -234,10 +195,7 @@ const FAQ: PageLayoutProps = () => {
                         "Does Engame provide marketing services to enhance our exposure?",
                       content: (
                         <p>
-                          Our fees vary depending on the industry and average
-                          monthly turnover. We charge a small percentage on each
-                          successful transaction that uses Riipay. Please get in
-                          touch for more details on our fee structure.
+                          Engame only promotes the entire platform as a whole service, we don't promote specific brands or voucher
                         </p>
                       ),
                     },
@@ -270,14 +228,16 @@ const FAQ: PageLayoutProps = () => {
           <Section zIndex="z-10" bgColor="bg-transparent">
             <div className="flex flex-col items-center py-10 space-y-10">
               <p className="text-center font-montserrat font-extrabold text-4xl">
-                Still need help?
+                Need further assistance?
               </p>
               <p className="text-center font-montserrat text-3xl">
                 Our team will be happy to help!
               </p>
-              <button className="w-full md:w-52 px-5 py-2 border border-black bg-black text-white rounded font-montserrat font-bold hover:opacity-90 hover:shadow-lg">
-                Get in touch
-              </button>
+              <Link href="/contact-us" passHref>
+                <button className="w-full md:w-52 px-5 py-2 border border-black bg-black text-white rounded font-montserrat font-bold hover:opacity-90 hover:shadow-lg">
+                  Get in touch
+                </button>
+              </Link>
             </div>
           </Section>
         </div>

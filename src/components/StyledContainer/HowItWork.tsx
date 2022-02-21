@@ -7,7 +7,7 @@ const HowItWork = (): JSX.Element => {
         <div className="flex flex-col md:w-1/3 items-center justify-center md:items-start space-y-6 md:space-y-2">
           <div className="max-w-xs md:h-32 md:w-32 flex justify-center">
             <img
-              src="/assets/images/01 Home/EG---Landing-home_info(D).png"
+              src="/assets/images/EG---cat354.png"
               width={800}
               height={800}
               alt="home-2"
@@ -15,16 +15,15 @@ const HowItWork = (): JSX.Element => {
             />
           </div>
           <p className="text-center md:text-left font-montserrat font-extrabold text-4xl">
-            How it work easier?
+            You are just 3 steps away!
           </p>
           <p className="text-center md:text-left font-lato text-lg">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
-            netus et ut imperdiet et quisque donec
+          You only need these 3 simple steps to gamify your business and get your products flying off the shelves!
           </p>
         </div>
         <div
           style={{
-            backgroundImage: "url('/assets/images/home-4.png')",
+            backgroundImage: "url('/assets/images/engame_step123.gif')",
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}

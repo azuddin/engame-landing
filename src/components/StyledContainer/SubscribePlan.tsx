@@ -21,18 +21,17 @@ const SubscribePlan = (props: {
       <Section bgColor={backgroundImage ? "bg-transparent" : "bg-white"}>
         <div className="flex flex-col items-center py-10">
           <p className="text-center md:text-left font-montserrat font-extrabold text-4xl mb-4">
-            Subscribe your plan now!
+           Pick Your Best Plan Now!
           </p>
           <p className="text-center max-w-lg font-lato font-medium text-xl capitalize mb-10">
-            Interested to find out what Games as a Service can do to your
-            business? Subscribe to our basic starter package for FREE today!
+          Select your desired plan to get access easily! Subscribe to our Basic Starter Plan for FREE Today!	
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-6 xl:gap-20">
             {[
               {
                 title: "Basic Starter",
                 price: "FREE",
-                desc: "Empowering users to manage their electronic health record in a secure & interoperable manner",
+                desc: "Get complete access to the first level and learn exactly how gamification works!",
                 descList: [
                   "Access to GaaS player base",
                   "Voucher distribution",
@@ -42,8 +41,8 @@ const SubscribePlan = (props: {
               },
               {
                 title: "Business",
-                price: "RM299",
-                desc: "Empowering users to manage their electronic health record in a secure & interoperable manner",
+                price: "USD49",
+                desc: "Perfect Choice for teams and businesses ready to feature your brand identities in your own game!",
                 descList: [
                   "Access to GaaS player base",
                   "Voucher distribution",
@@ -56,8 +55,8 @@ const SubscribePlan = (props: {
               },
               {
                 title: "Professional",
-                price: "RM599",
-                desc: "Empowering users to manage their electronic health record in a secure & interoperable manner",
+                price: "USD149",
+                desc: "Ideal Choice for businesses or enterprises that would like to customize a well-fitted challenging game with specific business or campaign needs.",
                 descList: [
                   "Access to GaaS player base",
                   "Voucher distribution",
@@ -92,7 +91,7 @@ const SubscribePlan = (props: {
                     <span className="font-montserrat font-bold text-3xl">
                       {i.price}
                     </span>
-                    /annual
+                    /monthly
                   </p>
                   <p className="text-left font-lato">{i.desc}</p>
                   <ol>

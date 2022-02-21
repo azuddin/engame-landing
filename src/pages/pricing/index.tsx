@@ -38,11 +38,10 @@ const Pricing: PageLayoutProps = () => {
                   Get started now, pick a plan later.
                 </p>
                 <p className="text-center md:text-left font-lato pb-4 text-2xl">
-                  Try Engame <span className="font-bold">FREE</span> for 7 days
-                  and get unrestricted access to all our products and features.
+                Get full access to the features of any Engame plan for up to <span className="font-bold">7 days!</span> Great for companies of all sizes and industries.  
                 </p>
                 <p className="w-full md:w-72 px-5 py-2 border border-gray-100 bg-gray-100 text-black rounded-full font-montserrat font-bold text-center">
-                  No credit card required
+                Subscribe your plan now!
                 </p>
               </div>
               <div className="flex justify-center items-center">

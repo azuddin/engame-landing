@@ -83,16 +83,19 @@ const ContactUs: PageLayoutProps = () => {
             </div>
             <div className="flex flex-col">
               <label htmlFor="category" className="font-lato text-xl mb-1">
-                Category <span className="text-red-600">*</span>
+                Industry <span className="text-red-600">*</span>
               </label>
               <Select
-                name="category"
-                aria-label="Category"
-                placeholder="Select a category"
+                name="industry"
+                aria-label="Industry"
+                placeholder="Select an industry"
               >
-                <Option key="category 1">Category 1</Option>
-                <Option key="category 2">Category 2</Option>
-                <Option key="category 3">Category 3</Option>
+                    <Option key="food and beverages">Food and Beverages</Option>
+                    <Option key="retail">Retail</Option>
+                    <Option key="fast moving consumer goods">Fast Moving Consumer Goods</Option>
+                    <Option key="fashion">Fashion</Option>
+                    <Option key="cosmetics">Cosmetics</Option>
+                    <Option key="services">Services</Option>
               </Select>
             </div>
             <div className="flex flex-col">
