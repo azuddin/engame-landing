@@ -57,7 +57,9 @@ const OurStory: PageLayoutProps = () => {
       <Section>
         <div className="flex flex-col items-center space-y-6 py-10">
           <p className="text-center font-montserrat font-extrabold text-4xl">
-          Our journey is like an adventure game. We are fighting enemies, completing tasks, leveling up, and we know we are heading the right way, just as the games do.
+            Our journey is like an adventure game. We are fighting enemies,
+            completing tasks, leveling up, and we know we are heading the right
+            way, just as the games do.
           </p>
           <p className="text-center font-montserrat font-semibold text-2xl">
             The adventure of <span className="font-extrabold">Engame</span>{" "}
@@ -138,7 +140,8 @@ const OurStory: PageLayoutProps = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 border-4 overflow-hidden border-yellow-400 rounded-2xl mb-10">
           <div className="flex flex-col space-y-8 p-8">
             <p className="font-montserrat font-extrabold text-4xl text-center md:text-left">
-              Make Everything Fun! The Gamification Platform that Drives Engagement!
+              Make Everything Fun! The Gamification Platform that Drives
+              Engagement!
             </p>
             <ol className="list-decimal pl-4 font-montserrat font-semibold text-sm xl:text-base">
               <li>
@@ -180,7 +183,8 @@ const OurStory: PageLayoutProps = () => {
         <Section zIndex="z-30" bgColor="bg-transparent">
           <p className="py-10 font-montserrat font-extrabold text-4xl text-center capitalize">
             <span className="underline underline-yellow">Strategic Plan</span>{" "}
-            That Defines A Goal Or Desired Outcome And Includes The Major Steps Or Milestones Needed To Reach It.
+            That Defines A Goal Or Desired Outcome And Includes The Major Steps
+            Or Milestones Needed To Reach It.
           </p>
         </Section>
         <Section bgColor="bg-transparent">
@@ -489,7 +493,7 @@ const OurStory: PageLayoutProps = () => {
               {
                 image: "/assets/images/core-tsengfeng.png",
                 quote:
-                  "“Whether you&apos;re A casual gamer, OR you&apos;re an enthusiast, there&apos;s a large market for us.”",
+                  "“Whether you're A casual gamer, OR you're an enthusiast, there's a large market for us.”",
                 name: "Cham Lee",
                 title: "The Archbishop CTO",
               },

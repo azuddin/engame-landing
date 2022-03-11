@@ -1,9 +1,44 @@
 import Head from "next/head";
-import { Layout, Option, Section, Select } from "@engame/components";
+import { Input, Layout, Option, Section, Select } from "@engame/components";
+import { dashboardBaseUrl } from "@engame/constants";
 import { PageLayoutProps } from "@engame/types";
+import axios from "axios";
 import toast from "react-hot-toast";
 
 const ContactUs: PageLayoutProps = () => {
+  const inputContactUs = {
+    contactPerson: "",
+    email: "",
+    password: "",
+    contactNumber: "",
+    companyName: "",
+    industry: "Others",
+    message: "",
+  };
+  const signup = () => {
+    const formData = new FormData();
+    for (const key in inputContactUs) {
+      //@ts-ignore
+      formData.set(key, inputContactUs[key]);
+    }
+    axios
+      .post(`${dashboardBaseUrl}/BackEnd/Vendor/signup.php`, formData)
+      .then((response) => {
+        toast.success(
+          "Registration successful! Please check your email for your verification email to continue"
+        );
+      })
+      .catch(
+        ({
+          response: {
+            data: { message },
+          },
+        }) => {
+          // handle error here
+        }
+      );
+  };
+
   return (
     <>
       <Head>
@@ -37,80 +72,75 @@ const ContactUs: PageLayoutProps = () => {
             </div>
           </div>
           <div className="flex flex-col space-y-6">
+            <Input
+              name="name"
+              id="name"
+              type="text"
+              label="Name"
+              isRequired
+              onChange={(e) => (inputContactUs.contactPerson = e.target.value)}
+            />
+            <Input
+              name="company_name"
+              id="company_name"
+              type="text"
+              label="Company Name"
+              isRequired
+              onChange={(e) => (inputContactUs.companyName = e.target.value)}
+            />
+            <Input
+              name="email"
+              id="email"
+              type="email"
+              label="Email"
+              isRequired
+              onChange={(e) => (inputContactUs.email = e.target.value)}
+            />
+            <Input
+              name="phone_number"
+              id="phone_number"
+              type="tel"
+              label="Phone Number"
+              isRequired
+              onChange={(e) => (inputContactUs.contactNumber = e.target.value)}
+            />
             <div className="flex flex-col">
-              <label htmlFor="name" className="font-lato text-xl mb-1">
-                Name <span className="text-red-600">*</span>
-              </label>
-              <input
-                name="name"
-                id="name"
-                type="text"
-                className="rounded-md border px-4 py-2 text-2xl"
-              />
-            </div>
-            <div className="flex flex-col">
-              <label htmlFor="company_name" className="font-lato text-xl mb-1">
-                Company Name <span className="text-red-600">*</span>
-              </label>
-              <input
-                name="company_name"
-                id="company_name"
-                type="text"
-                className="rounded-md border px-4 py-2 text-2xl"
-              />
-            </div>
-            <div className="flex flex-col">
-              <label htmlFor="email" className="font-lato text-xl mb-1">
-                Email <span className="text-red-600">*</span>
-              </label>
-              <input
-                name="email"
-                id="email"
-                type="email"
-                className="rounded-md border px-4 py-2 text-2xl lowercase"
-              />
-            </div>
-            <div className="flex flex-col">
-              <label htmlFor="phone_number" className="font-lato text-xl mb-1">
-                Phone Number <span className="text-red-600">*</span>
-              </label>
-              <input
-                name="phone_number"
-                id="phone_number"
-                type="tel"
-                className="rounded-md border px-4 py-2 text-2xl"
-              />
-            </div>
-            <div className="flex flex-col">
-              <label htmlFor="category" className="font-lato text-xl mb-1">
+              <label htmlFor="category" className="font-lato text-md mb-1">
                 Industry <span className="text-red-600">*</span>
               </label>
               <Select
                 name="industry"
                 aria-label="Industry"
                 placeholder="Select an industry"
+                onSelectionChange={(e) =>
+                  (inputContactUs.industry = e as string)
+                }
               >
-                    <Option key="food and beverages">Food and Beverages</Option>
-                    <Option key="retail">Retail</Option>
-                    <Option key="fast moving consumer goods">Fast Moving Consumer Goods</Option>
-                    <Option key="fashion">Fashion</Option>
-                    <Option key="cosmetics">Cosmetics</Option>
-                    <Option key="services">Services</Option>
+                <Option key="food and beverages">Food and Beverages</Option>
+                <Option key="retail">Retail</Option>
+                <Option key="fast moving consumer goods">
+                  Fast Moving Consumer Goods
+                </Option>
+                <Option key="fashion">Fashion</Option>
+                <Option key="cosmetics">Cosmetics</Option>
+                <Option key="services">Services</Option>
               </Select>
             </div>
             <div className="flex flex-col">
-              <label htmlFor="message" className="font-lato text-xl mb-1">
+              <label htmlFor="message" className="font-lato text-md mb-1">
                 Enter Your Message <span className="text-red-600">*</span>
               </label>
               <textarea
                 name="message"
                 id="message"
                 rows={4}
-                className="rounded-md border px-4 py-2 text-2xl"
+                className="rounded-md border px-4 py-2 text-md"
+                onChange={(e) => (inputContactUs.message = e.target.value)}
               ></textarea>
             </div>
             <button
               onClick={() => {
+                signup();
                 toast.success(
                   "Submission Successful! Thank you for your interest and we'll get in touch with you shortly!"
                 );

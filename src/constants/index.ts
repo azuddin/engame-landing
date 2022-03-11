@@ -248,3 +248,5 @@ export const carouselResponsive = {
     partialVisibilityGutter: 30,
   },
 };
+
+export const dashboardBaseUrl = "https://selfservice-tapmaster.engame.asia";
