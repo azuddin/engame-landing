@@ -21,7 +21,12 @@ const ContactUs: PageLayoutProps = () => {
       message: "test",
     },
   });
-  const contactUs = async (formData: any) => {
+  const contactUs = async (data: any) => {
+    const formData = new FormData();
+    for (const key in data) {
+      formData.set(key, data[key]);
+    }
+
     await fetch(`https://engame.asia/web_backend/enquiry.php`, {
       method: "POST",
       body: JSON.stringify(formData),

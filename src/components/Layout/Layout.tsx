@@ -75,7 +75,12 @@ const Layout = (props: LayoutProps): JSX.Element => {
     setLoginModal(false);
   };
 
-  const login = async (formData: LoginForm) => {
+  const login = async (data: any) => {
+    const formData = new FormData();
+    for (const key in data) {
+      formData.set(key, data[key]);
+    }
+
     await fetch(loginEndpoint, {
       method: "POST",
       body: JSON.stringify(formData),
@@ -90,11 +95,15 @@ const Layout = (props: LayoutProps): JSX.Element => {
       });
   };
 
-  const signup = async (formData: SignupForm) => {
-    console.log("DATA=>", formData);
+  const signup = async (data: any) => {
+    const formData = new FormData();
+    for (const key in data) {
+      formData.set(key, data[key]);
+    }
+
     await fetch(signupEndpoint, {
       method: "POST",
-      body: JSON.stringify(formData),
+      body: formData,
       headers: headers,
     })
       .then((res) => res.json())

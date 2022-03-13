@@ -31,7 +31,12 @@ const Home: PageLayoutProps = () => {
       message: "test",
     },
   });
-  const contactUs = async (formData: any) => {
+  const contactUs = async (data: any) => {
+    const formData = new FormData();
+    for (const key in data) {
+      formData.set(key, data[key]);
+    }
+
     await fetch(enquiryEndpoint, {
       method: "POST",
       body: JSON.stringify(formData),
