@@ -11,8 +11,6 @@ interface NavbarProps {
 }
 
 const Navbar = (props: NavbarProps): JSX.Element => {
-  const { push } = useRouter();
-
   const { onClickLogin, onClickStartFreeTrial, onToggleShowMenu, isOpen } =
     props;
 
@@ -57,14 +55,6 @@ const Navbar = (props: NavbarProps): JSX.Element => {
                   Contact Us
                 </button>
               </Link>
-              <div className="flex flex-col justify-center items-center py-4">
-                <img
-                  src="/assets/images/home-2.png"
-                  alt="menu image"
-                  width={300}
-                  height={300}
-                />
-              </div>
               <button
                 onClick={onClickStartFreeTrial}
                 className="text-montserrat font-bold text-lg bg-black text-white border-2 border-black rounded-lg py-2 hover:opacity-90 hover:shadow-lg"

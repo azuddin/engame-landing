@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import Script from "next/script";
 import { AppLayoutProps } from "@engame/types";
@@ -7,8 +7,22 @@ import { Toaster } from "react-hot-toast";
 import * as gtag from "../lib/gtag";
 import "../styles/globals.css";
 
+interface AppContextValue {
+  modalName: string;
+  handleToggleModal: (modalName: string) => void;
+}
+export const AppContext = createContext<AppContextValue>({
+  modalName: "",
+  handleToggleModal: () => {},
+});
+
 function MyApp({ Component, pageProps }: AppLayoutProps) {
   const router = useRouter();
+
+  const [modalName, setModalName] = useState("");
+  const handleToggleModal = (modal_name: string) => {
+    setModalName(modal_name);
+  };
 
   useEffect(() => {
     const handleRouteChange = (url: any) => {
@@ -42,13 +56,15 @@ function MyApp({ Component, pageProps }: AppLayoutProps) {
       />
 
       <SSRProvider>
-        {Component.layout ? (
-          <Component.layout>
+        <AppContext.Provider value={{ modalName, handleToggleModal }}>
+          {Component.layout ? (
+            <Component.layout>
+              <Component {...pageProps} />
+            </Component.layout>
+          ) : (
             <Component {...pageProps} />
-          </Component.layout>
-        ) : (
-          <Component {...pageProps} />
-        )}
+          )}
+        </AppContext.Provider>
         <Toaster position="top-center" reverseOrder={false} />
       </SSRProvider>
     </>

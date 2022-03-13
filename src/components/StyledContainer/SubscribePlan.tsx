@@ -1,6 +1,8 @@
+import { useContext } from "react";
 import { useRouter } from "next/router";
 import { Section } from "@engame/components";
 import { FiCheckCircle } from "react-icons/fi";
+import { AppContext } from "src/pages/_app";
 
 const SubscribePlan = (props: {
   backgroundImage?: boolean;
@@ -9,6 +11,8 @@ const SubscribePlan = (props: {
   const { push } = useRouter();
   const { backgroundImage, backgroundImageUrl = "/assets/images/EG---bg.jpg" } =
     props;
+
+  const { handleToggleModal } = useContext(AppContext);
 
   return (
     <div
@@ -39,6 +43,9 @@ const SubscribePlan = (props: {
                   "Fixed game challenges",
                   "Free business package trial",
                 ],
+                onClick: () => {
+                  handleToggleModal("signup");
+                },
               },
               {
                 title: "Business",
@@ -53,6 +60,9 @@ const SubscribePlan = (props: {
                   "Fixed game challenges",
                 ],
                 isPopular: true,
+                onClick: () => {
+                  handleToggleModal("signup2");
+                },
               },
               {
                 title: "Professional",
@@ -67,56 +77,63 @@ const SubscribePlan = (props: {
                   "Featuring your competition in game",
                   "Custom game challenges",
                 ],
+                onClick: () => {
+                  handleToggleModal("signup2");
+                },
               },
-            ].map((i, pricingIndex) => (
-              <div
-                key={`pricing-${pricingIndex}`}
-                className={`bg-white rounded-2xl shadow-lg p-4 flex flex-col justify-between relative overflow-hidden ${
-                  i?.isPopular ? "border-2 border-black" : ""
-                }`}
-              >
-                {i?.isPopular && (
-                  <div className="w-20 absolute top-0 right-0 overflow-hidden inline-block">
-                    <div className="h-20 bg-black transform rotate-45 origin-bottom-right flex-1 flex items-end -ml-8 px-8">
-                      <p className="text-center text-white capitalize font-montserrat font-bold text-xs">
-                        popular choice
-                      </p>
-                    </div>
-                  </div>
-                )}
-                <div className="flex flex-col space-y-4">
-                  <p className="text-left font-montserrat font-bold text-xl capitalize">
-                    {i.title}
-                  </p>
-                  <p className="text-left font-lato font-thin text-xl">
-                    <span className="font-montserrat font-bold text-3xl">
-                      {i.price}
-                    </span>
-                    /monthly
-                  </p>
-                  <p className="text-left font-lato">{i.desc}</p>
-                  <ol>
-                    {i.descList.map((li, descListKey) => (
-                      <li
-                        key={`${pricingIndex}-descList-${descListKey}`}
-                        className="flex space-x-2 text-left font-lato font-bold"
-                      >
-                        <span className="text-yellow-400 text-lg pt-1">
-                          <FiCheckCircle />
-                        </span>
-                        <p>{li}</p>
-                      </li>
-                    ))}
-                  </ol>
-                </div>
-                <button
-                  onClick={() => push("/pricing/payment")}
-                  className="w-full px-2 py-1 mt-6 text-base bg-black text-white rounded border border-black font-montserrat font-bold hover:opacity-90 hover:shadow-lg"
+            ].map((i, pricingIndex) => {
+              const redirectPayment = () => push("/pricing/payment");
+              const handleOnClick = i.onClick ?? redirectPayment;
+              return (
+                <div
+                  key={`pricing-${pricingIndex}`}
+                  className={`bg-white rounded-2xl shadow-lg p-4 flex flex-col justify-between relative overflow-hidden ${
+                    i?.isPopular ? "border-2 border-black" : ""
+                  }`}
                 >
-                  Choose plan
-                </button>
-              </div>
-            ))}
+                  {i?.isPopular && (
+                    <div className="w-20 absolute top-0 right-0 overflow-hidden inline-block">
+                      <div className="h-20 bg-black transform rotate-45 origin-bottom-right flex-1 flex items-end -ml-8 px-8">
+                        <p className="text-center text-white capitalize font-montserrat font-bold text-xs">
+                          popular choice
+                        </p>
+                      </div>
+                    </div>
+                  )}
+                  <div className="flex flex-col space-y-4">
+                    <p className="text-left font-montserrat font-bold text-xl capitalize">
+                      {i.title}
+                    </p>
+                    <p className="text-left font-lato font-thin text-xl">
+                      <span className="font-montserrat font-bold text-3xl">
+                        {i.price}
+                      </span>
+                      /monthly
+                    </p>
+                    <p className="text-left font-lato">{i.desc}</p>
+                    <ol>
+                      {i.descList.map((li, descListKey) => (
+                        <li
+                          key={`${pricingIndex}-descList-${descListKey}`}
+                          className="flex space-x-2 text-left font-lato font-bold"
+                        >
+                          <span className="text-yellow-400 text-lg pt-1">
+                            <FiCheckCircle />
+                          </span>
+                          <p>{li}</p>
+                        </li>
+                      ))}
+                    </ol>
+                  </div>
+                  <button
+                    onClick={handleOnClick}
+                    className="w-full px-2 py-1 mt-6 text-base bg-black text-white rounded border border-black font-montserrat font-bold hover:opacity-90 hover:shadow-lg"
+                  >
+                    Choose plan
+                  </button>
+                </div>
+              );
+            })}
           </div>
         </div>
       </Section>
