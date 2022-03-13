@@ -83,7 +83,7 @@ const Layout = (props: LayoutProps): JSX.Element => {
       case "signup2":
         setSignupModal(true);
         setLoginModal(false);
-        setSignupModalTitle("Signup Now!");
+        setSignupModalTitle("Register Now!");
         break;
 
       default:
