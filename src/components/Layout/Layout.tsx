@@ -8,8 +8,14 @@ import {
   Option,
   Select,
 } from "@engame/components";
-import { dashboardBaseUrl } from "@engame/constants";
-import axios from "axios";
+import {
+  dashboardBaseUrl,
+  headers,
+  loginEndpoint,
+  signupEndpoint,
+} from "@engame/constants";
+import { LoginForm, SignupForm } from "@engame/types";
+import { Controller, useForm } from "react-hook-form";
 import toast from "react-hot-toast";
 import { FiCheckCircle } from "react-icons/fi";
 
@@ -19,6 +25,32 @@ export interface LayoutProps {
 
 const Layout = (props: LayoutProps): JSX.Element => {
   const [showMenu, setShowMenu] = useState(false);
+
+  const {
+    handleSubmit: handleSubmitLogin,
+    control: controlLogin,
+    reset: resetLogin,
+  } = useForm<LoginForm>({
+    defaultValues: {
+      email: "",
+      password: "",
+    },
+  });
+
+  const {
+    handleSubmit: handleSubmitSignup,
+    control: controlSignup,
+    reset: resetSignup,
+  } = useForm<SignupForm>({
+    defaultValues: {
+      contactPerson: "rlz56929 test",
+      email: "rlz56929@mzico.com",
+      password: "zaq1xsw2",
+      contactNumber: "0123456789",
+      companyName: "mzico.com test",
+      industry: "Others",
+    },
+  });
 
   const { events } = useRouter();
 
@@ -43,71 +75,38 @@ const Layout = (props: LayoutProps): JSX.Element => {
     setLoginModal(false);
   };
 
-  const inputLogin = {
-    email: "",
-    password: "",
-  };
-
-  const inputSignUp = {
-    contactPerson: "",
-    email: "",
-    password: "",
-    contactNumber: "",
-    companyName: "",
-    industry: "Others",
-  };
-
-  const login = () => {
-    const formData = new FormData();
-    for (const key in inputLogin) {
-      //@ts-ignore
-      formData.set(key, inputLogin[key]);
-    }
-
-    axios
-      .post(`${dashboardBaseUrl}/BackEnd/Vendor/login.php`, formData, {
-        withCredentials: true,
-      })
-      .then((response) => {
+  const login = async (formData: LoginForm) => {
+    await fetch(loginEndpoint, {
+      method: "POST",
+      body: JSON.stringify(formData),
+      headers: headers,
+    })
+      .then((res) => res.json())
+      .then((result) => {
         window.location.href = dashboardBaseUrl;
       })
-      .catch(
-        ({
-          response: {
-            data: { message },
-          },
-        }) => {
-          // handle error here
-        }
-      );
+      .catch((err) => {
+        console.error("LOGIN ERROR=>", err);
+      });
   };
 
-  const signup = () => {
-    const formData = new FormData();
-
-    for (const key in inputSignUp) {
-      //@ts-ignore
-      formData.set(key, inputSignUp[key]);
-    }
-
-    axios
-      .post(`${dashboardBaseUrl}/BackEnd/Vendor/signup.php`, formData)
-      .then((response) => {
+  const signup = async (formData: SignupForm) => {
+    console.log("DATA=>", formData);
+    await fetch(signupEndpoint, {
+      method: "POST",
+      body: JSON.stringify(formData),
+      headers: headers,
+    })
+      .then((res) => res.json())
+      .then((result) => {
         toast.success(
           "Registration successful! Please check your email for your verification email to continue"
         );
-
         setSignupModal(false);
       })
-      .catch(
-        ({
-          response: {
-            data: { message },
-          },
-        }) => {
-          // handle error here
-        }
-      );
+      .catch((err) => {
+        console.error("SIGNUP ERROR=>", err);
+      });
   };
 
   useEffect(() => {
@@ -121,46 +120,61 @@ const Layout = (props: LayoutProps): JSX.Element => {
     const { isOpen, onCloseModal } = props;
     return (
       <Modal isOpen={isOpen} onCloseModal={onCloseModal} title="Login">
-        <div className="grid grid-cols-1 gap-2">
-          <div className="col-span-1">
-            <Input
-              name="email"
-              id="email"
-              type="email"
-              label="Email"
-              isRequired
-              onChange={(e) => (inputLogin.email = e.target.value)}
-            />
-          </div>
-          <div className="col-span-1">
-            <Input
-              name="password"
-              id="password"
-              type="password"
-              label="Password"
-              isRequired
-              onChange={(e) => (inputLogin.password = e.target.value)}
-            />
-          </div>
-          <div className="col-span-1">
-            <div className="flex flex-col space-y-2 w-full">
-              <button
-                className="w-full px-5 py-2 border border-black bg-black text-white rounded font-montserrat font-bold hover:opacity-90 hover:shadow-lg"
-                onClick={login}
-              >
-                Login
-              </button>
-              <div className="border-t my-8 w-full"></div>
-              <a className="font-lato">Don&apos;t have account yet?</a>
-              <button
-                onClick={handleCreateAFreeAccount}
-                className="w-full px-5 py-2 border border-black bg-white text-black rounded font-montserrat font-bold hover:opacity-90 hover:shadow-lg"
-              >
-                Create a free account
-              </button>
+        <form onSubmit={handleSubmitLogin(login)}>
+          <div className="grid grid-cols-1 gap-2">
+            <div className="col-span-1">
+              <Controller
+                name="email"
+                control={controlLogin}
+                rules={{ required: true }}
+                render={({ field }) => (
+                  <Input
+                    id="email"
+                    type="email"
+                    label="Email"
+                    isRequired
+                    {...field}
+                  />
+                )}
+              />
+            </div>
+            <div className="col-span-1">
+              <Controller
+                name="password"
+                control={controlLogin}
+                rules={{ required: true }}
+                render={({ field }) => (
+                  <Input
+                    id="password"
+                    type="password"
+                    label="Password"
+                    isRequired
+                    {...field}
+                  />
+                )}
+              />
+            </div>
+            <div className="col-span-1">
+              <div className="flex flex-col space-y-2 w-full">
+                <button
+                  type="submit"
+                  className="w-full px-5 py-2 border border-black bg-black text-white rounded font-montserrat font-bold hover:opacity-90 hover:shadow-lg"
+                  // onClick={login}
+                >
+                  Login
+                </button>
+                <div className="border-t my-8 w-full"></div>
+                <a className="font-lato">Don&apos;t have account yet?</a>
+                <button
+                  onClick={handleCreateAFreeAccount}
+                  className="w-full px-5 py-2 border border-black bg-white text-black rounded font-montserrat font-bold hover:opacity-90 hover:shadow-lg"
+                >
+                  Create a free account
+                </button>
+              </div>
             </div>
           </div>
-        </div>
+        </form>
       </Modal>
     );
   };
@@ -176,135 +190,191 @@ const Layout = (props: LayoutProps): JSX.Element => {
         onCloseModal={onCloseModal}
         title="Start your free trial now!"
       >
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-y-2 md:gap-x-8">
-          <div className="col-span-1 row-span-3 flex items-center">
-            <div className="flex-1 flex justify-center items-start relative h-full">
-              <img
-                src="/assets/images/07 Free trial/EG---Free-trial(D).png"
-                width={231}
-                height={300}
-                alt="home-2"
+        <form onSubmit={handleSubmitSignup(signup)}>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-y-2 md:gap-x-8">
+            <div className="col-span-1 row-span-3 flex items-center">
+              <div className="flex-1 flex justify-center items-start relative h-full">
+                <img
+                  src="/assets/images/07 Free trial/EG---Free-trial(D).png"
+                  width={231}
+                  height={300}
+                  alt="home-2"
+                />
+              </div>
+            </div>
+            <div className="col-span-1">
+              <p className="font-lato text-xl mb-4">
+                Start your free trial now and drive more sales and leads for
+                your business from day one. (No risk. No credit card required.)
+              </p>
+            </div>
+            <div className="col-span-1">
+              <Controller
+                name="contactPerson"
+                control={controlSignup}
+                rules={{ required: true }}
+                render={({ field }) => (
+                  <Input
+                    id="contactPerson"
+                    type="text"
+                    label="Name"
+                    isRequired
+                    {...field}
+                  />
+                )}
               />
             </div>
-          </div>
-          <div className="col-span-1">
-            <p className="font-lato text-xl mb-4">
-              Start your free trial now and drive more sales and leads for your
-              business from day one. (No risk. No credit card required.)
-            </p>
-          </div>
-          <div className="col-span-1">
-            <Input
-              name="name"
-              id="name"
-              type="text"
-              label="Name"
-              isRequired
-              onChange={(e) => (inputSignUp.contactPerson = e.target.value)}
-            />
-          </div>
-          <div className="col-span-1">
-            <Input
-              name="company_name"
-              id="company_name"
-              type="text"
-              label="Company Name"
-              isRequired
-              onChange={(e) => (inputSignUp.companyName = e.target.value)}
-            />
-          </div>
-          <div className="col-span-1">
-            <Input
-              name="email"
-              id="email"
-              type="email"
-              label="Email"
-              isRequired
-              onChange={(e) => (inputSignUp.email = e.target.value)}
-            />
-          </div>
-          <div className="col-span-1">
-            <Input
-              name="password"
-              id="password"
-              type="password"
-              label="Password"
-              isRequired
-              onChange={(e) => (inputSignUp.password = e.target.value)}
-            />
-          </div>
-          <div className="col-span-1">
-            <Input
-              name="phone_number"
-              id="phone_number"
-              type="tel"
-              label="Phone Number"
-              isRequired
-              onChange={(e) => (inputSignUp.contactNumber = e.target.value)}
-            />
-          </div>
-          <div className="col-span-1">
-            <div className="flex flex-col">
-              <label htmlFor="industry" className="font-lato text-md mb-1">
-                Industry <span className="text-red-600">*</span>
-              </label>
-              <Select
-                name="industry"
-                aria-label="Industry"
-                placeholder="Select an industry"
-                onSelectionChange={(e) => (inputSignUp.industry = e as string)}
-              >
-                <Option key="Food and Beverage">Food and Beverage</Option>
-                <Option key="Retail">Retail</Option>
-                <Option key="Fast Moving Consumer Goods">
-                  Fast Moving Consumer Goods
-                </Option>
-                <Option key="Fashion">Fashion</Option>
-                <Option key="Cosmetics">Cosmetics</Option>
-                <Option key="Services">Services</Option>
-                <Option key="Others">Others</Option>
-              </Select>
+            <div className="col-span-1">
+              <Controller
+                name="companyName"
+                control={controlSignup}
+                rules={{ required: true }}
+                render={({ field }) => (
+                  <Input
+                    id="companyName"
+                    type="text"
+                    label="Company Name"
+                    isRequired
+                    {...field}
+                  />
+                )}
+              />
             </div>
-          </div>
-          <div className="col-span-1">
-            <button
-              onClick={signup}
-              className="mb-2 w-full px-5 py-2 border border-black bg-black text-white rounded font-montserrat font-bold hover:opacity-90 hover:shadow-lg"
-            >
-              Start free Trial
-            </button>
-            <div className="flex flex-row space-x-2">
-              <span className="text-black text-lg pt-1">
-                <FiCheckCircle />
-              </span>
-              <p>
-                By creating an account, I agree to Engame&apos;s{" "}
-                <span className="text-blue-400 hover:text-blue-600 font-lato">
-                  Website terms
+            <div className="col-span-1">
+              <Controller
+                name="email"
+                control={controlSignup}
+                rules={{ required: true }}
+                render={({ field }) => (
+                  <Input
+                    id="email"
+                    type="email"
+                    label="Email"
+                    isRequired
+                    {...field}
+                  />
+                )}
+              />
+            </div>
+            <div className="col-span-1">
+              <Controller
+                name="password"
+                control={controlSignup}
+                rules={{ required: true }}
+                render={({ field }) => (
+                  <Input
+                    id="password"
+                    type="password"
+                    label="Password"
+                    isRequired
+                    {...field}
+                  />
+                )}
+              />
+            </div>
+            <div className="col-span-1">
+              <Controller
+                name="contactNumber"
+                control={controlSignup}
+                rules={{ required: true }}
+                render={({ field }) => (
+                  <Input
+                    id="contactNumber"
+                    type="tel"
+                    label="Phone Number"
+                    isRequired
+                    {...field}
+                  />
+                )}
+              />
+            </div>
+            <div className="col-span-1">
+              <div className="flex flex-col">
+                <label htmlFor="industry" className="font-lato text-md mb-1">
+                  Industry <span className="text-red-600">*</span>
+                </label>
+                <Controller
+                  name="industry"
+                  control={controlSignup}
+                  rules={{ required: true }}
+                  render={({ field: { onChange } }) => (
+                    <Select
+                      aria-label="Industry"
+                      placeholder="Select an industry"
+                      onSelectionChange={onChange}
+                    >
+                      <Option
+                        key="Food and Beverage"
+                        textValue="Food and Beverage"
+                      >
+                        Food and Beverage
+                      </Option>
+                      <Option key="Retail" textValue="Retail">
+                        Retail
+                      </Option>
+                      <Option
+                        key="Fast Moving Consumer Goods"
+                        textValue="Fast Moving Consumer Goods"
+                      >
+                        Fast Moving Consumer Goods
+                      </Option>
+                      <Option key="Fashion" textValue="Fashion">
+                        Fashion
+                      </Option>
+                      <Option key="Cosmetics" textValue="Cosmetics">
+                        Cosmetics
+                      </Option>
+                      <Option key="Services" textValue="Services">
+                        Services
+                      </Option>
+                      <Option key="Others" textValue="Others">
+                        Others
+                      </Option>
+                    </Select>
+                  )}
+                />
+              </div>
+            </div>
+            <div className="col-span-1">
+              <button
+                type="submit"
+                className="mb-2 w-full px-5 py-2 border border-black bg-black text-white rounded font-montserrat font-bold hover:opacity-90 hover:shadow-lg"
+              >
+                Start free Trial
+              </button>
+              <div className="flex flex-row space-x-2">
+                <span className="text-black text-lg pt-1">
+                  <FiCheckCircle />
                 </span>
-                ,{" "}
-                <span className="text-blue-400 hover:text-blue-600 font-lato">
-                  Privacy policy
-                </span>{" "}
-                and{" "}
-                <span className="text-blue-400 hover:text-blue-600 font-lato">
-                  Licensing terms.
-                </span>
+                <p>
+                  By creating an account, I agree to Engame&apos;s{" "}
+                  <span className="text-blue-400 hover:text-blue-600 font-lato">
+                    Website terms
+                  </span>
+                  ,{" "}
+                  <span className="text-blue-400 hover:text-blue-600 font-lato">
+                    Privacy policy
+                  </span>{" "}
+                  and{" "}
+                  <span className="text-blue-400 hover:text-blue-600 font-lato">
+                    Licensing terms.
+                  </span>
+                </p>
+              </div>
+            </div>
+            <div className="col-span-1 pt-4 flex items-center">
+              <p className=" font-lato mb-10">
+                Already have an account?{" "}
+                <a
+                  onClick={handleLoginHere}
+                  className="text-blue-400 hover:text-blue-600 font-lato"
+                >
+                  Log in here.
+                </a>
               </p>
             </div>
           </div>
-          <div className="col-span-1 pt-4 flex items-center">
-            <p className=" font-lato mb-10">
-              Already have an account?{" "}
-              <a
-                onClick={handleLoginHere}
-                className="text-blue-400 hover:text-blue-600 font-lato"
-              >
-                Log in here.
-              </a>
-            </p>
-          </div>
-        </div>
+        </form>
       </Modal>
     );
   };

@@ -21,10 +21,11 @@ const SubscribePlan = (props: {
       <Section bgColor={backgroundImage ? "bg-transparent" : "bg-white"}>
         <div className="flex flex-col items-center py-10">
           <p className="text-center md:text-left font-montserrat font-extrabold text-4xl mb-4">
-           Pick Your Best Plan Now!
+            Pick Your Best Plan Now!
           </p>
           <p className="text-center max-w-lg font-lato font-medium text-xl capitalize mb-10">
-          Select your desired plan to get access easily! Subscribe to our Basic Starter Plan for FREE Today!	
+            Select your desired plan to get access easily! Subscribe to our
+            Basic Starter Plan for FREE Today!
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-6 xl:gap-20">
             {[
