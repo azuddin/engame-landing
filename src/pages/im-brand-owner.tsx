@@ -1,5 +1,4 @@
 import Head from "next/head";
-import { useRouter } from "next/router";
 import {
   HowItWork,
   Layout,
@@ -115,7 +114,8 @@ const ImBrandOwner: PageLayoutProps = () => {
                   "/assets/images/03 Brand owner/EG---Landing_brand_voucher-2(D).jpg",
               },
               {
-                title: "3. Game Start! Players To Win The Vouchers From Your Games!",
+                title:
+                  "3. Game Start! Players To Win The Vouchers From Your Games!",
                 imageUrl:
                   "/assets/images/03 Brand owner/EG---Landing_brand_voucher-3(D).jpg",
               },

@@ -19,6 +19,7 @@
       "@engame/components": ["src/components"],
       "@engame/constants": ["src/constants"],
       "@engame/utils": ["src/utils"],
+      "@engame/hooks": ["src/hooks"],
       "@engame/styles/*": ["src/styles/*"],
       "@engame/types": ["src/types"]
     },

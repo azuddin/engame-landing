@@ -250,3 +250,13 @@ export const carouselResponsive = {
 };
 
 export const dashboardBaseUrl = "https://selfservice-tapmaster.engame.asia";
+
+export const loginEndpoint = `${dashboardBaseUrl}/BackEnd/Vendor/login.php`;
+export const forgotPasswordEndpoint = `${dashboardBaseUrl}/BackEnd/Vendor/forgotpassword.php`;
+export const signupEndpoint = `${dashboardBaseUrl}/BackEnd/Vendor/signup.php`;
+export const enquiryEndpoint = "https://engame.asia/web_backend/enquiry.php";
+
+export const headers = {
+  // Accept: "application/json",
+  // "Content-Type": "application/json",
+};
