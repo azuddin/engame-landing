@@ -16,7 +16,7 @@ const Modal = (props: ModalProps): JSX.Element => {
       {isOpen && (
         <>
           <div className="fixed h-screen w-screen top-0 bg-black z-30 opacity-80"></div>
-          <div className="overflow-y-auto overflow-x-hidden fixed z-30 flex justify-center items-center h-modal md:h-full md:inset-0">
+          <div className="w-full overflow-y-auto overflow-x-hidden fixed z-30 flex justify-center items-center h-modal md:h-full md:inset-0">
             <div className="relative mx-auto w-full max-w-2xl h-full md:h-auto">
               <div
                 style={{

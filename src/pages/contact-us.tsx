@@ -29,11 +29,15 @@ const ContactUs: PageLayoutProps = () => {
 
     await fetch(`https://engame.asia/web_backend/enquiry.php`, {
       method: "POST",
-      body: JSON.stringify(formData),
+      body: formData,
       headers: headers,
     })
       .then((res) => res.json())
       .then((result) => {
+        if (result.code !== 200) {
+          toast.error(result.message);
+          return;
+        }
         toast.success(
           "Submission Successful! Thank you for your interest and we'll get in touch with you shortly!"
         );
@@ -75,8 +79,11 @@ const ContactUs: PageLayoutProps = () => {
               />
             </div>
           </div>
-          <div className="flex flex-col space-y-6">
-            <form onSubmit={handleSubmitContactUs(contactUs)}>
+          <div className="flex flex-col">
+            <form
+              onSubmit={handleSubmitContactUs(contactUs)}
+              className="space-y-6"
+            >
               <Controller
                 name="name"
                 control={controlContactUs}

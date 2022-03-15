@@ -39,11 +39,15 @@ const Home: PageLayoutProps = () => {
 
     await fetch(enquiryEndpoint, {
       method: "POST",
-      body: JSON.stringify(formData),
+      body: formData,
       headers: headers,
     })
       .then((res) => res.json())
       .then((result) => {
+        if (result.code !== 200) {
+          toast.error(result.message);
+          return;
+        }
         toast.success(
           "Submission Successful! Thank you for your interest and we'll get in touch with you shortly!"
         );

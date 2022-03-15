@@ -99,11 +99,13 @@ const Layout = (props: LayoutProps): JSX.Element => {
 
     await fetch(loginEndpoint, {
       method: "POST",
-      body: JSON.stringify(formData),
+      body: formData,
       headers: headers,
+      credentials: "include",
     })
       .then((res) => res.json())
       .then((result) => {
+        console.log("RESULT=>", result);
         window.location.href = dashboardBaseUrl;
       })
       .catch((err) => {
