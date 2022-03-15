@@ -47,11 +47,11 @@ const Layout = (props: LayoutProps): JSX.Element => {
     reset: resetSignup,
   } = useForm<SignupForm>({
     defaultValues: {
-      contactPerson: "rlztest",
-      email: "rlz56929@mzico.com",
-      password: "zaq1xsw2",
-      contactNumber: "0123456789",
-      companyName: "mzico4test",
+      contactPerson: "",
+      email: "",
+      password: "",
+      contactNumber: "",
+      companyName: "",
       industry: "Others",
     },
   });

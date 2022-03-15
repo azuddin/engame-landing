@@ -23,12 +23,12 @@ const Home: PageLayoutProps = () => {
     reset: resetContactUs,
   } = useForm<EnquiryForm>({
     defaultValues: {
-      name: "rlz56929 test",
-      email: "rlz56929@mzico.com",
-      phone_number: "0123456789",
-      company_name: "mzico.com test",
+      name: "",
+      email: "",
+      phone_number: "",
+      company_name: "",
       category: "Others",
-      message: "test",
+      message: "",
     },
   });
   const contactUs = async (data: any) => {
