@@ -1,4 +1,4 @@
-import { ReactNode, useEffect, useState } from "react";
+import { ReactNode, useContext, useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import {
   Footer,
@@ -18,6 +18,8 @@ import { LoginForm, SignupForm } from "@engame/types";
 import { Controller, useForm } from "react-hook-form";
 import toast from "react-hot-toast";
 import { FiCheckCircle } from "react-icons/fi";
+import useMediaQuery from "src/hooks/useMediaQuery";
+import { AppContext } from "src/pages/_app";
 
 export interface LayoutProps {
   children?: ReactNode;
@@ -25,6 +27,8 @@ export interface LayoutProps {
 
 const Layout = (props: LayoutProps): JSX.Element => {
   const [showMenu, setShowMenu] = useState(false);
+
+  const isMobile = useMediaQuery("(max-width: 767px)");
 
   const {
     handleSubmit: handleSubmitLogin,
@@ -56,24 +60,36 @@ const Layout = (props: LayoutProps): JSX.Element => {
 
   const [openLoginModal, setLoginModal] = useState(false);
   const [openSignupModal, setSignupModal] = useState(false);
+  const [signupTitle, setSignupModalTitle] = useState<string | undefined>(
+    undefined
+  );
 
-  const toggleLoginModal = () => {
-    setLoginModal(!openLoginModal);
-  };
+  const { modalName, handleToggleModal } = useContext(AppContext);
 
-  const toggleSignupModal = () => {
-    setSignupModal(!openSignupModal);
-  };
-
-  const handleLoginHere = () => {
+  useEffect(() => {
     setSignupModal(false);
-    setLoginModal(true);
-  };
-
-  const handleCreateAFreeAccount = () => {
-    setSignupModal(true);
     setLoginModal(false);
-  };
+    setSignupModalTitle(undefined);
+
+    switch (modalName) {
+      case "login":
+        setSignupModal(false);
+        setLoginModal(true);
+        break;
+      case "signup":
+        setSignupModal(true);
+        setLoginModal(false);
+        break;
+      case "signup2":
+        setSignupModal(true);
+        setLoginModal(false);
+        setSignupModalTitle("Register Now!");
+        break;
+
+      default:
+        break;
+    }
+  }, [modalName]);
 
   const login = async (data: any) => {
     const formData = new FormData();
@@ -129,10 +145,13 @@ const Layout = (props: LayoutProps): JSX.Element => {
     };
   }, [events]);
 
-  const LoginModal = (props: { isOpen: boolean; onCloseModal: () => void }) => {
-    const { isOpen, onCloseModal } = props;
+  const LoginModal = () => {
     return (
-      <Modal isOpen={isOpen} onCloseModal={onCloseModal} title="Login">
+      <Modal
+        isOpen={openLoginModal}
+        onCloseModal={() => handleToggleModal("")}
+        title="Login"
+      >
         <form onSubmit={handleSubmitLogin(login)}>
           <div className="grid grid-cols-1 gap-2">
             <div className="col-span-1">
@@ -179,7 +198,7 @@ const Layout = (props: LayoutProps): JSX.Element => {
                 <div className="border-t my-8 w-full"></div>
                 <a className="font-lato">Don&apos;t have account yet?</a>
                 <button
-                  onClick={handleCreateAFreeAccount}
+                  onClick={() => handleToggleModal("signup")}
                   className="w-full px-5 py-2 border border-black bg-white text-black rounded font-montserrat font-bold hover:opacity-90 hover:shadow-lg"
                 >
                   Create a free account
@@ -192,16 +211,12 @@ const Layout = (props: LayoutProps): JSX.Element => {
     );
   };
 
-  const SignupModal = (props: {
-    isOpen: boolean;
-    onCloseModal: () => void;
-  }) => {
-    const { isOpen, onCloseModal } = props;
+  const SignupModal = () => {
     return (
       <Modal
-        isOpen={isOpen}
-        onCloseModal={onCloseModal}
-        title="Start your free trial now!"
+        isOpen={openSignupModal}
+        onCloseModal={() => handleToggleModal("")}
+        title={signupTitle ?? "Start your free trial now!"}
       >
         <form onSubmit={handleSubmitSignup(signup)}>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-y-2 md:gap-x-8">
@@ -353,7 +368,7 @@ const Layout = (props: LayoutProps): JSX.Element => {
                 type="submit"
                 className="mb-2 w-full px-5 py-2 border border-black bg-black text-white rounded font-montserrat font-bold hover:opacity-90 hover:shadow-lg"
               >
-                Start free Trial
+                {signupTitle ?? "Start Free Trial"}
               </button>
               <div className="flex flex-row space-x-2">
                 <span className="text-black text-lg pt-1">
@@ -379,7 +394,7 @@ const Layout = (props: LayoutProps): JSX.Element => {
               <p className=" font-lato mb-10">
                 Already have an account?{" "}
                 <a
-                  onClick={handleLoginHere}
+                  onClick={() => handleToggleModal("login")}
                   className="text-blue-400 hover:text-blue-600 font-lato"
                 >
                   Log in here.
@@ -396,9 +411,9 @@ const Layout = (props: LayoutProps): JSX.Element => {
   return (
     <div className="flex flex-1 flex-col h-screen">
       <Navbar
-        isOpen={showMenu}
-        onClickLogin={toggleLoginModal}
-        onClickStartFreeTrial={toggleSignupModal}
+        isOpen={showMenu && isMobile}
+        onClickLogin={() => handleToggleModal("login")}
+        onClickStartFreeTrial={() => handleToggleModal("signup")}
         onToggleShowMenu={() => setShowMenu(!showMenu)}
       />
       <div
@@ -409,8 +424,8 @@ const Layout = (props: LayoutProps): JSX.Element => {
         {children}
         <Footer />
       </div>
-      <LoginModal isOpen={openLoginModal} onCloseModal={toggleLoginModal} />
-      <SignupModal isOpen={openSignupModal} onCloseModal={toggleSignupModal} />
+      <LoginModal />
+      <SignupModal />
     </div>
   );
 };
