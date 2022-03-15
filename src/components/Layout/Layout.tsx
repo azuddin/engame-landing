@@ -103,13 +103,12 @@ const Layout = (props: LayoutProps): JSX.Element => {
       headers: headers,
       credentials: "include",
     })
-      .then((res) => {
-        if (res.status !== 200) {
-          throw new Error(res.statusText);
-        }
-        return res.json();
-      })
+      .then((res) => res.json())
       .then((result) => {
+        if (result.code !== 200) {
+          toast.error(result.message);
+          return;
+        }
         console.log("RESULT=>", result);
         window.location.href = dashboardBaseUrl;
       })
