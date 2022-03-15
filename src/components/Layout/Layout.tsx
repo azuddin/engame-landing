@@ -103,13 +103,18 @@ const Layout = (props: LayoutProps): JSX.Element => {
       headers: headers,
       credentials: "include",
     })
-      .then((res) => res.json())
+      .then((res) => {
+        if (res.status !== 200) {
+          throw new Error(res.statusText);
+        }
+        return res.json();
+      })
       .then((result) => {
         console.log("RESULT=>", result);
         window.location.href = dashboardBaseUrl;
       })
       .catch((err) => {
-        console.error("LOGIN ERROR=>", err);
+        toast.error(err.message);
       });
   };
 
