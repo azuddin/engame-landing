@@ -257,6 +257,6 @@ export const signupEndpoint = `${dashboardBaseUrl}/BackEnd/Vendor/signup.php`;
 export const enquiryEndpoint = "https://engame.asia/web_backend/enquiry.php";
 
 export const headers = {
-  Accept: "application/json",
-  "Content-Type": "application/json",
+  // Accept: "application/json",
+  // "Content-Type": "application/json",
 };

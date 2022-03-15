@@ -43,11 +43,11 @@ const Layout = (props: LayoutProps): JSX.Element => {
     reset: resetSignup,
   } = useForm<SignupForm>({
     defaultValues: {
-      contactPerson: "rlz56929 test",
+      contactPerson: "rlztest",
       email: "rlz56929@mzico.com",
       password: "zaq1xsw2",
       contactNumber: "0123456789",
-      companyName: "mzico.com test",
+      companyName: "mzico4test",
       industry: "Others",
     },
   });
@@ -108,6 +108,10 @@ const Layout = (props: LayoutProps): JSX.Element => {
     })
       .then((res) => res.json())
       .then((result) => {
+        if (result.code !== 200) {
+          toast.error(result.message);
+          return;
+        }
         toast.success(
           "Registration successful! Please check your email for your verification email to continue"
         );
