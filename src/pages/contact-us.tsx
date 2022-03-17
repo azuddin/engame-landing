@@ -1,8 +1,7 @@
 import Head from "next/head";
 import { Input, Layout, Option, Section, Select } from "@engame/components";
-import { dashboardBaseUrl, headers } from "@engame/constants";
+import { enquiryEndpoint, headers } from "@engame/constants";
 import { EnquiryForm, PageLayoutProps } from "@engame/types";
-import axios from "axios";
 import { Controller, useForm } from "react-hook-form";
 import toast from "react-hot-toast";
 
@@ -27,7 +26,7 @@ const ContactUs: PageLayoutProps = () => {
       formData.set(key, data[key]);
     }
 
-    await fetch(`https://engame.asia/web_backend/enquiry.php`, {
+    await fetch(enquiryEndpoint, {
       method: "POST",
       body: formData,
       headers: headers,
