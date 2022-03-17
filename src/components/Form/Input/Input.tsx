@@ -5,24 +5,31 @@ import {
   RefObject,
   useRef,
 } from "react";
+import { filterClassNames } from "@engame/utils";
 
 export interface InputProps {
   label: string;
   isRequired?: boolean;
   id: string;
   type: string;
+  inputClassname?: string;
 }
 
 const Input = (
   props: InputProps,
   ref: ForwardedRef<HTMLInputElement | HTMLTextAreaElement>
 ): JSX.Element => {
-  const { label, isRequired, id, ...otherProps } = props;
+  const { label, isRequired, id, inputClassname, ...otherProps } = props;
   const as = "input";
   const InputElement = as as ElementType;
   const fallbackRef = useRef<HTMLInputElement>(null);
   const domRef =
     (ref as RefObject<HTMLInputElement | HTMLTextAreaElement>) || fallbackRef;
+
+  const inputClassnames = filterClassNames([
+    inputClassname ?? "",
+    "rounded-md border px-4 py-2 text-md",
+  ]);
 
   return (
     <>
@@ -32,7 +39,7 @@ const Input = (
         </label>
         <InputElement
           ref={domRef}
-          className="rounded-md border px-4 py-2 text-md lowercase"
+          className={inputClassnames}
           {...otherProps}
         />
       </div>

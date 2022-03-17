@@ -62,7 +62,7 @@ const Payment: PageLayoutProps = () => {
                   name="email"
                   id="email"
                   type="email"
-                  className="rounded-md border px-4 py-2 text-2xl lowercase"
+                  className="rounded-md border px-4 py-2 text-2xl"
                 />
               </div>
               <div className="flex flex-col">
