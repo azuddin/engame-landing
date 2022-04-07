@@ -238,9 +238,11 @@ const Home: PageLayoutProps = () => {
                 }}
                 className="flex-grow flex justify-center items-center relative w-full h-44 rounded-3xl overflow-hidden"
               ></div>
+              <Link href="/im-brand-owner">
               <button className="w-full md:w-52 px-5 py-2 border border-black bg-black text-white rounded font-montserrat font-bold hover:opacity-90 hover:shadow-lg">
                 Get A Free Demo
               </button>
+              </Link>
             </div>
             <div className="flex flex-col items-center space-y-6">
               <p className="text-center font-montserrat font-extrabold text-4xl md:text-3xl">
@@ -256,9 +258,11 @@ const Home: PageLayoutProps = () => {
                 }}
                 className="flex-grow flex justify-center items-center relative w-full h-44 rounded-3xl overflow-hidden"
               ></div>
+              <Link href="/im-gamer">
               <button className="w-full md:w-52 px-5 py-2 border border-black bg-black text-white rounded font-montserrat font-bold hover:opacity-90 hover:shadow-lg">
                 Play a game
               </button>
+              </Link>
             </div>
           </div>
         </Section>

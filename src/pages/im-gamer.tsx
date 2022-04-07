@@ -105,10 +105,10 @@ const ImGamer: PageLayoutProps = () => {
             <div className="flex flex-col md:w-1/3 items-center justify-center md:items-start space-y-6 md:space-y-2">
               <div className="max-w-xs md:h-32 md:w-32 flex justify-center rounded-lg overflow-hidden">
                 <img
-                  src="/assets/images/01 Home/EG---Landing-home_info(D).png"
+                  src="/assets/images/04 Gamer/EG---cat.png"
                   width={800}
                   height={800}
-                  alt="home-2"
+                  alt="EG---cat "
                 />
               </div>
               <p className="text-center md:text-left font-montserrat font-extrabold text-4xl">
@@ -136,7 +136,7 @@ const ImGamer: PageLayoutProps = () => {
             </div>
             <div
               style={{
-                backgroundImage: "url('/assets/images/home-2.png')",
+                backgroundImage: "url('/assets/images/04 Gamer/EG---Landing-gamer_playgame(D).jpg')",
                 backgroundSize: "cover",
                 backgroundPosition: "center",
               }}
