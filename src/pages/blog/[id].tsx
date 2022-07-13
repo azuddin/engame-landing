@@ -1,27 +1,13 @@
+import { useRouter } from "next/router";
 import { Layout, Section } from "@engame/components";
+import { blogs } from "@engame/constants";
 import { PageLayoutProps } from "@engame/types";
 
 const BlogDetail: PageLayoutProps = () => {
-  const content = (
-    <div>
-      <p>
-        In year 2017 when we first got ourselves into the then called IPCC
-        (Intellectual Property Creators&apos; Challenge), we squeezed ourselves
-        into the finalist but falls short in the final round; it&apos;s clear
-        that our game with commercial elements wasn&apos;t ready and we stuffed
-        the idea into the deep freeze.
-      </p>
-      <br />
-      <p>
-        Fast forward to late 2019, where we just pivoted to B2B games platform
-        for enterprise, DiCE (Digital Content Creation Challenge) came up and we
-        submitted in a blink of an eye; coupled with several improvements on
-        gameplay, commercial elements and market positioning, we&apos;re able to
-        win this time, and this signifies that our game as a service platform is
-        ready to roll.
-      </p>
-    </div>
-  );
+  const router = useRouter();
+  const { id } = router.query;
+
+  const content = id ? blogs[parseInt(id as string) - 1].content : "";
   return (
     <>
       <div
@@ -64,7 +50,7 @@ const BlogDetail: PageLayoutProps = () => {
               </p>
             </div>
           </div>
-          <div>{content}</div>
+          <div dangerouslySetInnerHTML={{ __html: content }} />
         </div>
       </Section>
     </>

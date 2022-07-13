@@ -220,7 +220,7 @@ export const carouselResponsive = {
   xxl: {
     breakpoint: { max: 3000, min: 1536 },
     items: 4,
-    partialVisibilityGutter: 60,
+    partialVisibilityGutter: 40,
   },
   xl: {
     breakpoint: { max: 1535, min: 1280 },
@@ -245,7 +245,7 @@ export const carouselResponsive = {
   mobile: {
     breakpoint: { max: 464, min: 0 },
     items: 1,
-    partialVisibilityGutter: 30,
+    partialVisibilityGutter: 0,
   },
 };
 
@@ -261,3 +261,62 @@ export const headers = {
   // Accept: "application/json",
   // "Content-Type": "application/json",
 };
+
+export const blogs = [
+  {
+    avatar: "/assets/images/icon.png",
+    author: "Engame.Asia",
+    datetime: "13 Apr 21  •  9:00AM",
+    image: "/assets/images/engame_mdec_dice_winner.jpg",
+    title: "MDEC DiCE 2019 Commercial Ready Game Winner",
+    desc: "In year 2017 when we first got ourselves into the then called IPCC (Intellectual Property Creators' Challenge)...",
+    content: `
+      <div>
+        <p>
+          In year 2017 when we first got ourselves into the then called IPCC
+          (Intellectual Property Creators&apos; Challenge), we squeezed
+          ourselves into the finalist but falls short in the final round;
+          it&apos;s clear that our game with commercial elements wasn&apos;t
+          ready and we stuffed the idea into the deep freeze.
+        </p>
+        <br />
+        <p>
+          Fast forward to late 2019, where we just pivoted to B2B games platform
+          for enterprise, DiCE (Digital Content Creation Challenge) came up and
+          we submitted in a blink of an eye; coupled with several improvements
+          on gameplay, commercial elements and market positioning, we&apos;re
+          able to win this time, and this signifies that our game as a service
+          platform is ready to roll.
+        </p>
+      </div>
+    `,
+  },
+  {
+    avatar: "/assets/images/icon.png",
+    author: "Engame.Asia",
+    datetime: "13 Apr 21  •  9:00AM",
+    image: "/assets/images/engame_maxis_top_startup.jpg",
+    title: "MDEC DiCE 2019 Commercial Ready Game Winner",
+    desc: "In year 2017 when we first got ourselves into the then called IPCC (Intellectual Property Creators' Challenge)...",
+    content: `
+      <div>
+        <p>
+          In year 2017 when we first got ourselves into the then called IPCC
+          (Intellectual Property Creators&apos; Challenge), we squeezed
+          ourselves into the finalist but falls short in the final round;
+          it&apos;s clear that our game with commercial elements wasn&apos;t
+          ready and we stuffed the idea into the deep freeze.
+        </p>
+        <br />
+        <p>
+          Fast forward to late 2019, where we just pivoted to B2B games platform
+          for enterprise, DiCE (Digital Content Creation Challenge) came up and
+          we submitted in a blink of an eye; coupled with several improvements
+          on gameplay, commercial elements and market positioning, we&apos;re
+          able to win this time, and this signifies that our game as a service
+          platform is ready to roll.
+        </p>
+      </div>
+    `,
+  },
+];

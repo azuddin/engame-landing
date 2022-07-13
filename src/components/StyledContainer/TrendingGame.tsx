@@ -18,7 +18,7 @@ const TrendingGame = (): JSX.Element => {
           </p>
           <Carousel
             responsive={carouselResponsive}
-            className="w-full pb-2 space-x-4"
+            className="w-full pb-2"
             ssr
             partialVisible
           >
@@ -47,19 +47,12 @@ const TrendingGame = (): JSX.Element => {
               <div
                 key={k}
                 className={
-                  "flex flex-col min-w-max " +
-                  // (k % 2 === 0 ? "bg-gray-200" : "") +
-                  (k === 0 ? "" : " ml-6")
+                  "flex flex-col min-w-max " + (k === 0 ? "" : " ml-6")
                 }
               >
-                <div
-                  style={{
-                    backgroundImage: `url('${i.image}')`,
-                    backgroundSize: "cover",
-                    backgroundPosition: "center",
-                  }}
-                  className="flex-grow flex justify-center items-center relative w-full h-44 bg-black rounded-lg overflow-hidden"
-                ></div>
+                <div className="flex h-44">
+                  <img src={i.image} alt={`game-${k + 1}`} className="w-auto" />
+                </div>
                 <p className="w-52 font-montserrat font-bold text-lg md:text-lg truncate">
                   {i.name}
                 </p>

@@ -1,27 +1,10 @@
 import Link from "next/link";
 import { Layout, Section } from "@engame/components";
+import { blogs } from "@engame/constants";
 import { PageLayoutProps } from "@engame/types";
 import { FiArrowRight } from "react-icons/fi";
 
 const Blog: PageLayoutProps = () => {
-  const blogs = [
-    {
-      avatar: "/assets/images/icon.png",
-      author: "Engame.Asia",
-      datetime: "13 Apr 21  •  9:00AM",
-      image: "/assets/images/engame_mdec_dice_winner.jpg",
-      title: "MDEC DiCE 2019 Commercial Ready Game Winner",
-      desc: "In year 2017 when we first got ourselves into the then called IPCC (Intellectual Property Creators' Challenge)...",
-    },
-    {
-      avatar: "/assets/images/icon.png",
-      author: "Engame.Asia",
-      datetime: "13 Apr 21  •  9:00AM",
-      image: "/assets/images/engame_maxis_top_startup.jpg",
-      title: "MDEC DiCE 2019 Commercial Ready Game Winner",
-      desc: "In year 2017 when we first got ourselves into the then called IPCC (Intellectual Property Creators' Challenge)...",
-    },
-  ];
   return (
     <>
       <div
@@ -87,7 +70,7 @@ const Blog: PageLayoutProps = () => {
                     {i.title}
                   </p>
                   <p className="font-lato text-lg">{i.desc}</p>
-                  <Link href="/blog/1" passHref>
+                  <Link href={`/blog/${index + 1}`} passHref>
                     <div className="flex items-center space-x-1 font-montserrat font-bold cursor-pointer">
                       <a>Read more</a>
                       <FiArrowRight />
