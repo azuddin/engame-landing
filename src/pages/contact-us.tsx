@@ -51,8 +51,8 @@ const ContactUs: PageLayoutProps = () => {
       <Head>
         <title>Contact Us - Engame</title>
         <meta
-          name="description"
-          content="Sunt ullamco do adipisicing dolore occaecat qui eiusmod ut irure."
+          name="Sell More With Tap Master"
+          content="Sell More With Tap Master"
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>

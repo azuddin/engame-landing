@@ -44,7 +44,7 @@ const BlogDetail: PageLayoutProps = () => {
               className="flex justify-center items-center relative w-10 h-10 rounded-3xl overflow-hidden"
             ></div>
             <div className="flex flex-col">
-              <p className="font-lato font-extrabold">Engame.Asia</p>
+              <p className="font-lato font-extrabold">Engame.tech</p>
               <p className="font-lato text-gray-500 font-bold">
                 13 Apr 21 • 9:00AM
               </p>

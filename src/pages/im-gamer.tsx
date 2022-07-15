@@ -10,8 +10,8 @@ const ImGamer: PageLayoutProps = () => {
       <Head>
         <title>I&apos;m Gamer - Engame</title>
         <meta
-          name="description"
-          content="Sunt ullamco do adipisicing dolore occaecat qui eiusmod ut irure."
+          name="Sell More With Tap Master"
+          content="Sell More With Tap Master"
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -32,7 +32,7 @@ const ImGamer: PageLayoutProps = () => {
                 <p className="text-center md:text-left font-montserrat font-extrabold pb-4 text-4xl">
                   Tap Master, Play the Games, Enjoy the Rewards!
                 </p>
-                <Link href="https://tapmaster.engame.asia" passHref>
+                <Link href="https://uat.tapmaster.engame.tech" passHref>
                   <button className="w-full md:w-60 px-5 py-2 border border-black bg-black text-white rounded font-montserrat font-bold hover:opacity-90 hover:shadow-lg">
                     Play Tap Master Now!
                   </button>
@@ -142,9 +142,11 @@ const ImGamer: PageLayoutProps = () => {
               }}
               className="flex-grow flex justify-center items-center relative h-96 rounded-3xl"
             >
+            <Link href="https://uat.tapmaster.engame.tech" passHref> 
               <button className="absolute bottom-8 w-52 px-5 py-2 border border-black bg-black text-white rounded font-montserrat font-bold hover:opacity-90 hover:shadow-lg">
                 Play game Now
               </button>
+              </Link> 
             </div>
           </div>
         </Section>
@@ -248,7 +250,7 @@ const ImGamer: PageLayoutProps = () => {
                   </p>
                 </div>
                 <div className="flex flex-col justify-center">
-                  <Link href="https://tapmaster.engame.asia" passHref>
+                  <Link href="https://uat.tapmaster.engame.tech" passHref>
                     <button className="w-full md:w-52 px-5 py-2 border border-black bg-black text-white rounded font-montserrat font-bold hover:opacity-90 hover:shadow-lg">
                       Play Now
                     </button>

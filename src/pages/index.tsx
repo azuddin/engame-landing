@@ -61,8 +61,8 @@ const Home: PageLayoutProps = () => {
       <Head>
         <title>Home - Engame</title>
         <meta
-          name="description"
-          content="Sunt ullamco do adipisicing dolore occaecat qui eiusmod ut irure."
+          name="Sell More With Tap Master"
+          content="Sell More With Tap Master"
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -88,7 +88,7 @@ const Home: PageLayoutProps = () => {
                     I want more Customers!
                   </button>
                 </Link>
-                <Link href="/im-gamer" passHref>
+                <Link href="im-gamer" passHref>
                   <button className="w-full md:w-60 px-5 py-2 border border-white bg-white rounded font-segoeui font-bold hover:opacity-90 hover:shadow-lg">
                     I wanna play Games!
                   </button>
@@ -258,7 +258,7 @@ const Home: PageLayoutProps = () => {
                 }}
                 className="flex-grow flex justify-center items-center relative w-full h-44 rounded-3xl overflow-hidden"
               ></div>
-              <Link href="/im-gamer">
+              <Link href="https://uat.tapmaster.engame.tech">
               <button className="w-full md:w-52 px-5 py-2 border border-black bg-black text-white rounded font-montserrat font-bold hover:opacity-90 hover:shadow-lg">
                 Play a game
               </button>

@@ -249,13 +249,13 @@ export const carouselResponsive = {
   },
 };
 
-export const dashboardBaseUrl = "https://uat.selfservice-tapmaster.engame.asia";
+export const dashboardBaseUrl = "https://uat.selfservice-tapmaster.engame.tech";
 
 export const loginEndpoint = `${dashboardBaseUrl}/BackEnd/Vendor/login.php`;
 export const forgotPasswordEndpoint = `${dashboardBaseUrl}/BackEnd/Vendor/forgotpassword.php`;
 export const signupEndpoint = `${dashboardBaseUrl}/BackEnd/Vendor/signup.php`;
 export const enquiryEndpoint =
-  "https://uat.engame.asia/web_backend/enquiry.php";
+  "https://uat.engame.tech/web_backend/enquiry.php";
 
 export const headers = {
   // Accept: "application/json",
@@ -265,7 +265,7 @@ export const headers = {
 export const blogs = [
   {
     avatar: "/assets/images/icon.png",
-    author: "Engame.Asia",
+    author: "Engame.tech",
     datetime: "13 Apr 21  •  9:00AM",
     image: "/assets/images/engame_mdec_dice_winner.jpg",
     title: "MDEC DiCE 2019 Commercial Ready Game Winner",
@@ -293,7 +293,7 @@ export const blogs = [
   },
   {
     avatar: "/assets/images/icon.png",
-    author: "Engame.Asia",
+    author: "Engame.tech",
     datetime: "13 Apr 21  •  9:00AM",
     image: "/assets/images/engame_maxis_top_startup.jpg",
     title: "MDEC DiCE 2019 Commercial Ready Game Winner",
