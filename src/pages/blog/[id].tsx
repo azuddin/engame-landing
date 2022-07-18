@@ -25,7 +25,7 @@ const BlogDetail: PageLayoutProps = () => {
           <Section zIndex="z-10" bgColor="bg-transparent">
             <div className="flex justify-center py-10">
               <p className="text-center md:text-left font-montserrat font-extrabold text-4xl">
-                MDEC DiCE 2019 Commercial Ready Game Winner
+                Can Games Boost Sales?
               </p>
             </div>
           </Section>
@@ -44,9 +44,9 @@ const BlogDetail: PageLayoutProps = () => {
               className="flex justify-center items-center relative w-10 h-10 rounded-3xl overflow-hidden"
             ></div>
             <div className="flex flex-col">
-              <p className="font-lato font-extrabold">Engame.tech</p>
+              <p className="font-lato font-extrabold">Engame</p>
               <p className="font-lato text-gray-500 font-bold">
-                13 Apr 21 • 9:00AM
+              02 Apr 22  •  7:33PM
               </p>
             </div>
           </div>
