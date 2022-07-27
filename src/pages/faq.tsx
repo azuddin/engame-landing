@@ -68,8 +68,8 @@ const FAQ: PageLayoutProps = () => {
       <Head>
         <title>FAQ - Engame</title>
         <meta
-          name="description"
-          content="Sunt ullamco do adipisicing dolore occaecat qui eiusmod ut irure."
+          name="Sell More With Tap Master"
+          content="Sell More With Tap Master"
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -133,7 +133,7 @@ const FAQ: PageLayoutProps = () => {
                         "I encountered some issues or bugs in the game, how can I get help?",
                       content: (
                         <p>
-                          Please email your feedback to enquiry@engame.asia, we
+                          Please email your feedback to enquiry@engame.tech, we
                           will get in touch with you the soonest!
                         </p>
                       ),
@@ -178,7 +178,7 @@ const FAQ: PageLayoutProps = () => {
                         "Can we have a fully customised Tap Master deployment with no other vendors in it?",
                       content: (
                         <p>
-                          Yes! Please email us enquiry@engame.asia, our game
+                          Yes! Please email us enquiry@engame.tech, our game
                           expert will get in touch with you!
                         </p>
                       ),

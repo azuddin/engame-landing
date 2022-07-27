@@ -23,9 +23,9 @@ const Footer = (): JSX.Element => {
           <div className="flex flex-col space-y-4 text-center md:text-left">
             <div>
               <p className="text-6xl md:text-lg">✉️</p>
-              <Link href="mailto:contact@engame.asia" passHref>
+              <Link href="mailto:enquiry@engame.tech" passHref>
                 <a className="font-montserrat font-bold text-lg md:text-base">
-                  contact@engame.asia
+                  enquiry@engame.tech
                 </a>
               </Link>
             </div>
@@ -33,7 +33,7 @@ const Footer = (): JSX.Element => {
               <p className="text-6xl md:text-lg">☎</p>
               <Link href="tel:+600122774439" passHref>
                 <a className="font-montserrat font-bold text-lg md:text-base">
-                  (+60) 012-277 4439
+                  (+60) 012-299 9786 (+60) 012-277 4439
                 </a>
               </Link>
             </div>
@@ -49,7 +49,7 @@ const Footer = (): JSX.Element => {
         <div className="flex flex-col md:flex-row justify-between items-center border-t py-8 md:py-4 space-y-4 md:space-y-0">
           <div className="social space-x-4 flex flex-row">
             <a
-              href="https://www.instagram.com/engame.tap.master/"
+              href="https://www.instagram.com/tapmaster.engame/"
               className="flex flex-col justify-center w-9 md:w-6"
             >
               <img

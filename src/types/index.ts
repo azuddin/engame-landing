@@ -13,7 +13,7 @@ export type AppLayoutProps = {
 
 /**
  * SignUp
- * https://selfservice-tapmaster.engame.asia/BackEnd/Vendor/signup.php
+ * https://selfservice-tapmaster.engame.tech/BackEnd/Vendor/signup.php
  */
 export interface SignupForm {
   companyName: string;
@@ -26,7 +26,7 @@ export interface SignupForm {
 
 /**
  * Forgot Password
- * https://selfservice-tapmaster.engame.asia/BackEnd/Vendor/forgotpassword.php
+ * https://selfservice-tapmaster.engame.tech/BackEnd/Vendor/forgotpassword.php
  */
 export interface ForgotPasswordForm {
   email: string;
@@ -34,7 +34,7 @@ export interface ForgotPasswordForm {
 
 /**
  * Login
- * https://selfservice-tapmaster.engame.asia/BackEnd/Vendor/login.php
+ * https://selfservice-tapmaster.engame.tech/BackEnd/Vendor/login.php
  */
 export interface LoginForm {
   email: string;
@@ -43,7 +43,7 @@ export interface LoginForm {
 
 /**
  * Enquiry
- * https://engame.asia/web_backend/enquiry.php
+ * https://engame.tech/web_backend/enquiry.php
  */
 export interface EnquiryForm {
   name: string;
