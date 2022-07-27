@@ -30,27 +30,27 @@ const Navbar = (props: NavbarProps): JSX.Element => {
             className="fixed pt-14 w-full h-full bg-white z-20 overflow-auto"
           >
             <div className="container mx-auto p-4 lg:px-36 flex flex-col space-y-4 overflow-auto">
-              <Link href="/our-story" passHref>
+              <Link scroll={true} href="/our-story" passHref>
                 <button className="text-montserrat font-bold text-left text-lg">
                   Our Story
                 </button>
               </Link>
-              <Link href="/pricing" passHref>
+              <Link scroll={true} href="/pricing" passHref>
                 <button className="text-montserrat font-bold text-left text-lg">
                   Pricing
                 </button>
               </Link>
-              <Link href="/blog" passHref>
+              <Link scroll={true} href="/blog" passHref>
                 <button className="text-montserrat font-bold text-left text-lg">
                   Blog
                 </button>
               </Link>
-              <Link href="/faq" passHref>
+              <Link scroll={true} href="/faq" passHref>
                 <button className="text-montserrat font-bold text-left text-lg">
                   FAQ
                 </button>
               </Link>
-              <Link href="/contact-us" passHref>
+              <Link scroll={true} href="/contact-us" passHref>
                 <button className="text-montserrat font-bold text-left text-lg">
                   Contact Us
                 </button>
@@ -73,7 +73,7 @@ const Navbar = (props: NavbarProps): JSX.Element => {
       </AnimatePresence>
       <div className="z-20 h-14 flex justify-center bg-white">
         <div className="container mx-auto px-4 lg:px-36 py-3 md:py-2 flex justify-between items-center">
-          <Link href="/" passHref>
+          <Link scroll={true} href="/" passHref>
             <div className="flex flex-col justify-center w-36 md:w-28 cursor-pointer">
               <img
                 src="/assets/images/logo.png"
@@ -91,27 +91,27 @@ const Navbar = (props: NavbarProps): JSX.Element => {
             <Hamburger isOpen={isOpen} />
           </button>
           <div id="nav" className="space-x-1 md:flex hidden">
-            <Link href="/our-story" passHref>
+            <Link scroll={true} href="/our-story" passHref>
               <button className="px-2 py-1 text-montserrat font-bold md:text-base">
                 Our Story
               </button>
             </Link>
-            <Link href="/pricing" passHref>
+            <Link scroll={true} href="/pricing" passHref>
               <button className="px-2 py-1 text-montserrat font-bold md:text-base">
                 Pricing
               </button>
             </Link>
-            <Link href="/blog" passHref>
+            <Link scroll={true} href="/blog" passHref>
               <button className="px-2 py-1 text-montserrat font-bold md:text-base">
                 Blog
               </button>
             </Link>
-            <Link href="/faq" passHref>
+            <Link scroll={true} href="/faq" passHref>
               <button className="px-2 py-1 text-montserrat font-bold md:text-base">
                 FAQ
               </button>
             </Link>
-            <Link href="/contact-us" passHref>
+            <Link scroll={true} href="/contact-us" passHref>
               <button className="px-2 py-1 text-montserrat font-bold md:text-base">
                 Contact Us
               </button>

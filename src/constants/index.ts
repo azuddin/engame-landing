@@ -262,12 +262,23 @@ export const headers = {
   // "Content-Type": "application/json",
 };
 
-export const blogs = [
+export interface BlogType {
+  avatar: string;
+  author: string;
+  datetime: string;
+  image: string;
+  image_lg: string;
+  title: string;
+  desc: string;
+  content: string;
+}
+export const blogs: BlogType[] = [
   {
     avatar: "/assets/images/icon.png",
     author: "Engame.Asia",
-    datetime: "13 Apr 21  •  9:00AM",
+    datetime: "2021-04-13 09:00",
     image: "/assets/images/engame_mdec_dice_winner.jpg",
+    image_lg: "",
     title: "MDEC DiCE 2019 Commercial Ready Game Winner",
     desc: "In year 2017 when we first got ourselves into the then called IPCC (Intellectual Property Creators' Challenge)...",
     content: `
@@ -294,8 +305,9 @@ export const blogs = [
   {
     avatar: "/assets/images/icon.png",
     author: "Engame.Asia",
-    datetime: "13 Apr 21  •  9:00AM",
+    datetime: "2021-04-13 09:00",
     image: "/assets/images/engame_maxis_top_startup.jpg",
+    image_lg: "/assets/images/engame_maxis_top_startup.jpg",
     title: "MDEC DiCE 2019 Commercial Ready Game Winner",
     desc: "In year 2017 when we first got ourselves into the then called IPCC (Intellectual Property Creators' Challenge)...",
     content: `

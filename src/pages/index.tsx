@@ -83,12 +83,12 @@ const Home: PageLayoutProps = () => {
                 <p className="text-center md:text-left font-montserrat font-extrabold pb-4 text-4xl">
                   Adding Fun to Your Brand! Think Big, Play Beyond!
                 </p>
-                <Link href="/im-brand-owner" passHref>
+                <Link scroll={true} href="/im-brand-owner" passHref>
                   <button className="w-full md:w-60 px-5 py-2 border border-black bg-black text-white rounded font-segoeui font-bold hover:opacity-90 hover:shadow-lg">
                     I want more Customers!
                   </button>
                 </Link>
-                <Link href="/im-gamer" passHref>
+                <Link scroll={true} href="/im-gamer" passHref>
                   <button className="w-full md:w-60 px-5 py-2 border border-white bg-white rounded font-segoeui font-bold hover:opacity-90 hover:shadow-lg">
                     I wanna play Games!
                   </button>
@@ -238,10 +238,10 @@ const Home: PageLayoutProps = () => {
                 }}
                 className="flex-grow flex justify-center items-center relative w-full h-44 rounded-3xl overflow-hidden"
               ></div>
-              <Link href="/im-brand-owner">
-              <button className="w-full md:w-52 px-5 py-2 border border-black bg-black text-white rounded font-montserrat font-bold hover:opacity-90 hover:shadow-lg">
-                Get A Free Demo
-              </button>
+              <Link scroll={true} href="/im-brand-owner">
+                <button className="w-full md:w-52 px-5 py-2 border border-black bg-black text-white rounded font-montserrat font-bold hover:opacity-90 hover:shadow-lg">
+                  Get A Free Demo
+                </button>
               </Link>
             </div>
             <div className="flex flex-col items-center space-y-6">
@@ -258,10 +258,10 @@ const Home: PageLayoutProps = () => {
                 }}
                 className="flex-grow flex justify-center items-center relative w-full h-44 rounded-3xl overflow-hidden"
               ></div>
-              <Link href="/im-gamer">
-              <button className="w-full md:w-52 px-5 py-2 border border-black bg-black text-white rounded font-montserrat font-bold hover:opacity-90 hover:shadow-lg">
-                Play a game
-              </button>
+              <Link scroll={true} href="/im-gamer">
+                <button className="w-full md:w-52 px-5 py-2 border border-black bg-black text-white rounded font-montserrat font-bold hover:opacity-90 hover:shadow-lg">
+                  Play a game
+                </button>
               </Link>
             </div>
           </div>

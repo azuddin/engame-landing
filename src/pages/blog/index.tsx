@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Link from "next/link";
 import { Layout, Section } from "@engame/components";
 import { blogs } from "@engame/constants";
@@ -7,6 +8,14 @@ import { FiArrowRight } from "react-icons/fi";
 const Blog: PageLayoutProps = () => {
   return (
     <>
+      <Head>
+        <title>Blogs - Engame</title>
+        <meta
+          name="description"
+          content="Sunt ullamco do adipisicing dolore occaecat qui eiusmod ut irure."
+        />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <div
         style={{
           backgroundImage: "url('/assets/images/EG---bg.jpg')",
@@ -70,7 +79,7 @@ const Blog: PageLayoutProps = () => {
                     {i.title}
                   </p>
                   <p className="font-lato text-lg">{i.desc}</p>
-                  <Link href={`/blog/${index + 1}`} passHref>
+                  <Link scroll={true} href={`/blog/${index + 1}`} passHref>
                     <div className="flex items-center space-x-1 font-montserrat font-bold cursor-pointer">
                       <a>Read more</a>
                       <FiArrowRight />

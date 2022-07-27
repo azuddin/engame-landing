@@ -32,7 +32,11 @@ const ImGamer: PageLayoutProps = () => {
                 <p className="text-center md:text-left font-montserrat font-extrabold pb-4 text-4xl">
                   Tap Master, Play the Games, Enjoy the Rewards!
                 </p>
-                <Link href="https://tapmaster.engame.asia" passHref>
+                <Link
+                  scroll={true}
+                  href="https://tapmaster.engame.asia"
+                  passHref
+                >
                   <button className="w-full md:w-60 px-5 py-2 border border-black bg-black text-white rounded font-montserrat font-bold hover:opacity-90 hover:shadow-lg">
                     Play Tap Master Now!
                   </button>
@@ -136,7 +140,8 @@ const ImGamer: PageLayoutProps = () => {
             </div>
             <div
               style={{
-                backgroundImage: "url('/assets/images/04 Gamer/EG---Landing-gamer_playgame(D).jpg')",
+                backgroundImage:
+                  "url('/assets/images/04 Gamer/EG---Landing-gamer_playgame(D).jpg')",
                 backgroundSize: "cover",
                 backgroundPosition: "center",
               }}
@@ -248,7 +253,11 @@ const ImGamer: PageLayoutProps = () => {
                   </p>
                 </div>
                 <div className="flex flex-col justify-center">
-                  <Link href="https://tapmaster.engame.asia" passHref>
+                  <Link
+                    scroll={true}
+                    href="https://tapmaster.engame.asia"
+                    passHref
+                  >
                     <button className="w-full md:w-52 px-5 py-2 border border-black bg-black text-white rounded font-montserrat font-bold hover:opacity-90 hover:shadow-lg">
                       Play Now
                     </button>

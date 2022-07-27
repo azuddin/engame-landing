@@ -47,16 +47,22 @@ const Footer = (): JSX.Element => {
           </div>
         </div>
         <div className="flex flex-col md:flex-row justify-between items-center border-t py-8 md:py-4 space-y-4 md:space-y-0">
-          <div className="social space-x-4 flex flex-row">          
-            <a href="https://www.instagram.com/engame.tap.master/" className="flex flex-col justify-center w-9 md:w-6">
+          <div className="social space-x-4 flex flex-row">
+            <a
+              href="https://www.instagram.com/engame.tap.master/"
+              className="flex flex-col justify-center w-9 md:w-6"
+            >
               <img
                 src="/assets/images/ig-icon.png"
                 alt="logo"
                 width={40}
                 height={40}
               />
-            </a>            
-            <a href="https://www.facebook.com/TapMaster.voucher.arcade" className="flex flex-col justify-center w-9 md:w-6">
+            </a>
+            <a
+              href="https://www.facebook.com/TapMaster.voucher.arcade"
+              className="flex flex-col justify-center w-9 md:w-6"
+            >
               <img
                 src="/assets/images/fb-icon.png"
                 alt="logo"
@@ -66,35 +72,35 @@ const Footer = (): JSX.Element => {
             </a>
           </div>
           <div className="menu md:space-x-6 flex flex-col md:flex-row space-y-4 md:space-y-0">
-            <Link href="/our-story" passHref>
+            <Link scroll={true} href="/our-story" passHref>
               <button className="font-lato font-bold text-lg md:text-base">
                 Our Story
               </button>
             </Link>
-            <Link href="/pricing" passHref>
+            <Link scroll={true} href="/pricing" passHref>
               <button className="font-lato font-bold text-lg md:text-base">
                 Pricing
               </button>
             </Link>
 
-            <Link href="/faq" passHref>
+            <Link scroll={true} href="/faq" passHref>
               <button className="font-lato font-bold text-lg md:text-base">
                 FAQ
               </button>
             </Link>
-            <Link href="/contact-us" passHref>
+            <Link scroll={true} href="/contact-us" passHref>
               <button className="font-lato font-bold text-lg md:text-base">
                 Contact Us
               </button>
             </Link>
           </div>
           <div className="term md:space-x-6 flex flex-col md:flex-row space-y-4 md:space-y-0">
-            <Link href="/privacy" passHref>
+            <Link scroll={true} href="/privacy" passHref>
               <button className="font-lato font-bold text-lg md:text-base">
                 Privacy
               </button>
             </Link>
-            <Link href="/conditions" passHref>
+            <Link scroll={true} href="/conditions" passHref>
               <button className="font-lato font-bold text-lg md:text-base">
                 Conditions
               </button>
