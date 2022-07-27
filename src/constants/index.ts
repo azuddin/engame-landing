@@ -276,7 +276,7 @@ export const blogs: BlogType[] = [
   {
     avatar: "/assets/images/icon.png",
     author: "Engame",
-    datetime: "13 July 22  •  10:48AM",
+    datetime: "2022-07-13 10:48",
     image_lg: "/assets/images/09 blog/engame_can_games_boost_sales.gif",
     image: "/assets/images/09 blog/engame_can_games_boost_sales.gif",
     title: "Can Games Boost Sales?",
@@ -336,7 +336,7 @@ export const blogs: BlogType[] = [
   {
     avatar: "/assets/images/icon.png",
     author: "Engame",
-    datetime: "02 Apr 22  •  7:33PM",
+    datetime: "2022-04-02 19:33",
     image: "/assets/images/09 blog/engame_maxis_top_startup.jpg",
     image_lg: "/assets/images/09 blog/engame_maxis_top_startup.jpg",
     title: "Maxis Market Access Day Top 100 Startups",
@@ -365,7 +365,7 @@ export const blogs: BlogType[] = [
   {
     avatar: "/assets/images/icon.png",
     author: "Engame",
-    datetime: "11 Mar 22  •  2:31PM",
+    datetime: "2022-03-11 14:31",
     image: "/assets/images/09 blog/engame_mdec_dice_winner.jpg",
     image_lg: "/assets/images/09 blog/engame_mdec_dice_winner.jpg",
     title: "MDEC DiCE 2019 Commercial Ready Game Winner",

@@ -27,6 +27,9 @@ function MyApp({ Component, pageProps }: AppLayoutProps) {
   useEffect(() => {
     const handleRouteChange = (url: any) => {
       gtag.pageview(url);
+      setTimeout(() => {
+        document.getElementById("top")?.scrollIntoView();
+      }, 5);
     };
     router.events.on("routeChangeComplete", handleRouteChange);
     return () => {

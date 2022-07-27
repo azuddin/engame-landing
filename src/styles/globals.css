@@ -22,4 +22,5 @@ roboto
 html,
 body {
   overflow: hidden;
+  scroll-behavior: smooth !important;
 }

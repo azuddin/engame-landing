@@ -427,6 +427,7 @@ const Layout = (props: LayoutProps): JSX.Element => {
           "flex flex-1 flex-col" + (!!showMenu ? "" : " overflow-auto")
         }
       >
+        <div id="top"></div>
         {children}
         <Footer />
       </div>

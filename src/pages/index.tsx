@@ -88,7 +88,7 @@ const Home: PageLayoutProps = () => {
                     I want more Customers!
                   </button>
                 </Link>
-                <Link href="im-gamer" passHref>
+                <Link href="/im-gamer" passHref>
                   <button className="w-full md:w-60 px-5 py-2 border border-white bg-white rounded font-segoeui font-bold hover:opacity-90 hover:shadow-lg">
                     I wanna play Games!
                   </button>
