@@ -11,7 +11,7 @@ const TrendingGame = (): JSX.Element => {
         backgroundSize: "cover",
       }}
     >
-      <Section>
+      <Section bgColor="bg-transparent">
         <div className="flex flex-col items-center space-y-5 py-10">
           <p className="text-center font-montserrat font-extrabold text-4xl z-10">
             Trending Games
