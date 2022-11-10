@@ -53,3 +53,8 @@ export interface EnquiryForm {
   category: string;
   message: string;
 }
+
+export enum MediaTypeProps {
+  image = "image",
+  video = "video",
+}

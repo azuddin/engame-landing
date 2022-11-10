@@ -1,3 +1,4 @@
+import { useContext } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -13,9 +14,11 @@ import {
   TrendingGame,
 } from "@engame/components";
 import { enquiryEndpoint, headers } from "@engame/constants";
-import { EnquiryForm, PageLayoutProps } from "@engame/types";
+import { EnquiryForm, MediaTypeProps, PageLayoutProps } from "@engame/types";
 import { Controller, useForm } from "react-hook-form";
 import toast from "react-hot-toast";
+import useMediaQuery from "src/hooks/useMediaQuery";
+import { AppContext } from "./_app";
 import "react-multi-carousel/lib/styles.css";
 
 const Home: PageLayoutProps = () => {
@@ -58,6 +61,10 @@ const Home: PageLayoutProps = () => {
         console.error("CONTACT US ERROR=>", err);
       });
   };
+
+  const { handleToggleModal } = useContext(AppContext);
+  const isMobile = useMediaQuery("(max-width: 425px)");
+
   return (
     <>
       <Head>
@@ -79,7 +86,16 @@ const Home: PageLayoutProps = () => {
         }}
       >
         <div className="relative bg-transparent">
-          <Section zIndex="z-10" bgColor="bg-transparent">
+          <Section
+            zIndex="z-10"
+            bgColor="bg-transparent"
+            isVideo
+            videoUrl={
+              isMobile
+                ? "https://engame.tech/assets/images/400x750.mp4"
+                : "https://engame.tech/assets/images/1920x700.mp4"
+            }
+          >
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-10 md:pt-0">
               <div className="flex flex-col justify-center space-y-2">
                 <p className="text-center md:text-left font-montserrat font-extrabold pb-1 text-4xl">
@@ -89,11 +105,12 @@ const Home: PageLayoutProps = () => {
                   Try <b>Tap Master</b>, the easy-to-use platform to boost your
                   revenue, promote your brand, and engage your customers.
                 </p>
-                <Link href="/im-brand-owner" passHref>
-                  <button className="w-full md:w-60 px-5 py-2 border border-black bg-black text-white rounded font-segoeui font-bold hover:opacity-90 hover:shadow-lg">
-                    Get a Free Trial Now!
-                  </button>
-                </Link>
+                <button
+                  onClick={() => handleToggleModal("signup")}
+                  className="w-full md:w-60 px-5 py-2 border border-black bg-black text-white rounded font-segoeui font-bold hover:opacity-90 hover:shadow-lg"
+                >
+                  Get a Free Trial Now!
+                </button>
                 <Link href="https://forms.gle/w2CeqCTwG3qTgQEC8" passHref>
                   <button className="w-full md:w-60 px-5 py-2 border border-black bg-black text-white rounded font-segoeui font-bold hover:opacity-90 hover:shadow-lg">
                     Join Kaw-Kaw Challenge!
@@ -251,7 +268,10 @@ const Home: PageLayoutProps = () => {
             alt="home-1"
           />
         </div>
-        <HowItWork />
+        <HowItWork
+          mediaType={MediaTypeProps.video}
+          mediaUrl="https://engame.tech/assets/images/1920x700.mp4"
+        />
         <TrendingGame />
         <Section>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-10 py-10">
