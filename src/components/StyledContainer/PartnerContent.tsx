@@ -8,24 +8,21 @@ const PartnerContent = (props: {
     <div
       className="relative"
       style={{
-        backgroundImage: backgroundImage
-          ? "url('/assets/images/EG---bg-2.jpg')"
-          : "",
-        backgroundSize: "cover",
+        backgroundColor: "white",
       }}
     >
       <Section bgColor={backgroundImage ? "bg-transparent" : "bg-white"}>
         <div className="flex flex-col items-center py-10 space-y-8">
-          <p className="text-center font-montserrat font-extrabold text-4xl z-10">
-            Partnered with the world&apos;s best companies
+          <p className="text-center font-montserrat font-bold text-3xl z-10">
+            Trusted by the World&apos;s leading companies
           </p>
           <div className="w-full flex flex-row overflow-auto space-x-4 pb-2 2xl:justify-center">
             {[
-              "/assets/images/company-1.png",
-              "/assets/images/company-2.png",
-              "/assets/images/company-3.png",
-              "/assets/images/company-4.png",
-              "/assets/images/company-5.png",
+              "/assets/images/company-tealive.png",
+              "/assets/images/company-fave.png",
+              "/assets/images/company-herbalife.png",
+              "/assets/images/company-texaschicken.png",
+              "/assets/images/company-packtica.png",
             ].map((i, k) => (
               <div
                 key={k}

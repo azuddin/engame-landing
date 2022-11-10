@@ -24,24 +24,25 @@ const SubscribePlan = (props: {
     >
       <Section bgColor={backgroundImage ? "bg-transparent" : "bg-white"}>
         <div className="flex flex-col items-center py-10">
-          <p className="text-center md:text-left font-montserrat font-extrabold text-4xl mb-4">
-            Pick Your Best Plan Now!
+          <p className="text-center md:text-center font-montserrat font-bold text-3xl mb-4">
+            Pick a plan to supercharge your sales, brand, and market with Tap
+            Master!
           </p>
-          <p className="text-center max-w-lg font-lato font-medium text-xl capitalize mb-10">
-            Select your desired plan to get access easily! Subscribe to our
-            Basic Starter Plan for FREE Today!
+          <p className="text-center max-w-3xl font-lato font-medium text-xl capitalize mb-10">
+            Boost your Sales, Customer Experience, and Brand Stickiness!{" "}
+            <b>All</b> in this platform!
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-6 xl:gap-20">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-6 2xl:gap-10">
             {[
               {
-                title: "Basic Starter",
+                title: "Starter Package",
                 price: "FREE",
-                desc: "Get complete access to the first level and learn exactly how gamification works!",
+                desc: "Get complete access to the first level and learn exactly how Tap Master works! You'll get to..",
                 descList: [
-                  "Access to GaaS player base",
-                  "Voucher distribution",
-                  "Fixed game challenges",
-                  "Free business package trial",
+                  "Promote to our growing player base!",
+                  "Access to your voucher dashboard!",
+                  "Attend exclusive Tap Master workshop!",
+                  "Win a month of Business Package!",
                 ],
                 onClick: () => {
                   handleToggleModal("signup");
@@ -49,15 +50,14 @@ const SubscribePlan = (props: {
               },
               {
                 title: "Business",
-                price: "USD49",
-                desc: "Perfect Choice for teams and businesses ready to feature your brand identities in your own game!",
+                price: "$49",
+                desc: "Best choice for you to start featuring your brand & products in Tap Master! You'll get to..",
                 descList: [
-                  "Access to GaaS player base",
-                  "Voucher distribution",
-                  "Voucher optimization",
-                  "Featuring your brand in game",
-                  "Featuring your product in game",
-                  "Fixed game challenges",
+                  "One (1) slot for your brand or product",
+                  "Promote to our growing player base",
+                  "Access to your voucher dashboard",
+                  "Know your customers who played your game",
+                  "Attend exclusive Tap Master workshop!",
                 ],
                 isPopular: true,
                 onClick: () => {
@@ -66,16 +66,15 @@ const SubscribePlan = (props: {
               },
               {
                 title: "Professional",
-                price: "USD149",
-                desc: "Ideal Choice for businesses or enterprises that would like to customize a well-fitted challenging game with specific business or campaign needs.",
+                price: "$149",
+                desc: "Ultimate choice for next level customisation for maximum marketing effect! You'll get to..",
                 descList: [
-                  "Access to GaaS player base",
-                  "Voucher distribution",
-                  "Voucher optimization",
-                  "Featuring your brand in game",
-                  "Featuring your product in game",
-                  "Featuring your competition in game",
-                  "Custom game challenges",
+                  "Fully customise games to your needs",
+                  "Four (4) slot for your brand or product",
+                  "Promote to our growing player base",
+                  "Access to your voucher dashboard",
+                  "Know your customers who played your game",
+                  "Attend exclusive Tap Master workshop!",
                 ],
                 onClick: () => {
                   handleToggleModal("signup2");
@@ -95,7 +94,7 @@ const SubscribePlan = (props: {
                     <div className="w-20 absolute top-0 right-0 overflow-hidden inline-block">
                       <div className="h-20 bg-black transform rotate-45 origin-bottom-right flex-1 flex items-end -ml-8 px-8">
                         <p className="text-center text-white capitalize font-montserrat font-bold text-xs">
-                          popular choice
+                          Popular Choice
                         </p>
                       </div>
                     </div>
@@ -129,7 +128,7 @@ const SubscribePlan = (props: {
                     onClick={handleOnClick}
                     className="w-full px-2 py-1 mt-6 text-base bg-black text-white rounded border border-black font-montserrat font-bold hover:opacity-90 hover:shadow-lg"
                   >
-                    Choose plan
+                    Sign Up Now!
                   </button>
                 </div>
               );

@@ -1,19 +1,21 @@
 import Head from "next/head";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import {
   HowItWork,
   Input,
   Layout,
   Option,
+  PartnerContent,
   Section,
   Select,
+  SubscribePlan,
   TrendingGame,
 } from "@engame/components";
 import { enquiryEndpoint, headers } from "@engame/constants";
 import { EnquiryForm, PageLayoutProps } from "@engame/types";
 import { Controller, useForm } from "react-hook-form";
 import toast from "react-hot-toast";
-import { PartnerContent } from "src/components";
 import "react-multi-carousel/lib/styles.css";
 
 const Home: PageLayoutProps = () => {
@@ -49,7 +51,7 @@ const Home: PageLayoutProps = () => {
           return;
         }
         toast.success(
-          "Submission Successful! Thank you for your interest and we'll get in touch with you shortly!"
+          "Message sent successfully! Thank you for your interest and we'll get in touch with you shortly!"
         );
       })
       .catch((err) => {
@@ -80,20 +82,30 @@ const Home: PageLayoutProps = () => {
           <Section zIndex="z-10" bgColor="bg-transparent">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-10 md:pt-0">
               <div className="flex flex-col justify-center space-y-2">
-                <p className="text-center md:text-left font-montserrat font-extrabold pb-4 text-4xl">
-                  Adding Fun to Your Brand! Think Big, Play Beyond!
+                <p className="text-center md:text-left font-montserrat font-extrabold pb-1 text-4xl">
+                  Supercharge your revenue, brand, and market!
                 </p>
-                <Link scroll={true} href="/im-brand-owner" passHref>
+                <p className="text-center md:text-left font-montserrat font pb-4 text-xl">
+                  Try <b>Tap Master</b>, the easy-to-use platform to boost your
+                  revenue, promote your brand, and engage your customers.
+                </p>
+                <Link href="/im-brand-owner" passHref>
                   <button className="w-full md:w-60 px-5 py-2 border border-black bg-black text-white rounded font-segoeui font-bold hover:opacity-90 hover:shadow-lg">
-                    I want more Customers!
+                    Get a Free Trial Now!
                   </button>
                 </Link>
-                <Link href="/im-gamer" passHref>
+                <Link href="https://forms.gle/w2CeqCTwG3qTgQEC8" passHref>
+                  <button className="w-full md:w-60 px-5 py-2 border border-black bg-black text-white rounded font-segoeui font-bold hover:opacity-90 hover:shadow-lg">
+                    Join Kaw-Kaw Challenge!
+                  </button>
+                </Link>
+                <Link href="https://tapmaster.engame.tech" passHref>
                   <button className="w-full md:w-60 px-5 py-2 border border-white bg-white rounded font-segoeui font-bold hover:opacity-90 hover:shadow-lg">
-                    I wanna play Games!
+                    Play Tap Master Now!
                   </button>
                 </Link>
               </div>
+
               <div className="flex justify-center items-center">
                 <div className="flex justify-center md:flex-1 md:justify-end max-w-lg">
                   <img
@@ -107,83 +119,102 @@ const Home: PageLayoutProps = () => {
             </div>
           </Section>
         </div>
-        <Section>
-          <div className="flex flex-col items-center space-y-10 py-10">
-            <p className="text-center font-montserrat font-extrabold text-4xl">
-              Proven Gamification Model Delivered To Superapps Across The Globe
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
-              {[
-                {
-                  title: "20,000+",
-                  desc: "Players",
-                  image_url:
-                    "/assets/images/01 Home/EG---Landing-home_icon-1(D).png",
-                },
-                {
-                  title: "700,000+ ",
-                  desc: "Games played",
-                  image_url:
-                    "/assets/images/01 Home/EG---Landing-home_icon-2(D).png",
-                },
-                {
-                  title: "3+ Minutes",
-                  desc: "Played per session",
-                  image_url:
-                    "/assets/images/01 Home/EG---Landing-home_icon-3(D).png",
-                },
-                {
-                  title: "12+ Partners",
-                  desc: "Across the globe",
-                  image_url:
-                    "/assets/images/01 Home/EG---Landing-home_icon-4(D).png",
-                },
-              ].map((i, k) => (
-                <div
-                  key={k}
-                  className="flex flex-col justify-start items-center"
-                >
-                  <div className="max-w-xs md:h-32 md:w-32 flex justify-center mb-4 rounded-lg overflow-hidden">
-                    <img
-                      src={i.image_url}
-                      width={800}
-                      height={800}
-                      alt="home-2"
-                    />
-                  </div>
-                  <p className="text-center font-montserrat font-bold text-3xl md:text-xl">
-                    {i.title}
-                  </p>
-                  <p className="text-center font-montserrat font-bold text-xl md:text-base">
-                    {i.desc}
-                  </p>
+
+        <PartnerContent backgroundImage />
+
+        <div className="bg-white">
+          <div
+            style={{
+              backgroundImage: "url('/assets/images/EG---bg-2.jpg')",
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
+            className="flex justify-center items-end mb-8 md:mb-0 bg-yellow-400 relative"
+          >
+            <Section bgColor={"bg-transparent"}>
+              <div className="flex flex-col items-center space-y-6 py-14">
+                <p className="text-center font-montserrat font-bold text-3xl">
+                  How Tap Master Supercharge your Revenue, Brand and Market
+                </p>
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
+                  {[
+                    {
+                      title: "24,000+",
+                      desc: "Daily Views",
+                      image_url:
+                        "/assets/images/01 Home/EG---Landing-home_icon-1(D).png",
+                    },
+                    {
+                      title: "750,000+ ",
+                      desc: "Games Completed",
+                      image_url:
+                        "/assets/images/01 Home/EG---Landing-home_icon-2(D).png",
+                    },
+                    {
+                      title: "2.1M Minutes",
+                      desc: "Play Time Monthly",
+                      image_url:
+                        "/assets/images/01 Home/EG---Landing-home_icon-3(D).png",
+                    },
+                    {
+                      title: "3200% Increased",
+                      desc: "Brand Stickiness",
+                      image_url:
+                        "/assets/images/01 Home/EG---Landing-home_icon-4(D).png",
+                    },
+                  ].map((i, k) => (
+                    <div
+                      key={k}
+                      className="flex flex-col justify-start items-center"
+                    >
+                      <div className="max-w-xs md:h-32 md:w-32 flex justify-center mb-4 rounded-lg overflow-hidden">
+                        <img
+                          src={i.image_url}
+                          width={800}
+                          height={800}
+                          alt="home-2"
+                        />
+                      </div>
+                      <p className="text-center font-montserrat font-bold text-3xl md:text-xl">
+                        {i.title}
+                      </p>
+                      <p className="text-center font-montserrat font-bold text-xl md:text-base">
+                        {i.desc}
+                      </p>
+                    </div>
+                  ))}
                 </div>
-              ))}
-            </div>
+              </div>
+            </Section>
           </div>
-        </Section>
+        </div>
         <Section>
-          <div className="flex flex-col space-y-6 md:space-y-10 py-10">
-            <p className="text-center font-montserrat font-extrabold text-4xl">
-              Next-Gen Enter-Gagement Platform
+          <div className="flex flex-col space-y-6 md:space-y-5 py-14">
+            <p className="text-center font-montserrat font-bold text-3xl">
+              No Programming Needed! Sign Up And Maximize Sales With Your Own
+              Games!
+            </p>
+            <p className="text-center font-montserrat font text-lg">
+              Just upload your brand logo or product images to <b>Tap Master</b>{" "}
+              and you are good to go!
             </p>
             <div className="flex flex-col-reverse md:flex-col items-center">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
                 {[
                   {
-                    title: "30 F2P Rewards Earning Games",
-                    desc: "Tired of playing games that earn you nothing? Join us now to enjoy the most gratifying Free to Play Rewards Earning Game!",
+                    title: "Ride On Our Player Base For Free!",
+                    desc: "With our ever growing player base across the globe, so do your brand exposure! Feel free to use our games for free and get more exposure! ",
                   },
                   {
-                    title: "20K+ Active Players in the Arcade",
-                    desc: "Don't know who to play with? No worries! You can easily play with over 20,000 active users at our platform and feel connected!",
+                    title: "35 Games To Hype Your Products!",
+                    desc: "Select your games from our 35 unique games that fit your brand and products, then customise them to compliment your marketing campaign immediately!",
                   },
                 ].map((i, k) => (
                   <div
                     key={`next-${k}`}
                     className="rounded-2xl bg-yellow-100 p-10 flex flex-col justify-between"
                   >
-                    <p className="font-montserrat font-extrabold text-2xl">
+                    <p className="font-montserrat font-bold text-2xl">
                       {i.title}
                     </p>
                     <p className="font-lato text-lg">{i.desc}</p>
@@ -200,7 +231,7 @@ const Home: PageLayoutProps = () => {
               backgroundSize: "cover",
               backgroundPosition: "center",
             }}
-            className="flex justify-center items-end mb-8 md:mb-0 bg-yellow-400 md:h-28 lg:h-40 2xl:h-52 relative"
+            className="flex justify-center items-end mb-8 md:mb-0 bg-yellow-400 md:h-28 lg:h-40 2xl:h-42 relative"
           >
             <div className="h-80 items-end hidden md:flex">
               <img
@@ -225,8 +256,8 @@ const Home: PageLayoutProps = () => {
         <Section>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-10 py-10">
             <div className="flex flex-col items-center space-y-6">
-              <p className="text-center font-montserrat font-extrabold text-4xl md:text-3xl">
-                Learn more about why Super-brands work with us?
+              <p className="text-center font-montserrat font-bold text-2xl md:text-3xl">
+                Boost Your Sales up to 50% with a Free Trial Now!
               </p>
               <div
                 style={{
@@ -238,15 +269,16 @@ const Home: PageLayoutProps = () => {
                 }}
                 className="flex-grow flex justify-center items-center relative w-full h-44 rounded-3xl overflow-hidden"
               ></div>
-              <Link scroll={true} href="/im-brand-owner">
+              <Link href="/pricing">
                 <button className="w-full md:w-52 px-5 py-2 border border-black bg-black text-white rounded font-montserrat font-bold hover:opacity-90 hover:shadow-lg">
-                  Get A Free Demo
+                  Get A Free Trial!
                 </button>
               </Link>
             </div>
             <div className="flex flex-col items-center space-y-6">
-              <p className="text-center font-montserrat font-extrabold text-4xl md:text-3xl">
-                The Immersive Gaming Experience is Here. Are You Ready?
+              <p className="text-center font-montserrat font-bold text-2xl md:text-3xl">
+                Play Tap Master to Unlock Special Promos of your Favourite
+                Brand!
               </p>
               <div
                 style={{
@@ -258,30 +290,34 @@ const Home: PageLayoutProps = () => {
                 }}
                 className="flex-grow flex justify-center items-center relative w-full h-44 rounded-3xl overflow-hidden"
               ></div>
-              <Link href="https://uat.tapmaster.engame.tech">
+              <Link href="https://tapmaster.engame.tech">
                 <button className="w-full md:w-52 px-5 py-2 border border-black bg-black text-white rounded font-montserrat font-bold hover:opacity-90 hover:shadow-lg">
-                  Play a game
+                  Play Tap Master!
                 </button>
               </Link>
             </div>
           </div>
         </Section>
-        <PartnerContent backgroundImage />
+        <SubscribePlan
+          backgroundImage
+          backgroundImageUrl="/assets/images/EG---bg-2.jpg"
+        />
         <Section>
           <form onSubmit={handleSubmitContactUs(contactUs)}>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10 py-10">
               <div className="flex flex-col-reverse md:flex-col items-center md:justify-center">
-                <div className="flex flex-col space-y-8">
+                <div className="flex flex-col space-y-2">
                   <p className="text-center md:text-left font-montserrat font-extrabold text-4xl">
-                    Be part of the next gaming phenomenon
+                    Let&apos;s Talk!
                   </p>
                   <p className="font-lato text-xl">
-                    Testing to make a media inquiry ? Any feedback or
-                    suggestions about one of our games? Fill out the form and
-                    we&apos;ll get back to you !
+                    At Engame, our clients are our partners! If you have any
+                    inquiries about the subscription plans, pricing or bespoke
+                    solutions, please do not hesitate to reach out and our team
+                    will be happy to help!
                   </p>
                 </div>
-                <div className="flex max-w-md">
+                <div className="flex max-w-md py-10">
                   <img
                     src="/assets/images/01 Home/EG---Landing-home_feedback(D).png"
                     width={800}

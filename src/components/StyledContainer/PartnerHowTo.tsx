@@ -2,7 +2,7 @@ import { Section } from "@engame/components";
 import { carouselResponsive } from "@engame/constants";
 import Carousel from "react-multi-carousel";
 
-const TrendingGame = (): JSX.Element => {
+const PartnerHowTo = (): JSX.Element => {
   return (
     <div
       className="relative"
@@ -14,7 +14,7 @@ const TrendingGame = (): JSX.Element => {
       <Section bgColor="bg-transparent">
         <div className="flex flex-col items-center space-y-5 py-14">
           <p className="text-center font-montserrat font-bold text-3xl z-10">
-            Trending Games
+            How Can You Use Tap Master
           </p>
           <Carousel
             responsive={carouselResponsive}
@@ -53,7 +53,7 @@ const TrendingGame = (): JSX.Element => {
                 <div className="flex h-44">
                   <img src={i.image} alt={`game-${k + 1}`} className="w-auto" />
                 </div>
-                <p className="w-52 font-montserrat font-bold text-lg md:text-lg truncate">
+                <p className="w-60 font-montserrat font-bold text-base md:text-base truncate">
                   {i.name}
                 </p>
               </div>
@@ -65,4 +65,4 @@ const TrendingGame = (): JSX.Element => {
   );
 };
 
-export { TrendingGame };
+export { PartnerHowTo };

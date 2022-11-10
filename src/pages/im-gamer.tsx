@@ -29,10 +29,17 @@ const ImGamer: PageLayoutProps = () => {
           <Section bgColor="bg-transparent">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-10 md:pt-0">
               <div className="flex flex-col justify-center space-y-2">
-                <p className="text-center md:text-left font-montserrat font-extrabold pb-4 text-4xl">
-                  Tap Master, Play the Games, Enjoy the Rewards!
+                <p className="text-center md:text-left font-montserrat font-extrabold pb-1 text-4xl">
+                  Play Tap Master,
+                  <br />
+                  Enjoy Real Rewards!
                 </p>
-                <Link href="https://uat.tapmaster.engame.tech" passHref>
+                <p className="text-center md:text-left font-montserrat font pb-4 text-xl">
+                  Tap Master is the only game where you can win 50% discount on
+                  your lunch, 10% off your favourite gadgets, 20% rebate
+                  vouchers, and so much more!
+                </p>
+                <Link href="https://tapmaster.engame.tech" passHref>
                   <button className="w-full md:w-60 px-5 py-2 border border-black bg-black text-white rounded font-montserrat font-bold hover:opacity-90 hover:shadow-lg">
                     Play Tap Master Now!
                   </button>
@@ -52,37 +59,40 @@ const ImGamer: PageLayoutProps = () => {
           </Section>
         </div>
         <Section>
-          <div className="flex flex-col items-center space-y-10 py-10">
-            <p className="text-center font-montserrat font-extrabold text-4xl">
-              Tired of games that earn you nothing? Join Tap Master Now!
+          <div className="flex flex-col items-center space-y-5 py-14">
+            <p className="text-center font-montserrat font-bold text-3xl">
+              Tired of games that earn you nothing? Play Tap Master Now!
             </p>
-            <p className="text-center font-montserrat font-semibold text-2xl capitalize">
+            <p className="text-center font-montserrat font text-lg">
               Tap Master is more than just fun. We are an{" "}
-              <span className="font-extrabold">FREE</span> online arcade centre
-              where allows you to earn real-life rewards while enjoying
-              arcade-type casual games! Join Us Now!
+              <span className="font-extrabold">FREE</span> online game centre
+              where allows you to earn real-life rewards while enjoying retro
+              arcade hyper casual games!
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-6 xl:gap-20">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-6 3xl:gap-20">
               {[
                 {
-                  title: "30 FREE Arcade Games to Play!",
+                  title: "35 Exciting Retro Hyper Casual Games!",
+                  desc: "All our games are designed to be easy to play, yet challenge your mind and fingers to their limits!",
                   imageUrl:
                     "/assets/images/04 Gamer/EG---Landing-gamer_icon-1(D).png",
                 },
                 {
-                  title: "Challenge others in Multiplayer Mode!",
-                  imageUrl:
-                    "/assets/images/04 Gamer/EG---Landing-gamer_icon-2(D).png",
-                },
-                {
-                  title: "Play Games and Earn Exciting Vouchers!",
+                  title: "Play Games and Redeem Vouchers!",
+                  desc: "Collect Points (PTS) by playing with computer or other players, redeem the hottest deal in town!",
                   imageUrl:
                     "/assets/images/04 Gamer/EG---Landing-gamer_icon-3(D).png",
+                },
+                {
+                  title: "Challenge Others to Win Vouchers Faster!",
+                  desc: "Earn up to 10 times the Points (PTS) by playing with other players to redeem your vouchers 10 times faster!",
+                  imageUrl:
+                    "/assets/images/04 Gamer/EG---Landing-gamer_icon-2(D).png",
                 },
               ].map((i, k) => (
                 <div
                   key={`why-${k}`}
-                  className="flex flex-col justify-start items-center border-2 border-yellow-400 rounded-2xl px-8 py-6"
+                  className="flex flex-col justify-start items-center border-2 border-yellow-400 rounded-2xl px-8 py-8"
                 >
                   <div className="max-w-xs md:h-32 md:w-32 flex justify-center mb-4 rounded-lg overflow-hidden">
                     <img
@@ -92,8 +102,11 @@ const ImGamer: PageLayoutProps = () => {
                       alt="home-2"
                     />
                   </div>
-                  <p className="text-center font-montserrat font-bold text-3xl md:text-xl capitalize">
+                  <p className="text-center font-montserrat font-bold text-3xl md:text-2xl mb-3">
                     {i.title}
+                  </p>
+                  <p className="text-center max-w-xs font-lato font-medium text-xl md:text-base">
+                    {i.desc}
                   </p>
                 </div>
               ))}
@@ -111,21 +124,22 @@ const ImGamer: PageLayoutProps = () => {
                   alt="EG---cat "
                 />
               </div>
-              <p className="text-center md:text-left font-montserrat font-extrabold text-4xl">
+              <p className="text-center md:text-left font-montserrat font-bold text-4xl">
                 How to join the fun?
               </p>
-              <ul className="w-full text-left font-lato text-lg space-y-2">
+              <ul className="w-full text-left font-lato text-xl space-y-0">
                 {[
-                  "Sign up with Google",
+                  "Click Play Tap Master Now",
                   "Start playing & earning points!",
-                  "Redeem vouchers!",
+                  "Redeem your vouchers!",
                 ].map((i, k) => {
                   const isOdd = k % 2 === 0;
                   return (
                     <li
                       key={`fun-list-${k}`}
                       className={
-                        " px-4 py-2 rounded-lg" + (isOdd ? " " : " bg-gray-200")
+                        " px-4 py-2 rounded-lg" +
+                        (isOdd ? " " : " bg-yellow-200")
                       }
                     >
                       {i}
@@ -143,9 +157,9 @@ const ImGamer: PageLayoutProps = () => {
               }}
               className="flex-grow flex justify-center items-center relative h-96 rounded-3xl"
             >
-              <Link href="https://uat.tapmaster.engame.tech" passHref>
-                <button className="absolute bottom-8 w-52 px-5 py-2 border border-black bg-black text-white rounded font-montserrat font-bold hover:opacity-90 hover:shadow-lg">
-                  Play game Now
+              <Link href="https://tapmaster.engame.tech" passHref>
+                <button className="absolute bottom-8 w-56 px-5 py-2 border border-black bg-black text-white rounded font-montserrat font-bold hover:opacity-90 hover:shadow-lg">
+                  Play Tap Master Now
                 </button>
               </Link>
             </div>
@@ -162,8 +176,8 @@ const ImGamer: PageLayoutProps = () => {
             className="absolute bottom-0 top-auto h-5/6 md:h-2/3 w-full"
           ></div>
           <Section zIndex="z-10">
-            <div className="flex flex-col items-center py-10 space-y-8">
-              <p className="text-center font-montserrat font-extrabold text-4xl">
+            <div className="flex flex-col items-center py-8 space-y-8">
+              <p className="text-center font-montserrat font-bold text-3xl">
                 Hot Vouchers
               </p>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-6">
@@ -242,16 +256,16 @@ const ImGamer: PageLayoutProps = () => {
             <div className="bg-white rounded-xl p-10 shadow-lg my-10">
               <div className="flex flex-col md:flex-row justify-between space-y-10 md:space-y-0 md:space-x-8">
                 <div className="flex flex-col space-y-2">
-                  <p className="text-center md:text-left font-montserrat font-bold text-3xl capitalize">
+                  <h1 className="text-center md:text-left font-montserrat font-bold text-3xl capitalize">
                     Games, Fun, Rewards! Let&apos;s Play Now!
-                  </p>
+                  </h1>
                   <p className="text-center md:text-left font-lato text-xl">
                     <span className="font-bold">START</span> tapping and winning
                     now!
                   </p>
                 </div>
                 <div className="flex flex-col justify-center">
-                  <Link href="https://uat.tapmaster.engame.tech" passHref>
+                  <Link href="https://tapmaster.engame.tech" passHref>
                     <button className="w-full md:w-52 px-5 py-2 border border-black bg-black text-white rounded font-montserrat font-bold hover:opacity-90 hover:shadow-lg">
                       Play Now
                     </button>

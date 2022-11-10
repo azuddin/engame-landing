@@ -16,8 +16,9 @@ const Footer = (): JSX.Element => {
               />
             </div>
             <p className="font-montserrat text-lg md:text-base">
-              © 2021 <span className="font-bold">Engame</span> all rights
-              reserved.
+              © {new Date().getFullYear()}{" "}
+              <span className="font-bold">Engame (Enidea Sdn Bhd)</span> all
+              rights reserved.
             </p>
           </div>
           <div className="flex flex-col space-y-4 text-center md:text-left">
@@ -31,9 +32,15 @@ const Footer = (): JSX.Element => {
             </div>
             <div>
               <p className="text-6xl md:text-lg">☎</p>
+              <Link href="tel:+60012999786" passHref>
+                <a className="font-montserrat font-bold text-lg md:text-base">
+                  (+60) 012-299 9786
+                </a>
+              </Link>
+              <br />
               <Link href="tel:+600122774439" passHref>
                 <a className="font-montserrat font-bold text-lg md:text-base">
-                  (+60) 012-299 9786 (+60) 012-277 4439
+                  (+60) 012-277 4439
                 </a>
               </Link>
             </div>
@@ -41,7 +48,7 @@ const Footer = (): JSX.Element => {
           <div className="text-center md:text-left">
             <p className="text-6xl md:text-lg">📍</p>
             <p className="font-montserrat font-bold text-lg md:text-base">
-              Enidea Sdn Bhd C-20-02, Metropolitan Square, Jalan PJU 8/1,
+              Enidea Sdn Bhd, C-20-02, Metropolitan Square, Jalan PJU 8/1,
               Damansara Perdana, Petaling Jaya, 47820 Selangor, Malaysia
             </p>
           </div>
@@ -72,17 +79,31 @@ const Footer = (): JSX.Element => {
             </a>
           </div>
           <div className="menu md:space-x-6 flex flex-col md:flex-row space-y-4 md:space-y-0">
-            <Link scroll={true} href="/our-story" passHref>
-              <button className="font-lato font-bold text-lg md:text-base">
-                Our Story
-              </button>
-            </Link>
             <Link scroll={true} href="/pricing" passHref>
               <button className="font-lato font-bold text-lg md:text-base">
                 Pricing
               </button>
             </Link>
-
+            <Link scroll={true} href="/im-brand-owner" passHref>
+              <button className="font-lato font-bold text-lg md:text-base">
+                Brand Owner
+              </button>
+            </Link>
+            <Link scroll={true} href="/im-gamer" passHref>
+              <button className="font-lato font-bold text-lg md:text-base">
+                Gamer
+              </button>
+            </Link>
+            <Link scroll={true} href="/blog" passHref>
+              <button className="font-lato font-bold text-lg md:text-base">
+                Blog
+              </button>
+            </Link>
+            <Link scroll={true} href="/our-story" passHref>
+              <button className="font-lato font-bold text-lg md:text-base">
+                Our Story
+              </button>
+            </Link>
             <Link scroll={true} href="/faq" passHref>
               <button className="font-lato font-bold text-lg md:text-base">
                 FAQ

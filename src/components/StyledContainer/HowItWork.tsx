@@ -14,11 +14,12 @@ const HowItWork = (): JSX.Element => {
               className="rounded-lg"
             />
           </div>
-          <p className="text-center md:text-left font-montserrat font-extrabold text-4xl">
-            You are just 3 steps away!
+          <p className="text-center md:text-left font-montserrat font-extrabold text-3xl">
+            Supercharge your business in just 3 steps!
           </p>
           <p className="text-center md:text-left font-lato text-lg">
-          You only need these 3 simple steps to gamify your business and get your products flying off the shelves!
+            Gamify your business in less than 10 minutes with 3 simple steps!
+            And get your products flying off the shelves!
           </p>
         </div>
         <div
