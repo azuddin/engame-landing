@@ -229,7 +229,7 @@ const Layout = (props: LayoutProps): JSX.Element => {
             <div className="col-span-1 row-span-3 flex items-center">
               <div className="flex-1 flex justify-center items-start relative h-full">
                 <img
-                  src="/assets/images/07 Free trial/EG---Free-trial(D).png"
+                  src="./assets/images/07 Free trial/EG---Free-trial(D).png"
                   width={231}
                   height={300}
                   alt="home-2"

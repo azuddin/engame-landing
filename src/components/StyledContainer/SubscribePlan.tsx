@@ -9,8 +9,10 @@ const SubscribePlan = (props: {
   backgroundImageUrl?: string;
 }): JSX.Element => {
   const { push } = useRouter();
-  const { backgroundImage, backgroundImageUrl = "/assets/images/EG---bg.jpg" } =
-    props;
+  const {
+    backgroundImage,
+    backgroundImageUrl = "./assets/images/EG---bg.jpg",
+  } = props;
 
   const { handleToggleModal } = useContext(AppContext);
 

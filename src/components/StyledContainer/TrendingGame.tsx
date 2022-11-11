@@ -7,7 +7,7 @@ const TrendingGame = (): JSX.Element => {
     <div
       className="relative"
       style={{
-        backgroundImage: "url('/assets/images/EG---bg-2.jpg')",
+        backgroundImage: "url('./assets/images/EG---bg-2.jpg')",
         backgroundSize: "cover",
       }}
     >
@@ -25,23 +25,28 @@ const TrendingGame = (): JSX.Element => {
             {[
               {
                 name: "Legendary moai",
-                image: "/assets/images/01 Home/EG---Landing-home_game-1(D).png",
+                image:
+                  "./assets/images/01 Home/EG---Landing-home_game-1(D).png",
               },
               {
                 name: "The largest one",
-                image: "/assets/images/01 Home/EG---Landing-home_game-2(D).png",
+                image:
+                  "./assets/images/01 Home/EG---Landing-home_game-2(D).png",
               },
               {
                 name: "Deep blue sea",
-                image: "/assets/images/01 Home/EG---Landing-home_game-3(D).png",
+                image:
+                  "./assets/images/01 Home/EG---Landing-home_game-3(D).png",
               },
               {
                 name: "Scissors rock paper",
-                image: "/assets/images/01 Home/EG---Landing-home_game-4(D).png",
+                image:
+                  "./assets/images/01 Home/EG---Landing-home_game-4(D).png",
               },
               {
                 name: "Super fast food",
-                image: "/assets/images/01 Home/EG---Landing-home_game-5(D).png",
+                image:
+                  "./assets/images/01 Home/EG---Landing-home_game-5(D).png",
               },
             ].map((i, k) => (
               <div

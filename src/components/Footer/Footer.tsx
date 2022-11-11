@@ -9,7 +9,7 @@ const Footer = (): JSX.Element => {
           <div className="border-b-2 pt-10 pb-16 md:py-0 md:border-0 flex flex-col items-center md:items-start space-y-2">
             <div className="flex flex-col justify-center h-auto md:w-36">
               <img
-                src="/assets/images/logo.png"
+                src="./assets/images/logo.png"
                 alt="logo"
                 width={374}
                 height={72}
@@ -60,7 +60,7 @@ const Footer = (): JSX.Element => {
               className="flex flex-col justify-center w-9 md:w-6"
             >
               <img
-                src="/assets/images/ig-icon.png"
+                src="./assets/images/ig-icon.png"
                 alt="logo"
                 width={40}
                 height={40}
@@ -71,7 +71,7 @@ const Footer = (): JSX.Element => {
               className="flex flex-col justify-center w-9 md:w-6"
             >
               <img
-                src="/assets/images/fb-icon.png"
+                src="./assets/images/fb-icon.png"
                 alt="logo"
                 width={40}
                 height={40}

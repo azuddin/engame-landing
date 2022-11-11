@@ -22,7 +22,7 @@ const Pricing: PageLayoutProps = () => {
       </Head>
       <div
         style={{
-          backgroundImage: `url("/assets/images/EG---bg.jpg")`,
+          backgroundImage: `url("./assets/images/EG---bg.jpg")`,
           backgroundAttachment: "fixed",
           backgroundPosition: "center",
           backgroundRepeat: "repeat",
@@ -49,7 +49,7 @@ const Pricing: PageLayoutProps = () => {
               <div className="flex justify-center items-center">
                 <div className="flex justify-center md:flex-1 md:justify-end max-w-lg">
                   <img
-                    src="/assets/images/08 Pricing/EG---Landing-pricing_top-main(D).png"
+                    src="./assets/images/08 Pricing/EG---Landing-pricing_top-main(D).png"
                     width={800}
                     height={800}
                     alt="home-1"
@@ -64,7 +64,7 @@ const Pricing: PageLayoutProps = () => {
         </Section>
         <SubscribePlan
           backgroundImage
-          backgroundImageUrl="/assets/images/EG---bg-2.jpg"
+          backgroundImageUrl="./assets/images/EG---bg-2.jpg"
         />
         <PartnerContent />
       </div>

@@ -224,7 +224,7 @@ const Payment: PageLayoutProps = () => {
                   />
                   <div className="absolute right-2 flex flex-row">
                     <img
-                      src="/assets/images/master.png"
+                      src="./assets/images/master.png"
                       width={30}
                       height={30}
                       className={
@@ -235,7 +235,7 @@ const Payment: PageLayoutProps = () => {
                       alt="mastercard"
                     />
                     <img
-                      src="/assets/images/visa.png"
+                      src="./assets/images/visa.png"
                       width={30}
                       height={30}
                       className={
@@ -281,7 +281,7 @@ const Payment: PageLayoutProps = () => {
           <div className="flex flex-col">
             <div
               style={{
-                backgroundImage: `url('/assets/images/EG---bg.jpg')`,
+                backgroundImage: `url('./assets/images/EG---bg.jpg')`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
                 backgroundRepeat: "no-repeat",

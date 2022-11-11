@@ -18,7 +18,7 @@ const Blog: PageLayoutProps = () => {
       </Head>
       <div
         style={{
-          backgroundImage: "url('/assets/images/EG---bg.jpg')",
+          backgroundImage: "url('./assets/images/EG---bg.jpg')",
           backgroundAttachment: "fixed",
           backgroundPosition: "center",
           backgroundRepeat: "repeat",

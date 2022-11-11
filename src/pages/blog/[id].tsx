@@ -35,7 +35,7 @@ const BlogDetail: PageLayoutProps = () => {
       </Head>
       <div
         style={{
-          backgroundImage: "url('/assets/images/EG---bg.jpg')",
+          backgroundImage: "url('./assets/images/EG---bg.jpg')",
           backgroundAttachment: "fixed",
           backgroundPosition: "center",
           backgroundRepeat: "repeat",
@@ -65,7 +65,7 @@ const BlogDetail: PageLayoutProps = () => {
           <div className="flex items-center space-x-4">
             <div
               style={{
-                backgroundImage: "url('/assets/images/icon.png')",
+                backgroundImage: "url('./assets/images/icon.png')",
                 backgroundSize: "cover",
                 backgroundPosition: "center",
                 backgroundRepeat: "no-repeat",

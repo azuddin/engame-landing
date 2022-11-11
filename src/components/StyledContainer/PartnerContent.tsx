@@ -18,11 +18,11 @@ const PartnerContent = (props: {
           </p>
           <div className="w-full flex flex-row overflow-auto space-x-4 pb-2 2xl:justify-center">
             {[
-              "/assets/images/company-tealive.png",
-              "/assets/images/company-fave.png",
-              "/assets/images/company-herbalife.png",
-              "/assets/images/company-texaschicken.png",
-              "/assets/images/company-packtica.png",
+              "./assets/images/company-tealive.png",
+              "./assets/images/company-fave.png",
+              "./assets/images/company-herbalife.png",
+              "./assets/images/company-texaschicken.png",
+              "./assets/images/company-packtica.png",
             ].map((i, k) => (
               <div
                 key={k}

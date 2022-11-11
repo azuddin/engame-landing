@@ -86,7 +86,7 @@ const Navbar = (props: NavbarProps): JSX.Element => {
           <Link scroll={true} href="/" passHref>
             <div className="flex flex-col justify-center w-36 md:w-28 cursor-pointer">
               <img
-                src="/assets/images/logo.png"
+                src="./assets/images/logo.png"
                 alt="logo"
                 width={180}
                 height={34}

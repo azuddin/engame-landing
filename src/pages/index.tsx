@@ -77,7 +77,7 @@ const Home: PageLayoutProps = () => {
       </Head>
       <div
         style={{
-          backgroundImage: `url("/assets/images/EG---bg.jpg")`,
+          backgroundImage: `url("./assets/images/EG---bg.jpg")`,
           backgroundAttachment: "fixed",
           backgroundPosition: "center",
           backgroundRepeat: "repeat",
@@ -126,7 +126,7 @@ const Home: PageLayoutProps = () => {
               <div className="flex justify-center items-center">
                 <div className="flex justify-center md:flex-1 md:justify-end max-w-lg">
                   <img
-                    src="/assets/images/01 Home/EG---Landing-home_top-main(D).png"
+                    src="./assets/images/01 Home/EG---Landing-home_top-main(D).png"
                     width={800}
                     height={800}
                     alt="home-1"
@@ -142,7 +142,7 @@ const Home: PageLayoutProps = () => {
         <div className="bg-white">
           <div
             style={{
-              backgroundImage: "url('/assets/images/EG---bg-2.jpg')",
+              backgroundImage: "url('./assets/images/EG---bg-2.jpg')",
               backgroundSize: "cover",
               backgroundPosition: "center",
             }}
@@ -159,25 +159,25 @@ const Home: PageLayoutProps = () => {
                       title: "24,000+",
                       desc: "Daily Views",
                       image_url:
-                        "/assets/images/01 Home/EG---Landing-home_icon-1(D).png",
+                        "./assets/images/01 Home/EG---Landing-home_icon-1(D).png",
                     },
                     {
                       title: "750,000+ ",
                       desc: "Games Completed",
                       image_url:
-                        "/assets/images/01 Home/EG---Landing-home_icon-2(D).png",
+                        "./assets/images/01 Home/EG---Landing-home_icon-2(D).png",
                     },
                     {
                       title: "2.1M Minutes",
                       desc: "Play Time Monthly",
                       image_url:
-                        "/assets/images/01 Home/EG---Landing-home_icon-3(D).png",
+                        "./assets/images/01 Home/EG---Landing-home_icon-3(D).png",
                     },
                     {
                       title: "3200% Increased",
                       desc: "Brand Stickiness",
                       image_url:
-                        "/assets/images/01 Home/EG---Landing-home_icon-4(D).png",
+                        "./assets/images/01 Home/EG---Landing-home_icon-4(D).png",
                     },
                   ].map((i, k) => (
                     <div
@@ -244,7 +244,7 @@ const Home: PageLayoutProps = () => {
         <div className="bg-white md:pt-8 lg:pt-18 xl:pt-28 2xl:pt-36 ">
           <div
             style={{
-              backgroundImage: "url('/assets/images/EG---bg.jpg')",
+              backgroundImage: "url('./assets/images/EG---bg.jpg')",
               backgroundSize: "cover",
               backgroundPosition: "center",
             }}
@@ -252,7 +252,7 @@ const Home: PageLayoutProps = () => {
           >
             <div className="h-80 items-end hidden md:flex">
               <img
-                src="/assets/images/01 Home/EG---Landing-home_arcade(D).png"
+                src="./assets/images/01 Home/EG---Landing-home_arcade(D).png"
                 width={1920}
                 height={300}
                 alt="home-1"
@@ -262,7 +262,7 @@ const Home: PageLayoutProps = () => {
         </div>
         <div className="block md:hidden">
           <img
-            src="/assets/images/01 Home/EG---Landing-home_arcade(M).png"
+            src="./assets/images/01 Home/EG---Landing-home_arcade(M).png"
             width={800}
             height={300}
             alt="home-1"
@@ -282,7 +282,7 @@ const Home: PageLayoutProps = () => {
               <div
                 style={{
                   backgroundImage:
-                    "url('/assets/images/01 Home/EG---Landing-home_demo(D).jpg')",
+                    "url('./assets/images/01 Home/EG---Landing-home_demo(D).jpg')",
                   backgroundSize: "contain",
                   backgroundPosition: "center",
                   backgroundRepeat: "no-repeat",
@@ -303,7 +303,7 @@ const Home: PageLayoutProps = () => {
               <div
                 style={{
                   backgroundImage:
-                    "url('/assets/images/01 Home/EG---Landing-home_playgame(D).jpg')",
+                    "url('./assets/images/01 Home/EG---Landing-home_playgame(D).jpg')",
                   backgroundSize: "contain",
                   backgroundPosition: "center",
                   backgroundRepeat: "no-repeat",
@@ -320,7 +320,7 @@ const Home: PageLayoutProps = () => {
         </Section>
         <SubscribePlan
           backgroundImage
-          backgroundImageUrl="/assets/images/EG---bg-2.jpg"
+          backgroundImageUrl="./assets/images/EG---bg-2.jpg"
         />
         <Section>
           <form onSubmit={handleSubmitContactUs(contactUs)}>
@@ -339,7 +339,7 @@ const Home: PageLayoutProps = () => {
                 </div>
                 <div className="flex max-w-md py-10">
                   <img
-                    src="/assets/images/01 Home/EG---Landing-home_feedback(D).png"
+                    src="./assets/images/01 Home/EG---Landing-home_feedback(D).png"
                     width={800}
                     height={800}
                     alt="home-1"

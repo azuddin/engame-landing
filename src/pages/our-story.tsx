@@ -36,7 +36,7 @@ const OurStory: PageLayoutProps = () => {
       <div
         style={{
           backgroundImage:
-            "url('/assets/images/02 Our story/EG---Landing-ourstory_top(D).jpg')",
+            "url('./assets/images/02 Our story/EG---Landing-ourstory_top(D).jpg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
@@ -48,7 +48,7 @@ const OurStory: PageLayoutProps = () => {
       </div>
       <div className="mb-10 block md:hidden">
         <img
-          src="/assets/images/02 Our story/EG---Landing-ourstory_top2(M).jpg"
+          src="./assets/images/02 Our story/EG---Landing-ourstory_top2(M).jpg"
           width={800}
           height={400}
           alt="home-1"
@@ -162,7 +162,7 @@ const OurStory: PageLayoutProps = () => {
           <div
             style={{
               backgroundImage:
-                "url('/assets/images/02 Our story/EG---Landing-ourstory_milestone-1(M).jpg')",
+                "url('./assets/images/02 Our story/EG---Landing-ourstory_milestone-1(M).jpg')",
               backgroundSize: "cover",
               backgroundPosition: "center",
               backgroundRepeat: "no-repeat",
@@ -173,7 +173,7 @@ const OurStory: PageLayoutProps = () => {
       </Section>
       <div
         style={{
-          backgroundImage: "url('/assets/images/EG---bg-2.jpg')",
+          backgroundImage: "url('./assets/images/EG---bg-2.jpg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
@@ -224,7 +224,7 @@ const OurStory: PageLayoutProps = () => {
                   <div className="grid grid-cols-1 md:grid-cols-2">
                     <div className="flex justify-center items-center">
                       <img
-                        src="/assets/images/02 Our story/EG---Landing-ourstory_milestone-2(D).png"
+                        src="./assets/images/02 Our story/EG---Landing-ourstory_milestone-2(D).png"
                         width={800}
                         height={800}
                         alt="our-story-2"
@@ -319,7 +319,7 @@ const OurStory: PageLayoutProps = () => {
                   <div className="grid grid-cols-1 md:grid-cols-2">
                     <div className="flex justify-center items-center">
                       <img
-                        src="/assets/images/02 Our story/EG---Landing-ourstory_milestone-2(D).png"
+                        src="./assets/images/02 Our story/EG---Landing-ourstory_milestone-2(D).png"
                         width={800}
                         height={800}
                         alt="our-story-2"
@@ -392,7 +392,7 @@ const OurStory: PageLayoutProps = () => {
                   <div className="grid grid-cols-1 md:grid-cols-2">
                     <div className="flex justify-center items-center">
                       <img
-                        src="/assets/images/02 Our story/EG---Landing-ourstory_milestone-2(D).png"
+                        src="./assets/images/02 Our story/EG---Landing-ourstory_milestone-2(D).png"
                         width={800}
                         height={800}
                         alt="our-story-2"
@@ -477,21 +477,21 @@ const OurStory: PageLayoutProps = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
             {[
               {
-                image: "/assets/images/core-vincent.png",
+                image: "./assets/images/core-vincent.png",
                 quote:
                   "“grow this studio to a place where creative game person from all around the world can gather.”",
                 name: "Vincent Chong",
                 title: "The Mastermind CEO",
               },
               {
-                image: "/assets/images/core-jasmine.png",
+                image: "./assets/images/core-jasmine.png",
                 quote:
                   "“games and engagement thru entertainment will bring about the next paradigm shift in technological evolution for new business.”",
                 name: "Jasmine Ng",
                 title: "Business Leader Co-founder",
               },
               {
-                image: "/assets/images/core-tsengfeng.png",
+                image: "./assets/images/core-tsengfeng.png",
                 quote:
                   "“Whether you're A casual gamer, OR you're an enthusiast, there's a large market for us.”",
                 name: "Cham Lee",
@@ -539,7 +539,7 @@ const OurStory: PageLayoutProps = () => {
       <PartnerContent backgroundImage />
       <div
         style={{
-          backgroundImage: "url('/assets/images/EG---bg.jpg')",
+          backgroundImage: "url('./assets/images/EG---bg.jpg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",

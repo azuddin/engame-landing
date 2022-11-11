@@ -20,7 +20,7 @@ const Modal = (props: ModalProps): JSX.Element => {
             <div className="relative mx-auto w-full max-w-2xl h-full md:h-auto">
               <div
                 style={{
-                  backgroundImage: "url('/assets/images/EG---bg.jpg')",
+                  backgroundImage: "url('./assets/images/EG---bg.jpg')",
                   backgroundSize: "contain",
                 }}
                 className="flex flex-col relative bg-white rounded-lg overflow-hidden shadow dark:bg-gray-700 max-h-screen h-screen md:h-fit"

@@ -20,7 +20,7 @@ const HowItWork = (props: {
         return {};
       default:
         return {
-          backgroundImage: "url('/assets/images/engame_step123.gif')",
+          backgroundImage: "url('./assets/images/engame_step123.gif')",
           backgroundSize: "cover",
           backgroundPosition: "center",
         };
@@ -38,7 +38,7 @@ const HowItWork = (props: {
         <div className="flex flex-grow flex-col md:max-w-md items-center justify-center md:items-start space-y-6 md:space-y-2">
           <div className="max-w-xs md:h-32 md:w-32 flex justify-center">
             <img
-              src="/assets/images/EG---cat354.png"
+              src="./assets/images/EG---cat354.png"
               width={800}
               height={800}
               alt="home-2"

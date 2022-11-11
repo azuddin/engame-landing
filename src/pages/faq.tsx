@@ -75,7 +75,7 @@ const FAQ: PageLayoutProps = () => {
       </Head>
       <div
         style={{
-          backgroundImage: `url("/assets/images/EG---bg.jpg")`,
+          backgroundImage: `url("./assets/images/EG---bg.jpg")`,
           backgroundAttachment: "fixed",
           backgroundPosition: "center",
           backgroundRepeat: "repeat",
@@ -94,7 +94,7 @@ const FAQ: PageLayoutProps = () => {
               <div className="flex justify-center items-center">
                 <div className="flex justify-center md:flex-1 md:justify-end max-w-lg">
                   <img
-                    src="/assets/images/06 Faq/EG---Landing-faq_top-main(D).png"
+                    src="./assets/images/06 Faq/EG---Landing-faq_top-main(D).png"
                     width={628}
                     height={621}
                     alt="home-1"
@@ -227,7 +227,7 @@ const FAQ: PageLayoutProps = () => {
         <div
           className="relative"
           style={{
-            backgroundImage: "url('/assets/images/EG---bg-2.jpg')",
+            backgroundImage: "url('./assets/images/EG---bg-2.jpg')",
             backgroundSize: "cover",
           }}
         >
